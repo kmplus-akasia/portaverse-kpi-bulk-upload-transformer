@@ -1,0 +1,33 @@
+{
+  "positions": [
+    {
+      "sheet_name": "Group Head",
+      "position_name": "Group Head Pengelolaan SDM",
+      "position_master_id": 504,
+      "position_lookup_names": [
+        "Group Head Pengelolaan SDM"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10,
+      "drop_comment_values": [
+        "Drop"
+      ]
+    },
+    {
+      "sheet_name": "DH Manajemen Talenta",
+      "position_name": "Department Head Manajemen Talenta dan Kinerja SDM",
+      "position_master_id": 514,
+      "position_lookup_names": [
+        "Department Head Manajemen Talenta dan Kinerja SDM",
+        "Dept Head Manajemen Talenta dan Kinerja SDM"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10,
+      "drop_comment_values": [
+        "Drop"
+      ]
+    }
+  ]
+}

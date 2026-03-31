@@ -1,0 +1,162 @@
+{
+  "positions": [
+    {
+      "sheet_name": "Group Head",
+      "position_name": "Group Head Pengelolaan SDM",
+      "position_master_id": 504,
+      "position_lookup_names": [
+        "Group Head Pengelolaan SDM"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "DH Manajemen Talenta",
+      "position_name": "Department Head Manajemen Talenta dan Kinerja SDM",
+      "position_master_id": 514,
+      "position_lookup_names": [
+        "Department Head Manajemen Talenta dan Kinerja SDM",
+        "Dept Head Manajemen Talenta dan Kinerja SDM"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "DH Kepemimpinan",
+      "position_name": "Department Head Kepemimpinan dan Budaya Korporat",
+      "position_master_id": 505,
+      "position_lookup_names": [
+        "Department Head Kepemimpinan dan Budaya Korporat",
+        "DH Kepemimpinan dan Budaya Korporat"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "DH Perencanaan-Penyelenggaraan",
+      "position_name": "Department Head Perencanaan dan Penyelenggaraan Pembelajaran",
+      "position_master_id": 533,
+      "position_lookup_names": [
+        "Department Head Perencanaan dan Penyelenggaraan Pembelajaran",
+        "DH Perencanaan dan Penyelenggaraan Pembelajaran"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Manager Rekrutmen-Karir",
+      "position_name": "Manager Rekrutmen dan Karir",
+      "position_master_id": 515,
+      "position_lookup_names": [
+        "Manager Rekrutmen dan Karir",
+        "Manager Rekrutmen-Karir"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Manager Pelaksanaan Pembelajara",
+      "position_name": "Manager Pelaksanaan Pembelajaran",
+      "position_master_id": 543,
+      "position_lookup_names": [
+        "Manager Pelaksanaan Pembelajaran",
+        "Manager Pelaksanaan Pembelajara"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Manager Strategi-Evaluasi",
+      "position_name": "Manager Strategi dan Evaluasi Pembelajaran",
+      "position_master_id": 534,
+      "position_lookup_names": [
+        "Manager Strategi dan Evaluasi Pembelajaran",
+        "Manager Strategi-Evaluasi Pembelajaran"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Manager Kinerja Individu",
+      "position_name": "Manager Kinerja Individu",
+      "position_master_id": 524,
+      "position_lookup_names": [
+        "Manager Kinerja Individu"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Officer Rekrutmen-Karir",
+      "position_name": "Officer I Rekrutmen dan Karir",
+      "position_master_id": 519,
+      "position_lookup_names": [
+        "Officer I Rekrutmen dan Karir",
+        "Officer Rekrutmen dan Karir",
+        "Officer Rekrutmen-Karir"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Officer Pelaksanaan Pembelajara",
+      "position_name": "Officer I Pelaksanaan Pembelajaran",
+      "position_master_id": 547,
+      "position_lookup_names": [
+        "Officer I Pelaksanaan Pembelajaran",
+        "Officer Pelaksanaan Pembelajaran",
+        "Officer Pelaksanaan Pembelajara"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Officer Kinerja Individu",
+      "position_name": "Officer I Kinerja Individu",
+      "position_master_id": 528,
+      "position_lookup_names": [
+        "Officer I Kinerja Individu",
+        "Officer Kinerja Individu"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Officer Kepemimpinan-Budaya",
+      "position_name": "Officer I Kepemimpinan dan Budaya Korporat",
+      "position_master_id": 509,
+      "position_lookup_names": [
+        "Officer I Kepemimpinan dan Budaya Korporat",
+        "Officer Kepemimpinan dan Budaya Korporat",
+        "Officer Kepemimpinan-Budaya"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    },
+    {
+      "sheet_name": "Officer Strategi-Evaluasi",
+      "position_name": "Officer I Strategi dan Evaluasi Pembelajaran",
+      "position_master_id": 538,
+      "position_lookup_names": [
+        "Officer I Strategi dan Evaluasi Pembelajaran",
+        "Officer Strategi dan Evaluasi Pembelajaran",
+        "Officer Strategi-Evaluasi Pembelajaran"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10
+    }
+  ]
+}
