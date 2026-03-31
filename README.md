@@ -33,13 +33,13 @@ python3 -m pip install -r requirements.txt
 
 ## Inputs
 
-Put these files under `input/` or anywhere else you want, then point the CLI to their paths:
+This repo now includes a ready-to-run `input/` folder. It is intended to hold:
 
 - source KPI workbook, for example `Bu Desi - Group Pengelolaan SDM (done Konfirmasi KPI).xlsx`
 - official upload template, for example `KPI Upload Template (1).xlsx`
 - folder containing `Master Posisi` exports
 
-Suggested local layout:
+Current local layout:
 
 ```text
 input/
@@ -92,6 +92,8 @@ Important fields:
 
 - Source sheets are parsed as block-style layouts with downward inheritance for merged-looking fields.
 - Placeholder values like `(blank)` are treated as missing.
+- The transformer only exports positions whose `Tipe Posisi` in `Master Posisi` is exactly `Struktural`.
+- Non-struktural positions are skipped and reported as warnings because uploader support for `Position Master Variant ID` is not implemented yet.
 - `Triwulan` and `Triwulanan` are normalized to `TRIWULANAN`.
 - Allowed uploader periods supported by normalization:
   - `BULANAN`
@@ -121,6 +123,11 @@ The CSV report contains:
 - `record_type`
 - `title`
 - `message`
+
+## Current Limitation
+
+- Non-struktural positions are intentionally excluded for now.
+- When support for `Position Master Variant ID` is added later, this filter can be relaxed.
 
 ## Git Init
 

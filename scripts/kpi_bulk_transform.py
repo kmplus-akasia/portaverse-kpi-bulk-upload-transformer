@@ -266,7 +266,12 @@ class PositionMasterIndex:
         index = cls()
         files = sorted(root_dir.glob("*.xlsx"))
         for workbook_path in files:
-            rows = read_xlsx_sheet(workbook_path, "Master Posisi")
+            if workbook_path.name.startswith("~$"):
+                continue
+            try:
+                rows = read_xlsx_sheet(workbook_path, "Master Posisi")
+            except zipfile.BadZipFile:
+                continue
             if not rows:
                 continue
             for row in rows[1:]:
@@ -808,7 +813,7 @@ def main() -> int:
                     ),
                 )
             )
-        if metadata.position_type and metadata.position_type != "Struktural":
+        if metadata.position_type != "Struktural":
             issues.append(
                 ValidationIssue(
                     severity="warning",
@@ -817,11 +822,12 @@ def main() -> int:
                     record_type="sheet",
                     title=config.position_name,
                     message=(
-                        f"Master position type is {metadata.position_type}; uploader may require "
-                        "Position Master Variant ID for non-struktural roles."
+                        f"Skipped sheet because master position type is {metadata.position_type or 'UNKNOWN'}; "
+                        "for now the transformer only exports positions with Tipe Posisi = Struktural."
                     ),
                 )
             )
+            continue
 
         sheet_rows = read_xlsx_sheet(args.source, config.sheet_name)
         impacts = parse_block_sheet(sheet_rows, config, issues)
