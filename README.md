@@ -36,7 +36,7 @@ python3 -m pip install -r requirements.txt
 This repo now includes a ready-to-run `input/` folder. It is intended to hold:
 
 - source KPI workbook, for example `Bu Desi - Group Pengelolaan SDM (done Konfirmasi KPI).xlsx`
-- official upload template, for example `KPI Upload Template (1).xlsx`
+- official upload template, for example `KPI Upload Template.xlsx`
 - folder containing `Master Posisi` exports
 
 Current local layout:
@@ -44,7 +44,7 @@ Current local layout:
 ```text
 input/
   Bu Desi - Group Pengelolaan SDM (done Konfirmasi KPI).xlsx
-  KPI Upload Template (1).xlsx
+  KPI Upload Template.xlsx
   data_master_posisi_31-03-2026_12_56_12/
 ```
 
@@ -53,7 +53,7 @@ input/
 ```bash
 python3 scripts/kpi_bulk_transform.py \
   --source "input/Bu Desi - Group Pengelolaan SDM (done Konfirmasi KPI).xlsx" \
-  --template "input/KPI Upload Template (1).xlsx" \
+  --template "input/KPI Upload Template.xlsx" \
   --positions-dir "input/data_master_posisi_31-03-2026_12_56_12" \
   --config "configs/all_positions.json" \
   --output "output/KPI Upload Template - All Positions.xlsx" \
@@ -65,7 +65,7 @@ python3 scripts/kpi_bulk_transform.py \
 ```bash
 python3 scripts/kpi_bulk_transform.py \
   --source "input/Bu Desi - Group Pengelolaan SDM (done Konfirmasi KPI).xlsx" \
-  --template "input/KPI Upload Template (1).xlsx" \
+  --template "input/KPI Upload Template.xlsx" \
   --positions-dir "input/data_master_posisi_31-03-2026_12_56_12" \
   --config "configs/all_positions.json" \
   --only-sheet "DH Manajemen Talenta" \
