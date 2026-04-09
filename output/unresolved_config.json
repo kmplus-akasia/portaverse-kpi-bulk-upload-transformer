@@ -1,0 +1,17 @@
+{
+  "positions": [
+    {
+      "sheet_name": "Group Head",
+      "position_name": "Unknown Position For Test",
+      "position_lookup_names": [
+        "Unknown Position For Test"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10,
+      "drop_comment_values": [
+        "Drop"
+      ]
+    }
+  ]
+}

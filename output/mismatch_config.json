@@ -1,0 +1,18 @@
+{
+  "positions": [
+    {
+      "sheet_name": "Group Head",
+      "position_name": "Group Head Pengelolaan SDM",
+      "position_master_id": 99999,
+      "position_lookup_names": [
+        "Group Head Pengelolaan SDM"
+      ],
+      "group_name": "Group Pengelolaan SDM",
+      "directorate_name": "Direktorat Sumber Daya Manusia dan Umum",
+      "expected_impact_count": 10,
+      "drop_comment_values": [
+        "Drop"
+      ]
+    }
+  ]
+}

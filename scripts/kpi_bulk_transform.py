@@ -33,7 +33,7 @@ UPLOAD_HEADERS = [
     "Direktorat",
     "Posisi",
     "Position Master ID (Required)",
-    "Position Master Variant ID (Required only for Non-Struktural)",
+    "Position Master Variant ID (Optional)",
     "BSC Perspective",
     "KPI Type",
     "Parent KPI ID",
@@ -49,6 +49,7 @@ UPLOAD_HEADERS = [
     "Ownership Type",
     "Nature Of Work (KAI Only)",
     "External ID (PKPI)",
+    "System KPI ID",
 ]
 
 
@@ -513,11 +514,10 @@ def parse_block_sheet(
 
 def build_upload_rows(
     config: PositionConfig,
-    metadata: PositionMetadata | None,
+    position_master_id: str,
     impacts: list[ImpactRecord],
     start_id: int,
 ) -> tuple[list[list[Any]], int]:
-    position_master_id = metadata.position_master_id if metadata else str(config.position_master_id)
     position_name = config.position_name
 
     rows: list[list[Any]] = []
@@ -547,6 +547,7 @@ def build_upload_rows(
                 uploader_period(impact.period),
                 impact.formula,
                 impact.weight,
+                None,
                 None,
                 None,
                 None,
@@ -582,6 +583,7 @@ def build_upload_rows(
                     output["ownership_type"],
                     None,
                     None,
+                    None,
                 ]
             )
 
@@ -613,11 +615,24 @@ def build_upload_rows(
                     kai["ownership_type"],
                     kai["nature_of_work"],
                     None,
+                    None,
                 ]
             )
             next_id += 1
 
     return rows, next_id
+
+
+def resolve_output_position_master_id(
+    config: PositionConfig,
+    metadata: PositionMetadata | None,
+) -> str | None:
+    # Explicit config value has highest precedence for output consistency.
+    if config.position_master_id:
+        return str(config.position_master_id)
+    if metadata and metadata.position_master_id:
+        return metadata.position_master_id
+    return None
 
 
 def validate_output_rows(
@@ -809,21 +824,22 @@ def main() -> int:
                     title=config.position_name,
                     message=(
                         f"Config position_master_id={config.position_master_id} differs from master lookup "
-                        f"{metadata.position_master_id}; using the config value in output."
+                        f"{metadata.position_master_id}; using the config value as output override."
                     ),
                 )
             )
-        if metadata.position_type != "Struktural":
+        position_master_id = resolve_output_position_master_id(config, metadata)
+        if not position_master_id:
             issues.append(
                 ValidationIssue(
-                    severity="warning",
+                    severity="error",
                     sheet_name=config.sheet_name,
                     source_row=None,
                     record_type="sheet",
                     title=config.position_name,
                     message=(
-                        f"Skipped sheet because master position type is {metadata.position_type or 'UNKNOWN'}; "
-                        "for now the transformer only exports positions with Tipe Posisi = Struktural."
+                        "Could not determine Position Master ID from config override or master lookup; "
+                        "sheet output was skipped."
                     ),
                 )
             )
@@ -850,9 +866,25 @@ def main() -> int:
     backfill_shared_impact_fields(parsed_sheets)
 
     for parsed in parsed_sheets:
+        position_master_id = resolve_output_position_master_id(parsed.config, parsed.metadata)
+        if not position_master_id:
+            issues.append(
+                ValidationIssue(
+                    severity="error",
+                    sheet_name=parsed.config.sheet_name,
+                    source_row=None,
+                    record_type="sheet",
+                    title=parsed.config.position_name,
+                    message=(
+                        "Could not determine Position Master ID from config override or master lookup; "
+                        "sheet output was skipped."
+                    ),
+                )
+            )
+            continue
         rows, next_global_id = build_upload_rows(
             parsed.config,
-            parsed.metadata,
+            position_master_id,
             parsed.impacts,
             next_global_id,
         )

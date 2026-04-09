@@ -92,8 +92,10 @@ Important fields:
 
 - Source sheets are parsed as block-style layouts with downward inheritance for merged-looking fields.
 - Placeholder values like `(blank)` are treated as missing.
-- The transformer only exports positions whose `Tipe Posisi` in `Master Posisi` is exactly `Struktural`.
-- Non-struktural positions are skipped and reported as warnings because uploader support for `Position Master Variant ID` is not implemented yet.
+- Positions are exported regardless of `Tipe Posisi` (`Struktural` and `Non-struktural` are both included).
+- `Position Master ID` is always required in generated output rows.
+- `Position Master Variant ID` is optional and may be blank.
+- `System KPI ID` is included in output format and currently left blank.
 - `Triwulan` and `Triwulanan` are normalized to `TRIWULANAN`.
 - Allowed uploader periods supported by normalization:
   - `BULANAN`
@@ -126,8 +128,7 @@ The CSV report contains:
 
 ## Current Limitation
 
-- Non-struktural positions are intentionally excluded for now.
-- When support for `Position Master Variant ID` is added later, this filter can be relaxed.
+- `Position Master Variant ID` and `System KPI ID` are currently not populated by the transformer and remain blank.
 
 ## Git Init
 
