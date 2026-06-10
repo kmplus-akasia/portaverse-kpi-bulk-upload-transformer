@@ -22,8 +22,9 @@ Required behavior:
 
 - A structural position must output PMID only.
 - A non-structural/general position must output PNID only.
-- If a configured PNID matches a production structural PMID, the converter must correct the scope to structural when confidence is high and report the correction.
-- If the same numeric ID appears in conflicting contexts, the converter must block that position and report a mapping conflict instead of guessing.
+- The converter must decide PMID vs PNID from position scope and production position identity, not from the numeric ID alone.
+- If a configured PNID also exists as a production structural PMID, the converter must still output PMID when the raw position title/sheet resolves to a structural production position.
+- If the raw title/scope signals and production reference cannot produce one clear structural or non-structural identity, the converter must block that position and report a mapping conflict instead of guessing.
 
 ### Enum and Cross-Column Pollution
 
@@ -88,9 +89,9 @@ The converter should normalize:
 - `indirect`, `Indirect` -> `INDIRECT`
 - `duplicate` -> `DUPLICATE`
 
-If Cascading contains ownership, nature, or polarity values such as `SPECIFIC`, `SHARED`, `COMMON`, `Routine`, `Non Routine`, `Positif`, or `Negatif`, the converter should output `DIRECT` and report the cross-column correction. This matches the user decision that typo/pollution in the Cascading column should default to direct unless an explicit valid cascading value exists.
+If Cascading contains ownership, nature, or polarity values such as `SPECIFIC`, `SHARED`, `COMMON`, `Routine`, `Non Routine`, `Positif`, or `Negatif`, the converter should output `INDIRECT` and report the cross-column correction. This matches the user decision that typo/pollution in the Cascading column should default to indirect unless an explicit valid cascading value exists.
 
-If Cascading contains long free text or a copied header, the converter should output `DIRECT` only when the row itself is otherwise structurally valid, and report a warning. If other required fields also look shifted, the row should be spotlighted as a possible shifted-row issue.
+If Cascading contains long free text or a copied header, the converter should output `INDIRECT` only when the row itself is otherwise structurally valid, and report a warning. If other required fields also look shifted, the row should be spotlighted as a possible shifted-row issue.
 
 ### Ownership Type Normalization
 
@@ -100,7 +101,7 @@ The converter should normalize:
 - `Shared`, `shared` -> `SHARED`
 - `Common`, `common` -> `COMMON`
 
-If Ownership Type contains values from another enum family such as `Routine`, `Non Routine`, `DIRECT`, `INDIRECT`, `DUPLICATE`, `Positif`, or `Negatif`, the converter must not pass the value through. It should leave Ownership blank for non-required cases or default to `SPECIFIC` only when the KPI type and existing converter rule already require specific ownership, such as KAI rows. It must report the correction.
+If Ownership Type is blank or contains values from another enum family such as `Routine`, `Non Routine`, `DIRECT`, `INDIRECT`, `DUPLICATE`, `Positif`, or `Negatif`, the converter must not pass the raw value through. It should default output Ownership Type to `SPECIFIC` and report the default or correction.
 
 ### Nature Of Work Normalization
 
@@ -111,8 +112,8 @@ The converter should normalize:
 
 If Nature Of Work is blank, infer from period:
 
-- Routine for frequent periods: `BULANAN`, `TRIWULANAN`, `SEMESTER`, `MONTHLY`, `QUARTERLY`, `WEEKLY`
-- Non Routine for `TAHUNAN`
+- `Non Routine` when Period is `TAHUNAN`
+- `Routine` for every other period, including `BULANAN`, `TRIWULANAN`, `SEMESTER`, `MONTHLY`, `QUARTERLY`, and `WEEKLY`
 
 If Nature Of Work contains cascading values such as `DIRECT`, `INDIRECT`, or `DUPLICATE`, ignore the raw value, infer from period, and report the cross-column correction. URLs, `Pdf`, reference labels, and copied headers should be treated the same way.
 
@@ -120,27 +121,30 @@ If Nature Of Work contains cascading values such as `DIRECT`, `INDIRECT`, or `DU
 
 ### Source of Truth
 
-Position scope and ID type must be validated against production reference data:
+Position scope and ID type must be validated against production reference data. Scope resolution has higher priority than numeric ID uniqueness:
 
 - Structural positions use `position_master_rows` and output `Position Master ID`.
 - Non-structural positions use nomenclature `rows` and output `Position Nomenklatur ID`.
 - `position_master_type_id = 5` means structural.
-- Nomenclature/cluster IDs must not be inferred from an arbitrary numeric ID unless the production reference confirms it as a cluster ID for the target company.
+- Nomenclature/cluster IDs must not be inferred from an arbitrary numeric ID unless the raw position identity resolves to a non-structural production cluster.
+- The same number may exist as both PMID and PNID; the converter must choose the ID column from resolved position scope and title identity, not from numeric ID availability.
 
 ### Resolution Rules
 
 The converter should resolve position mapping in this order:
 
-1. Exact reviewed config with valid scope and ID type.
-2. Production reference exact title match scoped to target company.
-3. Alias-normalized match using sheet name, position name, group name, and known title abbreviations.
-4. Manual unresolved report.
+1. Normalize raw position identity from sheet name, discovered `Nama Posisi`, group name, and known aliases/abbreviations.
+2. Resolve that identity against production `position_master_rows` and nomenclature `rows` scoped to the target company.
+3. Decide structural vs non-structural from the resolved production position, with `position_master_type_id = 5` as structural.
+4. Apply exact reviewed config only when its scope and ID type agree with the resolved production identity.
+5. Use alias-normalized matching when exact title differs but still resolves to one clear production identity.
+6. Manual unresolved report.
 
-If reviewed config conflicts with production reference, production reference must win only when the conflict is deterministic:
+If reviewed config conflicts with production reference, scope/title identity must win over the numeric ID field:
 
-- Config says PNID `515`, production says PMID `515` structural, and no PNID `515` exists for target company: correct to structural PMID `515`.
-- Config says PNID `67`, production says PMID `67` structural, and no PNID `67` exists for target company: correct to structural PMID `67`.
-- If both a PNID and PMID exist with the same number or multiple active candidates match, block and report a mapping conflict.
+- Config says PNID `515`, production also has PNID `515`, but raw position identity resolves to structural `Manager Rekrutmen dan Karir` with `position_master_id = 515` and `position_master_type_id = 5`: correct to structural PMID `515`.
+- Config says PNID `67`, but raw position identity resolves to structural `Department Head Hubungan Lembaga dan Investor` with `position_master_id = 67` and `position_master_type_id = 5`: correct to structural PMID `67`.
+- If title/scope signals point to multiple active candidates, different companies, or both structural and non-structural identities with similar confidence, block and report a mapping conflict.
 
 ### Output Invariants
 
@@ -210,7 +214,7 @@ The row builder should consume these normalized objects and append report issues
 Add a mapping validation layer before row generation:
 
 - Validate configured PMID/PNID against production reference.
-- Correct deterministic PMID/PNID inversions.
+- Correct PMID/PNID inversions using resolved position scope and production title identity.
 - Block ambiguous mappings.
 - Record all corrections and conflicts in the conversion report and recap.
 
@@ -249,9 +253,9 @@ Add tests for:
 - `Semesteran` and `per Semester` -> `SEMESTER`
 - `Triwulanan/Tahunan` produces ambiguous status unless a parent fallback is used.
 - Polarity pollution `INDIRECT`, `DUPLICATE`, `SPECIFIC`, `Routine` defaults to `POSITIVE` and reports correction.
-- Cascading pollution `SPECIFIC`, `SHARED`, `COMMON`, `Routine`, `Non Routine`, `Positif` outputs `DIRECT` and reports correction.
+- Cascading pollution `SPECIFIC`, `SHARED`, `COMMON`, `Routine`, `Non Routine`, `Positif` outputs `INDIRECT` and reports correction.
 - Ownership variants `Shared`, `Specific`, `SPESIFIC` normalize correctly.
-- Ownership pollution `Non Routine` is not passed through.
+- Ownership pollution `Non Routine` defaults to `SPECIFIC` and is not passed through.
 - Nature variants `Non-Routine`, `Non-Rotine`, `non Routine` normalize to `Non Routine`.
 - Nature pollution `INDIRECT`, URL, and `Pdf` infer from period and report correction.
 - Config PNID `515` for Manager Rekrutmen-Karir corrects to structural PMID `515`.
