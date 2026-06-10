@@ -483,19 +483,16 @@ def append_enum_issue(
 ) -> None:
     if issues is None:
         return
-    if result.status not in {
-        NormalizationStatus.DEFAULTED,
-        NormalizationStatus.CROSS_COLUMN,
-        NormalizationStatus.AMBIGUOUS,
-        NormalizationStatus.INVALID,
-    }:
+    if result.status == NormalizationStatus.OK:
         return
 
-    severity = (
-        "error"
-        if result.value is None and result.status in {NormalizationStatus.AMBIGUOUS, NormalizationStatus.INVALID}
-        else "warning"
-    )
+    if result.status == NormalizationStatus.NORMALIZED:
+        severity = "info"
+    elif result.value is None and result.status in {NormalizationStatus.AMBIGUOUS, NormalizationStatus.INVALID}:
+        severity = "error"
+    else:
+        severity = "warning"
+
     issues.append(
         ValidationIssue(
             severity=severity,
@@ -540,6 +537,7 @@ class ImpactRecord:
     formula: str | None
     polarity: str | None
     weight: str | None
+    source_row: int | None = None
     outputs: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -687,6 +685,7 @@ def parse_block_sheet(
                 formula=impact_formula,
                 polarity=impact_polarity,
                 weight=impact_weight,
+                source_row=source_row,
             )
             current_impact_defaults = {
                 "unit": impact_unit,
@@ -989,6 +988,13 @@ def output_kai_records(output: dict[str, Any]) -> list[dict[str, Any]]:
     return records
 
 
+def kai_field_matches_output(kai: dict[str, Any], output: dict[str, Any], field_name: str) -> bool:
+    kai_value = norm_text(kai.get(field_name))
+    if kai_value is None:
+        return True
+    return kai_value == norm_text(output.get(field_name))
+
+
 def build_upload_rows(
     config: PositionConfig,
     position_master_id: str,
@@ -1009,8 +1015,8 @@ def build_upload_rows(
         impact_ids[impact.title] = impact_id
         impact_polarity_result = normalize_polarity(impact.polarity)
         impact_period_result = normalize_period(impact.period)
-        append_enum_issue(issues, config, None, "IMPACT", impact.title, "Polarity", impact_polarity_result)
-        append_enum_issue(issues, config, None, "IMPACT", impact.title, "Period", impact_period_result)
+        append_enum_issue(issues, config, impact.source_row, "IMPACT", impact.title, "Polarity", impact_polarity_result)
+        append_enum_issue(issues, config, impact.source_row, "IMPACT", impact.title, "Period", impact_period_result)
         rows.append(
             [
                 impact_id,
@@ -1131,24 +1137,26 @@ def build_upload_rows(
                 )
                 kai_polarity_result = normalize_polarity(kai.get("polarity"))
                 kai_nature_result = normalize_kai_nature(kai.get("nature_of_work"), kai_period_result.value)
-                append_enum_issue(
-                    issues,
-                    config,
-                    kai.get("source_row"),
-                    "KAI",
-                    kai.get("title"),
-                    "Period",
-                    kai_period_result,
-                )
-                append_enum_issue(
-                    issues,
-                    config,
-                    kai.get("source_row"),
-                    "KAI",
-                    kai.get("title"),
-                    "Polarity",
-                    kai_polarity_result,
-                )
+                if not kai_field_matches_output(kai, output, "period"):
+                    append_enum_issue(
+                        issues,
+                        config,
+                        kai.get("source_row"),
+                        "KAI",
+                        kai.get("title"),
+                        "Period",
+                        kai_period_result,
+                    )
+                if not kai_field_matches_output(kai, output, "polarity"):
+                    append_enum_issue(
+                        issues,
+                        config,
+                        kai.get("source_row"),
+                        "KAI",
+                        kai.get("title"),
+                        "Polarity",
+                        kai_polarity_result,
+                    )
                 append_enum_issue(
                     issues,
                     config,
@@ -1158,7 +1166,7 @@ def build_upload_rows(
                     "Nature Of Work",
                     kai_nature_result,
                 )
-                if kai.get("cascading") is not None:
+                if not kai_field_matches_output(kai, output, "cascading"):
                     append_enum_issue(
                         issues,
                         config,
@@ -1168,7 +1176,7 @@ def build_upload_rows(
                         "Cascading",
                         normalize_cascading(kai.get("cascading")),
                     )
-                if kai.get("ownership_type") is not None:
+                if not kai_field_matches_output(kai, output, "ownership_type"):
                     append_enum_issue(
                         issues,
                         config,

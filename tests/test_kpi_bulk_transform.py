@@ -212,6 +212,7 @@ class KpiBulkTransformTest(unittest.TestCase):
 
         impacts = parse_block_sheet(rows, config, issues)
 
+        self.assertEqual(impacts[0].source_row, 2)
         self.assertEqual(impacts[0].outputs[0]["polarity"], "Positif")
         self.assertEqual(impacts[0].outputs[0]["kai"]["polarity"], "Positif")
         self.assertIsNone(impacts[0].outputs[0]["kai"]["nature_of_work"])
@@ -284,6 +285,20 @@ class KpiBulkTransformTest(unittest.TestCase):
         append_enum_issue(
             issues,
             config,
+            6,
+            "IMPACT",
+            "Impact Title",
+            "Polarity",
+            NormalizedEnum(
+                value="POSITIVE",
+                status=NormalizationStatus.NORMALIZED,
+                raw_value="Positif",
+                message="Polarity normalized to POSITIVE.",
+            ),
+        )
+        append_enum_issue(
+            issues,
+            config,
             7,
             "OUTPUT",
             "Output Title",
@@ -310,15 +325,134 @@ class KpiBulkTransformTest(unittest.TestCase):
             ),
         )
 
-        self.assertEqual(issues[0].severity, "warning")
+        self.assertEqual(issues[0].severity, "info")
         self.assertIn(
-            "enum_issue category=defaulted; field=Period; raw=None; normalized=TRIWULANAN; Period missing; defaulted to fallback period TRIWULANAN.",
+            "enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.",
             issues[0].message,
         )
-        self.assertEqual(issues[1].severity, "error")
+        self.assertEqual(issues[1].severity, "warning")
+        self.assertIn(
+            "enum_issue category=defaulted; field=Period; raw=None; normalized=TRIWULANAN; Period missing; defaulted to fallback period TRIWULANAN.",
+            issues[1].message,
+        )
+        self.assertEqual(issues[2].severity, "error")
         self.assertIn(
             "enum_issue category=invalid; field=Period; raw=bogus; normalized=None; Invalid period.",
-            issues[1].message,
+            issues[2].message,
+        )
+
+    def test_build_upload_rows_uses_impact_source_row_for_normalized_polarity_issue(self):
+        config = PositionConfig(
+            sheet_name="Officer",
+            position_name="Officer",
+            group_name="Group Raw",
+            directorate_name="Direktorat Raw",
+            position_nomenclature_id="333",
+            position_scope="non_structural",
+        )
+        impact = ImpactRecord(
+            source_row=12,
+            bsc="Financial",
+            title="Revenue",
+            unit="Rupiah",
+            period="TRIWULANAN",
+            formula="Revenue",
+            polarity="Positif",
+            weight="100",
+        )
+        issues = []
+
+        rows, _ = build_upload_rows(config, None, [impact], 1, issues)
+
+        self.assertEqual(dict(zip(UPLOAD_HEADERS, rows[0]))["Polarity"], "POSITIVE")
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(issues[0].severity, "info")
+        self.assertEqual(issues[0].source_row, 12)
+        self.assertEqual(issues[0].record_type, "IMPACT")
+        self.assertIn(
+            "enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.",
+            issues[0].message,
+        )
+
+    def test_parsed_kai_inherited_fields_do_not_duplicate_output_enum_issues(self):
+        config = PositionConfig(
+            sheet_name="Officer Kinerja Individu",
+            position_name="Officer I Kinerja Individu",
+            group_name="Group Pengelolaan SDM",
+            directorate_name="Direktorat Sumber Daya Manusia dan Umum",
+        )
+        rows = [
+            [
+                "Jenis Posisi",
+                "BSC Perspective",
+                "KPI Impact",
+                "KPI Impact Unit",
+                "KPI Impact Frequency",
+                "KPI Impact Formula",
+                "%Weight (Impact)",
+                "KPI Impact Polarity",
+                "KPI Output",
+                "%Weight (Output)",
+                "KPI Output Definition",
+                "KPI Output Unit",
+                "KPI Output Frequency",
+                "KPI Output Formula",
+                "KPI Output Polarity",
+                "Coverage KPI Output",
+                "Cascading Tagging (KPI Output)",
+                "Nature of Work (KAI)",
+                "Key Activity Indicator (KAI)",
+                "%Weight (Activity)",
+            ],
+            [
+                "Struktural",
+                "Financial",
+                "Net Income",
+                "Rupiah",
+                "TRIWULANAN",
+                "Revenue - Cost",
+                "100",
+                "POSITIVE",
+                "Penyempurnaan PMS",
+                "100",
+                "Enhancement PMS",
+                "%",
+                "Triwulan",
+                "realisasi/target",
+                "Positif",
+                "Non Routine",
+                "SPECIFIC",
+                "Routine",
+                "update SOP",
+                "100",
+            ],
+        ]
+        parse_issues = []
+        issues = []
+
+        impacts = parse_block_sheet(rows, config, parse_issues)
+        self.assertEqual(impacts[0].source_row, 2)
+
+        upload_rows, _ = build_upload_rows(config, "528", impacts, 1, issues)
+        row_maps = [dict(zip(UPLOAD_HEADERS, row)) for row in upload_rows]
+
+        self.assertEqual([row["KPI Type"] for row in row_maps], ["IMPACT", "OUTPUT", "KAI"])
+        messages = [issue.message for issue in issues]
+        self.assertTrue(any("enum_issue category=normalized; field=Period" in message for message in messages))
+        self.assertTrue(any("enum_issue category=normalized; field=Polarity" in message for message in messages))
+        self.assertTrue(any("enum_issue category=cross_column; field=Cascading" in message for message in messages))
+        self.assertTrue(any("enum_issue category=cross_column; field=Ownership Type" in message for message in messages))
+        self.assertFalse(
+            any(
+                issue.record_type == "KAI" and "field=Cascading" in issue.message
+                for issue in issues
+            )
+        )
+        self.assertFalse(
+            any(
+                issue.record_type == "KAI" and "field=Ownership Type" in issue.message
+                for issue in issues
+            )
         )
 
     def test_build_upload_rows_reports_ambiguous_output_period(self):
@@ -359,9 +493,9 @@ class KpiBulkTransformTest(unittest.TestCase):
         )
 
         self.assertEqual(output_row["Period"], "TRIWULANAN")
-        self.assertEqual(len(issues), 1)
-        self.assertEqual(issues[0].severity, "warning")
-        self.assertIn("enum_issue category=ambiguous; field=Period", issues[0].message)
+        matching = [issue for issue in issues if "enum_issue category=ambiguous; field=Period" in issue.message]
+        self.assertEqual(len(matching), 1)
+        self.assertEqual(matching[0].severity, "warning")
 
     def test_build_upload_rows_reports_cross_column_output_cascading(self):
         config = PositionConfig(
@@ -401,9 +535,9 @@ class KpiBulkTransformTest(unittest.TestCase):
         )
 
         self.assertEqual(output_row["Cascading"], "INDIRECT")
-        self.assertEqual(len(issues), 1)
-        self.assertEqual(issues[0].severity, "warning")
-        self.assertIn("enum_issue category=cross_column; field=Cascading", issues[0].message)
+        matching = [issue for issue in issues if "enum_issue category=cross_column; field=Cascading" in issue.message]
+        self.assertEqual(len(matching), 1)
+        self.assertEqual(matching[0].severity, "warning")
 
     def test_build_upload_rows_reports_cross_column_kai_nature(self):
         config = PositionConfig(
@@ -452,9 +586,11 @@ class KpiBulkTransformTest(unittest.TestCase):
 
         self.assertEqual(kai_row["Period"], "TAHUNAN")
         self.assertEqual(kai_row["Nature Of Work (KAI Only)"], "Non Routine")
-        self.assertEqual(len(issues), 1)
-        self.assertEqual(issues[0].severity, "warning")
-        self.assertIn("enum_issue category=cross_column; field=Nature Of Work", issues[0].message)
+        matching = [
+            issue for issue in issues if "enum_issue category=cross_column; field=Nature Of Work" in issue.message
+        ]
+        self.assertEqual(len(matching), 1)
+        self.assertEqual(matching[0].severity, "warning")
 
     def test_unknown_polarity_values_default_to_positive_enum(self):
         self.assertEqual(uploader_polarity("INDIRECT"), "POSITIVE")
@@ -651,9 +787,15 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual(kai_row["Unit"], "%")
         self.assertEqual(kai_row["Cascading"], "INDIRECT")
         self.assertEqual(kai_row["Ownership Type"], "SPECIFIC")
-        self.assertEqual(len(issues), 2)
-        self.assertIn("enum_issue category=cross_column; field=Cascading", issues[0].message)
-        self.assertIn("enum_issue category=cross_column; field=Ownership Type", issues[1].message)
+        messages = [issue.message for issue in issues]
+        self.assertEqual(
+            sum("enum_issue category=cross_column; field=Cascading" in message for message in messages),
+            1,
+        )
+        self.assertEqual(
+            sum("enum_issue category=cross_column; field=Ownership Type" in message for message in messages),
+            1,
+        )
 
     def test_duplicate_outputs_merge_weight_and_reparent_kai_children(self):
         config = PositionConfig(
