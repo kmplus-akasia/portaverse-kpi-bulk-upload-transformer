@@ -368,6 +368,9 @@ def normalize_kai_nature(value: str | None, period: str | None = None) -> Normal
         status = NormalizationStatus.OK if raw == canonical else NormalizationStatus.NORMALIZED
         return enum_result(canonical, status, raw, "KAI Nature normalized to Non Routine.")
 
+    if raw_key in {"pdf", "diunggah"} or re.search(r"(?:https?://|www\.)", raw, flags=re.IGNORECASE):
+        return enum_result(inferred, NormalizationStatus.CROSS_COLUMN, raw, f"KAI Nature contains cross-column value; inferred as {inferred}.")
+
     if _is_cross_column_key(raw_key):
         return enum_result(inferred, NormalizationStatus.CROSS_COLUMN, raw, f"KAI Nature contains cross-column value; inferred as {inferred}.")
     return enum_result(inferred, NormalizationStatus.INVALID, raw, f"Invalid KAI Nature inferred as {inferred}.")

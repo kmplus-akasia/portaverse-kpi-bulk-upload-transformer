@@ -311,6 +311,14 @@ class KpiBulkTransformTest(unittest.TestCase):
         polluted_nature = normalize_kai_nature("INDIRECT", "BULANAN")
         self.assertEqual(polluted_nature.value, "Routine")
         self.assertEqual(polluted_nature.status, NormalizationStatus.CROSS_COLUMN)
+        pdf_nature = normalize_kai_nature("Pdf", "TAHUNAN")
+        self.assertEqual(pdf_nature.value, "Non Routine")
+        self.assertEqual(pdf_nature.status, NormalizationStatus.CROSS_COLUMN)
+        uploaded_nature = normalize_kai_nature("Diunggah", "BULANAN")
+        self.assertEqual(uploaded_nature.value, "Routine")
+        self.assertEqual(uploaded_nature.status, NormalizationStatus.CROSS_COLUMN)
+        url_nature = normalize_kai_nature("https://example.com/report.pdf", "BULANAN")
+        self.assertEqual(url_nature.status, NormalizationStatus.CROSS_COLUMN)
         self.assertEqual(normalize_kai_nature("Non-Rotine", "BULANAN").value, "Non Routine")
 
     def test_zero_weight_rows_are_dropped_and_period_inherits_from_parent(self):
