@@ -1787,6 +1787,20 @@ def merge_mapping_entry(
     if current is None:
         mapping[normalized] = dict(entry)
         return
+    if mapping_entry_scope(entry) == "structural":
+        current.update({key_name: value for key_name, value in entry.items() if value is not None})
+        current["position_nomenclature_id"] = None
+        current["position_scope"] = "structural"
+        return
+    if mapping_entry_scope(current) == "structural":
+        for key_name, value in entry.items():
+            if key_name == "position_nomenclature_id":
+                continue
+            if current.get(key_name) in (None, "") and value not in (None, ""):
+                current[key_name] = value
+        current["position_nomenclature_id"] = None
+        current["position_scope"] = "structural"
+        return
     # PNID rows are more specific for non-structural positions and must win
     # over a generic active PMID row with a similar title.
     if entry.get("position_nomenclature_id"):
@@ -1795,6 +1809,12 @@ def merge_mapping_entry(
         for key_name, value in entry.items():
             if current.get(key_name) in (None, "") and value not in (None, ""):
                 current[key_name] = value
+
+
+def mapping_entry_scope(entry: dict[str, str | None]) -> str | None:
+    if str(entry.get("position_master_type_id") or "") == "5":
+        return "structural"
+    return normalize_position_scope(entry.get("position_scope"))
 
 
 def load_nomenclature_mapping(
@@ -1822,6 +1842,7 @@ def load_nomenclature_mapping(
             "portaverse_group_name": norm_text(row.get("group_name")),
             "portaverse_company_name": norm_text(row.get("company_name")),
             "cluster_label": None,
+            "position_master_type_id": norm_text(row.get("position_master_type_id")),
         }
         merge_mapping_entry(mapping, position_name, entry)
 
@@ -1841,6 +1862,7 @@ def load_nomenclature_mapping(
             "portaverse_group_name": norm_text(row.get("active_group_name")) or norm_text(row.get("group_name")),
             "portaverse_company_name": norm_text(row.get("active_company_name")) or norm_text(row.get("company_name")),
             "cluster_label": cluster_label,
+            "position_master_type_id": norm_text(row.get("position_master_type_id")),
         }
         if row.get("position_master_id") not in (None, "", 0, "0"):
             entry["position_master_id"] = str(row["position_master_id"])
@@ -1989,12 +2011,21 @@ def refresh_config_from_mapping(
         and lookup_company_name
         and normalize_title(config.portaverse_company_name) != normalize_title(lookup_company_name)
     )
+    lookup_scope = mapping_entry_scope(lookup)
     if not has_manual_position_id or has_stale_company_mapping:
         config.position_master_id = lookup.get("position_master_id")
         config.position_nomenclature_id = lookup.get("position_nomenclature_id")
-        config.position_scope = lookup.get("position_scope")
+        config.position_scope = lookup_scope or lookup.get("position_scope")
     elif not config.position_scope:
-        config.position_scope = lookup.get("position_scope")
+        config.position_scope = lookup_scope or lookup.get("position_scope")
+    elif lookup_scope == "structural":
+        config.position_scope = "structural"
+        config.position_master_id = lookup.get("position_master_id") or config.position_master_id or config.position_nomenclature_id
+        config.position_nomenclature_id = None
+    elif lookup_scope == "non_structural" and not is_structural_scope(config):
+        config.position_scope = "non_structural"
+        config.position_nomenclature_id = lookup.get("position_nomenclature_id") or config.position_nomenclature_id
+        config.position_master_id = None
     config.portaverse_position_title = lookup.get("portaverse_position_title") or config.portaverse_position_title
     config.portaverse_group_name = lookup.get("portaverse_group_name") or config.portaverse_group_name
     config.portaverse_company_name = lookup.get("portaverse_company_name") or config.portaverse_company_name

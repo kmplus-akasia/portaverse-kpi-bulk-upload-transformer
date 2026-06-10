@@ -960,6 +960,79 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual(config.position_scope, "non_structural")
         self.assertEqual(config.group_name, "Group Raw")
 
+    def test_refresh_config_from_mapping_uses_structural_scope_when_number_exists_as_pmid_and_pnid(self):
+        mapping = {
+            "manager rekrutmen karir": {
+                "position_master_id": "515",
+                "position_nomenclature_id": "515",
+                "position_scope": "non_structural",
+                "position_master_type_id": "5",
+                "portaverse_position_title": "Manager Rekrutmen dan Karir",
+                "portaverse_group_name": "Unit Pendukung Rekrutmen dan Karir",
+                "portaverse_company_name": "PT Pelabuhan Indonesia (Persero)",
+                "cluster_label": "Manager Rekrutmen-Karir",
+            }
+        }
+        config = PositionConfig(
+            sheet_name="Manager Rekrutmen-Karir",
+            position_name="Manager Rekrutmen-Karir",
+            group_name="Group Pengelolaan SDM",
+            directorate_name="Direktorat SDM & Umum",
+            position_nomenclature_id="515",
+            position_scope="non_structural",
+        )
+
+        refresh_configs_from_mapping([config], mapping)
+
+        self.assertEqual(config.position_master_id, "515")
+        self.assertIsNone(config.position_nomenclature_id)
+        self.assertEqual(config.position_scope, "structural")
+
+    def test_load_nomenclature_mapping_structural_title_wins_over_same_number_pnid(self):
+        payload = {
+            "position_master_rows": [
+                {
+                    "position_master_id": 515,
+                    "position_name": "Manager Rekrutmen dan Karir",
+                    "position_master_type_id": 5,
+                    "company_id": 1,
+                    "company_name": "PT Pelabuhan Indonesia (Persero)",
+                    "group_name": "Unit Pendukung Rekrutmen dan Karir",
+                    "is_company_active": 1,
+                    "is_group_active": 1,
+                    "is_position_active": 1,
+                    "is_position_organization_active": 1,
+                }
+            ],
+            "rows": [
+                {
+                    "cluster_id": 515,
+                    "cluster_label": "Manager Rekrutmen dan Karir",
+                    "position_master_id": 9999,
+                    "position_name": "Officer I Rekrutmen dan Karir",
+                    "position_master_type_id": 6,
+                    "type_name": "General",
+                    "company_id": 1,
+                    "company_name": "PT Pelabuhan Indonesia (Persero)",
+                    "active_company_name": "PT Pelabuhan Indonesia (Persero)",
+                    "group_name": "Unit Pendukung Rekrutmen dan Karir",
+                    "active_group_name": "Unit Pendukung Rekrutmen dan Karir",
+                    "is_company_active": 1,
+                    "is_group_active": 1,
+                }
+            ],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "reference.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            mapping = load_nomenclature_mapping(path, "1")
+
+        manager = mapping["manager rekrutmen dan karir"]
+        self.assertEqual(manager["position_master_id"], "515")
+        self.assertIsNone(manager["position_nomenclature_id"])
+        self.assertEqual(manager["position_scope"], "structural")
+
     def test_refresh_config_from_mapping_preserves_reviewed_manual_pmid(self):
         mapping = {
             "different manager title": {
