@@ -14,6 +14,7 @@ from kpi_bulk_transform import (  # noqa: E402
     UPLOAD_HEADERS,
     append_enum_issue,
     build_upload_rows,
+    discover_configs_for_workbook,
     is_active_valid_sheet,
     load_config,
     load_nomenclature_mapping,
@@ -927,6 +928,35 @@ class KpiBulkTransformTest(unittest.TestCase):
         SheetLike.sheet_state = "visible"
         SheetLike.sheet_properties.tabColor.rgb = "FF70AD47"
         self.assertFalse(is_active_valid_sheet(SheetLike()))
+
+    def test_discover_configs_falls_back_to_visible_header_sheets_when_no_yellow_tabs_exist(self):
+        workbook = Workbook()
+        worksheet = workbook.active
+        worksheet.title = "OFFICER"
+        worksheet.append(["Nama Posisi", "Officer"])
+        worksheet.append(["Posisi", "Group Operasi"])
+        worksheet.append(["BSC Perspective", "KPI Impact", "KPI Output", "Key Activity Indicator (KAI)"])
+        mapping = {
+            "officer": {
+                "position_master_id": "9001",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "portaverse_position_title": "Officer",
+                "portaverse_group_name": "Group Operasi",
+                "portaverse_company_name": "PT Pelabuhan Indonesia (Persero)",
+                "cluster_label": None,
+            }
+        }
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "KAMUS KPI TEST.xlsx"
+            workbook.save(path)
+
+            configs = discover_configs_for_workbook("KAMUS KPI TEST.xlsx", path, mapping)
+
+        self.assertEqual(len(configs), 1)
+        self.assertEqual(configs[0].sheet_name, "OFFICER")
+        self.assertEqual(configs[0].position_master_id, "9001")
 
     def test_mapping_restricts_lookup_to_target_company_and_uses_cluster_label(self):
         payload = {

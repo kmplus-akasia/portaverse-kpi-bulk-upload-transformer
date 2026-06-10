@@ -2217,12 +2217,15 @@ def discover_configs_for_workbook(
     nomenclature_mapping: dict[str, dict[str, str | None]],
 ) -> list[PositionConfig]:
     active_sheet_names = active_valid_sheet_names_from_xlsx(workbook_path)
+    require_yellow_tab = bool(active_sheet_names)
     workbook = load_workbook(workbook_path, read_only=True, data_only=True)
     configs: list[PositionConfig] = []
     directorate_name = Path(source_workbook).stem.split(" - ")[0]
     normalized_mapping = build_normalized_position_mapping(nomenclature_mapping)
     for worksheet in workbook.worksheets:
-        if worksheet.title not in active_sheet_names:
+        if require_yellow_tab and worksheet.title not in active_sheet_names:
+            continue
+        if not require_yellow_tab and getattr(worksheet, "sheet_state", "visible") != "visible":
             continue
         rows = [list(row) for row in worksheet.iter_rows(values_only=True)]
         try:
@@ -2271,19 +2274,14 @@ def discover_configs_for_workbook(
     return configs
 
 
-def transform_workbook(
+def collect_parsed_sheets(
     source_path: Path,
-    template_path: Path,
     positions_dir: Path | None,
     configs: list[PositionConfig],
-    output_path: Path,
-    report_path: Path,
-) -> tuple[int, int, int, int]:
+    issues: list[ValidationIssue],
+) -> list[ParsedSheet]:
     master_index = PositionMasterIndex.load(positions_dir) if positions_dir else PositionMasterIndex()
-    issues: list[ValidationIssue] = []
     parsed_sheets: list[ParsedSheet] = []
-    output_rows: list[list[Any]] = []
-    next_global_id = 1
 
     for config in configs:
         metadata = master_index.resolve(config)
@@ -2359,9 +2357,18 @@ def transform_workbook(
                 )
             )
         parsed_sheets.append(ParsedSheet(config=config, metadata=metadata, impacts=impacts))
+    return parsed_sheets
 
-    backfill_shared_impact_fields(parsed_sheets)
 
+def write_transformed_workbook(
+    template_path: Path,
+    output_path: Path,
+    report_path: Path,
+    parsed_sheets: list[ParsedSheet],
+    issues: list[ValidationIssue],
+) -> tuple[int, int, int, int]:
+    output_rows: list[list[Any]] = []
+    next_global_id = 1
     for parsed in parsed_sheets:
         position_master_id = resolve_output_position_master_id(parsed.config, parsed.metadata)
         if not position_master_id:
@@ -2400,6 +2407,20 @@ def transform_workbook(
     print(f"Generated rows: {len(output_rows)}")
     print(f"Issues: errors={errors} warnings={warnings} info={infos}")
     return len(output_rows), errors, warnings, infos
+
+
+def transform_workbook(
+    source_path: Path,
+    template_path: Path,
+    positions_dir: Path | None,
+    configs: list[PositionConfig],
+    output_path: Path,
+    report_path: Path,
+) -> tuple[int, int, int, int]:
+    issues: list[ValidationIssue] = []
+    parsed_sheets = collect_parsed_sheets(source_path, positions_dir, configs, issues)
+    backfill_shared_impact_fields(parsed_sheets)
+    return write_transformed_workbook(template_path, output_path, report_path, parsed_sheets, issues)
 
 
 def extract_zip_workbooks(source_zip: Path, destination: Path) -> dict[str, Path]:
@@ -2443,19 +2464,28 @@ def run_zip_batch(args: argparse.Namespace) -> int:
         total_errors = 0
         total_rows = 0
         generated_at = datetime.now()
+        batch_items: list[tuple[str, list[ParsedSheet], list[ValidationIssue], Path]] = []
         for source_workbook, workbook_path in extracted.items():
             workbook_configs = configs_by_workbook.get(source_workbook, [])
             if not workbook_configs:
                 continue
             output_name = conversion_output_name(source_workbook, workbook_configs, generated_at)
             output_dir = args.output_dir / output_name
-            rows, errors, _, _ = transform_workbook(
-                workbook_path,
+            workbook_issues: list[ValidationIssue] = []
+            parsed_sheets = collect_parsed_sheets(workbook_path, args.positions_dir, workbook_configs, workbook_issues)
+            batch_items.append((output_name, parsed_sheets, workbook_issues, output_dir))
+
+        backfill_shared_impact_fields(
+            [parsed_sheet for _, parsed_sheets, _, _ in batch_items for parsed_sheet in parsed_sheets]
+        )
+
+        for output_name, parsed_sheets, workbook_issues, output_dir in batch_items:
+            rows, errors, _, _ = write_transformed_workbook(
                 args.template,
-                args.positions_dir,
-                workbook_configs,
                 output_dir / f"{output_name}.xlsx",
                 output_dir / f"{output_name}.report.csv",
+                parsed_sheets,
+                workbook_issues,
             )
             total_rows += rows
             total_errors += errors

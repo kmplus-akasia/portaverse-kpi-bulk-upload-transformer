@@ -102,6 +102,17 @@ python3 scripts/kpi_bulk_transform.py \
   --output-dir "output/group2_conversion_$(date +%Y%m%d_%H%M)"
 ```
 
+For Group 3 or affiliate/non-HO workbooks, use the all-company reference lookup:
+
+```bash
+python3 scripts/kpi_bulk_transform.py \
+  --source "/absolute/path/to/KAMUS KPI GROUP 3.zip" \
+  --template "input/KPI Upload Template.xlsx" \
+  --mapping "configs/production_position_reference.json" \
+  --target-company-id "" \
+  --output-dir "output/group3_conversion_$(date +%Y%m%d_%H%M)"
+```
+
 Run one workbook:
 
 ```bash
