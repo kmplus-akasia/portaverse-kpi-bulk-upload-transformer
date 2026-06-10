@@ -26,6 +26,7 @@ from kpi_bulk_transform import (  # noqa: E402
     refresh_configs_from_mapping,
     uploader_kai_nature,
     uploader_polarity,
+    validate_output_rows,
     write_output_workbook,
 )
 
@@ -98,6 +99,60 @@ class KpiBulkTransformTest(unittest.TestCase):
         row_map = dict(zip(UPLOAD_HEADERS, rows[0]))
         self.assertEqual(row_map["Position Master ID (Required)"], "509")
         self.assertIsNone(row_map["Position Nomenklatur ID"])
+
+    def test_validate_output_rows_rejects_invalid_upload_enums_and_dual_position_ids(self):
+        config = PositionConfig(
+            sheet_name="Manager Rekrutmen-Karir",
+            position_name="Manager Rekrutmen dan Karir",
+            group_name="Group Pengelolaan SDM",
+            directorate_name="Direktorat SDM & Umum",
+        )
+        impact = dict.fromkeys(UPLOAD_HEADERS)
+        impact.update(
+            {
+                "IDKPI": "1",
+                "Group": "Group Pengelolaan SDM",
+                "Direktorat": "Direktorat SDM & Umum",
+                "Posisi": "Manager Rekrutmen dan Karir",
+                "Position Master ID (Required)": "515",
+                "BSC Perspective": "Learning & Growth",
+                "KPI Type": "IMPACT",
+                "Title": "Pemenuhan formasi",
+                "Unit": "%",
+                "Polarity": "POSITIVE",
+                "Period": "PER TAHUN",
+                "Formula": "realisasi/target",
+                "Weight (%)": "10",
+                "Cascading": "SPECIFIC",
+                "Ownership Type": "Non Routine",
+                "Position Nomenklatur ID": "515",
+            }
+        )
+        kai = dict(impact)
+        kai.update(
+            {
+                "IDKPI": "2",
+                "KPI Type": "KAI",
+                "Parent KPI ID": "1",
+                "Parent KPI Title": "Pemenuhan formasi",
+                "Title": "Follow up rekrutmen",
+                "Period": "TAHUNAN",
+                "Cascading": "DIRECT",
+                "Nature Of Work (KAI Only)": "Kadang",
+                "Ownership Type": "SPECIFIC",
+                "Position Nomenklatur ID": None,
+            }
+        )
+        issues = []
+
+        validate_output_rows(config, [[row[header] for header in UPLOAD_HEADERS] for row in [impact, kai]], issues)
+
+        messages = [issue.message for issue in issues]
+        self.assertIn("Invalid Period enum: PER TAHUN", messages)
+        self.assertIn("Invalid Cascading enum: SPECIFIC", messages)
+        self.assertIn("Invalid Ownership Type enum: Non Routine", messages)
+        self.assertIn("Invalid upload scope: row has both PMID and PNID.", messages)
+        self.assertIn("Invalid KAI Nature enum: Kadang", messages)
 
     def test_load_config_treats_zero_position_master_id_as_missing_and_loads_pnid(self):
         payload = {

@@ -1433,9 +1433,68 @@ def validate_output_rows(
                     message=f"Invalid Polarity enum: {polarity}",
                 )
             )
-        if not norm_text(row_map.get("Position Master ID (Required)")) and not norm_text(
-            row_map.get("Position Nomenklatur ID")
-        ):
+        period = norm_text(row_map.get("Period"))
+        if period and period not in ALLOWED_UPLOAD_PERIODS:
+            issues.append(
+                ValidationIssue(
+                    severity="error",
+                    sheet_name=config.sheet_name,
+                    source_row=None,
+                    record_type=record_type or "row",
+                    title=title,
+                    message=f"Invalid Period enum: {period}",
+                )
+            )
+        cascading = norm_text(row_map.get("Cascading"))
+        if cascading and cascading not in ALLOWED_UPLOAD_CASCADING:
+            issues.append(
+                ValidationIssue(
+                    severity="error",
+                    sheet_name=config.sheet_name,
+                    source_row=None,
+                    record_type=record_type or "row",
+                    title=title,
+                    message=f"Invalid Cascading enum: {cascading}",
+                )
+            )
+        ownership = norm_text(row_map.get("Ownership Type"))
+        if ownership and ownership not in ALLOWED_UPLOAD_OWNERSHIP:
+            issues.append(
+                ValidationIssue(
+                    severity="error",
+                    sheet_name=config.sheet_name,
+                    source_row=None,
+                    record_type=record_type or "row",
+                    title=title,
+                    message=f"Invalid Ownership Type enum: {ownership}",
+                )
+            )
+        nature = norm_text(row_map.get("Nature Of Work (KAI Only)"))
+        if record_type == "KAI" and nature and nature not in {"Routine", "Non Routine"}:
+            issues.append(
+                ValidationIssue(
+                    severity="error",
+                    sheet_name=config.sheet_name,
+                    source_row=None,
+                    record_type="KAI",
+                    title=title,
+                    message=f"Invalid KAI Nature enum: {nature}",
+                )
+            )
+        pmid = norm_text(row_map.get("Position Master ID (Required)"))
+        pnid = norm_text(row_map.get("Position Nomenklatur ID"))
+        if pmid and pnid:
+            issues.append(
+                ValidationIssue(
+                    severity="error",
+                    sheet_name=config.sheet_name,
+                    source_row=None,
+                    record_type=record_type or "row",
+                    title=title,
+                    message="Invalid upload scope: row has both PMID and PNID.",
+                )
+            )
+        if not pmid and not pnid:
             issues.append(
                 ValidationIssue(
                     severity="error",
