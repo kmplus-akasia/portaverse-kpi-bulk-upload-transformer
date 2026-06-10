@@ -472,6 +472,45 @@ class ValidationIssue:
     message: str
 
 
+def append_enum_issue(
+    issues: list[ValidationIssue] | None,
+    config: PositionConfig,
+    source_row: int | None,
+    record_type: str,
+    title: str | None,
+    field_name: str,
+    result: NormalizedEnum,
+) -> None:
+    if issues is None:
+        return
+    if result.status not in {
+        NormalizationStatus.DEFAULTED,
+        NormalizationStatus.CROSS_COLUMN,
+        NormalizationStatus.AMBIGUOUS,
+        NormalizationStatus.INVALID,
+    }:
+        return
+
+    severity = (
+        "error"
+        if result.value is None and result.status in {NormalizationStatus.AMBIGUOUS, NormalizationStatus.INVALID}
+        else "warning"
+    )
+    issues.append(
+        ValidationIssue(
+            severity=severity,
+            sheet_name=config.sheet_name,
+            source_row=source_row,
+            record_type=record_type,
+            title=title,
+            message=(
+                f"enum_issue category={result.status.value}; field={field_name}; raw={result.raw_value}; "
+                f"normalized={result.value}; {result.message}"
+            ),
+        )
+    )
+
+
 @dataclass
 class PositionConfig:
     sheet_name: str
@@ -968,17 +1007,10 @@ def build_upload_rows(
         impact_id = str(next_id)
         next_id += 1
         impact_ids[impact.title] = impact_id
-        if issues is not None and not norm_text(impact.polarity):
-            issues.append(
-                ValidationIssue(
-                    severity="info",
-                    sheet_name=config.sheet_name,
-                    source_row=None,
-                    record_type="IMPACT",
-                    title=impact.title,
-                    message="Missing polarity defaulted to POSITIVE.",
-                )
-            )
+        impact_polarity_result = normalize_polarity(impact.polarity)
+        impact_period_result = normalize_period(impact.period)
+        append_enum_issue(issues, config, None, "IMPACT", impact.title, "Polarity", impact_polarity_result)
+        append_enum_issue(issues, config, None, "IMPACT", impact.title, "Period", impact_period_result)
         rows.append(
             [
                 impact_id,
@@ -994,8 +1026,8 @@ def build_upload_rows(
                 impact.title,
                 None,
                 impact.unit,
-                uploader_polarity(impact.polarity),
-                uploader_period(impact.period),
+                impact_polarity_result.value,
+                impact_period_result.value,
                 impact.formula,
                 impact.weight,
                 None,
@@ -1013,22 +1045,52 @@ def build_upload_rows(
         merged_outputs_by_impact[impact.title] = merge_duplicate_outputs(config, impact, issues)
 
     for impact in impacts:
+        parent_period_result = normalize_period(impact.period)
         for output in merged_outputs_by_impact[impact.title]:
             output_id = str(next_id)
             next_id += 1
             output["_generated_id"] = output_id
-            output_period = output.get("period") or impact.period
-            if issues is not None and not norm_text(output.get("polarity")):
-                issues.append(
-                    ValidationIssue(
-                        severity="info",
-                        sheet_name=config.sheet_name,
-                        source_row=output.get("source_row"),
-                        record_type="OUTPUT",
-                        title=output.get("title"),
-                        message="Missing polarity defaulted to POSITIVE.",
-                    )
-                )
+            output_period_result = normalize_period(output.get("period"), parent_period_result.value)
+            output["_period_result"] = output_period_result
+            output_polarity_result = normalize_polarity(output.get("polarity"))
+            output_cascading_result = normalize_cascading(output.get("cascading"))
+            output_ownership_result = normalize_ownership_type(output.get("ownership_type"))
+            append_enum_issue(
+                issues,
+                config,
+                output.get("source_row"),
+                "OUTPUT",
+                output.get("title"),
+                "Period",
+                output_period_result,
+            )
+            append_enum_issue(
+                issues,
+                config,
+                output.get("source_row"),
+                "OUTPUT",
+                output.get("title"),
+                "Polarity",
+                output_polarity_result,
+            )
+            append_enum_issue(
+                issues,
+                config,
+                output.get("source_row"),
+                "OUTPUT",
+                output.get("title"),
+                "Cascading",
+                output_cascading_result,
+            )
+            append_enum_issue(
+                issues,
+                config,
+                output.get("source_row"),
+                "OUTPUT",
+                output.get("title"),
+                "Ownership Type",
+                output_ownership_result,
+            )
             rows.append(
                 [
                     output_id,
@@ -1044,58 +1106,90 @@ def build_upload_rows(
                     output["title"],
                     output["description"],
                     output["unit"],
-                    uploader_polarity(output["polarity"]),
-                    uploader_period(output_period),
+                    output_polarity_result.value,
+                    output_period_result.value,
                     output["formula"],
                     output["weight"],
-                    output["cascading"],
+                    output_cascading_result.value,
                     None,
                     None,
                     None,
-                    output["ownership_type"],
+                    output_ownership_result.value,
                     output_position_nomenclature_id,
                     config.rkm_code_id,
                 ]
             )
 
     for impact in impacts:
+        parent_period_result = normalize_period(impact.period)
         for output in merged_outputs_by_impact[impact.title]:
+            output_period_result = output.get("_period_result") or normalize_period(output.get("period"), parent_period_result.value)
             for kai in output_kai_records(output):
-                kai_period = kai.get("period") or output.get("period") or impact.period
-                kai_nature = uploader_kai_nature(kai.get("nature_of_work"), kai_period)
-                if issues is not None and not is_percentage_formula(kai.get("formula")):
-                    issues.append(
-                        ValidationIssue(
-                            severity="warning",
-                            sheet_name=config.sheet_name,
-                            source_row=kai.get("source_row"),
-                            record_type="KAI",
-                            title=kai.get("title"),
-                            message="KAI formula may not be percentage-based or is blank.",
-                        )
+                kai_period_result = normalize_period(
+                    kai.get("period") or output.get("period"),
+                    output_period_result.value or parent_period_result.value,
+                )
+                kai_polarity_result = normalize_polarity(kai.get("polarity"))
+                kai_nature_result = normalize_kai_nature(kai.get("nature_of_work"), kai_period_result.value)
+                append_enum_issue(
+                    issues,
+                    config,
+                    kai.get("source_row"),
+                    "KAI",
+                    kai.get("title"),
+                    "Period",
+                    kai_period_result,
+                )
+                append_enum_issue(
+                    issues,
+                    config,
+                    kai.get("source_row"),
+                    "KAI",
+                    kai.get("title"),
+                    "Polarity",
+                    kai_polarity_result,
+                )
+                append_enum_issue(
+                    issues,
+                    config,
+                    kai.get("source_row"),
+                    "KAI",
+                    kai.get("title"),
+                    "Nature Of Work",
+                    kai_nature_result,
+                )
+                if kai.get("cascading") is not None:
+                    append_enum_issue(
+                        issues,
+                        config,
+                        kai.get("source_row"),
+                        "KAI",
+                        kai.get("title"),
+                        "Cascading",
+                        normalize_cascading(kai.get("cascading")),
                     )
-                if issues is not None and not norm_text(kai.get("polarity")):
-                    issues.append(
-                        ValidationIssue(
-                            severity="info",
-                            sheet_name=config.sheet_name,
-                            source_row=kai.get("source_row"),
-                            record_type="KAI",
-                            title=kai.get("title"),
-                            message="Missing polarity defaulted to POSITIVE.",
-                        )
+                if kai.get("ownership_type") is not None:
+                    append_enum_issue(
+                        issues,
+                        config,
+                        kai.get("source_row"),
+                        "KAI",
+                        kai.get("title"),
+                        "Ownership Type",
+                        normalize_ownership_type(kai.get("ownership_type")),
                     )
-                if issues is not None and not norm_text(kai.get("nature_of_work")):
-                    issues.append(
-                        ValidationIssue(
-                            severity="info",
-                            sheet_name=config.sheet_name,
-                            source_row=kai.get("source_row"),
-                            record_type="KAI",
-                            title=kai.get("title"),
-                            message=f"Missing KAI Nature Of Work defaulted to {kai_nature}.",
+                if not is_percentage_formula(kai.get("formula")):
+                    if issues is not None:
+                        issues.append(
+                            ValidationIssue(
+                                severity="warning",
+                                sheet_name=config.sheet_name,
+                                source_row=kai.get("source_row"),
+                                record_type="KAI",
+                                title=kai.get("title"),
+                                message="KAI formula may not be percentage-based or is blank.",
+                            )
                         )
-                    )
                 rows.append(
                     [
                         str(next_id),
@@ -1111,12 +1205,12 @@ def build_upload_rows(
                         kai["title"],
                         kai["description"],
                         "%",
-                        uploader_polarity(kai["polarity"]),
-                        uploader_period(kai_period),
+                        kai_polarity_result.value,
+                        kai_period_result.value,
                         kai["formula"],
                         kai["weight"],
                         "INDIRECT",
-                        kai_nature,
+                        kai_nature_result.value,
                         None,
                         None,
                         "SPECIFIC",

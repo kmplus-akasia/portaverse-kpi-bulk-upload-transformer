@@ -8,9 +8,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from kpi_bulk_transform import (  # noqa: E402
     ImpactRecord,
+    NormalizedEnum,
     NormalizationStatus,
     PositionConfig,
     UPLOAD_HEADERS,
+    append_enum_issue,
     build_upload_rows,
     is_active_valid_sheet,
     load_config,
@@ -270,6 +272,190 @@ class KpiBulkTransformTest(unittest.TestCase):
         yearly_kai = dict(zip(UPLOAD_HEADERS, rows[2]))
         self.assertEqual(yearly_kai["Nature Of Work (KAI Only)"], "Non Routine")
 
+    def test_append_enum_issue_uses_warning_for_defaulted_and_error_for_invalid_without_value(self):
+        config = PositionConfig(
+            sheet_name="Officer",
+            position_name="Officer",
+            group_name="Group",
+            directorate_name="Direktorat",
+        )
+        issues = []
+
+        append_enum_issue(
+            issues,
+            config,
+            7,
+            "OUTPUT",
+            "Output Title",
+            "Period",
+            NormalizedEnum(
+                value="TRIWULANAN",
+                status=NormalizationStatus.DEFAULTED,
+                raw_value=None,
+                message="Period missing; defaulted to fallback period TRIWULANAN.",
+            ),
+        )
+        append_enum_issue(
+            issues,
+            config,
+            8,
+            "OUTPUT",
+            "Output Title",
+            "Period",
+            NormalizedEnum(
+                value=None,
+                status=NormalizationStatus.INVALID,
+                raw_value="bogus",
+                message="Invalid period.",
+            ),
+        )
+
+        self.assertEqual(issues[0].severity, "warning")
+        self.assertIn(
+            "enum_issue category=defaulted; field=Period; raw=None; normalized=TRIWULANAN; Period missing; defaulted to fallback period TRIWULANAN.",
+            issues[0].message,
+        )
+        self.assertEqual(issues[1].severity, "error")
+        self.assertIn(
+            "enum_issue category=invalid; field=Period; raw=bogus; normalized=None; Invalid period.",
+            issues[1].message,
+        )
+
+    def test_build_upload_rows_reports_ambiguous_output_period(self):
+        config = PositionConfig(
+            sheet_name="Officer Kinerja Individu",
+            position_name="Officer I Kinerja Individu",
+            group_name="Group Pengelolaan SDM",
+            directorate_name="Direktorat Sumber Daya Manusia dan Umum",
+        )
+        impact = ImpactRecord(
+            bsc="Financial",
+            title="Net Income",
+            unit="Rupiah",
+            period="Triwulan",
+            formula="Revenue - Cost",
+            polarity="Positif",
+            weight="15",
+            outputs=[
+                {
+                    "source_row": 2,
+                    "title": "Penyempurnaan PMS",
+                    "description": "Enhancement PMS",
+                    "unit": "%",
+                    "period": "Triwulanan/Tahunan",
+                    "formula": "realisasi/target",
+                    "polarity": "Positif",
+                    "weight": "10",
+                    "cascading": "DIRECT",
+                    "ownership_type": "SPECIFIC",
+                }
+            ],
+        )
+        issues = []
+
+        rows, _ = build_upload_rows(config, "528", [impact], 1, issues)
+        output_row = next(
+            row for row in (dict(zip(UPLOAD_HEADERS, row)) for row in rows) if row["KPI Type"] == "OUTPUT"
+        )
+
+        self.assertEqual(output_row["Period"], "TRIWULANAN")
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(issues[0].severity, "warning")
+        self.assertIn("enum_issue category=ambiguous; field=Period", issues[0].message)
+
+    def test_build_upload_rows_reports_cross_column_output_cascading(self):
+        config = PositionConfig(
+            sheet_name="Officer Kinerja Individu",
+            position_name="Officer I Kinerja Individu",
+            group_name="Group Pengelolaan SDM",
+            directorate_name="Direktorat Sumber Daya Manusia dan Umum",
+        )
+        impact = ImpactRecord(
+            bsc="Financial",
+            title="Net Income",
+            unit="Rupiah",
+            period="Triwulan",
+            formula="Revenue - Cost",
+            polarity="Positif",
+            weight="15",
+            outputs=[
+                {
+                    "source_row": 2,
+                    "title": "Penyempurnaan PMS",
+                    "description": "Enhancement PMS",
+                    "unit": "%",
+                    "period": "Triwulan",
+                    "formula": "realisasi/target",
+                    "polarity": "Positif",
+                    "weight": "10",
+                    "cascading": "SPECIFIC",
+                    "ownership_type": "SPECIFIC",
+                }
+            ],
+        )
+        issues = []
+
+        rows, _ = build_upload_rows(config, "528", [impact], 1, issues)
+        output_row = next(
+            row for row in (dict(zip(UPLOAD_HEADERS, row)) for row in rows) if row["KPI Type"] == "OUTPUT"
+        )
+
+        self.assertEqual(output_row["Cascading"], "INDIRECT")
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(issues[0].severity, "warning")
+        self.assertIn("enum_issue category=cross_column; field=Cascading", issues[0].message)
+
+    def test_build_upload_rows_reports_cross_column_kai_nature(self):
+        config = PositionConfig(
+            sheet_name="Officer Kinerja Individu",
+            position_name="Officer I Kinerja Individu",
+            group_name="Group Pengelolaan SDM",
+            directorate_name="Direktorat Sumber Daya Manusia dan Umum",
+        )
+        impact = ImpactRecord(
+            bsc="Financial",
+            title="Net Income",
+            unit="Rupiah",
+            period="Triwulan",
+            formula="Revenue - Cost",
+            polarity="Positif",
+            weight="15",
+            outputs=[
+                {
+                    "source_row": 2,
+                    "title": "Penyempurnaan PMS",
+                    "description": "Enhancement PMS",
+                    "unit": "%",
+                    "period": "Triwulan",
+                    "formula": "realisasi/target",
+                    "polarity": "Positif",
+                    "weight": "10",
+                    "cascading": "DIRECT",
+                    "ownership_type": "SPECIFIC",
+                    "kai": {
+                        "source_row": 2,
+                        "title": "update SOP",
+                        "description": "desc kai",
+                        "formula": "progress x 100%",
+                        "weight": "5",
+                        "nature_of_work": "Pdf",
+                        "period": "Tahunan",
+                        "polarity": "Positif",
+                    },
+                }
+            ],
+        )
+        issues = []
+
+        rows, _ = build_upload_rows(config, "528", [impact], 1, issues)
+        kai_row = next(row for row in (dict(zip(UPLOAD_HEADERS, row)) for row in rows) if row["KPI Type"] == "KAI")
+
+        self.assertEqual(kai_row["Period"], "TAHUNAN")
+        self.assertEqual(kai_row["Nature Of Work (KAI Only)"], "Non Routine")
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(issues[0].severity, "warning")
+        self.assertIn("enum_issue category=cross_column; field=Nature Of Work", issues[0].message)
+
     def test_unknown_polarity_values_default_to_positive_enum(self):
         self.assertEqual(uploader_polarity("INDIRECT"), "POSITIVE")
         self.assertEqual(uploader_polarity("DUPLICATE"), "POSITIVE")
@@ -441,7 +627,7 @@ class KpiBulkTransformTest(unittest.TestCase):
                     "polarity": "Positif",
                     "weight": "5",
                     "cascading": "DIRECT",
-                    "ownership_type": "COMMON",
+                    "ownership_type": "SPECIFIC",
                     "kai": {
                         "source_row": 20,
                         "title": "update SOP",
@@ -451,20 +637,23 @@ class KpiBulkTransformTest(unittest.TestCase):
                         "nature_of_work": "Routine",
                         "period": "Triwulan",
                         "polarity": "Positif",
-                        "cascading": "DUPLICATE",
-                        "ownership_type": "SHARED",
+                        "cascading": "SPECIFIC",
+                        "ownership_type": "Non Routine",
                     },
                 }
             ],
         )
-
-        rows, _ = build_upload_rows(config, "528", [impact], 1)
+        issues = []
+        rows, _ = build_upload_rows(config, "528", [impact], 1, issues)
 
         kai_row = dict(zip(UPLOAD_HEADERS, rows[2]))
         self.assertEqual(kai_row["KPI Type"], "KAI")
         self.assertEqual(kai_row["Unit"], "%")
         self.assertEqual(kai_row["Cascading"], "INDIRECT")
         self.assertEqual(kai_row["Ownership Type"], "SPECIFIC")
+        self.assertEqual(len(issues), 2)
+        self.assertIn("enum_issue category=cross_column; field=Cascading", issues[0].message)
+        self.assertIn("enum_issue category=cross_column; field=Ownership Type", issues[1].message)
 
     def test_duplicate_outputs_merge_weight_and_reparent_kai_children(self):
         config = PositionConfig(
