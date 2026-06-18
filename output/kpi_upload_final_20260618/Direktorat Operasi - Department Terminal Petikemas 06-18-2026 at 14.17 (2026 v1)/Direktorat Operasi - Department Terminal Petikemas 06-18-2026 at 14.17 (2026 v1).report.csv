@@ -1,0 +1,410 @@
+severity,sheet_name,source_row,record_type,title,message
+info,Officer Terminal Petikemas,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Petikemas,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Petikemas,11,kai,Tingkat Kematangan (Maturity Level) layanan operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,12,kai,Ketercapaian SLA dari business process critical (BSH),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,13,kai,"Mengkoordinasikan, menjaga alignment, mengintegrasikan, dan mengkonsolidasikan pelaksanaan implementasi program kerja Stranas PK Aksi Logistik Nasional oleh Officer pada Department Terminal Petikemas",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Petikemas,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Petikemas,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Petikemas,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Petikemas,18,kai,Pelaksanaan integrasi sistem layanan petikemas dan sistem layanan kapal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,19,kai,Pelaksanaan digitalisasi dan sistemisasi proses operasional layanan terminal petikemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,20,kai,Persentase Penyelesaian Tahapan Reviu Kajian Pola Operasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,21,kai,Pelaksanaan integrasi sistem layanan antar terminal petikemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Multipurpose,17,kai,Pelaksanaan integrasi sistem layanan antar terminal non petikemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Multipurpose,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Petikemas,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Petikemas,10,kai,Pelaksanaan pengelolaan biaya operasional pelayanan terminal peti kemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,11,kai,Tingkat Kematangan (Maturity Level) layanan operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,12,kai,Ketercapaian SLA dari business process critical (BSH),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,13,kai,"Mengkoordinasikan, menjaga alignment, mengintegrasikan, dan mengkonsolidasikan pelaksanaan implementasi program kerja Stranas PK Aksi Logistik Nasional oleh Officer pada Department Terminal Petikemas",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,14,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Petikemas,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Petikemas,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Petikemas,18,kai,Pelaksanaan integrasi sistem layanan petikemas dan sistem layanan kapal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,19,kai,Pelaksanaan digitalisasi dan sistemisasi proses operasional layanan terminal petikemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,20,output,% Penyelesaian Reviu Kajian Pola Operasi Proyek Strategis Common Area Terminal Kalibaru yang Terhubung dengan Eastern Access,Dropped OUTPUT row because output weight is blank.
+warning,DH Terminal Petikemas,20,kai,Persentase Penyelesaian Tahapan Reviu Kajian Pola Operasi,Skipped KAI because its OUTPUT row was dropped or missing.
+info,DH Terminal Petikemas,21,kai,Pelaksanaan integrasi sistem layanan antar terminal petikemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Petikemas,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Multipurpose,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Multipurpose,10,kai,Pelaksanaan pengelolaan biaya operasional pelayanan terminal non peti kemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Multipurpose,11,kai,Tingkat Kematangan (Maturity Level) layanan operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Multipurpose,12,kai,Ketercapaian SLA dari business process critical (TSD),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Multipurpose,13,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Multipurpose,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Multipurpose,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Multipurpose,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Multipurpose,17,kai,Pelaksanaan integrasi sistem layanan antar terminal non petikemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Multipurpose,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Terminal Curah,17,kai,Pelaksanaan terminalisasi pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Curah,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Curah,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Curah,10,kai,Pelaksanaan pengelolaan biaya operasional pelayanan terminal non peti kemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Curah,11,kai,Tingkat Kematangan (Maturity Level) layanan operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Curah,12,kai,Ketercapaian SLA dari business process critical (TSD),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Curah,13,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Curah,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Curah,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Curah,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Terminal Curah,17,kai,Pelaksanaan terminalisasi pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Terminal Curah,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,10,kai,Pelaksanaan pengelolaan biaya operasional pelayanan terminal peti kemas dan non peti kemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,11,kai,Tingkat Kematangan (Maturity Level) layanan operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,12,kai,Ketercapaian SLA dari business process critical (TSD dan BSH),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,13,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,17,kai,Pelaksanaan integrasi sistem layanan petikemas dan sistem layanan kapal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,18,kai,Pelaksanaan digitalisasi dan sistemisasi proses operasional layanan terminal petikemas,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,19,kai,Pelaksanaan terminalisasi pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,20,kai,Pelaksanaan integrasi sistem layanan antar terminal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,21,kai,Pelaksanaan tindak lanjut penyelesaian temuan audit,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Terminal Petikemas,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Terminal Petikemas,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,11,OUTPUT,Traffic Volume (Container Throughput),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Terminal Petikemas,11,OUTPUT,Traffic Volume (Container Throughput),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,12,OUTPUT,Productivity (B/S/H),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Terminal Petikemas,12,OUTPUT,Productivity (B/S/H),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,13,OUTPUT,% Penyelesaian Implementasi Program Kerja Stranas PK (Strategi Nasional Pencegahan Korupsi) Aksi Logistik Nasional Tahun 2026,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,13,OUTPUT,% Penyelesaian Implementasi Program Kerja Stranas PK (Strategi Nasional Pencegahan Korupsi) Aksi Logistik Nasional Tahun 2026,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,18,OUTPUT,Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Terminal Petikemas,18,OUTPUT,Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,19,OUTPUT,Digitalisasi & Standardisasi Operasi Layanan Terminal Petikemas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,19,OUTPUT,Digitalisasi & Standardisasi Operasi Layanan Terminal Petikemas,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,20,OUTPUT,% Penyelesaian Reviu Kajian Pola Operasi Proyek Strategis Common Area Terminal Kalibaru yang Terhubung dengan Eastern Access,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,20,OUTPUT,% Penyelesaian Reviu Kajian Pola Operasi Proyek Strategis Common Area Terminal Kalibaru yang Terhubung dengan Eastern Access,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Petikemas,21,OUTPUT,Integrasi Sistem Layanan Antar Terminal petikemas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Petikemas,21,OUTPUT,Integrasi Sistem Layanan Antar Terminal petikemas,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Terminal Petikemas,11,KAI,Tingkat Kematangan (Maturity Level) layanan operasional,KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Petikemas,12,KAI,Ketercapaian SLA dari business process critical (BSH),KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Petikemas,13,KAI,"Mengkoordinasikan, menjaga alignment, mengintegrasikan, dan mengkonsolidasikan pelaksanaan implementasi program kerja Stranas PK Aksi Logistik Nasional oleh Officer pada Department Terminal Petikemas",KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Petikemas,18,KAI,Pelaksanaan integrasi sistem layanan petikemas dan sistem layanan kapal,KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Petikemas,19,KAI,Pelaksanaan digitalisasi dan sistemisasi proses operasional layanan terminal petikemas,KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Petikemas,20,KAI,Persentase Penyelesaian Tahapan Reviu Kajian Pola Operasi,KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Petikemas,21,KAI,Pelaksanaan integrasi sistem layanan antar terminal petikemas,KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=55.0; output_total=55.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Traffic Volume; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=% Penyelesaian Implementasi Program Kerja Stranas PK (Strategi Nasional Pencegahan Korupsi) Aksi Logistik Nasional Tahun 2026; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=% Penyelesaian Reviu Kajian Pola Operasi Proyek Strategis Common Area Terminal Kalibaru yang Terhubung dengan Eastern Access; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi & Standardisasi Operasi Layanan Terminal Petikemas; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Antar Terminal petikemas; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Productivity (B/S/H); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Traffic Volume (Container Throughput); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=position; kpi_type=KAI; raw_total=90.0; output_total=90.0; cause=Raw Data Issue.
+warning,Officer Terminal Petikemas,,weight_audit,Officer Terminal Petikemas,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=90.0; output_total=90.0; cause=Raw Data Issue.
+info,Officer Terminal Multipurpose,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Terminal Multipurpose,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Multipurpose,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,17,OUTPUT,Integrasi Sistem Layanan Antar Terminal non petikemas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Multipurpose,17,OUTPUT,Integrasi Sistem Layanan Antar Terminal non petikemas,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Terminal Multipurpose,17,KAI,Pelaksanaan integrasi sistem layanan antar terminal non petikemas,KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Multipurpose,,weight_audit,Officer Terminal Multipurpose,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Multipurpose,,weight_audit,Officer Terminal Multipurpose,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Antar Terminal non petikemas; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Multipurpose,,weight_audit,Officer Terminal Multipurpose,Weight total not 100: level=position; kpi_type=KAI; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Terminal Multipurpose,,weight_audit,Officer Terminal Multipurpose,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+info,DH Terminal Petikemas,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Terminal Petikemas,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Petikemas,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,10,OUTPUT,Operating Cost for Container,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,10,OUTPUT,Operating Cost for Container,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Terminal Petikemas,11,OUTPUT,Traffic Volume (Container Throughput),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Terminal Petikemas,11,OUTPUT,Traffic Volume (Container Throughput),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,12,OUTPUT,Productivity (B/S/H),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Terminal Petikemas,12,OUTPUT,Productivity (B/S/H),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,13,OUTPUT,% Penyelesaian Implementasi Program Kerja Stranas PK (Strategi Nasional Pencegahan Korupsi) Aksi Logistik Nasional Tahun 2026,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,13,OUTPUT,% Penyelesaian Implementasi Program Kerja Stranas PK (Strategi Nasional Pencegahan Korupsi) Aksi Logistik Nasional Tahun 2026,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,14,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Petikemas,14,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,18,OUTPUT,Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Terminal Petikemas,18,OUTPUT,Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,19,OUTPUT,Digitalisasi & Standardisasi Operasi Layanan Terminal Petikemas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,19,OUTPUT,Digitalisasi & Standardisasi Operasi Layanan Terminal Petikemas,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Petikemas,21,OUTPUT,Integrasi Sistem Layanan Antar Terminal petikemas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Petikemas,21,OUTPUT,Integrasi Sistem Layanan Antar Terminal petikemas,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Terminal Petikemas,10,KAI,Pelaksanaan pengelolaan biaya operasional pelayanan terminal peti kemas,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,11,KAI,Tingkat Kematangan (Maturity Level) layanan operasional,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,12,KAI,Ketercapaian SLA dari business process critical (BSH),KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,13,KAI,"Mengkoordinasikan, menjaga alignment, mengintegrasikan, dan mengkonsolidasikan pelaksanaan implementasi program kerja Stranas PK Aksi Logistik Nasional oleh Officer pada Department Terminal Petikemas",KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,14,KAI,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,18,KAI,Pelaksanaan integrasi sistem layanan petikemas dan sistem layanan kapal,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,19,KAI,Pelaksanaan digitalisasi dan sistemisasi proses operasional layanan terminal petikemas,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,21,KAI,Pelaksanaan integrasi sistem layanan antar terminal petikemas,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Lost Time Injury Frequency Rate (LTIFR); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Traffic Volume; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=% Penyelesaian Implementasi Program Kerja Stranas PK (Strategi Nasional Pencegahan Korupsi) Aksi Logistik Nasional Tahun 2026; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Delta Pengurangan Kecelakaan Kerja Eksternal; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi & Standardisasi Operasi Layanan Terminal Petikemas; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Antar Terminal petikemas; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Operating Cost for Container; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Productivity (B/S/H); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=output; kpi_type=KAI; parent=Traffic Volume (Container Throughput); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=position; kpi_type=KAI; raw_total=85.0; output_total=85.0; cause=Raw Data Issue.
+warning,DH Terminal Petikemas,,weight_audit,DH Terminal Petikemas,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=85.0; output_total=85.0; cause=Raw Data Issue.
+info,DH Terminal Multipurpose,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Terminal Multipurpose,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Multipurpose,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,10,OUTPUT,Operating Cost for Non Container,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,10,OUTPUT,Operating Cost for Non Container,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Terminal Multipurpose,11,OUTPUT,Traffic Volume (Non Container Throughput),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Terminal Multipurpose,11,OUTPUT,Traffic Volume (Non Container Throughput),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,12,OUTPUT,Productivity (T/S/D),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Multipurpose,12,OUTPUT,Productivity (T/S/D),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,13,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Multipurpose,13,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Multipurpose,17,OUTPUT,Integrasi Sistem Layanan Antar Terminal non petikemas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Multipurpose,17,OUTPUT,Integrasi Sistem Layanan Antar Terminal non petikemas,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Terminal Multipurpose,10,KAI,Pelaksanaan pengelolaan biaya operasional pelayanan terminal non peti kemas,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Multipurpose,11,KAI,Tingkat Kematangan (Maturity Level) layanan operasional,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Multipurpose,12,KAI,Ketercapaian SLA dari business process critical (TSD),KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Multipurpose,13,KAI,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Multipurpose,17,KAI,Pelaksanaan integrasi sistem layanan antar terminal non petikemas,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Lost Time Injury Frequency Rate (LTIFR); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Traffic Volume; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=output; kpi_type=KAI; parent=Delta Pengurangan Kecelakaan Kerja Eksternal; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Antar Terminal non petikemas; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=output; kpi_type=KAI; parent=Operating Cost for Non Container; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=output; kpi_type=KAI; parent=Productivity (T/S/D); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=output; kpi_type=KAI; parent=Traffic Volume (Non Container Throughput); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=position; kpi_type=KAI; raw_total=45.0; output_total=45.0; cause=Raw Data Issue.
+warning,DH Terminal Multipurpose,,weight_audit,DH Terminal Multipurpose,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=45.0; output_total=45.0; cause=Raw Data Issue.
+info,Officer Terminal Curah,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Terminal Curah,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Terminal Curah,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,17,OUTPUT,Terminalisasi Pelabuhan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Terminal Curah,17,OUTPUT,Terminalisasi Pelabuhan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Terminal Curah,17,KAI,Pelaksanaan terminalisasi pelabuhan,KAI formula may not be percentage-based or is blank.
+warning,Officer Terminal Curah,,weight_audit,Officer Terminal Curah,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Terminal Curah,,weight_audit,Officer Terminal Curah,Weight total not 100: level=output; kpi_type=KAI; parent=Terminalisasi Pelabuhan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Terminal Curah,,weight_audit,Officer Terminal Curah,Weight total not 100: level=position; kpi_type=KAI; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Terminal Curah,,weight_audit,Officer Terminal Curah,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+info,DH Terminal Curah,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Terminal Curah,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Curah,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,10,OUTPUT,Operating Cost for Non Container,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,10,OUTPUT,Operating Cost for Non Container,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Terminal Curah,11,OUTPUT,Traffic Volume (Non Container Throughput),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Terminal Curah,11,OUTPUT,Traffic Volume (Non Container Throughput),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,12,OUTPUT,Productivity (T/S/D),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Curah,12,OUTPUT,Productivity (T/S/D),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,13,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Terminal Curah,13,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Terminal Curah,17,OUTPUT,Terminalisasi Pelabuhan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Terminal Curah,17,OUTPUT,Terminalisasi Pelabuhan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Terminal Curah,10,KAI,Pelaksanaan pengelolaan biaya operasional pelayanan terminal non peti kemas,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Curah,11,KAI,Tingkat Kematangan (Maturity Level) layanan operasional,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Curah,12,KAI,Ketercapaian SLA dari business process critical (TSD),KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Curah,13,KAI,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Curah,17,KAI,Pelaksanaan terminalisasi pelabuhan,KAI formula may not be percentage-based or is blank.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Lost Time Injury Frequency Rate (LTIFR); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Traffic Volume; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=output; kpi_type=KAI; parent=Delta Pengurangan Kecelakaan Kerja Eksternal; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=output; kpi_type=KAI; parent=Operating Cost for Non Container; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=output; kpi_type=KAI; parent=Productivity (T/S/D); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=output; kpi_type=KAI; parent=Terminalisasi Pelabuhan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=output; kpi_type=KAI; parent=Traffic Volume (Non Container Throughput); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=position; kpi_type=KAI; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+warning,DH Terminal Curah,,weight_audit,DH Terminal Curah,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+info,Group Head,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,10,OUTPUT,Operating Cost for Container & Non Container,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,10,OUTPUT,Operating Cost for Container & Non Container,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,11,OUTPUT,Traffic Volume (Container & Non Container Throughput),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,11,OUTPUT,Traffic Volume (Container & Non Container Throughput),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,12,OUTPUT,Productivity (T/S/D dan B/S/H),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,12,OUTPUT,Productivity (T/S/D dan B/S/H),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,13,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,13,OUTPUT,Delta Pengurangan Kecelakaan Kerja Eksternal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,17,OUTPUT,Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,17,OUTPUT,Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,18,OUTPUT,Digitalisasi & Sistemisasi Operasi Layanan Terminal Petikemas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,18,OUTPUT,Digitalisasi & Sistemisasi Operasi Layanan Terminal Petikemas,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,19,OUTPUT,Terminalisasi Pelabuhan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,19,OUTPUT,Terminalisasi Pelabuhan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,OUTPUT,Integrasi Sistem Layanan Antar Terminal,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,20,OUTPUT,Integrasi Sistem Layanan Antar Terminal,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Group Head,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Group Head,9,KAI,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI formula may not be percentage-based or is blank.
+warning,Group Head,10,KAI,Pelaksanaan pengelolaan biaya operasional pelayanan terminal peti kemas dan non peti kemas,KAI formula may not be percentage-based or is blank.
+warning,Group Head,11,KAI,Tingkat Kematangan (Maturity Level) layanan operasional,KAI formula may not be percentage-based or is blank.
+warning,Group Head,12,KAI,Ketercapaian SLA dari business process critical (TSD dan BSH),KAI formula may not be percentage-based or is blank.
+warning,Group Head,13,KAI,Pelaksanaan program pencegahan kecelakaan kerja eksternal,KAI formula may not be percentage-based or is blank.
+warning,Group Head,17,KAI,Pelaksanaan integrasi sistem layanan petikemas dan sistem layanan kapal,KAI formula may not be percentage-based or is blank.
+warning,Group Head,18,KAI,Pelaksanaan digitalisasi dan sistemisasi proses operasional layanan terminal petikemas,KAI formula may not be percentage-based or is blank.
+warning,Group Head,19,KAI,Pelaksanaan terminalisasi pelabuhan,KAI formula may not be percentage-based or is blank.
+warning,Group Head,20,KAI,Pelaksanaan integrasi sistem layanan antar terminal,KAI formula may not be percentage-based or is blank.
+warning,Group Head,21,KAI,Pelaksanaan tindak lanjut penyelesaian temuan audit,KAI formula may not be percentage-based or is blank.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Lost Time Injury Frequency Rate (LTIFR); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Traffic Volume; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Delta Pengurangan Kecelakaan Kerja Eksternal; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi & Sistemisasi Operasi Layanan Terminal Petikemas; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Antar Terminal; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Integrasi Sistem Layanan Petikemas dan Sistem Layanan Kapal; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Operating Cost for Container & Non Container; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Productivity (T/S/D dan B/S/H); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Terminalisasi Pelabuhan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Traffic Volume (Container & Non Container Throughput); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.

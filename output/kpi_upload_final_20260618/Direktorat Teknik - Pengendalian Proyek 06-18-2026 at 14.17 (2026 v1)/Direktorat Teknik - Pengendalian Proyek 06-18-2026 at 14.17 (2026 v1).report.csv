@@ -1,0 +1,678 @@
+severity,sheet_name,source_row,record_type,title,message
+info,Group Head,9,kai,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu (Tanggal 15 bulan berikutnya),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,10,kai,Persentase dokumen adendum dan pembayaran yang direviu dan disampaikan hasilnya tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,11,output,Tindak Lanjut pelaksanaan monitoring evaluasi pencapaian investasi,Dropped OUTPUT row because output weight is blank.
+warning,Group Head,11,kai,Realisasi Tindak Lanjut Terhadap Rencana Aksi yang Disepakati,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Group Head,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,14,kai,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,15,kai,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,20,kai,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,21,kai,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,22,kai,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,23,kai,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,24,kai,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Pengendalian Kinerja Proyek,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Pengendalian Kinerja Proyek,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Pengendalian Kinerja Proyek,12,kai,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Pengendalian Kinerja Proyek,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Pengendalian Kinerja Proyek,15,kai,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,16,output,Tindak Lanjut pelaksanaan monitoring evaluasi pencapaian investasi,Dropped OUTPUT row because output weight is blank.
+warning,DH Pengendalian Kinerja Proyek,16,kai,Realisasi Tindak Lanjut Terhadap Rencana Aksi yang Disepakati,Skipped KAI because its OUTPUT row was dropped or missing.
+info,DH Pengendalian Kinerja Proyek,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Pengendalian Kinerja Proyek,18,kai,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,19,kai,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,20,kai,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,21,kai,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu (Tanggal 15 bulan berikutnya),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,22,kai,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Pengendalian Kinerja Proyek,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Manajemen Kontrak,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Manajemen Kontrak,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Manajemen Kontrak,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Manajemen Kontrak,12,kai,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Manajemen Kontrak,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Manajemen Kontrak,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Manajemen Kontrak,15,kai,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Manajemen Kontrak,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Manajemen Kontrak,17,kai,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Manajemen Kontrak,18,kai,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Manajemen Kontrak,19,kai,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu (Tanggal 15 bulan berikutnya),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Manajemen Kontrak,20,kai,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Manajemen Kontrak,21,kai,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Manajemen Kontrak,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Pimpinan Proyek,,sheet,Pimpinan Proyek,Position scope is neglect; sheet output was skipped.
+info,Deputy Administrasi,,sheet,Deputy Administrasi,Position scope is neglect; sheet output was skipped.
+info,Deputy Konstruksi,,sheet,Deputy Konstruksi,Position scope is neglect; sheet output was skipped.
+info,Deputy Perencanaan Proyek,,sheet,Deputy Perencanaan Proyek,Position scope is neglect; sheet output was skipped.
+info,Officer Pengendalian Kinerja P1,,sheet,Officer Pengendalian Kinerja Proyek Investasi 1,Position scope is neglect; sheet output was skipped.
+info,Officer Pengendalian Kinerja P2,,sheet,Officer Pengendalian Kinerja Proyek Investasi 2,Position scope is neglect; sheet output was skipped.
+info,Officer Admin Kontrak,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Kontrak,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Kontrak,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Kontrak,12,kai,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Kontrak,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Kontrak,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Kontrak,15,kai,Persentase dokumen adendum dan pembayaran yang direviu dan disampaikan hasilnya tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Kontrak,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Kontrak,17,kai,Persentase Dokumen Teknis yang Disusun Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Kontrak,18,kai,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Kontrak,19,kai,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Kontrak,20,kai,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P1,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P1,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P1,12,kai,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P1,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P1,15,kai,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,16,output,Tindak Lanjut pelaksanaan monitoring evaluasi pencapaian investasi,Dropped OUTPUT row because output weight is blank.
+warning,Manager Pengendalian Kinerja P1,16,kai,Realisasi Tindak Lanjut Terhadap Rencana Aksi yang Disepakati,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Manager Pengendalian Kinerja P1,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P1,18,kai,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,19,kai,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,20,kai,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,21,kai,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,22,kai,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P1,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P2,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P2,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P2,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P2,12,kai,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P2,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P2,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P2,15,kai,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P2,16,output,Tindak Lanjut pelaksanaan monitoring evaluasi pencapaian investasi,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Manager Pengendalian Kinerja P2,16,kai,Realisasi Tindak Lanjut Terhadap Rencana Aksi yang Disepakati,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Manager Pengendalian Kinerja P2,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Pengendalian Kinerja P2,18,kai,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P2,19,kai,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P2,20,kai,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P2,21,kai,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P2,22,kai,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Pengendalian Kinerja P2,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manajer Admin Kontrak,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manajer Admin Kontrak,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manajer Admin Kontrak,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manajer Admin Kontrak,12,kai,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manajer Admin Kontrak,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manajer Admin Kontrak,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manajer Admin Kontrak,15,kai,Persentase dokumen adendum dan pembayaran yang direviu dan disampaikan hasilnya tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manajer Admin Kontrak,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manajer Admin Kontrak,17,kai,Persentase Dokumen Teknis yang Disusun Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manajer Admin Kontrak,18,kai,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manajer Admin Kontrak,19,kai,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manajer Admin Kontrak,20,kai,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Administrasi,,sheet,Officer Administrasi,Position scope is neglect; sheet output was skipped.
+info,Manager Administrasi,,sheet,Manager Administrasi,Position scope is neglect; sheet output was skipped.
+info,Officer Konstruksi,,sheet,Officer Konstruksi,Position scope is neglect; sheet output was skipped.
+info,Manager Konstruksi,,sheet,Manager Konstruksi,Position scope is neglect; sheet output was skipped.
+info,Officer Perencanaan Proyek,9,output,Pertanggungjawaban Kas Operasional Proyek Batang dan Semarang,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,9,kai,Tingkat Kepatuhan Pengendalian Beban Operasional,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,10,output,Capital Expenditure (CAPEX)  (untuk Proyek NPEA Seksi I dan Seksi II),Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,10,kai,Persentase Realisasi Anggaran Sesuai Jadwal Progres Fisik,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,11,output,Capital Expenditure (CAPEX) Variance (untuk Proyek Kalibaru),Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,11,kai,Persentase Realisasi Belanja Modal yang Telah Diverifikasi,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Proyek,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Proyek,14,kai,Waktu Penyelesaian Penyusunan Laporan Monitoring Lingkungan dan TKDN,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Proyek,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Proyek,17,kai,Persiapan dan Penyusunan Laporan Monitoring Realisasi Investasi dan Lingkungan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,18,output,Penyelesaian Administrasi dan Komersial Pekerjaan Pembangunan  Terminal Petikemas Kalibaru Tahap 1A,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,18,kai,Persentase Dokumen Administrasi dan Komersial yang Diselesaikan Tepat Waktu,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,19,output,Ketepatan Penyampaian Laporan Monitoring Realisasi Investasi Terminal Kalibaru,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,19,kai,Persiapan dan Penyusunan Laporan Monitoring Realisasi Investasi Tepat Waktu,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,20,output,Ketepatan Penyampaian Laporan Monitoring Realisasi Investasi NPEA,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,20,kai,Persiapan dan Penyusunan Laporan Monitoring Realisasi Investasi Tepat Waktu,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,21,output,Monitoring Supervisi proyek Terminal Kalibaru 1 B,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,21,kai,Persentase Pelaporan Kemajuan Supervisi Proyek Tepat Waktu,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,22,output,Monitoring Supervisi proyek NPEA,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,22,kai,Persentase Pelaporan Kemajuan Supervisi Proyek Tepat Waktu,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,23,output,Realisasi program proyek Terminal Kalibaru 1 B,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,23,kai,Rencana progress milestone tahun 2026,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,24,output,Realisasi Program Pembangunan NPEA,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,24,kai,Persentase Penyelesaian Pekerjaan Fisik Proyek NPEA,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,25,output,Penyelesaian Pekerjaan DED Pembangunan Terminal Kalibaru Tahap 1B,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,25,kai,Persentase Penyelesaian Review dan Revisi Dokumen DED,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,26,output,Penyelesaian Pekerjaan DED Pembangunan NPEA,Dropped OUTPUT row because output weight is blank.
+warning,Officer Perencanaan Proyek,26,kai,Persentase Penyelesaian Review dan Revisi Dokumen DED,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,27,output,Penyelesaian Dokumen Administrasi untuk Pembangunan NPEA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,27,kai,Persentase Dokumen Administrasi yang Diselesaikan Tepat Waktu,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,28,output,Penyelesaian Dokumen Perizinan Pembangunan Terminal Kalibaru Tahap 1 B,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,28,kai,Persentase Dokumen Perizinan yang Diselesaikan Tepat Waktu,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,29,output,SLA Laporan monitoring pelaksanaan Detailed Engineering Design (DED) Dokumen pada proyek perbaikan infrastruktur ex JICT 2 dan pekerjaan perkuatan dermaga barat JICT,Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Proyek,30,kai,Persentase Penyelesaian Pekerjaan Fisik Bulanan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,31,output,Progres Masa Pemeliharaan Pekerjaan HDPE Dermaga Lantamal Makassar,Dropped OUTPUT row because comment is Drop.
+warning,Officer Perencanaan Proyek,31,kai,Persentase Penyelesaian Jadwal Pemeliharaan Sesuai Rencana,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,32,kai,Persentase Penyelesaian Pekerjaan Penanganan Tanah Lunak Bulanan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,33,kai,Persentase Penyelesaian Pekerjaan Konstruksi Perbaikan Dermaga,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,34,kai,Tingkat Kehadiran dan Partisipasi Stakeholder dalam Rapat Koordinasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,35,kai,Persentase Penyelesaian Pekerjaan Fisik Sesuai Jadwal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,36,kai,Waktu Penyelesaian Penyusunan Laporan Perencanaan Pekerjaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,37,output,SLA Laporan Administrasi Organisasi Manajemen Proyek JICT KOJA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,37,kai,Waktu Penyelesaian Penyusunan Laporan Realisasi Bulanan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,38,output,SLA Laporan Monitoring Realisasi Investasi untuk Proyek di Lingkungan JICT KOJA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Proyek,38,kai,Waktu Penyelesaian Penyusunan Laporan Realisasi Investasi,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,39,kai,Persentase Penyelesaian Pekerjaan Fisik Sesuai Jadwal Triwulanan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,40,kai,Waktu Penyelesaian Penyusunan Dokumen Pertanggungjawaban Kas Operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,41,kai,Persentase Penyelesaian Pekerjaan Jalan Akses Terminal KijingBulanan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,42,kai,Persentase Penyelesaian Milestone Pekerjaan Floating Pontoon,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,43,kai,Penyusunan dan Validasi Data Realisasi Investasi dan Lingkungan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,44,kai,Persentase Penyelesaian Milestone Pendampingan Non-Konstruksi Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,45,kai,Pelaksanaan Monitoring Bulanan,Dropped KAI row because KAI weight is blank.
+info,Officer Perencanaan Proyek,46,kai,Waktu Penyusunan dan Verifikasi Laporan Realisasi Investasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,47,output,Progres Pelaksanaan Pekerjaan Mekanikal dan Elektrikal Dermaga Lantamal Makassar,Dropped OUTPUT row because comment is Drop.
+warning,Officer Perencanaan Proyek,47,kai,Persentase Penyelesaian Pekerjaan Mekanikal dan Elektrikal Bulanan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,48,kai,Koordinasi dan Verifikasi Data Laporan Realisasi Proyek,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Proyek,49,output,SLA Laporan Monitoring Realisasi Pemeliharaan Pekerjaan Investasi untuk Proyek di Lingkungan Makassar New Port,Dropped OUTPUT row because comment is Drop.
+warning,Officer Perencanaan Proyek,49,kai,Penyusunan dan Verifikasi Laporan Realisasi Pemeliharaan Proyek,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Proyek,50,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Perencanaan Proyek,,sheet,Manager Perencanaan Proyek,Position scope is neglect; sheet output was skipped.
+info,Group Head,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,14,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,14,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,17,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,17,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,10,OUTPUT,"Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Group Head,10,OUTPUT,"Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,14,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,14,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,15,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Group Head,15,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,20,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,21,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Group Head,21,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,22,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Group Head,22,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,23,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,23,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Group Head,9,KAI,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu (Tanggal 15 bulan berikutnya),KAI formula may not be percentage-based or is blank.
+warning,Group Head,10,KAI,Persentase dokumen adendum dan pembayaran yang direviu dan disampaikan hasilnya tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Group Head,14,KAI,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI formula may not be percentage-based or is blank.
+warning,Group Head,15,KAI,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI formula may not be percentage-based or is blank.
+warning,Group Head,20,KAI,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI formula may not be percentage-based or is blank.
+warning,Group Head,21,KAI,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,Group Head,22,KAI,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI formula may not be percentage-based or is blank.
+warning,Group Head,23,KAI,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,Group Head,24,KAI,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis; raw_total=10.0; output_total=10.0; cause=Raw Data Issue."
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan SLA atas Monitoring
+Realisasi Investasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue."
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan  Mekanisme Kerja Manajemen Proyek; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH); raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,Group Head,,weight_audit,Group Head Pengendalian Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,DH Pengendalian Kinerja Proyek,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,12,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,12,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Pengendalian Kinerja Proyek,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Pengendalian Kinerja Proyek,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Pengendalian Kinerja Proyek,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,12,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,12,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,18,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Pengendalian Kinerja Proyek,18,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,19,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Pengendalian Kinerja Proyek,19,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Pengendalian Kinerja Proyek,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Pengendalian Kinerja Proyek,21,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,21,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Pengendalian Kinerja Proyek,22,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Pengendalian Kinerja Proyek,22,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Pengendalian Kinerja Proyek,12,KAI,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI formula may not be percentage-based or is blank.
+warning,DH Pengendalian Kinerja Proyek,15,KAI,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,DH Pengendalian Kinerja Proyek,18,KAI,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI formula may not be percentage-based or is blank.
+warning,DH Pengendalian Kinerja Proyek,19,KAI,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,DH Pengendalian Kinerja Proyek,20,KAI,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI formula may not be percentage-based or is blank.
+warning,DH Pengendalian Kinerja Proyek,21,KAI,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu (Tanggal 15 bulan berikutnya),KAI formula may not be percentage-based or is blank.
+warning,DH Pengendalian Kinerja Proyek,22,KAI,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=85.0; output_total=85.0; cause=Raw Data Issue.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan SLA atas Monitoring
+Realisasi Investasi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan  Mekanisme Kerja Manajemen Proyek; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH); raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,DH Pengendalian Kinerja Proyek,,weight_audit,DH Pengendalian Kinerja Proyek Investasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,DH Manajemen Kontrak,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,12,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,12,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Manajemen Kontrak,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Manajemen Kontrak,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Manajemen Kontrak,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,12,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,12,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,17,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Manajemen Kontrak,17,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,18,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,18,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,19,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,19,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Manajemen Kontrak,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Manajemen Kontrak,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Manajemen Kontrak,21,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Manajemen Kontrak,21,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Manajemen Kontrak,12,KAI,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI formula may not be percentage-based or is blank.
+warning,DH Manajemen Kontrak,15,KAI,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,DH Manajemen Kontrak,17,KAI,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI formula may not be percentage-based or is blank.
+warning,DH Manajemen Kontrak,18,KAI,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI formula may not be percentage-based or is blank.
+warning,DH Manajemen Kontrak,19,KAI,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu (Tanggal 15 bulan berikutnya),KAI formula may not be percentage-based or is blank.
+warning,DH Manajemen Kontrak,20,KAI,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI formula may not be percentage-based or is blank.
+warning,DH Manajemen Kontrak,21,KAI,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=80.0; output_total=80.0; cause=Raw Data Issue.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,"Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan SLA atas Monitoring
+Realisasi Investasi; raw_total=15.0; output_total=15.0; cause=Raw Data Issue."
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan  Mekanisme Kerja Manajemen Proyek; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, JICT Koja, NPEA, Pelabuhan Tanjung Mas dan BMTH); raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,DH Manajemen Kontrak,,weight_audit,DH Manajemen Kontrak,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Officer Admin Kontrak,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,12,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,12,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Admin Kontrak,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Admin Kontrak,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Admin Kontrak,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,12,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,12,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,15,OUTPUT,"Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Admin Kontrak,15,OUTPUT,"Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Admin Kontrak,17,OUTPUT,Penyusunan Dokumen Teknis Konsultan Supervisi dan Manajemen Konstruksi,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Admin Kontrak,17,OUTPUT,Penyusunan Dokumen Teknis Konsultan Supervisi dan Manajemen Konstruksi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,18,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,18,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,19,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Admin Kontrak,19,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Kontrak,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Kontrak,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Admin Kontrak,12,KAI,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Kontrak,15,KAI,Persentase dokumen adendum dan pembayaran yang direviu dan disampaikan hasilnya tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Kontrak,17,KAI,Persentase Dokumen Teknis yang Disusun Tepat Waktu,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Kontrak,18,KAI,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Kontrak,19,KAI,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Kontrak,20,KAI,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=55.0; output_total=55.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,"Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis; raw_total=25.0; output_total=25.0; cause=Raw Data Issue."
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Penyusunan Dokumen Teknis Konsultan Supervisi dan Manajemen Konstruksi; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Admin Kontrak,,weight_audit,Officer Administrasi Kontrak,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manager Pengendalian Kinerja P1,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,12,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,12,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Pengendalian Kinerja P1,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Pengendalian Kinerja P1,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Pengendalian Kinerja P1,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,12,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,12,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,18,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: JICT Koja, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Pengendalian Kinerja P1,18,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: JICT Koja, Pelabuhan Tanjung Mas dan BMTH)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,19,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Pengendalian Kinerja P1,19,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Pengendalian Kinerja P1,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P1,21,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,21,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Pengendalian Kinerja P1,22,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P1,22,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager Pengendalian Kinerja P1,12,KAI,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P1,15,KAI,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P1,18,KAI,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P1,19,KAI,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P1,20,KAI,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P1,21,KAI,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P1,22,KAI,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=85.0; output_total=85.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,"Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan SLA atas Monitoring
+Realisasi Investasi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan  Mekanisme Kerja Manajemen Proyek; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: JICT Koja, Pelabuhan Tanjung Mas dan BMTH); raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,Manager Pengendalian Kinerja P1,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 1,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manager Pengendalian Kinerja P2,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,12,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,12,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Pengendalian Kinerja P2,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Pengendalian Kinerja P2,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Pengendalian Kinerja P2,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,12,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,12,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,15,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,18,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, NPEA)",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Pengendalian Kinerja P2,18,OUTPUT,"Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, NPEA)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,19,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Pengendalian Kinerja P2,19,OUTPUT,Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Pengendalian Kinerja P2,20,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Pengendalian Kinerja P2,21,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,21,OUTPUT,"Pemenuhan SLA atas Monitoring
+Realisasi Investasi",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Pengendalian Kinerja P2,22,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Pengendalian Kinerja P2,22,OUTPUT,Peningkatan  Mekanisme Kerja Manajemen Proyek,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager Pengendalian Kinerja P2,12,KAI,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P2,15,KAI,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P2,18,KAI,Persentase Kepatuhan Pelaksanaan Jadwal Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P2,19,KAI,Persentase Kepatuhan Pelaksanaan Review Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P2,20,KAI,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P2,21,KAI,Persiapan dan Penyelesaian Laporan Monitoring Realisasi Investasi Tepat Waktu,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P2,22,KAI,Persentase Kepatuhan Terhadap Jadwal Milestone Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=85.0; output_total=85.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Impelementasi manajemen proyek sesuai dengan kaidah / aturan; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,"Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan SLA atas Monitoring
+Realisasi Investasi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan  Mekanisme Kerja Manajemen Proyek; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Proyek Investasi Strategis
+(Proyek Strategis: Kijing, Kalibaru, NPEA); raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,Manager Pengendalian Kinerja P2,,weight_audit,Manager Pengendalian Kinerja Proyek Investasi 2,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manajer Admin Kontrak,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,12,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,12,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,13,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manajer Admin Kontrak,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manajer Admin Kontrak,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manajer Admin Kontrak,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,12,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,12,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,15,OUTPUT,"Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manajer Admin Kontrak,15,OUTPUT,"Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manajer Admin Kontrak,17,OUTPUT,Penyusunan Dokumen Teknis Konsultan Supervisi dan Manajemen Konstruksi,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manajer Admin Kontrak,17,OUTPUT,Penyusunan Dokumen Teknis Konsultan Supervisi dan Manajemen Konstruksi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,18,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,18,OUTPUT,Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,19,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manajer Admin Kontrak,19,OUTPUT,Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manajer Admin Kontrak,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manajer Admin Kontrak,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manajer Admin Kontrak,12,KAI,Pelaksanaan pengelolaan biaya OPEX untuk mendukung pencapaian net income di Group Pengendalian Proyek,KAI formula may not be percentage-based or is blank.
+warning,Manajer Admin Kontrak,15,KAI,Persentase dokumen adendum dan pembayaran yang direviu dan disampaikan hasilnya tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Manajer Admin Kontrak,17,KAI,Persentase Dokumen Teknis yang Disusun Tepat Waktu,KAI formula may not be percentage-based or is blank.
+warning,Manajer Admin Kontrak,18,KAI,Persentase Pelaksanaan Pelatihan Manajemen Proyek Terhadap Target,KAI formula may not be percentage-based or is blank.
+warning,Manajer Admin Kontrak,19,KAI,Persentase Penyelesaian Tahapan Pengembangan Dashboard,KAI formula may not be percentage-based or is blank.
+warning,Manajer Admin Kontrak,20,KAI,Persentase penyelesaian tindak lanjut temuan audit tepat waktu,KAI formula may not be percentage-based or is blank.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=55.0; output_total=55.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,"Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan waktu penyampaian hasil
+reviu Dokumen Proyek Strategis; raw_total=25.0; output_total=25.0; cause=Raw Data Issue."
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Dashboard Lanjutan Monitoring Realisasi Proyek Investasi (Tahap III); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan Kompetensi Implementasi  Manajemen Proyek untuk memitigasi risiko claim atas kontrak konstruksi; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,Weight total not 100: level=output; kpi_type=KAI; parent=Penyusunan Dokumen Teknis Konsultan Supervisi dan Manajemen Konstruksi; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Manajer Admin Kontrak,,weight_audit,Manajer Administrasi Kontrak,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Officer Perencanaan Proyek,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,13,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,13,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,14,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,14,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Perencanaan Proyek,15,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,15,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,50,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,50,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,14,OUTPUT,SLA Laporan Monitoring  Lingkungan dan Monitoring TKDN untuk Proyek di Lingkungan JICT KOJA,enum_issue category=normalized; field=Period; raw=per Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Perencanaan Proyek,14,OUTPUT,SLA Laporan Monitoring  Lingkungan dan Monitoring TKDN untuk Proyek di Lingkungan JICT KOJA,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,17,OUTPUT,Penyiapan Administrasi Laporan Monitoring Realisasi Investasi dan Monitoring Lingkungan Untuk Proyek BMTH,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,17,OUTPUT,Penyiapan Administrasi Laporan Monitoring Realisasi Investasi dan Monitoring Lingkungan Untuk Proyek BMTH,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,30,OUTPUT,Realisasi Program Kerja Proyek Investasi Strategis Pekerjaan Perbaikan Infrastruktur Terminal Ex. JICT 2,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Perencanaan Proyek,30,OUTPUT,Realisasi Program Kerja Proyek Investasi Strategis Pekerjaan Perbaikan Infrastruktur Terminal Ex. JICT 2,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,32,OUTPUT,"Realisasi Pekerjaan Timbunan Tanah Pilihan (platform dan preloading) Pekerjaan Penanganan Tanah Lunak Pada Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Perencanaan Proyek,32,OUTPUT,"Realisasi Pekerjaan Timbunan Tanah Pilihan (platform dan preloading) Pekerjaan Penanganan Tanah Lunak Pada Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,33,OUTPUT,Realisasi Progres Pekerjaan Perbaikan Dermaga Timur Eksisting 340 M Pelabuhan Benoa - Bali,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,33,OUTPUT,Realisasi Progres Pekerjaan Perbaikan Dermaga Timur Eksisting 340 M Pelabuhan Benoa - Bali,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,34,OUTPUT,Kegiatan koordinasi pekerjaan Relokasi Jalan Nasional Ruas Sei Duri Mempawah,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Perencanaan Proyek,34,OUTPUT,Kegiatan koordinasi pekerjaan Relokasi Jalan Nasional Ruas Sei Duri Mempawah,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,35,OUTPUT,"Realisasi Peninggian dermaga dan lapangan penumpukan di pelabuhan Semarang
+
+*hanya jika pekerjaan fisik telah dimulai pada TW 2 2026",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,35,OUTPUT,"Realisasi Peninggian dermaga dan lapangan penumpukan di pelabuhan Semarang
+
+*hanya jika pekerjaan fisik telah dimulai pada TW 2 2026",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,36,OUTPUT,SLA Laporan Perencanaan Pekerjaan Organisasi Manajemen Proyek JICT KOJA Tahun 2026,enum_issue category=normalized; field=Period; raw=per Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Perencanaan Proyek,36,OUTPUT,SLA Laporan Perencanaan Pekerjaan Organisasi Manajemen Proyek JICT KOJA Tahun 2026,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,39,OUTPUT,"Realisasi Program Kerja Pekerjaan Fisik Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,39,OUTPUT,"Realisasi Program Kerja Pekerjaan Fisik Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,40,OUTPUT,SLA penyampaian Dokumen Pertanggungjawaban Penggunaan Kas Operasional Manajemen Proyek Kijing,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,40,OUTPUT,SLA penyampaian Dokumen Pertanggungjawaban Penggunaan Kas Operasional Manajemen Proyek Kijing,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,41,OUTPUT,Realisasi Program Kerja Pekerjaan Fisik Pembangunan Jalan Akses Terminal Kijing di Kalimantan Barat,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Perencanaan Proyek,41,OUTPUT,Realisasi Program Kerja Pekerjaan Fisik Pembangunan Jalan Akses Terminal Kijing di Kalimantan Barat,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,42,OUTPUT,Realisasi Progres Pekerjaan Pembangunan Floating Pontoon Untuk Breakwater di Kolam Area Pengembangan 1 Pelabuhan Benoa,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,42,OUTPUT,Realisasi Progres Pekerjaan Pembangunan Floating Pontoon Untuk Breakwater di Kolam Area Pengembangan 1 Pelabuhan Benoa,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,43,OUTPUT,Pembuatan Laporan Monitoring Realisasi Investasi dan Monitoring Lingkungan untuk Proyek  Multipurpose Batang dan Semarang Tahap 1,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,43,OUTPUT,Pembuatan Laporan Monitoring Realisasi Investasi dan Monitoring Lingkungan untuk Proyek  Multipurpose Batang dan Semarang Tahap 1,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,44,OUTPUT,Realisasi Pendampingan Kegiatan Non-Konstruksi Proyek Pelabuhan Batang dan Semarang,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,44,OUTPUT,Realisasi Pendampingan Kegiatan Non-Konstruksi Proyek Pelabuhan Batang dan Semarang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,45,OUTPUT,Realisasi  Pelaksanaan Monitoring dan Evaluasi Bulanan Tahap Pemeliharaan Pekerjaan Pembangunan Terminal Multipurpose Batang Tahap I,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,45,OUTPUT,Realisasi  Pelaksanaan Monitoring dan Evaluasi Bulanan Tahap Pemeliharaan Pekerjaan Pembangunan Terminal Multipurpose Batang Tahap I,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,46,OUTPUT,"SLA Laporan Monitoring Realisasi Investasi Proyek Kijing (Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat)",enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Perencanaan Proyek,46,OUTPUT,"SLA Laporan Monitoring Realisasi Investasi Proyek Kijing (Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat)",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,48,OUTPUT,"Pendampingan Proses Pengadaan,  Pra-Konstruks, dan Pasca Konstruksi Pekerjaan di Lingkungan JICT KOJA",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,48,OUTPUT,"Pendampingan Proses Pengadaan,  Pra-Konstruks, dan Pasca Konstruksi Pekerjaan di Lingkungan JICT KOJA",enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Proyek,50,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Proyek,50,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Proyek,14,KAI,Waktu Penyelesaian Penyusunan Laporan Monitoring Lingkungan dan TKDN,enum_issue category=normalized; field=Nature Of Work; raw=non Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Officer Perencanaan Proyek,14,KAI,Waktu Penyelesaian Penyusunan Laporan Monitoring Lingkungan dan TKDN,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,17,KAI,Persiapan dan Penyusunan Laporan Monitoring Realisasi Investasi dan Lingkungan,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,30,KAI,Persentase Penyelesaian Pekerjaan Fisik Bulanan,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,32,KAI,Persentase Penyelesaian Pekerjaan Penanganan Tanah Lunak Bulanan,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,33,KAI,Persentase Penyelesaian Pekerjaan Konstruksi Perbaikan Dermaga,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,34,KAI,Tingkat Kehadiran dan Partisipasi Stakeholder dalam Rapat Koordinasi,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,35,KAI,Persentase Penyelesaian Pekerjaan Fisik Sesuai Jadwal,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,36,KAI,Waktu Penyelesaian Penyusunan Laporan Perencanaan Pekerjaan,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,39,KAI,Persentase Penyelesaian Pekerjaan Fisik Sesuai Jadwal Triwulanan,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,40,KAI,Waktu Penyelesaian Penyusunan Dokumen Pertanggungjawaban Kas Operasional,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,41,KAI,Persentase Penyelesaian Pekerjaan Jalan Akses Terminal KijingBulanan,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,42,KAI,Persentase Penyelesaian Milestone Pekerjaan Floating Pontoon,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,43,KAI,Penyusunan dan Validasi Data Realisasi Investasi dan Lingkungan,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,44,KAI,Persentase Penyelesaian Milestone Pendampingan Non-Konstruksi Tepat Waktu,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,46,KAI,Waktu Penyusunan dan Verifikasi Laporan Realisasi Investasi,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,48,KAI,Koordinasi dan Verifikasi Data Laporan Realisasi Proyek,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,50,KAI,Persentase Penyelesaian Temuan Audit Internal,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=ESG Rating; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=326.0; output_total=326.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Kegiatan koordinasi pekerjaan Relokasi Jalan Nasional Ruas Sei Duri Mempawah; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Pembuatan Laporan Monitoring Realisasi Investasi dan Monitoring Lingkungan untuk Proyek  Multipurpose Batang dan Semarang Tahap 1; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Pendampingan Proses Pengadaan,  Pra-Konstruks, dan Pasca Konstruksi Pekerjaan di Lingkungan JICT KOJA; raw_total=10.0; output_total=10.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Penyiapan Administrasi Laporan Monitoring Realisasi Investasi dan Monitoring Lingkungan Untuk Proyek BMTH; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Pekerjaan Timbunan Tanah Pilihan (platform dan preloading) Pekerjaan Penanganan Tanah Lunak Pada Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat; raw_total=25.0; output_total=25.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Pendampingan Kegiatan Non-Konstruksi Proyek Pelabuhan Batang dan Semarang; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Peninggian dermaga dan lapangan penumpukan di pelabuhan Semarang
+
+*hanya jika pekerjaan fisik telah dimulai pada TW 2 2026; raw_total=25.0; output_total=25.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Pekerjaan Fisik Pembangunan Jalan Akses Terminal Kijing di Kalimantan Barat; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Pekerjaan Fisik Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat; raw_total=25.0; output_total=25.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Program Kerja Proyek Investasi Strategis Pekerjaan Perbaikan Infrastruktur Terminal Ex. JICT 2; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Progres Pekerjaan Pembangunan Floating Pontoon Untuk Breakwater di Kolam Area Pengembangan 1 Pelabuhan Benoa; raw_total=23.0; output_total=23.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=Realisasi Progres Pekerjaan Perbaikan Dermaga Timur Eksisting 340 M Pelabuhan Benoa - Bali; raw_total=28.0; output_total=28.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=SLA Laporan Monitoring  Lingkungan dan Monitoring TKDN untuk Proyek di Lingkungan JICT KOJA; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=SLA Laporan Monitoring Realisasi Investasi Proyek Kijing (Pembangunan Relokasi Jalan Nasional Ruas Sei Duri - Mempawah, Kalimantan Barat); raw_total=15.0; output_total=15.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=SLA Laporan Perencanaan Pekerjaan Organisasi Manajemen Proyek JICT KOJA Tahun 2026; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=output; kpi_type=KAI; parent=SLA penyampaian Dokumen Pertanggungjawaban Penggunaan Kas Operasional Manajemen Proyek Kijing; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=position; kpi_type=KAI; raw_total=336.0; output_total=336.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Proyek,,weight_audit,Officer Perencanaan Proyek,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=356.0; output_total=356.0; cause=Raw Data Issue.

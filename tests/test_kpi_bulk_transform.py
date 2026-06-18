@@ -2,7 +2,9 @@ import json
 import sys
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
+from zipfile import ZipFile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
@@ -14,6 +16,7 @@ from kpi_bulk_transform import (  # noqa: E402
     UPLOAD_HEADERS,
     append_enum_issue,
     build_upload_rows,
+    collect_parsed_sheets,
     discover_configs_for_workbook,
     is_active_valid_sheet,
     load_config,
@@ -35,6 +38,27 @@ from openpyxl import Workbook, load_workbook  # noqa: E402
 
 
 class KpiBulkTransformTest(unittest.TestCase):
+    def test_collect_parsed_sheets_skips_explicit_neglect_before_metadata_fallback(self):
+        config = PositionConfig(
+            sheet_name="Officer Layanan Pelanggan",
+            position_name="Officer Layanan Pelanggan",
+            group_name="Group Aliansi Bisnis",
+            directorate_name="Direktorat Komersial",
+            position_master_id="34580",
+            position_scope="neglect",
+        )
+        issues = []
+
+        parsed = collect_parsed_sheets(
+            Path("does-not-exist.xlsx"),
+            None,
+            [config],
+            issues,
+        )
+
+        self.assertEqual(parsed, [])
+        self.assertFalse(any(issue.severity == "error" for issue in issues))
+
     def test_latest_upload_headers_include_optional_pnid_columns(self):
         self.assertEqual(len(UPLOAD_HEADERS), 24)
         self.assertEqual(
@@ -1145,6 +1169,46 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertIsNone(config.position_nomenclature_id)
         self.assertEqual(config.position_scope, "structural")
 
+    def test_refresh_config_prefers_exact_structural_title_before_fuzzy_suffix_match(self):
+        mapping = {
+            "manager layanan keuangan wilayah timur 1": {
+                "position_master_id": "33845",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "position_master_type_id": "5",
+                "portaverse_position_title": "Manager Layanan Keuangan Wilayah Timur 1",
+                "portaverse_group_name": "Unit Timur 1",
+                "portaverse_company_name": "PT Pelabuhan Indonesia (Persero)",
+                "cluster_label": None,
+            },
+            "manager layanan keuangan wilayah timur 2": {
+                "position_master_id": "33854",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "position_master_type_id": "5",
+                "portaverse_position_title": "Manager Layanan Keuangan Wilayah Timur 2",
+                "portaverse_group_name": "Unit Timur 2",
+                "portaverse_company_name": "PT Pelabuhan Indonesia (Persero)",
+                "cluster_label": None,
+            },
+        }
+        config = PositionConfig(
+            sheet_name="Manager Layanan Keuangan Timur2",
+            position_name="Manager Layanan Keuangan Wilayah Timur 2",
+            group_name="Group Pengembangan SSC",
+            directorate_name="Direktorat Pengembangan Usaha",
+            position_master_id="33854",
+            position_scope="structural",
+        )
+
+        refresh_configs_from_mapping([config], mapping)
+
+        self.assertEqual(config.position_master_id, "33854")
+        self.assertEqual(
+            config.portaverse_position_title,
+            "Manager Layanan Keuangan Wilayah Timur 2",
+        )
+
     def test_refresh_config_from_mapping_preserves_reviewed_manual_pnid(self):
         mapping = {
             "different officer title": {
@@ -1216,6 +1280,34 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertIsInstance(weight_cell.value, float)
         self.assertEqual(weight_cell.value, 12.5)
         self.assertEqual(saved["KPI Template"].column_dimensions["P"].width, 72)
+
+    def test_write_output_workbook_preserves_valid_frozen_pane_view(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            template = Path(tmp) / "template.xlsx"
+            output = Path(tmp) / "output.xlsx"
+            workbook = Workbook()
+            worksheet = workbook.active
+            worksheet.title = "KPI Template"
+            worksheet.append(UPLOAD_HEADERS)
+            worksheet.append([None] * len(UPLOAD_HEADERS))
+            worksheet.freeze_panes = "B2"
+            workbook.save(template)
+
+            write_output_workbook(template, output, [])
+
+            with ZipFile(output) as output_zip:
+                root = ET.fromstring(output_zip.read("xl/worksheets/sheet1.xml"))
+
+        namespace = {"a": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+        sheet_view = root.find("a:sheetViews/a:sheetView", namespace)
+        self.assertIsNotNone(sheet_view)
+        pane_selections = [
+            selection
+            for selection in sheet_view.findall("a:selection", namespace)
+            if selection.get("pane")
+        ]
+        self.assertTrue(pane_selections)
+        self.assertIsNotNone(sheet_view.find("a:pane", namespace))
 
 
 if __name__ == "__main__":

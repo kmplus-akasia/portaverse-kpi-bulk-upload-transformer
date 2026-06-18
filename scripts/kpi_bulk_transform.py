@@ -1619,7 +1619,6 @@ def write_output_workbook(template_path: Path, output_path: Path, rows: list[lis
     for col_index, header in enumerate(UPLOAD_HEADERS, start=1):
         worksheet.column_dimensions[get_column_letter(col_index)].width = COLUMN_WIDTHS.get(header, 18)
     worksheet.row_dimensions[1].height = 36
-    worksheet.freeze_panes = None
     worksheet.auto_filter.ref = None
     output_path.parent.mkdir(parents=True, exist_ok=True)
     workbook.save(output_path)
@@ -1976,7 +1975,10 @@ def lookup_position_scope(
     normalized_mapping: dict[str, dict[str, str | None]] | None = None,
 ) -> dict[str, str | None]:
     direct = nomenclature_mapping.get(normalize_title(position_name))
-    if direct and direct.get("position_nomenclature_id"):
+    if direct and (
+        direct.get("position_nomenclature_id")
+        or mapping_entry_scope(direct) == "structural"
+    ):
         return direct
 
     normalized = normalize_position_lookup(position_name)
@@ -2284,6 +2286,18 @@ def collect_parsed_sheets(
     parsed_sheets: list[ParsedSheet] = []
 
     for config in configs:
+        if is_neglect_scope(config):
+            issues.append(
+                ValidationIssue(
+                    severity="info",
+                    sheet_name=config.sheet_name,
+                    source_row=None,
+                    record_type="sheet",
+                    title=config.position_name,
+                    message="Position scope is neglect; sheet output was skipped.",
+                )
+            )
+            continue
         metadata = master_index.resolve(config)
         if metadata is None and not (config.position_master_id or config.position_nomenclature_id):
             issues.append(

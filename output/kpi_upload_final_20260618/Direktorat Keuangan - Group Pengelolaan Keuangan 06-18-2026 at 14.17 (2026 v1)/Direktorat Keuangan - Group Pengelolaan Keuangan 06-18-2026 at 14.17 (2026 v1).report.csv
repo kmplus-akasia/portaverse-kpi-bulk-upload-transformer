@@ -1,0 +1,895 @@
+severity,sheet_name,source_row,record_type,title,message
+info,Officer Management Kas,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Management Kas,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Management Kas,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Management Kas,12,kai,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Management Kas,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Management Kas,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Management Kas,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Management Kas,17,kai,"melakukan evaluasi penggunaan kas operasional, menyusun nota dinas evaluasi",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,18,kai,Pelaksanaan rollout dashboard bank account,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,19,kai,Percentage progres pengembangan auto generate nota (100%),KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,20,kai,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,21,kai,Laporan rekonsiliasi pendapatan Get Pass,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,22,kai,melakukan penempatan dana pada deposito perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,23,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,24,kai,8.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Management Kas,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Management Kas,12,kai,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Management Kas,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Management Kas,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Management Kas,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Management Kas,17,kai,"melakukan evaluasi penggunaan kas operasional, menyusun nota dinas evaluasi",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,18,kai,Pelaksanaan rollout dashboard bank account,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,19,kai,Percentage progres pengembangan auto generate nota,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,20,kai,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,21,kai,melakukan penempatan dana pada deposito perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,22,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Management Kas,23,kai,8.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksional,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksional,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksional,12,kai,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,13,kai,Pelaksanaan verifikasi dan proses pembayaran sesuai jadwal pada Unit Pendukung Transaksional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksional,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksional,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksional,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksional,18,kai,Pelaksanaan pengembangan dashboard kebutuhan dana pada Unit Pendukung Transaksional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,19,kai,"1. rekap data
+
+2. pendampingan proses rekonsiliasi",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,20,kai,Pelaksanaan rekonsiliasi bank dan deposito pada Unit Pendukung Transaksional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,21,kai,Mendapatkan hasil penghitungan pendapatan bunga untuk penjurnalan hingga monitoring penyelesaian jurnal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,22,kai,Monitoring atas setiap transaksi (bila terdapat gagal bayar/retur/fail) yang kemudian akan diproses kembali pembayarannya,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,23,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksional,24,kai,8.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksional,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksional,12,kai,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,13,kai,Pelaksanaan verifikasi dan proses pembayaran sesuai jadwal pada Unit Pendukung Transaksional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksional,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksional,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksional,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksional,18,kai,Pelaksanaan pengembangan dashboard kebutuhan dana pada Unit Pendukung Transaksional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,19,kai,"1. rekap data
+
+2. pendampingan proses rekonsiliasi",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,20,kai,Pelaksanaan rekonsiliasi bank dan deposito pada Unit Pendukung Transaksional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,21,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksional,22,kai,7.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,9,kai,Pelaksanaan proses credit rating Pelindo pada Unit Pendukung Strategi Keuangan Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,10,kai,Pelaksanaan monitoring dan evaluasi arus kas operasional untuk pemenuhan kewajiban pembayaran utang pada Department Keuangan Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,11,output,Tingkat Kesehatan Perusahaan (Corporate Rating),Dropped OUTPUT row because output weight is blank.
+warning,Officer Strat Keuangan Korpo,11,kai,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Strat Keuangan Korpo,12,kai,Percentage progres enhancement sistem monitoring bond and loan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,13,kai,Angka efisiensi biaya pendanaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,14,kai,jumlah realisasi penerimaan SHL dan ICL,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,15,kai,kecepatan dan ketepatan pembayaran kewajiban pinjaman,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,16,output,WACC,Dropped OUTPUT row because output weight is blank.
+warning,Officer Strat Keuangan Korpo,16,kai,Tingkat Ketepatan Analisis Struktur Pendanaan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Strat Keuangan Korpo,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,24,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Strat Keuangan Korpo,25,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Strat Keuangan Korpo,26,kai,7.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,9,kai,Pelaksanaan proses credit rating Pelindo pada Unit Pendukung Strategi Keuangan Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,10,kai,Pelaksanaan monitoring dan evaluasi arus kas operasional untuk pemenuhan kewajiban pembayaran utang pada Department Keuangan Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,11,kai,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,12,kai,Percentage progres enhancement sistem monitoring bond and loan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,13,kai,Angka efisiensi biaya pendanaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,14,kai,jumlah realisasi penerimaan SHL dan ICL,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,15,kai,kecepatan dan ketepatan pembayaran kewajiban pinjaman,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,16,kai,Tingkat Ketepatan Analisis Struktur Pendanaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Strat Keuangan Korporas,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Strat Keuangan Korporas,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Strat Keuangan Korporas,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Strat Keuangan Korporas,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Strat Keuangan Korporas,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Strat Keuangan Korporas,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Strat Keuangan Korporas,24,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Strat Keuangan Korporas,25,kai,9.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,9,kai,Pelaksanaan perhitungan penyisihan piutang berdasarkan PSAK 71,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,10,kai,Pelaksanaan analisis dan pelaporan piutang usaha macet pada Unit Pendukung Administrasi Piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,11,kai,"rekonsiliasi piutang, penagihan dan pencatatan pembayaran",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,12,kai,Memberikan laporan piutang yang terekonsiliasi dengan akuntansi tiap bulan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,13,kai,Percentage Implementasi locking system,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,14,kai,Pemantauan jumlah piutang usaha dan pendapatan usaha dan langkah-langkah yang dilakukan untuk menjaga ACP agar 20 hari,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Piutang,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Piutang,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Piutang,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Piutang,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Piutang,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Piutang,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Admin Piutang,22,kai,jumlah pelaksanaan evaluasi piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,23,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,24,kai,progres implementasi perbaikan proses melalui sistem penyelesaian piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Admin Piutang,25,kai,9.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,10,kai,Pelaksanaan perhitungan penyisihan piutang berdasarkan PSAK 71,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,11,kai,Pelaksanaan analisis dan pelaporan piutang usaha macet pada Unit Pendukung Administrasi Piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,12,kai,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,13,kai,Percentage Implementasi locking system,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,14,kai,Pemantauan jumlah piutang usaha dan pendapatan usaha dan langkah-langkah yang dilakukan untuk menjaga ACP agar 20 hari,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Admin Piutang,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Admin Piutang,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Admin Piutang,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Admin Piutang,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Admin Piutang,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Admin Piutang,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Admin Piutang,22,kai,jumlah pelaksanaan evaluasi piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,23,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,24,kai,progres implementasi perbaikan proses melalui sistem penyelesaian piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Admin Piutang,25,kai,9.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,10,kai,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,11,kai,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,12,kai,Percentage progres pengembangan auto generate nota,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,13,kai,melakukan penempatan dana pada deposito perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Perbendaharaan,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Perbendaharaan,16,kai,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,17,kai,Pelaksanaan verifikasi dan proses pembayaran sesuai jadwal pada Unit Pendukung Transaksional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Perbendaharaan,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Perbendaharaan,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Perbendaharaan,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Perbendaharaan,22,kai,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,23,kai,Pelaksanaan rollout dashboard kebutuhan dana dan bank account,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,24,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Perbendaharaan,25,kai,10.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,10,kai,Optimalisasi kemampuan perusahaan dalam melakukan pengelolaan hutang dari kinerja operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,11,kai,Pelaksanaan monitoring dan evaluasi arus kas operasional untuk pemenuhan kewajiban pembayaran utang pada Department Keuangan Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,12,kai,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,13,kai,Percentage progres enhancement sistem monitoring bond and loan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,14,kai,Angka efisiensi biaya pendanaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,15,kai,jumlah realisasi penerimaan SHL dan ICL,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,16,kai,Tingkat Ketepatan Analisis Struktur Pendanaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Keuangan Korporasi,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Keuangan Korporasi,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Keuangan Korporasi,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Keuangan Korporasi,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Keuangan Korporasi,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Keuangan Korporasi,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Keuangan Korporasi,24,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Keuangan Korporasi,25,kai,10.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,10,kai,Pelaksanaan perhitungan penyisihan piutang berdasarkan PSAK 71,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,11,kai,Pelaksanaan analisis dan pelaporan piutang usaha macet pada Unit Pendukung Administrasi Piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,12,kai,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,13,kai,Percentage Implementasi locking system,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,14,kai,Pemantauan jumlah piutang usaha dan pendapatan usaha dan langkah-langkah yang dilakukan untuk menjaga ACP agar 20 hari,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Pengelolaan Piutang,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Pengelolaan Piutang,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Pengelolaan Piutang,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Pengelolaan Piutang,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Pengelolaan Piutang,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Pengelolaan Piutang,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Pengelolaan Piutang,22,kai,jumlah pelaksanaan evaluasi piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,23,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,24,kai,progres implementasi perbaikan proses melalui sistem penyelesaian piutang,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Pengelolaan Piutang,25,kai,9.0,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,9,kai,Pelaksanaan pengelolaan aktivitas operasional dan keuangan untuk mendukung pencapaian Net Income,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,10,kai,Optimalisasi kemampuan perusahaan dalam melakukan pengelolaan hutang dari kinerja operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,11,kai,Pemantauan jumlah piutang usaha dan pendapatan usaha dan langkah-langkah yang dilakukan untuk menjaga ACP agar 20 hari,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,12,kai,Angka efisiensi biaya pendanaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,13,kai,Tingkat Ketepatan Analisis Struktur Pendanaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,15,kai,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,20,kai,"Percentage progres enhancement sistem monitoring bond and loan, Percentage progres pengembangan auto generate nota, Percentage Implementasi locking system",KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,21,kai,melakukan penempatan dana pada deposito perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,22,kai,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,23,kai,Persentase penyelesaian temuan audit dalam periode waktu tertentu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,24,kai,10,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Management Kas,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,12,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,12,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,13,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,13,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,14,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,14,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,15,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Management Kas,15,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,16,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,18,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,18,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Management Kas,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Management Kas,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,12,OUTPUT,Enhancement kepada implementasi host2host penerimaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,12,OUTPUT,Enhancement kepada implementasi host2host penerimaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,17,OUTPUT,Evaluasi dropping dana kas operasional regional,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,17,OUTPUT,Evaluasi dropping dana kas operasional regional,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,18,OUTPUT,Roll-out bank account dashboard,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Management Kas,18,OUTPUT,Roll-out bank account dashboard,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,19,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,19,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,20,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Management Kas,20,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,21,OUTPUT,Implementasi cashless,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Management Kas,21,OUTPUT,Implementasi cashless,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,22,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Management Kas,22,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,24,OUTPUT,8.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Management Kas,24,OUTPUT,8.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Management Kas,12,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+info,Officer Management Kas,19,KAI,Percentage progres pengembangan auto generate nota (100%),enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Officer Management Kas,20,KAI,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI formula may not be percentage-based or is blank.
+warning,Officer Management Kas,24,KAI,8.0,KAI formula may not be percentage-based or is blank.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=ESG Rating; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Enhancement kepada implementasi host2host penerimaan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi dropping dana kas operasional regional; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi cashless; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Penempatan Dana; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Roll-out bank account dashboard; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Management Kas,,weight_audit,Officer Management Kas,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Manager Management Kas,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Management Kas,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,14,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,15,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,16,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Management Kas,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,17,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Management Kas,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,12,OUTPUT,Enhancement kepada implementasi host2host penerimaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,12,OUTPUT,Enhancement kepada implementasi host2host penerimaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,17,OUTPUT,Evaluasi dropping dana kas operasional regional,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,17,OUTPUT,Evaluasi dropping dana kas operasional regional,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,18,OUTPUT,Roll-out bank account dashboard,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Management Kas,18,OUTPUT,Roll-out bank account dashboard,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,19,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,19,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,20,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Management Kas,20,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,21,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Management Kas,21,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,23,OUTPUT,8.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Management Kas,23,OUTPUT,8.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Management Kas,12,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+info,Manager Management Kas,19,KAI,Percentage progres pengembangan auto generate nota,enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Manager Management Kas,20,KAI,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI formula may not be percentage-based or is blank.
+warning,Manager Management Kas,23,KAI,8.0,KAI formula may not be percentage-based or is blank.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=75.0; output_total=75.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Enhancement kepada implementasi host2host penerimaan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi dropping dana kas operasional regional; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Penempatan Dana; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=output; kpi_type=KAI; parent=Roll-out bank account dashboard; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Manager Management Kas,,weight_audit,Manager Management Kas,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Officer Transaksional,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksional,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Transaksional,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksional,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,12,OUTPUT,Enhancement kepada implementasi host2host pengeluaran,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,12,OUTPUT,Enhancement kepada implementasi host2host pengeluaran,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,13,OUTPUT,Ketepatan Pembayaran,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,13,OUTPUT,Ketepatan Pembayaran,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksional,18,OUTPUT,Roll-out dashboard kebutuhan dana,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,18,OUTPUT,Roll-out dashboard kebutuhan dana,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,19,OUTPUT,Asistensi implementasi rekonsiliasi bank PELINDO Group dengan Danantara Asset Management,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,19,OUTPUT,Asistensi implementasi rekonsiliasi bank PELINDO Group dengan Danantara Asset Management,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksional,20,OUTPUT,Rekonsiliasi bank dan deposito,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,20,OUTPUT,Rekonsiliasi bank dan deposito,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,21,OUTPUT,Journal Pendapatan bunga,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,21,OUTPUT,Journal Pendapatan bunga,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,22,OUTPUT,Proses monitoring pembayaran Reject,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,22,OUTPUT,Proses monitoring pembayaran Reject,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksional,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,24,OUTPUT,8.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksional,24,OUTPUT,8.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksional,12,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Officer Transaksional,12,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI formula may not be percentage-based or is blank.
+info,Officer Transaksional,18,KAI,Pelaksanaan pengembangan dashboard kebutuhan dana pada Unit Pendukung Transaksional,enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Officer Transaksional,19,KAI,"1. rekap data
+
+2. pendampingan proses rekonsiliasi",KAI formula may not be percentage-based or is blank.
+warning,Officer Transaksional,21,KAI,Mendapatkan hasil penghitungan pendapatan bunga untuk penjurnalan hingga monitoring penyelesaian jurnal,KAI formula may not be percentage-based or is blank.
+warning,Officer Transaksional,24,KAI,8.0,KAI formula may not be percentage-based or is blank.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=55.0; output_total=55.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=40.0; output_total=40.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Asistensi implementasi rekonsiliasi bank PELINDO Group dengan Danantara Asset Management; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Enhancement kepada implementasi host2host pengeluaran; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Journal Pendapatan bunga; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan Pembayaran; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Proses monitoring pembayaran Reject; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Rekonsiliasi bank dan deposito; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Roll-out dashboard kebutuhan dana; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Transaksional,,weight_audit,Officer Transaksional,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Manager Transaksional,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,10,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,12,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksional,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Transaksional,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksional,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,12,OUTPUT,Enhancement kepada implementasi host2host pengeluaran,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,12,OUTPUT,Enhancement kepada implementasi host2host pengeluaran,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,13,OUTPUT,Ketepatan Pembayaran,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,13,OUTPUT,Ketepatan Pembayaran,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksional,18,OUTPUT,Roll-out dashboard kebutuhan dana,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,18,OUTPUT,Roll-out dashboard kebutuhan dana,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,19,OUTPUT,Asistensi implementasi rekonsiliasi bank PELINDO Group dengan Danantara Asset Management,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,19,OUTPUT,Asistensi implementasi rekonsiliasi bank PELINDO Group dengan Danantara Asset Management,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksional,20,OUTPUT,Rekonsiliasi bank dan deposito,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,20,OUTPUT,Rekonsiliasi bank dan deposito,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,22,OUTPUT,7.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksional,22,OUTPUT,7.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksional,12,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Manager Transaksional,12,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI formula may not be percentage-based or is blank.
+info,Manager Transaksional,18,KAI,Pelaksanaan pengembangan dashboard kebutuhan dana pada Unit Pendukung Transaksional,enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Manager Transaksional,19,KAI,"1. rekap data
+
+2. pendampingan proses rekonsiliasi",KAI formula may not be percentage-based or is blank.
+warning,Manager Transaksional,22,KAI,7.0,KAI formula may not be percentage-based or is blank.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=40.0; output_total=40.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Asistensi implementasi rekonsiliasi bank PELINDO Group dengan Danantara Asset Management; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Enhancement kepada implementasi host2host pengeluaran; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan Pembayaran; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Rekonsiliasi bank dan deposito; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=output; kpi_type=KAI; parent=Roll-out dashboard kebutuhan dana; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Manager Transaksional,,weight_audit,Manager Transaksional,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Officer Strat Keuangan Korpo,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Strat Keuangan Korpo,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Strat Keuangan Korpo,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Strat Keuangan Korpo,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,9,OUTPUT,Pelaksanaan Credit Rating PELINDO,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Strat Keuangan Korpo,9,OUTPUT,Pelaksanaan Credit Rating PELINDO,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,10,OUTPUT,Debt Service Coverage Ratio,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,10,OUTPUT,Debt Service Coverage Ratio,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,12,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,12,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,13,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,13,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,14,OUTPUT,Penerimaan SHL (Shareholder Loan) dan ICL (Inter-Company Loan) dari grup usaha,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,14,OUTPUT,Penerimaan SHL (Shareholder Loan) dan ICL (Inter-Company Loan) dari grup usaha,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,15,OUTPUT,ketepatan pembayaran kewajiban pokok dan bunga pinjaman,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,15,OUTPUT,ketepatan pembayaran kewajiban pokok dan bunga pinjaman,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Strat Keuangan Korpo,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Strat Keuangan Korpo,26,OUTPUT,7.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Strat Keuangan Korpo,26,OUTPUT,7.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Strat Keuangan Korpo,15,KAI,kecepatan dan ketepatan pembayaran kewajiban pinjaman,KAI formula may not be percentage-based or is blank.
+warning,Officer Strat Keuangan Korpo,26,KAI,7.0,KAI formula may not be percentage-based or is blank.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=output; kpi_type=KAI; parent=Debt Service Coverage Ratio; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Pendanaan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan Credit Rating PELINDO; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=output; kpi_type=KAI; parent=Penerimaan SHL (Shareholder Loan) dan ICL (Inter-Company Loan) dari grup usaha; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=output; kpi_type=KAI; parent=ketepatan pembayaran kewajiban pokok dan bunga pinjaman; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Strat Keuangan Korpo,,weight_audit,Officer Strat Keuangan Korpo,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Manager Strat Keuangan Korporas,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,16,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,16,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,17,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,17,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,18,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,18,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,19,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Strat Keuangan Korporas,19,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,20,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,20,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,21,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,21,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,22,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,22,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Strat Keuangan Korporas,23,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,23,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Strat Keuangan Korporas,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,9,OUTPUT,Pelaksanaan Credit Rating PELINDO,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Strat Keuangan Korporas,9,OUTPUT,Pelaksanaan Credit Rating PELINDO,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,10,OUTPUT,Debt Service Coverage Ratio,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,10,OUTPUT,Debt Service Coverage Ratio,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,11,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Strat Keuangan Korporas,11,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,12,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,12,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,13,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,13,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,14,OUTPUT,Penerimaan SHL (Shareholder Loan)/ICL (Inter-Company Loan) dari grup usaha,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,14,OUTPUT,Penerimaan SHL (Shareholder Loan)/ICL (Inter-Company Loan) dari grup usaha,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,15,OUTPUT,ketepatan pembayaran kewajiban pokok dan bunga pinjaman,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,15,OUTPUT,ketepatan pembayaran kewajiban pokok dan bunga pinjaman,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Strat Keuangan Korporas,16,OUTPUT,WACC,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,16,OUTPUT,WACC,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,25,OUTPUT,9.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Strat Keuangan Korporas,25,OUTPUT,9.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Strat Keuangan Korporas,11,KAI,Persentase Kepatuhan Penyusunan Laporan Keuangan Tepat Waktu dan Akurat,enum_issue category=normalized; field=Nature Of Work; raw=routine; normalized=Routine; KAI Nature normalized to Routine.
+warning,Manager Strat Keuangan Korporas,15,KAI,kecepatan dan ketepatan pembayaran kewajiban pinjaman,KAI formula may not be percentage-based or is blank.
+warning,Manager Strat Keuangan Korporas,16,KAI,Tingkat Ketepatan Analisis Struktur Pendanaan,KAI formula may not be percentage-based or is blank.
+warning,Manager Strat Keuangan Korporas,25,KAI,9.0,KAI formula may not be percentage-based or is blank.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=85.0; output_total=85.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=Debt Service Coverage Ratio; raw_total=14.0; output_total=14.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Pendanaan; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan Credit Rating PELINDO; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=Penerimaan SHL (Shareholder Loan)/ICL (Inter-Company Loan) dari grup usaha; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat Kesehatan Perusahaan (Corporate Rating); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=WACC; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=output; kpi_type=KAI; parent=ketepatan pembayaran kewajiban pokok dan bunga pinjaman; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Manager Strat Keuangan Korporas,,weight_audit,Manager Strat Keuangan Korporas,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Officer Admin Piutang,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Admin Piutang,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Admin Piutang,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Admin Piutang,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,9,OUTPUT,Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,9,OUTPUT,Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,10,OUTPUT,Penurunan Piutang Usaha non-lancar,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,10,OUTPUT,Penurunan Piutang Usaha non-lancar,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,11,OUTPUT,kelancaran proses penyelesaian piutang,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Admin Piutang,11,OUTPUT,kelancaran proses penyelesaian piutang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,11,OUTPUT,kelancaran proses penyelesaian piutang,enum_issue category=normalized; field=Cascading; raw=Indirect; normalized=INDIRECT; Cascading normalized to INDIRECT.
+info,Officer Admin Piutang,12,OUTPUT,Ketepatan waktu pelaporan piutang baik di regional maupun di entitas,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,12,OUTPUT,Ketepatan waktu pelaporan piutang baik di regional maupun di entitas,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Admin Piutang,12,OUTPUT,Ketepatan waktu pelaporan piutang baik di regional maupun di entitas,enum_issue category=normalized; field=Cascading; raw=Indirect; normalized=INDIRECT; Cascading normalized to INDIRECT.
+info,Officer Admin Piutang,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,14,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,14,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Admin Piutang,22,OUTPUT,Pemenuhan Evaluasi Piutang,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,22,OUTPUT,Pemenuhan Evaluasi Piutang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,24,OUTPUT,Progress implementasi sistem penyelesaian piutang,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,24,OUTPUT,Progress implementasi sistem penyelesaian piutang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Admin Piutang,25,OUTPUT,9.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Admin Piutang,25,OUTPUT,9.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Admin Piutang,22,KAI,jumlah pelaksanaan evaluasi piutang,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Piutang,25,KAI,9.0,KAI formula may not be percentage-based or is blank.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=120.0; output_total=120.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=65.0; output_total=65.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan waktu pelaporan piutang baik di regional maupun di entitas; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Rasio Piutang Usaha; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan Evaluasi Piutang; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Penurunan Piutang Usaha non-lancar; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi sistem penyelesaian piutang; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=kelancaran proses penyelesaian piutang; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Admin Piutang,,weight_audit,Officer Admin Piutang,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Manager Admin Piutang,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Admin Piutang,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Admin Piutang,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Admin Piutang,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,10,OUTPUT,Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,10,OUTPUT,Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,11,OUTPUT,Penurunan Piutang Usaha non-lancar,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,11,OUTPUT,Penurunan Piutang Usaha non-lancar,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,12,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Admin Piutang,12,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,14,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,14,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Admin Piutang,22,OUTPUT,Pemenuhan Evaluasi Piutang,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,22,OUTPUT,Pemenuhan Evaluasi Piutang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,24,OUTPUT,Progress implementasi sistem penyelesaian piutang,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,24,OUTPUT,Progress implementasi sistem penyelesaian piutang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Admin Piutang,25,OUTPUT,9.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Admin Piutang,25,OUTPUT,9.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager Admin Piutang,22,KAI,jumlah pelaksanaan evaluasi piutang,KAI formula may not be percentage-based or is blank.
+warning,Manager Admin Piutang,25,KAI,9.0,KAI formula may not be percentage-based or is blank.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=120.0; output_total=120.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=65.0; output_total=65.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Rasio Piutang Usaha; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan Evaluasi Piutang; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Penurunan Piutang Usaha non-lancar; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi sistem penyelesaian piutang; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat Kesehatan Perusahaan (Corporate Rating); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Manager Admin Piutang,,weight_audit,Manager Admin Piutang,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Dept Head Perbendaharaan,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,14,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,14,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,15,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,15,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,16,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,16,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Perbendaharaan,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Perbendaharaan,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Perbendaharaan,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,10,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Perbendaharaan,10,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,11,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Perbendaharaan,11,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,12,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,12,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,13,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,13,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,16,OUTPUT,Enhancement kepada implementasi host2host penerimaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,16,OUTPUT,Enhancement kepada implementasi host2host penerimaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,17,OUTPUT,Ketepatan Pembayaran,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,17,OUTPUT,Ketepatan Pembayaran,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Perbendaharaan,22,OUTPUT,Enhancement kepada implementasi host2host pengeluaran,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,22,OUTPUT,Enhancement kepada implementasi host2host pengeluaran,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,23,OUTPUT,Roll-out bank account dashboard dan dashboard kebutuhan dana,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,23,OUTPUT,Roll-out bank account dashboard dan dashboard kebutuhan dana,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,25,OUTPUT,10.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Perbendaharaan,25,OUTPUT,10.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Perbendaharaan,10,KAI,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Dept Head Perbendaharaan,10,KAI,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI formula may not be percentage-based or is blank.
+info,Dept Head Perbendaharaan,12,KAI,Percentage progres pengembangan auto generate nota,enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+info,Dept Head Perbendaharaan,16,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+info,Dept Head Perbendaharaan,22,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Dept Head Perbendaharaan,22,KAI,"Perencanaan enhancement, proses enhancement, UAT dan EUT dan go-live",KAI formula may not be percentage-based or is blank.
+info,Dept Head Perbendaharaan,23,KAI,Pelaksanaan rollout dashboard kebutuhan dana dan bank account,enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Dept Head Perbendaharaan,25,KAI,10.0,KAI formula may not be percentage-based or is blank.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=43.0; output_total=43.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=26.0; output_total=26.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=26.0; output_total=26.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Enhancement kepada implementasi host2host penerimaan; raw_total=11.0; output_total=11.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Enhancement kepada implementasi host2host pengeluaran; raw_total=13.0; output_total=13.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan Pembayaran; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Penempatan Dana; raw_total=11.0; output_total=11.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Roll-out bank account dashboard dan dashboard kebutuhan dana; raw_total=13.0; output_total=13.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat Kesehatan Perusahaan (Corporate Rating); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Dept Head Perbendaharaan,,weight_audit,Dept Head Perbendaharaan,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Dept Head Keuangan Korporasi,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,16,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,16,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,17,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,17,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,18,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,18,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,19,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Keuangan Korporasi,19,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,20,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,20,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,21,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,21,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,22,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,22,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Keuangan Korporasi,23,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,23,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Keuangan Korporasi,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,10,OUTPUT,Interest-bearing debt to EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,10,OUTPUT,Interest-bearing debt to EBITDA,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Keuangan Korporasi,11,OUTPUT,Debt Service Coverage Ratio,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,11,OUTPUT,Debt Service Coverage Ratio,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,12,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Keuangan Korporasi,12,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,14,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,14,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,15,OUTPUT,Penerimaan SHL (Shareholder Loan)/ICL (Inter-Company Loan) dari grup usaha,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,15,OUTPUT,Penerimaan SHL (Shareholder Loan)/ICL (Inter-Company Loan) dari grup usaha,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,16,OUTPUT,WACC,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,16,OUTPUT,WACC,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Keuangan Korporasi,25,OUTPUT,10.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Keuangan Korporasi,25,OUTPUT,10.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Dept Head Keuangan Korporasi,16,KAI,Tingkat Ketepatan Analisis Struktur Pendanaan,KAI formula may not be percentage-based or is blank.
+warning,Dept Head Keuangan Korporasi,25,KAI,10.0,KAI formula may not be percentage-based or is blank.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=85.0; output_total=85.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Debt Service Coverage Ratio; raw_total=17.0; output_total=17.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Interest-bearing debt to EBITDA; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Pendanaan; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Penerimaan SHL (Shareholder Loan)/ICL (Inter-Company Loan) dari grup usaha; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat Kesehatan Perusahaan (Corporate Rating); raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=WACC; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Dept Head Keuangan Korporasi,,weight_audit,Dept Head Keuangan Korporasi,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Dept Head Pengelolaan Piutang,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Pengelolaan Piutang,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Pengelolaan Piutang,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Pengelolaan Piutang,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,10,OUTPUT,Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,10,OUTPUT,Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,11,OUTPUT,Penurunan Piutang Usaha non-lancar,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,11,OUTPUT,Penurunan Piutang Usaha non-lancar,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,12,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Pengelolaan Piutang,12,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,13,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,14,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,14,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Pengelolaan Piutang,22,OUTPUT,Pemenuhan Evaluasi Piutang,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,22,OUTPUT,Pemenuhan Evaluasi Piutang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,24,OUTPUT,Progress implementasi sistem penyelesaian piutang,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,24,OUTPUT,Progress implementasi sistem penyelesaian piutang,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Pengelolaan Piutang,25,OUTPUT,9.0,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Pengelolaan Piutang,25,OUTPUT,9.0,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Dept Head Pengelolaan Piutang,22,KAI,jumlah pelaksanaan evaluasi piutang,KAI formula may not be percentage-based or is blank.
+warning,Dept Head Pengelolaan Piutang,25,KAI,9.0,KAI formula may not be percentage-based or is blank.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=120.0; output_total=120.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=65.0; output_total=65.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Ketepatan waktu perhitungan penyisihan piutang berdasarkan PSAK 71; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Rasio Piutang Usaha; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Pemenuhan Evaluasi Piutang; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Penurunan Piutang Usaha non-lancar; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi sistem penyelesaian piutang; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat Kesehatan Perusahaan (Corporate Rating); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Dept Head Pengelolaan Piutang,,weight_audit,Dept Head Pengelolaan Piutang,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Group Head,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,10,OUTPUT,Interest-bearing debt to EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,10,OUTPUT,Interest-bearing debt to EBITDA,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,11,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,11,OUTPUT,Optimalisasi Rasio Piutang Usaha,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,12,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,12,OUTPUT,Optimalisasi Pendanaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,13,OUTPUT,ROIC > WACC,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,13,OUTPUT,ROIC > WACC,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,15,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,15,OUTPUT,Tingkat Kesehatan Perusahaan (Corporate Rating),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,20,OUTPUT,Digitalisasi Pengelolaan Keuangan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,21,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,21,OUTPUT,Optimalisasi Penempatan Dana,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,22,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,22,OUTPUT,Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,24,OUTPUT,10,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,24,OUTPUT,10,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Group Head,13,KAI,Tingkat Ketepatan Analisis Struktur Pendanaan,KAI formula may not be percentage-based or is blank.
+info,Group Head,20,KAI,"Percentage progres enhancement sistem monitoring bond and loan, Percentage progres pengembangan auto generate nota, Percentage Implementasi locking system",enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+info,Group Head,22,KAI,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,enum_issue category=normalized; field=Nature Of Work; raw=Non-Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Group Head,22,KAI,Jumlah PKS yang ditandatangani dengan Mitra Perbankan,KAI formula may not be percentage-based or is blank.
+warning,Group Head,24,KAI,10,KAI formula may not be percentage-based or is blank.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=44.0; output_total=44.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=29.0; output_total=29.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Digitalisasi Pengelolaan Keuangan; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Interest-bearing debt to EBITDA; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Kerjasama untuk Transaksi Perbankan dengan Mitra Perbankan; raw_total=6.0; output_total=6.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Pendanaan; raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Penempatan Dana; raw_total=11.0; output_total=11.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Optimalisasi Rasio Piutang Usaha; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=ROIC > WACC; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat Kesehatan Perusahaan (Corporate Rating); raw_total=12.0; output_total=12.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.

@@ -1,0 +1,330 @@
+severity,sheet_name,source_row,record_type,title,message
+info,Group Head,9,kai,Monitoring dan Evaluasi Perawatan alat utama dan alat pendukung,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,12,output,Net Income,Dropped OUTPUT row because output weight is blank.
+warning,Group Head,12,kai,Pelaksanaan pengelolaan strategis pengadaan untuk mendukung pencapaian net income,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Group Head,13,kai,Persentase Implementasi Teknologi Energi Terbarukan pada Peralatan Pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,14,output,Nilai Komitmen TKDN terhadap alat yang diproduksi di dalam negri,Dropped OUTPUT row because output weight is blank.
+warning,Group Head,14,kai,Persentase Penggunaan Komponen Lokal dalam Pengadaan Peralatan Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Group Head,15,kai,Jumlah alat yang berhasil dielektrifikasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,16,output,Delta Pengurangan Kecelakaan Kerja Eksternal,Dropped OUTPUT row because output weight is blank.
+warning,Group Head,16,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Group Head,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,19,kai,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,20,kai,Pelaksanaan evaluasi pemeliharaan peralatan pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,21,kai,Persentase penyelesaian tindak lanjut temuan audit internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,23,kai,9,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Peralatan,9,kai,Persentase Pelaporan Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat Tepat Waktu dan Lengkap,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Peralatan,10,kai,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul Bongkar Muat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Peralatan,11,kai,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Bongkar Muat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Peralatan,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Peralatan,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Peralatan,14,kai,Persentase Efisiensi Biaya konsumsi energi peralatan pelabuhan yang telah dielektrifikasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Peralatan,15,output,Nilai Komitmen TKDN terhadap alat yang diproduksi di dalam negri,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,DH Perencanaan Peralatan,15,kai,Persentase Penggunaan Komponen Lokal dalam Pengadaan Peralatan Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,DH Perencanaan Peralatan,16,output,Delta Pengurangan Kecelakaan Kerja Eksternal,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,DH Perencanaan Peralatan,16,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,Skipped KAI because its OUTPUT row was dropped or missing.
+info,DH Perencanaan Peralatan,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Peralatan,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Peralatan,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Peralatan,20,kai,Persentase penyelesaian tindak lanjut temuan audit internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Peralatan,22,kai,7,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Instalasi dan,9,kai,Persentase Pelaporan Evaluasi Pemeliharaan Aset Alat Apung Tepat Waktu dan Lengkap,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Instalasi dan,10,kai,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul alat apung,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Instalasi dan,11,kai,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Apung,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Instalasi dan,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Instalasi dan,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Instalasi dan,14,output,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,DH Perencanaan Instalasi dan,14,kai,Persentase Efisiensi Biaya konsumsi energi peralatan pelabuhan yang telah dielektrifikasi,Skipped KAI because its OUTPUT row was dropped or missing.
+info,DH Perencanaan Instalasi dan,15,output,Nilai Komitmen TKDN terhadap alat yang diproduksi di dalam negri,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,DH Perencanaan Instalasi dan,15,kai,Persentase Penggunaan Komponen Lokal dalam Pengadaan Peralatan Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,DH Perencanaan Instalasi dan,16,output,Delta Pengurangan Kecelakaan Kerja Eksternal,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,DH Perencanaan Instalasi dan,16,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,Skipped KAI because its OUTPUT row was dropped or missing.
+info,DH Perencanaan Instalasi dan,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Instalasi dan,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Perencanaan Instalasi dan,19,kai,Persentase Penyelesaian Dokumen Desain MEP Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Instalasi dan,20,kai,Persentase penyelesaian tindak lanjut temuan audit internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Perencanaan Instalasi dan,22,kai,8,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Peralatan,9,kai,Persentase Pelaporan Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat Tepat Waktu dan Lengkap,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Peralatan,10,kai,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul Bongkar Muat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Peralatan,11,kai,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Bongkar Muat,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Peralatan,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Peralatan,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Peralatan,14,kai,Persentase Efisiensi Biaya konsumsi energi peralatan pelabuhan yang telah dielektrifikasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Peralatan,15,output,Nilai Komitmen TKDN terhadap alat yang diproduksi di dalam negri,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Peralatan,15,kai,Persentase Penggunaan Komponen Lokal dalam Pengadaan Peralatan Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Peralatan,16,output,Delta Pengurangan Kecelakaan Kerja Eksternal,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Peralatan,16,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Peralatan,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Peralatan,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Peralatan,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Peralatan,20,kai,Persentase penyelesaian tindak lanjut temuan audit internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Peralatan,22,kai,7,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Instalasi,9,kai,Persentase Pelaporan Evaluasi Pemeliharaan Aset Alat Apung Tepat Waktu dan Lengkap,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Instalasi,10,kai,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul alat apung,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Instalasi,11,kai,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Apung,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Instalasi,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Instalasi,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Instalasi,14,output,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Instalasi,14,kai,Persentase Efisiensi Biaya konsumsi energi peralatan pelabuhan yang telah dielektrifikasi,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Instalasi,15,output,Nilai Komitmen TKDN terhadap alat yang diproduksi di dalam negri,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Instalasi,15,kai,Persentase Penggunaan Komponen Lokal dalam Pengadaan Peralatan Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Instalasi,16,output,Delta Pengurangan Kecelakaan Kerja Eksternal,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Perencanaan Instalasi,16,kai,Pelaksanaan program pencegahan kecelakaan kerja eksternal,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Perencanaan Instalasi,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Instalasi,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Perencanaan Instalasi,19,kai,Persentase Penyelesaian Dokumen Desain MEP Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Instalasi,20,kai,Persentase penyelesaian tindak lanjut temuan audit internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Perencanaan Instalasi,22,kai,8,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,10,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,12,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,12,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,14,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,14,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,Monitoring dan Evaluasi Availability Peralatan Pelabuhan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,Monitoring dan Evaluasi Availability Peralatan Pelabuhan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,13,OUTPUT,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,13,OUTPUT,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,15,OUTPUT,Implementasi Green Technology dan Renewable Energy Bidang Peralatan di Pelabuhan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,15,OUTPUT,Implementasi Green Technology dan Renewable Energy Bidang Peralatan di Pelabuhan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,19,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,19,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,OUTPUT,Evaluasi Pemeliharaan Peralatan Pelabuhan,enum_issue category=normalized; field=Period; raw=per Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Group Head,20,OUTPUT,Evaluasi Pemeliharaan Peralatan Pelabuhan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,23,OUTPUT,9,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,23,OUTPUT,9,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Group Head,9,KAI,Monitoring dan Evaluasi Perawatan alat utama dan alat pendukung,KAI formula may not be percentage-based or is blank.
+warning,Group Head,13,KAI,Persentase Implementasi Teknologi Energi Terbarukan pada Peralatan Pelabuhan,KAI formula may not be percentage-based or is blank.
+warning,Group Head,15,KAI,Jumlah alat yang berhasil dielektrifikasi,KAI formula may not be percentage-based or is blank.
+warning,Group Head,19,KAI,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan,KAI formula may not be percentage-based or is blank.
+warning,Group Head,20,KAI,Pelaksanaan evaluasi pemeliharaan peralatan pelabuhan,KAI formula may not be percentage-based or is blank.
+warning,Group Head,21,KAI,Persentase penyelesaian tindak lanjut temuan audit internal,KAI formula may not be percentage-based or is blank.
+warning,Group Head,23,KAI,9,KAI formula may not be percentage-based or is blank.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=ESG Rating; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Pemeliharaan Peralatan Pelabuhan; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Aplikasi Pemeliharaan (SIGAP); raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Green Technology dan Renewable Energy Bidang Peralatan di Pelabuhan; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Availability Peralatan Pelabuhan; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,DH Perencanaan Peralatan,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,14,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,14,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Perencanaan Peralatan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Perencanaan Peralatan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Perencanaan Peralatan,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Perencanaan Peralatan,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,9,OUTPUT,Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,9,OUTPUT,Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Bongkar Muat,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Bongkar Muat,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,11,OUTPUT,Monitoring dan Evaluasi Availability Alat bongkar muat,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,11,OUTPUT,Monitoring dan Evaluasi Availability Alat bongkar muat,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,14,OUTPUT,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,14,OUTPUT,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Peralatan,22,OUTPUT,7,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Peralatan,22,OUTPUT,7,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Perencanaan Peralatan,9,KAI,Persentase Pelaporan Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat Tepat Waktu dan Lengkap,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Peralatan,10,KAI,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul Bongkar Muat,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Peralatan,11,KAI,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Bongkar Muat,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Peralatan,14,KAI,Persentase Efisiensi Biaya konsumsi energi peralatan pelabuhan yang telah dielektrifikasi,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Peralatan,20,KAI,Persentase penyelesaian tindak lanjut temuan audit internal,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Peralatan,22,KAI,7,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=75.0; output_total=75.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Aplikasi Pemeliharaan (SIGAP) modul Bongkar Muat; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Availability Alat bongkar muat; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,DH Perencanaan Peralatan,,weight_audit,DH Perencanaan Peralatan,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,DH Perencanaan Instalasi dan,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,14,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,14,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Perencanaan Instalasi dan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Perencanaan Instalasi dan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Perencanaan Instalasi dan,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Perencanaan Instalasi dan,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,9,OUTPUT,Evaluasi Pemeliharaan Aset Alat Apung,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,9,OUTPUT,Evaluasi Pemeliharaan Aset Alat Apung,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Alat Apung,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Alat Apung,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,11,OUTPUT,Monitoring dan Evaluasi Availability Alat Apung,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,11,OUTPUT,Monitoring dan Evaluasi Availability Alat Apung,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,19,OUTPUT,Perencanaan Desain MEP,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,19,OUTPUT,Perencanaan Desain MEP,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Perencanaan Instalasi dan,22,OUTPUT,8,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Perencanaan Instalasi dan,22,OUTPUT,8,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Perencanaan Instalasi dan,9,KAI,Persentase Pelaporan Evaluasi Pemeliharaan Aset Alat Apung Tepat Waktu dan Lengkap,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Instalasi dan,10,KAI,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul alat apung,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Instalasi dan,11,KAI,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Apung,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Instalasi dan,19,KAI,Persentase Penyelesaian Dokumen Desain MEP Tepat Waktu,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Instalasi dan,20,KAI,Persentase penyelesaian tindak lanjut temuan audit internal,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Instalasi dan,22,KAI,8,KAI formula may not be percentage-based or is blank.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=80.0; output_total=80.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Pemeliharaan Aset Alat Apung; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Aplikasi Pemeliharaan (SIGAP) modul Alat Apung; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Availability Alat Apung; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=output; kpi_type=KAI; parent=Perencanaan Desain MEP; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,DH Perencanaan Instalasi dan,,weight_audit,DH Perencanaan Instalasi dan,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Officer Perencanaan Peralatan,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,14,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,14,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Perencanaan Peralatan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Peralatan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Perencanaan Peralatan,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Peralatan,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,9,OUTPUT,Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,9,OUTPUT,Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Bongkar Muat,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Bongkar Muat,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,11,OUTPUT,Monitoring dan Evaluasi Availability Alat bongkar muat,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,11,OUTPUT,Monitoring dan Evaluasi Availability Alat bongkar muat,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,14,OUTPUT,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Peralatan,14,OUTPUT,Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Peralatan,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+warning,Officer Perencanaan Peralatan,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=defaulted; field=Polarity; raw=(blank); normalized=POSITIVE; Polarity defaulted to POSITIVE.
+warning,Officer Perencanaan Peralatan,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=defaulted; field=Ownership Type; raw=(blank); normalized=SPECIFIC; Ownership Type defaulted to SPECIFIC.
+info,Officer Perencanaan Peralatan,22,OUTPUT,7,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+warning,Officer Perencanaan Peralatan,22,OUTPUT,7,enum_issue category=defaulted; field=Polarity; raw=(blank); normalized=POSITIVE; Polarity defaulted to POSITIVE.
+warning,Officer Perencanaan Peralatan,22,OUTPUT,7,enum_issue category=defaulted; field=Ownership Type; raw=(blank); normalized=SPECIFIC; Ownership Type defaulted to SPECIFIC.
+warning,Officer Perencanaan Peralatan,9,KAI,Persentase Pelaporan Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat Tepat Waktu dan Lengkap,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Peralatan,10,KAI,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul Bongkar Muat,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Peralatan,11,KAI,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Bongkar Muat,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Peralatan,14,KAI,Persentase Efisiensi Biaya konsumsi energi peralatan pelabuhan yang telah dielektrifikasi,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Peralatan,20,KAI,Persentase penyelesaian tindak lanjut temuan audit internal,enum_issue category=defaulted; field=Nature Of Work; raw=(blank); normalized=Routine; KAI Nature inferred as Routine.
+warning,Officer Perencanaan Peralatan,20,KAI,Persentase penyelesaian tindak lanjut temuan audit internal,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Peralatan,22,KAI,7,enum_issue category=defaulted; field=Nature Of Work; raw=(blank); normalized=Routine; KAI Nature inferred as Routine.
+warning,Officer Perencanaan Peralatan,22,KAI,7,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=75.0; output_total=75.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Efisiensi Biaya Konsumsi Energi Peralatan Pelabuhan yang telah dielektrifikasi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Pemeliharaan Aset Peralatan Bongkar Muat; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Aplikasi Pemeliharaan (SIGAP) modul Bongkar Muat; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Availability Alat bongkar muat; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Peralatan,,weight_audit,Officer Perencanaan Peralatan,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Officer Perencanaan Instalasi,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,9,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,14,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,14,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,15,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Perencanaan Instalasi,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Instalasi,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Perencanaan Instalasi,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,17,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,19,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Perencanaan Instalasi,20,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,9,OUTPUT,Evaluasi Pemeliharaan Aset Alat Apung,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,9,OUTPUT,Evaluasi Pemeliharaan Aset Alat Apung,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Alat Apung,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,10,OUTPUT,Implementasi Aplikasi Pemeliharaan (SIGAP) modul Alat Apung,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,11,OUTPUT,Monitoring dan Evaluasi Availability Alat Apung,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,11,OUTPUT,Monitoring dan Evaluasi Availability Alat Apung,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,19,OUTPUT,Perencanaan Desain MEP,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,19,OUTPUT,Perencanaan Desain MEP,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,20,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Perencanaan Instalasi,22,OUTPUT,8,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Perencanaan Instalasi,22,OUTPUT,8,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Perencanaan Instalasi,9,KAI,Persentase Pelaporan Evaluasi Pemeliharaan Aset Alat Apung Tepat Waktu dan Lengkap,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Instalasi,10,KAI,Persentase Penyelesaian Tahapan Implementasi Aplikasi Pemeliharaan modul alat apung,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Instalasi,11,KAI,MonEv Tingkat Kepatuhan Jadwal Pemeliharaan Alat Apung,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Instalasi,19,KAI,Persentase Penyelesaian Dokumen Desain MEP Tepat Waktu,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Instalasi,20,KAI,Persentase penyelesaian tindak lanjut temuan audit internal,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Instalasi,22,KAI,8,KAI formula may not be percentage-based or is blank.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=80.0; output_total=80.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Pemeliharaan Aset Alat Apung; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Aplikasi Pemeliharaan (SIGAP) modul Alat Apung; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring dan Evaluasi Availability Alat Apung; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=output; kpi_type=KAI; parent=Perencanaan Desain MEP; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Perencanaan Instalasi,,weight_audit,Officer Perencanaan Instalasi,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.

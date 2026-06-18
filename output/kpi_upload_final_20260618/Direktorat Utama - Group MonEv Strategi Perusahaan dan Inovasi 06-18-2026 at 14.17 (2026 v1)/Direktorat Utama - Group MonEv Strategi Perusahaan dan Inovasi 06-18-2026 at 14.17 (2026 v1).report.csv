@@ -1,0 +1,530 @@
+severity,sheet_name,source_row,record_type,title,message
+info,Officer MEKO ,3,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKO ,4,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKO ,5,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKO ,6,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKO ,7,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKO ,8,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKO ,9,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKO ,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKO ,11,kai,Persentase Penyelesaian Pemetaan Rencana Implementasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKO ,12,kai,Jumlah pelaporan progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKO ,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKO ,15,kai,4,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKA ,3,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKA ,4,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKA ,5,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKA ,6,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKA ,7,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKA ,8,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKA ,9,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKA ,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer MEKA ,11,kai,Persentase Penyelesaian Pemetaan Rencana Implementasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKA ,12,kai,Jumlah pelaporan progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKA ,13,kai,Koordinasi pengumpulan data untuk penyusunan laporan final PELINDO pasca penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKA ,14,kai,Pelaksanaan pelatihan dan/atau pendampingan terkait peningkatan kompetensi fungsi MonEv strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Riset & Inovasi ,4,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Riset & Inovasi ,5,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Riset & Inovasi ,6,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal  Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Riset & Inovasi ,7,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Riset & Inovasi ,8,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Riset & Inovasi ,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Riset & Inovasi ,10,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada  Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Riset & Inovasi ,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Riset & Inovasi ,12,kai,% Program riset yang terealisasi sesuai jadwal pada Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Riset & Inovasi ,13,kai,% Program Inovasi yang terealisasi sesuai jadwal pada Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Riset & Inovasi ,14,kai,% Program pengembangan innovation center of excellence sesuai jadwal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Riset & Inovasi ,16,kai,5,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Manajemen Perubahan,4,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Manajemen Perubahan,5,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Manajemen Perubahan,6,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Manajemen Perubahan,7,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Manajemen Perubahan,8,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Manajemen Perubahan,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Manajemen Perubahan,10,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Manajemen Perubahan,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Manajemen Perubahan,12,kai,% Realisasi jumlah Change Management Report sesuai jadwal pada Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Manajemen Perubahan,13,kai,%Realisasi jumlah event keterbukaan informasi pelaksanaan strategi perusahaan sesuai jadwal pada Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Manajemen Perubahan,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Manajemen Perubahan,16,kai,4,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKO,3,kai,% Pengendalian biaya Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKO,4,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKO,5,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKO,6,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKO,7,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKO,8,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKO,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKO,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKO,11,kai,Persentase Penyelesaian Pemetaan Rencana Implementasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKO,12,kai,Jumlah pelaporan progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKO,13,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKO,15,kai,5,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,3,kai,% Pengendalian biaya Group MNEV Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,4,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKA,5,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,6,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKA,7,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKA,8,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKA,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKA,10,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head MEKA,11,kai,Persentase Penyelesaian Pemetaan Rencana Implementasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,12,kai,Jumlah pelaporan progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,13,kai,Koordinasi pengumpulan data untuk penyusunan laporan final PELINDO pasca penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,14,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,15,kai,Pelaksanaan pelatihan dan/atau pendampingan terkait peningkatan kompetensi fungsi MonEv strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head MEKA,17,kai,7,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Riset & Inovasi,8,kai,% Pengendalian biaya Group MNEV Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Riset & Inovasi,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Riset & Inovasi,10,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal  Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Riset & Inovasi,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Riset & Inovasi,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Riset & Inovasi,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Riset & Inovasi,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Riset & Inovasi,16,kai,% Program riset yang terealisasi sesuai jadwal pada Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Riset & Inovasi,17,kai,% ide Inovasi yang terimplementasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Riset & Inovasi,18,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada  Dept Riset dan Inovasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Riset & Inovasi,19,kai,% Program pengembangan innovation center of excellence sesuai jadwal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Riset & Inovasi,21,kai,6,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Manajemen Perubahan,8,kai,% Pengendalian biaya Group MNEV Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Manajemen Perubahan,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Manajemen Perubahan,10,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Manajemen Perubahan,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Manajemen Perubahan,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Manajemen Perubahan,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Manajemen Perubahan,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Manajemen Perubahan,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Dept Head Manajemen Perubahan,16,kai,% Realisasi jumlah Change Management Report sesuai jadwal pada Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Manajemen Perubahan,17,kai,%Realisasi jumlah event keterbukaan informasi pelaksanaan strategi perusahaan sesuai jadwal pada Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Manajemen Perubahan,18,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu pada Dept Manajemen Perubahan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Dept Head Manajemen Perubahan,20,kai,5,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,8,kai,% Pengendalian biaya Group MNEV,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,9,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,10,kai,%Realisasi jumlah event keterbukaan informasi pelaksanaan strategi perusahaan sesuai jadwal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,16,kai,% Realisasi jumlah Change Management Report sesuai jadwal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,17,kai,Jumlah analisis dan pelaporan strategis sesuai jadwal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,18,kai,Jumlah pelaporan progress implementasi strategi perusahaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,19,kai,Persentase Penyelesaian Pemetaan Rencana Implementasi Strategi Perusahaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,20,kai,Koordinasi pengumpulan data untuk penyusunan laporan final PELINDO pasca penggabungan 2021-2025,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,21,kai,% Program Riset dan Inovasi yang terealisasi sesuai jadwal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,22,kai,Persentase Penyelesaian Temuan Audit Internal Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,23,kai,Pelaksanaan pelatihan dan/atau pendampingan terkait peningkatan kompetensi fungsi MonEv strategi perusahaan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,25,kai,10,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer MEKO ,3,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,3,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer MEKO ,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer MEKO ,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer MEKO ,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,13,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,13,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,9,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer MEKO ,9,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer MEKO ,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKO ,15,OUTPUT,4,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKO ,15,OUTPUT,4,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer MEKO ,15,KAI,4,KAI formula may not be percentage-based or is blank.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=output; kpi_type=KAI; parent=Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer MEKO ,,weight_audit,Officer MEKO ,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Officer MEKA ,3,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,3,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer MEKA ,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer MEKA ,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer MEKA ,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer MEKA ,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,9,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer MEKA ,9,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer MEKA ,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer MEKA ,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,13,OUTPUT,Evaluasi Final Pelindo Pasca Penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer MEKA ,13,OUTPUT,Evaluasi Final Pelindo Pasca Penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer MEKA ,14,OUTPUT,Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer MEKA ,14,OUTPUT,Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer MEKA ,13,KAI,Koordinasi pengumpulan data untuk penyusunan laporan final PELINDO pasca penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI formula may not be percentage-based or is blank.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=57.5; output_total=57.5; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=27.5; output_total=27.5; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Final Pelindo Pasca Penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=output; kpi_type=KAI; parent=Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=27.5; output_total=27.5; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer MEKA ,,weight_audit,Officer MEKA ,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=27.5; output_total=27.5; cause=Raw Data Issue.
+info,Officer Riset & Inovasi ,4,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,4,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,5,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,5,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,6,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,6,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,7,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,7,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,8,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,8,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Riset & Inovasi ,9,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Riset & Inovasi ,9,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,10,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Riset & Inovasi ,10,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,11,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Riset & Inovasi ,11,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,12,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,12,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,6,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Riset & Inovasi ,6,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,10,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada  Dept Riset dan Inovasi",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Riset & Inovasi ,10,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada  Dept Riset dan Inovasi",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,12,OUTPUT,Penguatan program riset pada Dept Riset dan Inovasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Riset & Inovasi ,12,OUTPUT,Penguatan program riset pada Dept Riset dan Inovasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,13,OUTPUT,Penguatan program inovasi pada Dept Riset dan Inovasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Riset & Inovasi ,13,OUTPUT,Penguatan program inovasi pada Dept Riset dan Inovasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,14,OUTPUT,Pengembangan Innovation Center of Excellence,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Riset & Inovasi ,14,OUTPUT,Pengembangan Innovation Center of Excellence,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Riset & Inovasi ,16,OUTPUT,5,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Riset & Inovasi ,16,OUTPUT,5,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Riset & Inovasi ,16,KAI,5,KAI formula may not be percentage-based or is blank.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=125.0; output_total=125.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Innovation Center of Excellence; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=output; kpi_type=KAI; parent=Penguatan program inovasi pada Dept Riset dan Inovasi; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=output; kpi_type=KAI; parent=Penguatan program riset pada Dept Riset dan Inovasi; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada  Dept Riset dan Inovasi; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Riset & Inovasi ,,weight_audit,Officer Riset & Inovasi ,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Officer Manajemen Perubahan,4,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,4,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,5,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,5,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,6,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,6,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,7,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,7,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,8,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,8,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Manajemen Perubahan,9,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Manajemen Perubahan,9,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,10,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Manajemen Perubahan,10,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,11,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Manajemen Perubahan,11,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,12,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,12,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Manajemen Perubahan,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,6,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,6,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,10,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada Dept Manajemen Perubahan",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Manajemen Perubahan,10,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada Dept Manajemen Perubahan",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,12,OUTPUT,Pelaksanaan Change Management Program pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Manajemen Perubahan,12,OUTPUT,Pelaksanaan Change Management Program pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,13,OUTPUT,Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Manajemen Perubahan,13,OUTPUT,Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Manajemen Perubahan,16,OUTPUT,4,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Manajemen Perubahan,16,OUTPUT,4,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Manajemen Perubahan,16,KAI,4,KAI formula may not be percentage-based or is blank.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=70.0; output_total=70.0; cause=Raw Data Issue.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=output; kpi_type=KAI; parent=Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan pada Dept Manajemen Perubahan; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan Change Management Program pada Dept Manajemen Perubahan; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada Dept Manajemen Perubahan; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Officer Manajemen Perubahan,,weight_audit,Officer Manajemen Perubahan,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Dept Head MEKO,3,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,3,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head MEKO,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head MEKO,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,13,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head MEKO,13,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,3,OUTPUT,Pengendalian biaya Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,3,OUTPUT,Pengendalian biaya Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head MEKO,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKO,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,13,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head MEKO,13,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKO,15,OUTPUT,5,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head MEKO,15,OUTPUT,5,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Dept Head MEKO,15,KAI,5,KAI formula may not be percentage-based or is blank.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=55.0; output_total=55.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Pengendalian biaya Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Optimalisasi Korporasi; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Dept Head MEKO,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Optimalisasi Korporasi,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Dept Head MEKA,3,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,3,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,4,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,5,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,6,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,7,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head MEKA,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head MEKA,8,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head MEKA,9,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head MEKA,10,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,11,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head MEKA,14,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,3,OUTPUT,Pengendalian biaya Group MNEV Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,3,OUTPUT,Pengendalian biaya Group MNEV Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,5,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head MEKA,11,OUTPUT,Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head MEKA,12,OUTPUT,Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,13,OUTPUT,Evaluasi Final Pelindo Pasca Penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head MEKA,13,OUTPUT,Evaluasi Final Pelindo Pasca Penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,14,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head MEKA,14,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,15,OUTPUT,Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head MEKA,15,OUTPUT,Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head MEKA,17,OUTPUT,7,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head MEKA,17,OUTPUT,7,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Dept Head MEKA,13,KAI,Koordinasi pengumpulan data untuk penyusunan laporan final PELINDO pasca penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi,KAI formula may not be percentage-based or is blank.
+warning,Dept Head MEKA,17,KAI,7,KAI formula may not be percentage-based or is blank.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=115.0; output_total=115.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=7.0; output_total=7.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=54.0; output_total=54.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=24.0; output_total=24.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Final Pelindo Pasca Penggabungan 2021-2025 pada pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Pemetaan rencana implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=24.0; output_total=24.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Pengendalian biaya Group MNEV Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=7.0; output_total=7.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi strategi perusahaan pada Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) Dept Monitoring dan Evaluasi Klaster Ekspansi Korporasi; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=24.0; output_total=24.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Dept Head MEKA,,weight_audit,Department Head Monitoring dan Evaluasi Klaster Ekspansi Korporasi,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Dept Head Riset & Inovasi,8,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,8,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,9,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,9,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,10,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,10,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,12,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,12,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Riset & Inovasi,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Riset & Inovasi,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,14,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Riset & Inovasi,14,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Riset & Inovasi,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,16,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,16,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Riset & Inovasi,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,8,OUTPUT,Pengendalian biaya Group MNEV Dept Riset dan Inovasi,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,8,OUTPUT,Pengendalian biaya Group MNEV Dept Riset dan Inovasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,10,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Riset & Inovasi,10,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,16,OUTPUT,Penguatan program riset pada Dept Riset dan Inovasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head Riset & Inovasi,16,OUTPUT,Penguatan program riset pada Dept Riset dan Inovasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,17,OUTPUT,Implementasi Ide Inovasi di regional dan SH masing-masing,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head Riset & Inovasi,17,OUTPUT,Implementasi Ide Inovasi di regional dan SH masing-masing,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,18,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada  Dept Riset dan Inovasi",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head Riset & Inovasi,18,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada  Dept Riset dan Inovasi",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,19,OUTPUT,Pengembangan Innovation Center of Excellence,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Riset & Inovasi,19,OUTPUT,Pengembangan Innovation Center of Excellence,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Riset & Inovasi,21,OUTPUT,6,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Riset & Inovasi,21,OUTPUT,6,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Dept Head Riset & Inovasi,21,KAI,6,KAI formula may not be percentage-based or is blank.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=125.0; output_total=125.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=50.0; output_total=50.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Ide Inovasi di regional dan SH masing-masing; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan Innovation Center of Excellence; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=output; kpi_type=KAI; parent=Pengendalian biaya Group MNEV Dept Riset dan Inovasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=output; kpi_type=KAI; parent=Penguatan program riset pada Dept Riset dan Inovasi; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada  Dept Riset dan Inovasi; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Dept Head Riset & Inovasi,,weight_audit,Dept Head Riset & Inovasi,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Dept Head Manajemen Perubahan,8,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,8,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,9,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,9,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,10,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,10,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,12,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,12,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Dept Head Manajemen Perubahan,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Manajemen Perubahan,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,14,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Manajemen Perubahan,14,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Manajemen Perubahan,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,16,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,16,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Dept Head Manajemen Perubahan,18,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,8,OUTPUT,Pengendalian biaya Group MNEV Dept Manajemen Perubahan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,8,OUTPUT,Pengendalian biaya Group MNEV Dept Manajemen Perubahan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,10,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,10,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,16,OUTPUT,Pelaksanaan Change Management Program pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Dept Head Manajemen Perubahan,16,OUTPUT,Pelaksanaan Change Management Program pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,17,OUTPUT,Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head Manajemen Perubahan,17,OUTPUT,Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan pada Dept Manajemen Perubahan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,18,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada Dept Manajemen Perubahan",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head Manajemen Perubahan,18,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada Dept Manajemen Perubahan",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Dept Head Manajemen Perubahan,20,OUTPUT,5,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Dept Head Manajemen Perubahan,20,OUTPUT,5,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Dept Head Manajemen Perubahan,20,KAI,5,KAI formula may not be percentage-based or is blank.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=105.0; output_total=105.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=output; kpi_type=KAI; parent=Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan pada Dept Manajemen Perubahan; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan Change Management Program pada Dept Manajemen Perubahan; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=output; kpi_type=KAI; parent=Pengendalian biaya Group MNEV Dept Manajemen Perubahan; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) pada Dept Manajemen Perubahan; raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Dept Head Manajemen Perubahan,,weight_audit,Dept Head Manajemen Perubahan,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+info,Group Head,8,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,8,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,9,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,10,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,10,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,11,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,12,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,12,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,13,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,14,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,14,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,16,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,16,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,8,OUTPUT,Pengendalian biaya Group MNEV,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,8,OUTPUT,Pengendalian biaya Group MNEV,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,10,OUTPUT,Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Group Head,10,OUTPUT,Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,16,OUTPUT,Pelaksanaan Change Management Program,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,16,OUTPUT,Pelaksanaan Change Management Program,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,17,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,17,OUTPUT,Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,18,OUTPUT,Progress implementasi strategi perusahaan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,18,OUTPUT,Progress implementasi strategi perusahaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,19,OUTPUT,Pemetaan rencana implementasi strategi perusahaan,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Group Head,19,OUTPUT,Pemetaan rencana implementasi strategi perusahaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,OUTPUT,Evaluasi Final Pelindo Pasca Penggabungan 2021-2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,20,OUTPUT,Evaluasi Final Pelindo Pasca Penggabungan 2021-2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,21,OUTPUT,Penguatan program riset dan inovasi,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Group Head,21,OUTPUT,Penguatan program riset dan inovasi,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Group Head,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,23,OUTPUT,Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,23,OUTPUT,Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,25,OUTPUT,10,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,25,OUTPUT,10,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Group Head,20,KAI,Koordinasi pengumpulan data untuk penyusunan laporan final PELINDO pasca penggabungan 2021-2025,KAI formula may not be percentage-based or is blank.
+warning,Group Head,25,KAI,10,KAI formula may not be percentage-based or is blank.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=125.0; output_total=125.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Total Productivity; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Evaluasi Final Pelindo Pasca Penggabungan 2021-2025; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Keterbukaan Informasi atas evaluasi dan pelaporan pelaksanaan strategi Perusahaan; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan Change Management Program; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Pemetaan rencana implementasi strategi perusahaan; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Pengendalian biaya Group MNEV; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Penguatan program riset dan inovasi; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Peningkatan Kompetensi fungsi Monitoring Evaluasi Strategi Perusahaan; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Progress implementasi strategi perusahaan; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat produktivitas dalam memberikan analisis atau pelaporan strategis; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=position; kpi_type=IMPACT; raw_total=110.0; output_total=110.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=position; kpi_type=KAI; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=position; kpi_type=OUTPUT; raw_total=200.0; output_total=200.0; cause=Raw Data Issue.

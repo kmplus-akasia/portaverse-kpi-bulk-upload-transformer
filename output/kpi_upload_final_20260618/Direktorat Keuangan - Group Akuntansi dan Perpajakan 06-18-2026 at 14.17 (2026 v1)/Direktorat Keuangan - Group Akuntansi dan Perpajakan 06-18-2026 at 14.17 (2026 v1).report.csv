@@ -1,0 +1,918 @@
+severity,sheet_name,source_row,record_type,title,message
+info,Officer Akuntansi,9,kai,Tingkat Kepatuhan Penyusunan Laporan Keuangan Konsolidasi Sesuai Standar Akuntansi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Akuntansi,10,kai,Penyusunan dan Verifikasi Laporan Keuangan Triwulan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Akuntansi,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Akuntansi,19,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksi dan Proses,9,output,BOPO,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Transaksi dan Proses,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Transaksi dan Proses,10,output,EBITDA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Transaksi dan Proses,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Transaksi dan Proses,11,kai,Tingkat Kepatuhan Penyusunan dan Pengajuan Laporan Keuangan Konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksi dan Proses,12,kai,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksi dan Proses,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksi dan Proses,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksi dan Proses,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksi dan Proses,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksi dan Proses,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksi dan Proses,18,kai,Persentase Kepatuhan Pengumpulan Data ICOFR Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Transaksi dan Proses,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksi dan Proses,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Transaksi dan Proses,21,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer QA,9,output,BOPO,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer QA,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer QA,10,output,EBITDA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer QA,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer QA,11,kai,Tingkat Kepatuhan Penyusunan dan Pengajuan Laporan Keuangan Konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer QA,12,kai,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer QA,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,19,kai,Persentase Kepatuhan Pengumpulan Data ICOFR Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer QA,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer QA,22,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Aset Tetap,9,kai,Persentase Penyelesaian Pencatatan dan Verifikasi Aset Tetap,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Aset Tetap,10,kai,Persentase Implementasi aplikasi SIAP di Subholding dan AnPer,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Aset Tetap,11,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,12,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Aset Tetap,19,kai,Persentase Penyelesaian Temuan Audit Internal di dept aset,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Tax Compliance,9,output,BOPO,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Tax Compliance,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Tax Compliance,10,output,EBITDA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Tax Compliance,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Tax Compliance,11,kai,Persentase Penyelesaian Penerbitan Surat Perintah Pemeriksaan (SP2) Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Tax Compliance,12,kai,Persentase Dokumen Pengajuan SKB dan SKF yang Diajukan Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Tax Compliance,13,kai,Jumlah Sesi Sosialisasi Perpajakan Pajak Penghasilan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Tax Compliance,14,kai,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Tax Compliance,15,kai,Persentase Penyelesaian Modul Pengembangan Sistem Informasi Perpajakan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Tax Compliance,16,kai,Persentase Penyampaian Laporan PPh Pasal 25 Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Tax Compliance,17,output,Rekonsiliasi dan Ekualisasi PPh Pasal 21,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Officer Tax Compliance,17,kai,Perhitungan Pajak Penghasilan Badan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Tax Compliance,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,24,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,25,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Tax Compliance,26,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Layanan Perpajakan,9,output,BOPO,Dropped OUTPUT row because output weight is blank.
+warning,Officer Layanan Perpajakan,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Layanan Perpajakan,10,output,EBITDA,Dropped OUTPUT row because output weight is blank.
+warning,Officer Layanan Perpajakan,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Officer Layanan Perpajakan,11,kai,Persentase Penyelesaian Penerbitan Surat Perintah Pemeriksaan (SP2) Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Layanan Perpajakan,12,kai,Persentase Dokumen Pengajuan SKF dan SKTD yang Diajukan Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Layanan Perpajakan,13,kai,Jumlah Sesi Sosialisasi Pajak Pertambahan Nilai yang Dilaksanakan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Layanan Perpajakan,14,kai,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Layanan Perpajakan,15,kai,Persiapan dan Verifikasi Data Pelaporan PPN dan withholding,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Layanan Perpajakan,16,kai,Persentase Penyelesaian Modul Pengembangan Sistem Informasi Perpajakan Simtax,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Layanan Perpajakan,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,24,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Officer Layanan Perpajakan,25,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Akuntansi,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Akuntansi,10,kai,Optimalisasi Pendapatan Inti dan Pengendalian Biaya Operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Akuntansi,11,kai,Penyusunan dan Verifikasi Laporan Keuangan Triwulan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Akuntansi,12,kai,Tingkat Kepatuhan Penyusunan Laporan Keuangan Konsolidasi Sesuai Standar Akuntansi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Akuntansi,13,kai,Tingkat Kepatuhan Penyusunan Laporan Accounting Hedge Sesuai Standar Akuntansi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Akuntansi,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Akuntansi,22,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksi dan Proses Da,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksi dan Proses Da,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksi dan Proses Da,11,kai,Tingkat Kepatuhan Penyusunan dan Pengajuan Laporan Keuangan Konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksi dan Proses Da,12,kai,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksi dan Proses Da,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksi dan Proses Da,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksi dan Proses Da,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksi dan Proses Da,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksi dan Proses Da,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksi dan Proses Da,18,kai,Persentase Kepatuhan Pengumpulan Data ICOFR Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Transaksi dan Proses Da,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksi dan Proses Da,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Transaksi dan Proses Da,21,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Tax Compliance,9,output,BOPO,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Manager Tax Compliance,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Manager Tax Compliance,10,output,EBITDA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Manager Tax Compliance,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Manager Tax Compliance,11,kai,Persentase Penyelesaian Penerbitan Surat Perintah Pemeriksaan (SP2) Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Tax Compliance,12,kai,Persentase Dokumen Pengajuan SKB dan SKF yang Diajukan Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Tax Compliance,13,kai,Jumlah Sesi Sosialisasi Perpajakan Pajak Penghasilan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Tax Compliance,14,kai,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Tax Compliance,15,kai,Persentase Penyelesaian Modul Pengembangan Sistem Informasi Perpajakan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Tax Compliance,16,kai,Persentase Penyampaian Laporan PPh Pasal 25 Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Tax Compliance,17,output,Rekonsiliasi dan Ekualisasi PPh Pasal 21,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Manager Tax Compliance,17,kai,Perhitungan Pajak Penghasilan Badan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Manager Tax Compliance,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Tax Compliance,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Tax Compliance,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Tax Compliance,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Tax Compliance,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Tax Compliance,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Tax Compliance,24,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Layanan Perpajakan,9,output,BOPO,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Manager Layanan Perpajakan,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Manager Layanan Perpajakan,10,output,EBITDA,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Manager Layanan Perpajakan,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Manager Layanan Perpajakan,11,kai,Persentase Penyelesaian Penerbitan Surat Perintah Pemeriksaan (SP2) Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Layanan Perpajakan,12,kai,Persentase Dokumen Pengajuan SKF dan SKTD yang Diajukan Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Layanan Perpajakan,13,kai,Jumlah Sesi Sosialisasi Pajak Pertambahan Nilai yang Dilaksanakan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Layanan Perpajakan,14,kai,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Layanan Perpajakan,15,kai,Persiapan dan Verifikasi Data Pelaporan PPN dan withholding,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Layanan Perpajakan,16,kai,Persentase Penyelesaian Modul Pengembangan Sistem Informasi Perpajakan Simtax,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager Layanan Perpajakan,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,24,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager Layanan Perpajakan,25,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager QA,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager QA,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager QA,11,kai,Tingkat Kepatuhan Penyusunan dan Pengajuan Laporan Keuangan Konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager QA,12,kai,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager QA,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,19,kai,Persentase Kepatuhan Pengumpulan Data ICOFR Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Manager QA,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Manager QA,22,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Akuntansi Umum,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Akuntansi Umum,10,kai,Optimalisasi Pendapatan Inti dan Pengendalian Biaya Operasional,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Akuntansi Umum,11,kai,Penyusunan dan Verifikasi Laporan Keuangan Triwulan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Akuntansi Umum,12,kai,Tingkat Kepatuhan Penyusunan Laporan Keuangan Konsolidasi Sesuai Standar Akuntansi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Akuntansi Umum,13,kai,Tingkat Kepatuhan Penyusunan Laporan Accounting Hedge Sesuai Standar Akuntansi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Akuntansi Umum,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Akuntansi Umum,22,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Sistem Keuangan,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Sistem Keuangan,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Sistem Keuangan,11,kai,Tingkat Kepatuhan Penyusunan dan Pengajuan Laporan Keuangan Konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Sistem Keuangan,12,kai,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Sistem Keuangan,13,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Sistem Keuangan,14,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Sistem Keuangan,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Sistem Keuangan,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Sistem Keuangan,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Sistem Keuangan,18,kai,Persentase Kepatuhan Pengumpulan Data ICOFR Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Sistem Keuangan,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Sistem Keuangan,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Sistem Keuangan,21,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Aset Tetap,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Aset Tetap,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Aset Tetap,11,kai,Persiapan dan Verifikasi Data Keuangan Triwulan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Aset Tetap,12,kai,Tingkat Kepatuhan Penyusunan dan Pengajuan Laporan Keuangan Konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Aset Tetap,13,kai,Persentase Penyelesaian Pencatatan dan Verifikasi Aset Tetap,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Aset Tetap,14,kai,Persentase Implementasi aplikasi SIAP di Subholding dan AnPer,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Aset Tetap,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Aset Tetap,23,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,11,kai,Persentase Penyelesaian Penerbitan Surat Perintah Pemeriksaan (SP2) Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,12,kai,Persentase Dokumen Pengajuan SKB dan SKF yang Diajukan Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,13,kai,Jumlah Sesi Sosialisasi Perpajakan Pajak Penghasilan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,14,kai,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,15,kai,Persentase Penyampaian Laporan PPh Pasal 25 Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,16,kai,Persentase Penyelesaian Modul Pengembangan Sistem Informasi Perpajakan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,DH Tax Compliance,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,20,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,22,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,23,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,24,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,DH Tax Compliance,25,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,9,kai,Tingkat Kepatuhan Prosedur Pengendalian Biaya Operasional Harian,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,10,kai,Optimalisasi Pendapatan Inti melalui Monitoring dan Pengendalian Harga Jasa Pelabuhan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,11,kai,Persiapan dan Verifikasi Data Keuangan Triwulan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,12,kai,Tingkat Kepatuhan Penyusunan dan Pengajuan Laporan Keuangan Konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,13,output,Tindak lanjut Roadmap Penyehatan Dana Pensiun,Dropped OUTPUT row because comment is Drop and output weight is blank.
+warning,Group Head,13,kai,Persentase Penyelesaian Review dan Penyesuaian Rencana Penyehatan Dana Pensiun,Skipped KAI because its OUTPUT row was dropped or missing.
+info,Group Head,14,kai,Tingkat Kepatuhan Penyusunan dan Verifikasi Laporan Accounting Hedge,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,15,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,16,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,17,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,18,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,19,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,20,kai,Persentase Kepatuhan Pengumpulan Data ICOFR Tepat Waktu,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,21,output,(blank),Dropped OUTPUT row because output weight is blank.
+info,Group Head,22,kai,Persentase Penyelesaian Pencatatan dan Verifikasi Aset Tetap,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,23,kai,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,24,kai,Persentase Penyelesaian Modul Pengembangan Sistem Informasi Perpajakan,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Group Head,25,kai,Persentase Penyelesaian Temuan Audit Internal,KAI period inferred from KPI Output Frequency because the source sheet does not provide a separate KAI period column.
+info,Officer Akuntansi,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,13,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,13,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Akuntansi,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Akuntansi,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,19,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Akuntansi,19,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,9,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Akuntansi,9,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Akuntansi,10,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,10,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Akuntansi,19,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Akuntansi,19,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Akuntansi,,weight_audit,Officer Akuntansi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Akuntansi,,weight_audit,Officer Akuntansi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=70.0; output_total=70.0; cause=Raw Data Issue.
+warning,Officer Akuntansi,,weight_audit,Officer Akuntansi,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Akuntansi,,weight_audit,Officer Akuntansi,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero); raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Akuntansi,,weight_audit,Officer Akuntansi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=30.0; output_total=30.0; cause=Raw Data Issue."
+info,Officer Transaksi dan Proses,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksi dan Proses,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksi dan Proses,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Transaksi dan Proses,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Transaksi dan Proses,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Transaksi dan Proses,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,18,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Transaksi dan Proses,18,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Transaksi dan Proses,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Transaksi dan Proses,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Transaksi dan Proses,12,KAI,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI formula may not be percentage-based or is blank.
+warning,Officer Transaksi dan Proses,,weight_audit,Officer Transaksi dan Proses,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Transaksi dan Proses,,weight_audit,Officer Transaksi dan Proses,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=65.0; output_total=65.0; cause=Raw Data Issue.
+warning,Officer Transaksi dan Proses,,weight_audit,Officer Transaksi dan Proses,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Transaksi dan Proses,,weight_audit,Officer Transaksi dan Proses,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi advance intercompany transaction; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Transaksi dan Proses,,weight_audit,Officer Transaksi dan Proses,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan ICOFR; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Transaksi dan Proses,,weight_audit,Officer Transaksi dan Proses,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Transaksi dan Proses,,weight_audit,Officer Transaksi dan Proses,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Officer QA,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer QA,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer QA,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer QA,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer QA,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,19,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer QA,19,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer QA,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer QA,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer QA,12,KAI,percepatan eliminasi transaksi pada penyusunan laporan konsolidasi,KAI formula may not be percentage-based or is blank.
+warning,Officer QA,,weight_audit,Officer QA,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer QA,,weight_audit,Officer QA,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,Officer QA,,weight_audit,Officer QA,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer QA,,weight_audit,Officer QA,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi advance intercompany transaction; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer QA,,weight_audit,Officer QA,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan ICOFR; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer QA,,weight_audit,Officer QA,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer QA,,weight_audit,Officer QA,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Officer Aset Tetap,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,11,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,12,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,13,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,13,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Aset Tetap,14,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,15,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,16,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,17,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Aset Tetap,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,18,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,19,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Aset Tetap,19,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,9,OUTPUT,Inventarisasi Aset Tetap,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Aset Tetap,9,OUTPUT,Inventarisasi Aset Tetap,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,10,OUTPUT,Implementasi Aplikasi SIAP di subholding dan AnPer,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,Officer Aset Tetap,10,OUTPUT,Implementasi Aplikasi SIAP di subholding dan AnPer,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,19,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) di department aset",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Aset Tetap,19,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) di department aset",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Aset Tetap,10,KAI,Persentase Implementasi aplikasi SIAP di Subholding dan AnPer,enum_issue category=normalized; field=Nature Of Work; raw=Non-Rotine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Officer Aset Tetap,,weight_audit,Officer Aset Tetap,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Officer Aset Tetap,,weight_audit,Officer Aset Tetap,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=70.0; output_total=70.0; cause=Raw Data Issue.
+warning,Officer Aset Tetap,,weight_audit,Officer Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Aplikasi SIAP di subholding dan AnPer; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Aset Tetap,,weight_audit,Officer Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=Inventarisasi Aset Tetap; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Aset Tetap,,weight_audit,Officer Aset Tetap,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit) di department aset; raw_total=30.0; output_total=30.0; cause=Raw Data Issue."
+info,Officer Tax Compliance,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,18,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,18,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,19,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,19,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,20,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,20,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,21,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Tax Compliance,21,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,22,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,22,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,23,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,23,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,24,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,24,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Tax Compliance,25,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,25,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,26,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Tax Compliance,26,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Tax Compliance,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,12,OUTPUT,"Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal)",enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Tax Compliance,12,OUTPUT,"Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Tax Compliance,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,15,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,15,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Tax Compliance,16,OUTPUT,SLA Pembayaran PPh Pasal 25,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Tax Compliance,16,OUTPUT,SLA Pembayaran PPh Pasal 25,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Tax Compliance,26,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Tax Compliance,26,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Tax Compliance,13,KAI,Jumlah Sesi Sosialisasi Perpajakan Pajak Penghasilan,KAI formula may not be percentage-based or is blank.
+info,Officer Tax Compliance,14,KAI,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,enum_issue category=normalized; field=Nature Of Work; raw=non Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring Penyelesaian Pemurnian Bisnis; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,"Weight total not 100: level=output; kpi_type=KAI; parent=Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal); raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan SimTax; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Penghapusan NPWP PT Pelabuhan Indonesia I (Persero); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=SLA Pembayaran PPh Pasal 25; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Officer Tax Compliance,,weight_audit,Officer Tax Compliance,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Officer Layanan Perpajakan,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Layanan Perpajakan,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Layanan Perpajakan,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Layanan Perpajakan,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Layanan Perpajakan,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,12,OUTPUT,SKF (Surat Keterangan Fiskal) dan SKTD (Surat Keterangan Tidak Dipungut) PPN,enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Layanan Perpajakan,12,OUTPUT,SKF (Surat Keterangan Fiskal) dan SKTD (Surat Keterangan Tidak Dipungut) PPN,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - PPN,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - PPN,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Officer Layanan Perpajakan,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,15,OUTPUT,SLA Pelaporan PPN + Withholding,enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Officer Layanan Perpajakan,15,OUTPUT,SLA Pelaporan PPN + Withholding,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Officer Layanan Perpajakan,16,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,16,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Officer Layanan Perpajakan,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Officer Layanan Perpajakan,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Officer Layanan Perpajakan,13,KAI,Jumlah Sesi Sosialisasi Pajak Pertambahan Nilai yang Dilaksanakan,KAI formula may not be percentage-based or is blank.
+info,Officer Layanan Perpajakan,14,KAI,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,enum_issue category=normalized; field=Nature Of Work; raw=non Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring Penyelesaian Pemurnian Bisnis; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan SimTax; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Penghapusan NPWP PT Pelabuhan Indonesia I (Persero); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=SKF (Surat Keterangan Fiskal) dan SKTD (Surat Keterangan Tidak Dipungut) PPN; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=SLA Pelaporan PPN + Withholding; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - PPN; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Officer Layanan Perpajakan,,weight_audit,Officer Layanan Perpajakan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manager Akuntansi,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,14,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,14,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,15,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,15,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,16,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,16,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,17,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Akuntansi,17,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,19,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,19,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Akuntansi,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Akuntansi,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Akuntansi,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Akuntansi,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Akuntansi,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,13,OUTPUT,Penyelesaian Laporan Accounting Hedge,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Akuntansi,13,OUTPUT,Penyelesaian Laporan Accounting Hedge,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Akuntansi,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Akuntansi,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Accounting Hedge; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero); raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Manager Akuntansi,,weight_audit,Manager Akuntansi,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manager Transaksi dan Proses Da,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksi dan Proses Da,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksi dan Proses Da,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Transaksi dan Proses Da,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksi dan Proses Da,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Transaksi dan Proses Da,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Transaksi dan Proses Da,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,18,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Transaksi dan Proses Da,18,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Transaksi dan Proses Da,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Transaksi dan Proses Da,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=75.0; output_total=75.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi advance intercompany transaction; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan ICOFR; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Manager Transaksi dan Proses Da,,weight_audit,Manager Transaksi dan Proses Da,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manager Tax Compliance,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,16,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,16,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,17,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,17,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,18,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,18,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,19,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,19,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,20,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,20,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,21,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Tax Compliance,21,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,22,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,22,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Tax Compliance,23,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,23,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Tax Compliance,24,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Tax Compliance,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,12,OUTPUT,"Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal)",enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Tax Compliance,12,OUTPUT,"Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Tax Compliance,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,15,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,15,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Tax Compliance,16,OUTPUT,SLA Pembayaran PPh Pasal 25,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Tax Compliance,16,OUTPUT,SLA Pembayaran PPh Pasal 25,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Tax Compliance,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Tax Compliance,24,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager Tax Compliance,13,KAI,Jumlah Sesi Sosialisasi Perpajakan Pajak Penghasilan,KAI formula may not be percentage-based or is blank.
+info,Manager Tax Compliance,14,KAI,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,enum_issue category=normalized; field=Nature Of Work; raw=non Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=(ROIC > WACC) x Inv.Capital; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring Penyelesaian Pemurnian Bisnis; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,"Weight total not 100: level=output; kpi_type=KAI; parent=Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal); raw_total=20.0; output_total=20.0; cause=Raw Data Issue."
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan SimTax; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Penghapusan NPWP PT Pelabuhan Indonesia I (Persero); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=SLA Pembayaran PPh Pasal 25; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Manager Tax Compliance,,weight_audit,Manager Tax Compliance,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manager Layanan Perpajakan,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Layanan Perpajakan,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Layanan Perpajakan,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Layanan Perpajakan,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Layanan Perpajakan,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,12,OUTPUT,SKF (Surat Keterangan Fiskal) dan SKTD (Surat Keterangan Tidak Dipungut) PPN,enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Layanan Perpajakan,12,OUTPUT,SKF (Surat Keterangan Fiskal) dan SKTD (Surat Keterangan Tidak Dipungut) PPN,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - PPN,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - PPN,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager Layanan Perpajakan,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,15,OUTPUT,SLA Pelaporan PPN + Withholding,enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,Manager Layanan Perpajakan,15,OUTPUT,SLA Pelaporan PPN + Withholding,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager Layanan Perpajakan,16,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,16,OUTPUT,Pengembangan SimTax,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager Layanan Perpajakan,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager Layanan Perpajakan,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager Layanan Perpajakan,13,KAI,Jumlah Sesi Sosialisasi Pajak Pertambahan Nilai yang Dilaksanakan,KAI formula may not be percentage-based or is blank.
+info,Manager Layanan Perpajakan,14,KAI,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,enum_issue category=normalized; field=Nature Of Work; raw=non Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring Penyelesaian Pemurnian Bisnis; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan SimTax; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Penghapusan NPWP PT Pelabuhan Indonesia I (Persero); raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=SKF (Surat Keterangan Fiskal) dan SKTD (Surat Keterangan Tidak Dipungut) PPN; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=SLA Pelaporan PPN + Withholding; raw_total=25.0; output_total=25.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,Weight total not 100: level=output; kpi_type=KAI; parent=Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - PPN; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager Layanan Perpajakan,,weight_audit,Manager Layanan Perpajakan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Manager QA,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager QA,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager QA,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager QA,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Manager QA,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager QA,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,19,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Manager QA,19,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Manager QA,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Manager QA,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi advance intercompany transaction; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan ICOFR; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Manager QA,,weight_audit,Manager QA,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,DH Akuntansi Umum,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,14,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,14,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,15,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,15,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,16,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,16,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,17,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Akuntansi Umum,17,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,18,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,19,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,19,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,20,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Akuntansi Umum,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,21,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Akuntansi Umum,22,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Akuntansi Umum,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Akuntansi Umum,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Akuntansi Umum,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,13,OUTPUT,Penyelesaian Laporan Accounting Hedge,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Akuntansi Umum,13,OUTPUT,Penyelesaian Laporan Accounting Hedge,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Akuntansi Umum,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Akuntansi Umum,22,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Accounting Hedge; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero); raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,DH Akuntansi Umum,,weight_audit,DH Akuntansi Umum,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,DH Sistem Keuangan,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,13,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,14,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,15,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Sistem Keuangan,16,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,17,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Sistem Keuangan,18,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,19,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Sistem Keuangan,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,20,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Sistem Keuangan,21,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Sistem Keuangan,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Sistem Keuangan,11,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,12,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,18,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Sistem Keuangan,18,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Sistem Keuangan,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Sistem Keuangan,21,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=60.0; output_total=60.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi advance intercompany transaction; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan ICOFR; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Sistem Keuangan,,weight_audit,DH Sistem Keuangan,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,DH Aset Tetap,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Aset Tetap,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Aset Tetap,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Aset Tetap,23,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Aset Tetap,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Aset Tetap,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Aset Tetap,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,13,OUTPUT,Inventarisasi Aset Tetap,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Aset Tetap,13,OUTPUT,Inventarisasi Aset Tetap,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,14,OUTPUT,Implementasi Aplikasi SIAP di subholding dan AnPer,enum_issue category=normalized; field=Period; raw=Semester; normalized=SEMESTER; Period normalized to SEMESTER.
+info,DH Aset Tetap,14,OUTPUT,Implementasi Aplikasi SIAP di subholding dan AnPer,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Aset Tetap,23,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Aset Tetap,14,KAI,Persentase Implementasi aplikasi SIAP di Subholding dan AnPer,enum_issue category=normalized; field=Nature Of Work; raw=Non-Rotine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi Aplikasi SIAP di subholding dan AnPer; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=Inventarisasi Aset Tetap; raw_total=30.0; output_total=30.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Aset Tetap,,weight_audit,DH Aset Tetap,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,DH Tax Compliance,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,17,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,18,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,19,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Tax Compliance,20,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,21,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,22,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,23,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Tax Compliance,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,24,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Tax Compliance,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Tax Compliance,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Tax Compliance,11,OUTPUT,Penghapusan NPWP PT Pelabuhan Indonesia I (Persero),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,12,OUTPUT,"Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal)",enum_issue category=normalized; field=Period; raw=bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Tax Compliance,12,OUTPUT,"Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,13,OUTPUT,Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,DH Tax Compliance,14,OUTPUT,Monitoring Penyelesaian Pemurnian Bisnis,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,15,OUTPUT,SLA Pembayaran PPh Pasal 25,enum_issue category=normalized; field=Period; raw=Bulanan; normalized=BULANAN; Period normalized to BULANAN.
+info,DH Tax Compliance,15,OUTPUT,SLA Pembayaran PPh Pasal 25,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,DH Tax Compliance,16,OUTPUT,Pengembangan SimTax PPh,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,16,OUTPUT,Pengembangan SimTax PPh,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,DH Tax Compliance,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,DH Tax Compliance,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,DH Tax Compliance,13,KAI,Jumlah Sesi Sosialisasi Perpajakan Pajak Penghasilan,KAI formula may not be percentage-based or is blank.
+info,DH Tax Compliance,14,KAI,Persentase Monitoring Penyelesaian Proses Due Diligence dan Legalitas Aksi Korporasi,enum_issue category=normalized; field=Nature Of Work; raw=non Routine; normalized=Non Routine; KAI Nature normalized to Non Routine.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=95.0; output_total=95.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Monitoring Penyelesaian Pemurnian Bisnis; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,"Weight total not 100: level=output; kpi_type=KAI; parent=Pengajuan SKB (Surat Keterangan Bebas) PPh Pasal 23, SKF (Surat Keterangan Fiskal); raw_total=15.0; output_total=15.0; cause=Raw Data Issue."
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan SimTax PPh; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Penghapusan NPWP PT Pelabuhan Indonesia I (Persero); raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=SLA Pembayaran PPh Pasal 25; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,Weight total not 100: level=output; kpi_type=KAI; parent=Sosialisasi Perpajakan PT Pelabuhan Indonesia (Persero) - Pajak Penghasilan; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,DH Tax Compliance,,weight_audit,DH Tax Compliance,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."
+info,Group Head,9,IMPACT,Net Income,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,9,IMPACT,Net Income,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,15,IMPACT,(ROIC > WACC) x Inv.Capital,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,16,IMPACT,Traffic Volume,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,17,IMPACT,Total Productivity,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,18,IMPACT,Lost Time Injury Frequency Rate (LTIFR),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,19,IMPACT,Pengembangan Ekosistem Bali Maritime Tourism Hub (BMTH),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,20,IMPACT,Number of KRI exceeding its risk tolerance limit,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,21,IMPACT,ESG Rating,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,22,IMPACT,Strategic Project Delivery,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,25,IMPACT,Manpower productivity (Revenue per total manpower),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,BOPO,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,9,OUTPUT,BOPO,enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,10,OUTPUT,EBITDA,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,11,OUTPUT,Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero),enum_issue category=normalized; field=Polarity; raw=Negatif; normalized=NEGATIVE; Polarity normalized to NEGATIVE.
+info,Group Head,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,12,OUTPUT,Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,14,OUTPUT,Penyelesaian Laporan Accounting Hedge,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,14,OUTPUT,Penyelesaian Laporan Accounting Hedge,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,20,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,20,OUTPUT,Pelaksanaan ICOFR,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,22,OUTPUT,Inventarisasi Aset Tetap,enum_issue category=normalized; field=Period; raw=Tahunan; normalized=TAHUNAN; Period normalized to TAHUNAN.
+info,Group Head,22,OUTPUT,Inventarisasi Aset Tetap,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,23,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,23,OUTPUT,Implementasi advance intercompany transaction,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,24,OUTPUT,Pengembangan SimTax PPh,enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,24,OUTPUT,Pengembangan SimTax PPh,enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+info,Group Head,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Period; raw=Triwulanan; normalized=TRIWULANAN; Period normalized to TRIWULANAN.
+info,Group Head,25,OUTPUT,"Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit)",enum_issue category=normalized; field=Polarity; raw=Positif; normalized=POSITIVE; Polarity normalized to POSITIVE.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Manpower productivity (Revenue per total manpower); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Net Income; raw_total=45.0; output_total=45.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Number of KRI exceeding its risk tolerance limit; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=impact; kpi_type=OUTPUT; parent=Strategic Project Delivery; raw_total=35.0; output_total=35.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=BOPO; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=EBITDA; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Implementasi advance intercompany transaction; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Inventarisasi Aset Tetap; raw_total=10.0; output_total=10.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Pelaksanaan ICOFR; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Pengembangan SimTax PPh; raw_total=15.0; output_total=15.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Accounting Hedge; raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Konsolidasi PT Pelindo (Persero) Tahun Buku 2025; raw_total=20.0; output_total=20.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,Weight total not 100: level=output; kpi_type=KAI; parent=Penyelesaian Laporan Keuangan Triwulan PT Pelindo (Persero); raw_total=5.0; output_total=5.0; cause=Raw Data Issue.
+warning,Group Head,,weight_audit,Group Head,"Weight total not 100: level=output; kpi_type=KAI; parent=Tingkat pemenuhan tata kelola, manajemen risiko, dan kepatuhan internal (Penyelesaian Temuan Audit); raw_total=5.0; output_total=5.0; cause=Raw Data Issue."

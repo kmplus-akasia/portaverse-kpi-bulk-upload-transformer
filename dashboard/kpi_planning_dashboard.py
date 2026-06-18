@@ -1,0 +1,1172 @@
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from dataclasses import dataclass
+from typing import Any
+
+import pandas as pd
+import pymysql
+from pymysql.cursors import DictCursor
+from pymysql.err import OperationalError
+
+
+DEFAULT_YEAR = int(os.getenv("KPI_DASHBOARD_YEAR", "2026"))
+DEFAULT_COMPANY_ID = int(os.getenv("KPI_DASHBOARD_COMPANY_ID", "1"))
+
+
+@dataclass(frozen=True)
+class DbConfig:
+    host: str
+    port: int
+    database: str
+    user: str
+    password: str
+    ssl_enabled: bool = False
+
+
+def _env(name: str, fallback: str | None = None) -> str | None:
+    return os.getenv(f"KPI_DASHBOARD_{name}") or os.getenv(name) or fallback
+
+
+def load_db_config() -> DbConfig:
+    missing = [
+        name
+        for name in ["DB_HOST", "DB_PORT", "DB_NAME", "DB_USER", "DB_PASSWORD"]
+        if not _env(name)
+    ]
+    if missing:
+        raise RuntimeError(
+            "Missing database environment variables: " + ", ".join(missing)
+        )
+    return DbConfig(
+        host=str(_env("DB_HOST")),
+        port=int(str(_env("DB_PORT"))),
+        database=str(_env("DB_NAME")),
+        user=str(_env("DB_USER")),
+        password=str(_env("DB_PASSWORD")),
+        ssl_enabled=str(_env("DB_SSL", "0")) == "1",
+    )
+
+
+def connect(config: DbConfig):
+    return pymysql.connect(
+        host=config.host,
+        port=config.port,
+        user=config.user,
+        password=config.password,
+        database=config.database,
+        cursorclass=DictCursor,
+        autocommit=True,
+        connect_timeout=10,
+        read_timeout=30,
+        write_timeout=30,
+        ssl={} if config.ssl_enabled else None,
+    )
+
+
+def read_sql(conn, sql: str, params: dict[str, Any] | None = None) -> pd.DataFrame:
+    normalized = sql.strip().lower()
+    if not (normalized.startswith("select") or normalized.startswith("with")):
+        raise ValueError("Dashboard query must be read-only SELECT/WITH SQL.")
+    with conn.cursor() as cursor:
+        cursor.execute(sql, params or {})
+        return pd.DataFrame(cursor.fetchall())
+
+
+ACTIVE_CTE = """
+active_positions AS (
+  SELECT
+    tpmv.position_master_variant_id,
+    tpm.position_master_id,
+    tpm.name AS position_name,
+    tpm.position_master_type_id,
+    tpmt.name AS position_type_name,
+    tpm.cohort_id,
+    tpmos.organization_master_id AS group_master_id,
+    tgm.name AS group_name,
+    COUNT(DISTINCT tepms.employee_number) AS active_employee_count,
+    SUM(CASE WHEN tepms.lakhar_id IS NULL AND tepms.job_sharing_id IS NULL THEN 1 ELSE 0 END) AS primary_assignment_count,
+    SUM(CASE WHEN tepms.lakhar_id IS NOT NULL OR tepms.job_sharing_id IS NOT NULL THEN 1 ELSE 0 END) AS secondary_assignment_count
+  FROM tb_employee_position_master_sync tepms
+  JOIN tb_position_master_variant tpmv
+    ON tpmv.position_master_variant_id = tepms.position_master_variant_id
+   AND tpmv.deletedAt IS NULL
+  JOIN tb_position_master_v2 tpm
+    ON tpm.position_master_id = tpmv.position_master_id
+   AND tpm.deletedAt IS NULL
+   AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tpm.start_date, '1000-01-01') AND COALESCE(tpm.end_date, '9999-12-31')
+  LEFT JOIN tb_position_master_type tpmt
+    ON tpmt.position_master_type_id = tpm.position_master_type_id
+  JOIN tb_position_master_organization_sync tpmos
+    ON tpmos.position_master_id = tpm.position_master_id
+   AND tpmos.deletedAt IS NULL
+   AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tpmos.start_date, '1000-01-01') AND COALESCE(tpmos.end_date, '9999-12-31')
+  JOIN tb_group_master tgm
+    ON tgm.group_master_id = tpmos.organization_master_id
+   AND tgm.deletedAt IS NULL
+   AND tgm.company_id = %(company_id)s
+   AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tgm.start_date, '1000-01-01') AND COALESCE(tgm.end_date, '9999-12-31')
+  JOIN tb_company_in tci
+    ON tci.company_in_id = tgm.company_id
+   AND tci.deletedAt IS NULL
+   AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tci.start_date, '1000-01-01') AND COALESCE(tci.end_date, '9999-12-31')
+  WHERE tepms.deletedAt IS NULL
+    AND CURRENT_TIMESTAMP() BETWEEN tepms.start_date AND COALESCE(tepms.end_date, '9999-12-31')
+    AND tpm.name NOT REGEXP '^(JA_|JS_)'
+  GROUP BY
+    tpmv.position_master_variant_id,
+    tpm.position_master_id,
+    tpm.name,
+    tpm.position_master_type_id,
+    tpmt.name,
+    tpm.cohort_id,
+    tpmos.organization_master_id,
+    tgm.name
+),
+kpi_counts AS (
+  SELECT
+    ko.position_master_variant_id,
+    ko.position_master_id,
+    COUNT(DISTINCT ko.kpi_id) AS kpi_count,
+    COUNT(DISTINCT CASE WHEN k.type = 'IMPACT' THEN ko.kpi_id END) AS impact_count,
+    COUNT(DISTINCT CASE WHEN k.type = 'OUTPUT' THEN ko.kpi_id END) AS output_count,
+    COUNT(DISTINCT CASE WHEN k.type = 'KAI' THEN ko.kpi_id END) AS kai_count,
+    COUNT(DISTINCT CASE WHEN k.type = 'SUB_IMPACT' THEN ko.kpi_id END) AS sub_impact_count,
+    COUNT(DISTINCT CASE WHEN k.item_approval_status IN ('APPROVED', 'APPROVED_ADJUSTED') THEN ko.kpi_id END) AS approved_item_count,
+    COUNT(DISTINCT CASE WHEN ko.weight_approval_status = 'APPROVED' THEN ko.kpi_id END) AS approved_weight_count
+  FROM kpi_ownership_v3 ko
+  JOIN kpi_v3 k ON k.kpi_id = ko.kpi_id
+  WHERE ko.deleted_at IS NULL
+    AND k.deleted_at IS NULL
+    AND k.is_active = 1
+    AND COALESCE(k.status, 'ACTIVE') = 'ACTIVE'
+    AND ko.year = %(year)s
+    AND k.year = %(year)s
+  GROUP BY ko.position_master_variant_id, ko.position_master_id
+)
+"""
+
+
+def build_category_summary(
+    structural_detail: pd.DataFrame, non_structural_detail: pd.DataFrame
+) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+    for category, df, unit_label in [
+        ("Struktural", structural_detail, "PMID"),
+        ("Non-struktural", non_structural_detail, "PNID"),
+    ]:
+        active_units = len(df)
+        complete = int((df["availability_status"] == "Complete").sum()) if active_units else 0
+        partial = int((df["availability_status"] == "Partial").sum()) if active_units else 0
+        missing = int((df["availability_status"] == "Missing").sum()) if active_units else 0
+        rows.append(
+            {
+                "category": category,
+                "unit": unit_label,
+                "active_units": active_units,
+                "complete_units": complete,
+                "partial_units": partial,
+                "missing_units": missing,
+                "not_complete_units": partial + missing,
+                "coverage_pct": round(100 * complete / max(active_units, 1), 1),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def empty_frame(columns: list[str]) -> pd.DataFrame:
+    return pd.DataFrame(columns=columns)
+
+
+def build_cached_snapshot(year: int, company_id: int) -> dict[str, pd.DataFrame]:
+    data: dict[str, pd.DataFrame] = {
+        "db_info": pd.DataFrame(
+            [
+                {
+                    "db_name": "defaultdb",
+                    "host_name": "cached snapshot",
+                    "server_read_only": 1,
+                    "db_now": "cached",
+                }
+            ]
+        ),
+        "schedule": pd.DataFrame(
+            [
+                {
+                    "kpi_schedule_id": 1,
+                    "name": "PLANNING 2026 Q1",
+                    "type": "PLANNING",
+                    "year": year,
+                    "quarter": 1,
+                    "company_id": company_id,
+                    "is_active": 1,
+                    "start_date": "2026-06-09",
+                    "end_date": "2026-06-26",
+                    "created_at": "2026-06-09 19:38:37",
+                    "updated_at": "2026-06-09 19:38:37",
+                }
+            ]
+        ),
+        "coverage": pd.DataFrame(
+            [
+                {
+                    "active_position_variants": 677,
+                    "active_position_masters": 565,
+                    "active_employee_assignments": 677,
+                    "variants_with_primary_assignment": 674,
+                    "variants_with_secondary_assignment": 3,
+                    "variants_with_any_kpi": 432,
+                    "variants_without_kpi": 245,
+                    "variants_with_impact_output_kai": 432,
+                    "total_kpi_ownership_rows": 9926,
+                    "total_impact": 4320,
+                    "total_output": 2812,
+                    "total_kai": 2794,
+                    "approved_items": 4320,
+                    "approved_weights": 4320,
+                }
+            ]
+        ),
+        "group_coverage": empty_frame(
+            [
+                "group_name",
+                "active_variants",
+                "active_primary_variants",
+                "with_kpi",
+                "without_kpi",
+                "coverage_pct",
+                "impact_count",
+                "output_count",
+                "kai_count",
+            ]
+        ),
+        "status": empty_frame(
+            [
+                "type",
+                "item_approval_status",
+                "allocation_status",
+                "weight_approval_status",
+                "ownership_rows",
+                "kpi_ids",
+                "active_variants",
+            ]
+        ),
+        "import_agg": pd.DataFrame(
+            [
+                {
+                    "dry_run": 0,
+                    "status": "FAILED",
+                    "logs": 6,
+                    "total_rows": 4,
+                    "created_count": 0,
+                    "updated_count": 0,
+                    "affected_rows": 0,
+                    "invalid_count": 29,
+                    "total_positions_sum": 2,
+                    "first_log_at": "2026-05-26 11:49:22.421067",
+                    "last_log_at": "2026-05-26 11:50:16.991385",
+                },
+                {
+                    "dry_run": 0,
+                    "status": "SUCCESS",
+                    "logs": 33,
+                    "total_rows": 21948,
+                    "created_count": 17375,
+                    "updated_count": 18124,
+                    "affected_rows": 35499,
+                    "invalid_count": 0,
+                    "total_positions_sum": 1627,
+                    "first_log_at": "2026-05-25 22:21:26.906983",
+                    "last_log_at": "2026-06-09 19:56:52.372948",
+                },
+                {
+                    "dry_run": 1,
+                    "status": "DRY_RUN_SUCCESS",
+                    "logs": 36,
+                    "total_rows": 23981,
+                    "created_count": 0,
+                    "updated_count": 0,
+                    "affected_rows": 0,
+                    "invalid_count": 0,
+                    "total_positions_sum": 1777,
+                    "first_log_at": "2026-05-25 22:21:19.392940",
+                    "last_log_at": "2026-06-09 19:56:23.083112",
+                },
+                {
+                    "dry_run": 1,
+                    "status": "FAILED",
+                    "logs": 29,
+                    "total_rows": 5469,
+                    "created_count": 0,
+                    "updated_count": 0,
+                    "affected_rows": 0,
+                    "invalid_count": 906,
+                    "total_positions_sum": 192,
+                    "first_log_at": "2026-06-08 08:18:55.433913",
+                    "last_log_at": "2026-06-09 18:29:45.602274",
+                },
+            ]
+        ),
+        "success_by_file": empty_frame(
+            [
+                "file_name",
+                "success_logs",
+                "total_rows",
+                "created_count",
+                "updated_count",
+                "affected_rows",
+                "total_positions",
+                "first_success_at",
+                "last_success_at",
+            ]
+        ),
+        "failed_imports": empty_frame(
+            [
+                "import_log_id",
+                "created_at",
+                "file_name",
+                "dry_run",
+                "status",
+                "total_rows",
+                "invalid_count",
+                "total_positions",
+                "error_summary",
+            ]
+        ),
+        "without_kpi": empty_frame(
+            [
+                "group_name",
+                "position_master_id",
+                "position_master_variant_id",
+                "position_name",
+                "active_employee_count",
+                "primary_assignment_count",
+                "secondary_assignment_count",
+            ]
+        ),
+        "structural_detail": empty_frame(
+            [
+                "pmid",
+                "position_name",
+                "position_type_name",
+                "group_names",
+                "active_variants",
+                "with_kpi_variants",
+                "without_kpi_variants",
+                "impact_count",
+                "output_count",
+                "kai_count",
+                "availability_status",
+            ]
+        ),
+        "non_structural_detail": empty_frame(
+            [
+                "pnid",
+                "pnid_label",
+                "position_type_names",
+                "group_names",
+                "active_pmids",
+                "active_variants",
+                "with_kpi_variants",
+                "without_kpi_variants",
+                "impact_count",
+                "output_count",
+                "kai_count",
+                "active_pmid_list",
+                "position_names",
+                "availability_status",
+            ]
+        ),
+        "category_gap_detail": empty_frame(
+            [
+                "category",
+                "pnid",
+                "pnid_label",
+                "pmid",
+                "position_master_variant_id",
+                "position_name",
+                "position_type_name",
+                "group_name",
+                "active_employee_count",
+                "primary_assignment_count",
+                "secondary_assignment_count",
+            ]
+        ),
+        "category_anomalies": pd.DataFrame(
+            [
+                {
+                    "anomaly": "active_non_structural_without_pnid",
+                    "active_pmids": 0,
+                    "active_variants": 0,
+                }
+            ]
+        ),
+        "anomalies": pd.DataFrame(
+            [
+                {"anomaly": "active_child_null_parent", "cnt": 0},
+                {"anomaly": "active_child_parent_missing", "cnt": 0},
+                {"anomaly": "active_kpi_missing_title", "cnt": 0},
+                {"anomaly": "kpi_target_rows_2026", "cnt": 0},
+            ]
+        ),
+    }
+    data["category_summary"] = pd.DataFrame(
+        [
+            {
+                "category": "Struktural",
+                "unit": "PMID",
+                "active_units": 205,
+                "complete_units": 152,
+                "partial_units": 0,
+                "missing_units": 53,
+                "not_complete_units": 53,
+                "coverage_pct": 74.1,
+            },
+            {
+                "category": "Non-struktural",
+                "unit": "PNID",
+                "active_units": 194,
+                "complete_units": 88,
+                "partial_units": 0,
+                "missing_units": 106,
+                "not_complete_units": 106,
+                "coverage_pct": 45.4,
+            },
+        ]
+    )
+    data["structural_not_complete"] = empty_frame(
+        [
+            "pmid",
+            "position_name",
+            "position_type_name",
+            "group_names",
+            "active_variants",
+            "with_kpi_variants",
+            "without_kpi_variants",
+            "impact_count",
+            "output_count",
+            "kai_count",
+            "availability_status",
+        ]
+    )
+    data["non_structural_not_complete"] = empty_frame(
+        [
+            "pnid",
+            "pnid_label",
+            "position_type_names",
+            "group_names",
+            "active_pmids",
+            "active_variants",
+            "with_kpi_variants",
+            "without_kpi_variants",
+            "impact_count",
+            "output_count",
+            "kai_count",
+            "active_pmid_list",
+            "position_names",
+            "availability_status",
+        ]
+    )
+    return data
+
+
+def format_db_error(exc: Exception) -> str:
+    if isinstance(exc, OperationalError):
+        code = exc.args[0] if exc.args else None
+        if code == 2013:
+            return (
+                "Production MySQL connection dropped while the dashboard was loading. "
+                "Live data cannot be fetched right now."
+            )
+        if code == 1045:
+            return "Production MySQL authentication failed. Check the dashboard DB credentials."
+    return "Unable to load live production data."
+
+
+def apply_kpi_scope_filter(df: pd.DataFrame, scope: str) -> pd.DataFrame:
+    if df.empty or scope == "All":
+        return df
+    if "with_kpi_variants" not in df.columns:
+        return df
+    with_kpi = df["with_kpi_variants"].fillna(0).astype(float) > 0
+    if scope == "With KPI":
+        return df[with_kpi].copy()
+    if scope == "Without KPI":
+        return df[~with_kpi].copy()
+    return df
+
+
+def fetch_dashboard_data(year: int, company_id: int) -> dict[str, pd.DataFrame]:
+    config = load_db_config()
+    params = {"year": year, "company_id": company_id}
+    with connect(config) as conn:
+        data = {
+            "db_info": read_sql(
+                conn,
+                """
+                SELECT DATABASE() AS db_name,
+                       @@hostname AS host_name,
+                       @@read_only AS server_read_only,
+                       CURRENT_TIMESTAMP() AS db_now
+                """,
+            ),
+            "schedule": read_sql(
+                conn,
+                """
+                SELECT kpi_schedule_id, name, type, year, quarter, company_id, is_active,
+                       start_date, end_date, created_at, updated_at
+                FROM kpi_schedule_v3
+                WHERE deleted_at IS NULL
+                  AND (company_id = %(company_id)s OR company_id IS NULL)
+                  AND year = %(year)s
+                ORDER BY is_active DESC, start_date DESC, kpi_schedule_id DESC
+                LIMIT 20
+                """,
+                params,
+            ),
+            "coverage": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  COUNT(*) AS active_position_variants,
+                  COUNT(DISTINCT ap.position_master_id) AS active_position_masters,
+                  SUM(ap.active_employee_count) AS active_employee_assignments,
+                  SUM(CASE WHEN ap.primary_assignment_count > 0 THEN 1 ELSE 0 END) AS variants_with_primary_assignment,
+                  SUM(CASE WHEN ap.secondary_assignment_count > 0 THEN 1 ELSE 0 END) AS variants_with_secondary_assignment,
+                  SUM(CASE WHEN COALESCE(kc.kpi_count, 0) > 0 THEN 1 ELSE 0 END) AS variants_with_any_kpi,
+                  SUM(CASE WHEN COALESCE(kc.kpi_count, 0) = 0 THEN 1 ELSE 0 END) AS variants_without_kpi,
+                  SUM(CASE WHEN COALESCE(kc.impact_count, 0) > 0
+                            AND COALESCE(kc.output_count, 0) > 0
+                            AND COALESCE(kc.kai_count, 0) > 0
+                           THEN 1 ELSE 0 END) AS variants_with_impact_output_kai,
+                  SUM(COALESCE(kc.kpi_count, 0)) AS total_kpi_ownership_rows,
+                  SUM(COALESCE(kc.impact_count, 0)) AS total_impact,
+                  SUM(COALESCE(kc.output_count, 0)) AS total_output,
+                  SUM(COALESCE(kc.kai_count, 0)) AS total_kai,
+                  SUM(COALESCE(kc.approved_item_count, 0)) AS approved_items,
+                  SUM(COALESCE(kc.approved_weight_count, 0)) AS approved_weights
+                FROM active_positions ap
+                LEFT JOIN kpi_counts kc
+                  ON kc.position_master_id = ap.position_master_id
+                 AND (kc.position_master_variant_id <=> ap.position_master_variant_id)
+                """,
+                params,
+            ),
+            "group_coverage": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  ap.group_name,
+                  COUNT(*) AS active_variants,
+                  SUM(CASE WHEN ap.primary_assignment_count > 0 THEN 1 ELSE 0 END) AS active_primary_variants,
+                  SUM(CASE WHEN COALESCE(kc.kpi_count, 0) > 0 THEN 1 ELSE 0 END) AS with_kpi,
+                  SUM(CASE WHEN COALESCE(kc.kpi_count, 0) = 0 THEN 1 ELSE 0 END) AS without_kpi,
+                  ROUND(100 * SUM(CASE WHEN COALESCE(kc.kpi_count, 0) > 0 THEN 1 ELSE 0 END) / COUNT(*), 1) AS coverage_pct,
+                  SUM(COALESCE(kc.impact_count, 0)) AS impact_count,
+                  SUM(COALESCE(kc.output_count, 0)) AS output_count,
+                  SUM(COALESCE(kc.kai_count, 0)) AS kai_count
+                FROM active_positions ap
+                LEFT JOIN kpi_counts kc
+                  ON kc.position_master_id = ap.position_master_id
+                 AND (kc.position_master_variant_id <=> ap.position_master_variant_id)
+                GROUP BY ap.group_name
+                ORDER BY without_kpi DESC, active_variants DESC, ap.group_name ASC
+                """,
+                params,
+            ),
+            "status": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  k.type,
+                  k.item_approval_status,
+                  ko.allocation_status,
+                  ko.weight_approval_status,
+                  COUNT(DISTINCT ko.kpi_ownership_id) AS ownership_rows,
+                  COUNT(DISTINCT ko.kpi_id) AS kpi_ids,
+                  COUNT(DISTINCT ap.position_master_variant_id) AS active_variants
+                FROM active_positions ap
+                JOIN kpi_ownership_v3 ko
+                  ON ko.position_master_id = ap.position_master_id
+                 AND (ko.position_master_variant_id <=> ap.position_master_variant_id)
+                JOIN kpi_v3 k ON k.kpi_id = ko.kpi_id
+                WHERE ko.deleted_at IS NULL
+                  AND k.deleted_at IS NULL
+                  AND k.is_active = 1
+                  AND COALESCE(k.status, 'ACTIVE') = 'ACTIVE'
+                  AND ko.year = %(year)s
+                  AND k.year = %(year)s
+                GROUP BY k.type, k.item_approval_status, ko.allocation_status, ko.weight_approval_status
+                ORDER BY k.type, ownership_rows DESC
+                """,
+                params,
+            ),
+            "import_agg": read_sql(
+                conn,
+                """
+                SELECT dry_run, status, COUNT(*) AS logs, SUM(total_rows) AS total_rows,
+                       SUM(created_count) AS created_count, SUM(updated_count) AS updated_count,
+                       SUM(affected_rows) AS affected_rows, SUM(invalid_count) AS invalid_count,
+                       SUM(COALESCE(total_positions, 0)) AS total_positions_sum,
+                       MIN(created_at) AS first_log_at, MAX(created_at) AS last_log_at
+                FROM kpi_template_import_log
+                WHERE planning_year = %(year)s
+                GROUP BY dry_run, status
+                ORDER BY dry_run, status
+                """,
+                params,
+            ),
+            "success_by_file": read_sql(
+                conn,
+                """
+                SELECT file_name, COUNT(*) AS success_logs, SUM(total_rows) AS total_rows,
+                       SUM(created_count) AS created_count, SUM(updated_count) AS updated_count,
+                       SUM(affected_rows) AS affected_rows, SUM(total_positions) AS total_positions,
+                       MIN(created_at) AS first_success_at, MAX(created_at) AS last_success_at
+                FROM kpi_template_import_log
+                WHERE planning_year = %(year)s AND dry_run = 0 AND status = 'SUCCESS'
+                GROUP BY file_name
+                ORDER BY last_success_at DESC
+                """,
+                params,
+            ),
+            "failed_imports": read_sql(
+                conn,
+                """
+                SELECT import_log_id, created_at, file_name, dry_run, status,
+                       total_rows, invalid_count, total_positions,
+                       LEFT(COALESCE(error_summary, ''), 500) AS error_summary
+                FROM kpi_template_import_log
+                WHERE planning_year = %(year)s
+                  AND status <> 'SUCCESS'
+                ORDER BY created_at DESC, import_log_id DESC
+                LIMIT 100
+                """,
+                params,
+            ),
+            "without_kpi": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  ap.group_name,
+                  ap.position_master_id,
+                  ap.position_master_variant_id,
+                  ap.position_name,
+                  ap.active_employee_count,
+                  ap.primary_assignment_count,
+                  ap.secondary_assignment_count
+                FROM active_positions ap
+                LEFT JOIN kpi_counts kc
+                  ON kc.position_master_id = ap.position_master_id
+                 AND (kc.position_master_variant_id <=> ap.position_master_variant_id)
+                WHERE COALESCE(kc.kpi_count, 0) = 0
+                ORDER BY ap.group_name, ap.position_name
+                """,
+                params,
+            ),
+            "structural_detail": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  x.pmid,
+                  x.position_name,
+                  x.position_type_name,
+                  x.group_names,
+                  x.active_variants,
+                  x.with_kpi_variants,
+                  x.without_kpi_variants,
+                  x.impact_count,
+                  x.output_count,
+                  x.kai_count,
+                  CASE
+                    WHEN x.with_kpi_variants = 0 THEN 'Missing'
+                    WHEN x.with_kpi_variants < x.active_variants THEN 'Partial'
+                    ELSE 'Complete'
+                  END AS availability_status
+                FROM (
+                  SELECT
+                    ap.position_master_id AS pmid,
+                    MIN(ap.position_name) AS position_name,
+                    MAX(COALESCE(ap.position_type_name, 'Struktural')) AS position_type_name,
+                    GROUP_CONCAT(DISTINCT ap.group_name ORDER BY ap.group_name SEPARATOR ' | ') AS group_names,
+                    COUNT(DISTINCT ap.position_master_variant_id) AS active_variants,
+                    COUNT(DISTINCT CASE WHEN COALESCE(kc.kpi_count, 0) > 0 THEN ap.position_master_variant_id END) AS with_kpi_variants,
+                    COUNT(DISTINCT CASE WHEN COALESCE(kc.kpi_count, 0) = 0 THEN ap.position_master_variant_id END) AS without_kpi_variants,
+                    SUM(COALESCE(kc.impact_count, 0)) AS impact_count,
+                    SUM(COALESCE(kc.output_count, 0)) AS output_count,
+                    SUM(COALESCE(kc.kai_count, 0)) AS kai_count
+                  FROM active_positions ap
+                  LEFT JOIN kpi_counts kc
+                    ON kc.position_master_id = ap.position_master_id
+                   AND (kc.position_master_variant_id <=> ap.position_master_variant_id)
+                  WHERE ap.position_master_type_id = 5
+                  GROUP BY ap.position_master_id
+                ) x
+                ORDER BY
+                  CASE
+                    WHEN x.with_kpi_variants = 0 THEN 0
+                    WHEN x.with_kpi_variants < x.active_variants THEN 1
+                    ELSE 2
+                  END,
+                  x.position_name
+                """,
+                params,
+            ),
+            "non_structural_detail": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  x.pnid,
+                  x.pnid_label,
+                  x.position_type_names,
+                  x.group_names,
+                  x.active_pmids,
+                  x.active_variants,
+                  x.with_kpi_variants,
+                  x.without_kpi_variants,
+                  x.impact_count,
+                  x.output_count,
+                  x.kai_count,
+                  x.active_pmid_list,
+                  x.position_names,
+                  CASE
+                    WHEN x.with_kpi_variants = 0 THEN 'Missing'
+                    WHEN x.with_kpi_variants < x.active_variants THEN 'Partial'
+                    ELSE 'Complete'
+                  END AS availability_status
+                FROM (
+                  SELECT
+                    pnm.cluster_id AS pnid,
+                    MAX(COALESCE(pnm.cluster_label, CONCAT('PNID ', pnm.cluster_id))) AS pnid_label,
+                    GROUP_CONCAT(DISTINCT COALESCE(ap.position_type_name, 'Non-struktural') ORDER BY ap.position_type_name SEPARATOR ' | ') AS position_type_names,
+                    GROUP_CONCAT(DISTINCT ap.group_name ORDER BY ap.group_name SEPARATOR ' | ') AS group_names,
+                    COUNT(DISTINCT ap.position_master_id) AS active_pmids,
+                    COUNT(DISTINCT ap.position_master_variant_id) AS active_variants,
+                    COUNT(DISTINCT CASE WHEN COALESCE(kc.kpi_count, 0) > 0 THEN ap.position_master_variant_id END) AS with_kpi_variants,
+                    COUNT(DISTINCT CASE WHEN COALESCE(kc.kpi_count, 0) = 0 THEN ap.position_master_variant_id END) AS without_kpi_variants,
+                    SUM(COALESCE(kc.impact_count, 0)) AS impact_count,
+                    SUM(COALESCE(kc.output_count, 0)) AS output_count,
+                    SUM(COALESCE(kc.kai_count, 0)) AS kai_count,
+                    GROUP_CONCAT(DISTINCT ap.position_master_id ORDER BY ap.position_master_id SEPARATOR ', ') AS active_pmid_list,
+                    GROUP_CONCAT(DISTINCT ap.position_name ORDER BY ap.position_name SEPARATOR ' | ') AS position_names
+                  FROM active_positions ap
+                  JOIN position_nomenclature_mapping pnm
+                    ON pnm.position_master_id = ap.position_master_id
+                   AND pnm.company_id = %(company_id)s
+                   AND (pnm.group_master_id <=> ap.group_master_id)
+                   AND pnm.cluster_id IS NOT NULL
+                  LEFT JOIN kpi_counts kc
+                    ON kc.position_master_id = ap.position_master_id
+                   AND (kc.position_master_variant_id <=> ap.position_master_variant_id)
+                  WHERE ap.position_master_type_id <> 5
+                  GROUP BY pnm.cluster_id
+                  HAVING active_pmids >= 1 AND active_variants >= 1
+                ) x
+                ORDER BY
+                  CASE
+                    WHEN x.with_kpi_variants = 0 THEN 0
+                    WHEN x.with_kpi_variants < x.active_variants THEN 1
+                    ELSE 2
+                  END,
+                  x.pnid_label
+                """,
+                params,
+            ),
+            "category_gap_detail": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  CASE
+                    WHEN ap.position_master_type_id = 5 THEN 'Struktural'
+                    ELSE 'Non-struktural'
+                  END AS category,
+                  pnm.cluster_id AS pnid,
+                  COALESCE(pnm.cluster_label, CONCAT('PNID ', pnm.cluster_id)) AS pnid_label,
+                  ap.position_master_id AS pmid,
+                  ap.position_master_variant_id,
+                  ap.position_name,
+                  ap.position_type_name,
+                  ap.group_name,
+                  ap.active_employee_count,
+                  ap.primary_assignment_count,
+                  ap.secondary_assignment_count
+                FROM active_positions ap
+                LEFT JOIN position_nomenclature_mapping pnm
+                  ON pnm.position_master_id = ap.position_master_id
+                 AND pnm.company_id = %(company_id)s
+                 AND (pnm.group_master_id <=> ap.group_master_id)
+                 AND pnm.cluster_id IS NOT NULL
+                LEFT JOIN kpi_counts kc
+                  ON kc.position_master_id = ap.position_master_id
+                 AND (kc.position_master_variant_id <=> ap.position_master_variant_id)
+                WHERE COALESCE(kc.kpi_count, 0) = 0
+                  AND (
+                    ap.position_master_type_id = 5
+                    OR (ap.position_master_type_id <> 5 AND pnm.cluster_id IS NOT NULL)
+                  )
+                ORDER BY category, pnm.cluster_id, ap.position_master_id, ap.position_name
+                """,
+                params,
+            ),
+            "category_anomalies": read_sql(
+                conn,
+                f"""
+                WITH {ACTIVE_CTE}
+                SELECT
+                  'active_non_structural_without_pnid' AS anomaly,
+                  COUNT(DISTINCT ap.position_master_id) AS active_pmids,
+                  COUNT(DISTINCT ap.position_master_variant_id) AS active_variants
+                FROM active_positions ap
+                LEFT JOIN position_nomenclature_mapping pnm
+                  ON pnm.position_master_id = ap.position_master_id
+                 AND pnm.company_id = %(company_id)s
+                 AND (pnm.group_master_id <=> ap.group_master_id)
+                 AND pnm.cluster_id IS NOT NULL
+                WHERE ap.position_master_type_id <> 5
+                  AND pnm.cluster_id IS NULL
+                """,
+                params,
+            ),
+            "anomalies": read_sql(
+                conn,
+                """
+                SELECT anomaly, cnt FROM (
+                  SELECT 'active_child_null_parent' AS anomaly, COUNT(*) AS cnt
+                  FROM kpi_v3 k
+                  WHERE k.deleted_at IS NULL AND k.is_active = 1 AND k.year = %(year)s
+                    AND k.type IN ('OUTPUT', 'KAI', 'SUB_IMPACT') AND k.parent_kpi_id IS NULL
+                  UNION ALL
+                  SELECT 'active_child_parent_missing', COUNT(*)
+                  FROM kpi_v3 k
+                  LEFT JOIN kpi_v3 p ON p.kpi_id = k.parent_kpi_id AND p.deleted_at IS NULL
+                  WHERE k.deleted_at IS NULL AND k.is_active = 1 AND k.year = %(year)s
+                    AND k.type IN ('OUTPUT', 'KAI', 'SUB_IMPACT')
+                    AND k.parent_kpi_id IS NOT NULL
+                    AND p.kpi_id IS NULL
+                  UNION ALL
+                  SELECT 'active_kpi_missing_title', COUNT(*)
+                  FROM kpi_v3 k
+                  WHERE k.deleted_at IS NULL AND k.is_active = 1 AND k.year = %(year)s
+                    AND (k.title IS NULL OR TRIM(k.title) = '')
+                  UNION ALL
+                  SELECT 'kpi_target_rows_2026', COUNT(*)
+                  FROM kpi_target_v3 kt
+                  JOIN kpi_v3 k ON k.kpi_id = kt.kpi_id
+                  WHERE kt.deleted_at IS NULL AND k.year = %(year)s
+                ) x
+                ORDER BY anomaly
+                """,
+                params,
+            ),
+        }
+        data["category_summary"] = build_category_summary(
+            data["structural_detail"], data["non_structural_detail"]
+        )
+        data["structural_not_complete"] = data["structural_detail"][
+            data["structural_detail"]["availability_status"] != "Complete"
+        ].copy()
+        data["non_structural_not_complete"] = data["non_structural_detail"][
+            data["non_structural_detail"]["availability_status"] != "Complete"
+        ].copy()
+        return data
+
+
+def _df_records(df: pd.DataFrame) -> list[dict[str, Any]]:
+    records = df.where(pd.notna(df), None).to_dict(orient="records")
+    return records
+
+
+def run_check(year: int, company_id: int) -> None:
+    data = fetch_dashboard_data(year, company_id)
+    coverage = _df_records(data["coverage"])[0]
+    import_agg = _df_records(data["import_agg"])
+    anomalies = _df_records(data["anomalies"])
+    db_info = _df_records(data["db_info"])[0]
+    schedule = _df_records(data["schedule"][:1])
+    print(
+        json.dumps(
+            {
+                "db": {
+                    "name": db_info.get("db_name"),
+                    "host": db_info.get("host_name"),
+                    "server_read_only": db_info.get("server_read_only"),
+                    "db_now": str(db_info.get("db_now")),
+                },
+                "year": year,
+                "company_id": company_id,
+                "schedule": schedule,
+                "coverage": coverage,
+                "import_agg": import_agg,
+                "anomalies": anomalies,
+                "category_summary": _df_records(data["category_summary"]),
+                "structural_rows": int(len(data["structural_detail"])),
+                "structural_not_complete_rows": int(len(data["structural_not_complete"])),
+                "non_structural_rows": int(len(data["non_structural_detail"])),
+                "non_structural_not_complete_rows": int(len(data["non_structural_not_complete"])),
+                "category_gap_rows": int(len(data["category_gap_detail"])),
+                "category_anomalies": _df_records(data["category_anomalies"]),
+                "without_kpi_rows": int(len(data["without_kpi"])),
+                "group_rows": int(len(data["group_coverage"])),
+            },
+            default=str,
+            indent=2,
+        )
+    )
+
+
+def format_int(value: Any) -> str:
+    try:
+        return f"{int(value):,}".replace(",", ".")
+    except (TypeError, ValueError):
+        return "0"
+
+
+def run_app() -> None:
+    import plotly.express as px
+    import streamlit as st
+
+    st.set_page_config(
+        page_title="KPI Planning Dashboard Production",
+        page_icon="KPI",
+        layout="wide",
+    )
+
+    st.title("KPI Planning Dashboard Production")
+
+    with st.sidebar:
+        st.header("Filters")
+        year = st.number_input("Planning year", min_value=2024, max_value=2030, value=DEFAULT_YEAR, step=1)
+        company_id = st.number_input("Company ID", min_value=1, value=DEFAULT_COMPANY_ID, step=1)
+        group_search = st.text_input("Group contains", "")
+        only_gaps = st.checkbox("Show only groups with gaps", value=True)
+        max_rows = st.slider("Detail rows", min_value=20, max_value=500, value=120, step=20)
+        refresh = st.button("Refresh data")
+
+    cached_mode = False
+    try:
+        data = fetch_dashboard_data(int(year), int(company_id))
+    except Exception as exc:
+        cached_mode = True
+        data = build_cached_snapshot(int(year), int(company_id))
+        st.warning(format_db_error(exc))
+        st.caption("Showing cached snapshot until the live production connection is restored.")
+        with st.expander("Technical details"):
+            st.code(str(exc))
+
+    coverage = data["coverage"].iloc[0].to_dict()
+    completion = (
+        float(coverage.get("variants_with_any_kpi") or 0)
+        / max(float(coverage.get("active_position_variants") or 0), 1)
+    )
+
+    db_info = data["db_info"].iloc[0].to_dict()
+    schedule = data["schedule"]
+    schedule_text = "No active schedule found"
+    if not schedule.empty:
+        active = schedule.iloc[0]
+        schedule_text = (
+            f"{active.get('name')} | {active.get('start_date')} - {active.get('end_date')}"
+        )
+
+    source_label = "cached snapshot" if cached_mode else "production"
+    st.caption(
+        f"Source: {source_label} `{db_info.get('db_name')}` on `{db_info.get('host_name')}`. "
+        f"DB time: {db_info.get('db_now')}. Schedule: {schedule_text}."
+    )
+    if not cached_mode and int(db_info.get("server_read_only") or 0) == 0:
+        st.warning("Production server is not read-only. This dashboard only runs internal SELECT queries.")
+    if cached_mode:
+        st.warning("Live production connection is unavailable. The dashboard is showing a cached snapshot.")
+
+    kpi_cols = st.columns(6)
+    kpi_cols[0].metric("Active variants", format_int(coverage.get("active_position_variants")))
+    kpi_cols[1].metric("Active masters", format_int(coverage.get("active_position_masters")))
+    kpi_cols[2].metric("With KPI", format_int(coverage.get("variants_with_any_kpi")))
+    kpi_cols[3].metric("Without KPI", format_int(coverage.get("variants_without_kpi")))
+    kpi_cols[4].metric("Completion", f"{completion:.1%}")
+    kpi_cols[5].metric("KPI ownership rows", format_int(coverage.get("total_kpi_ownership_rows")))
+
+    st.divider()
+
+    st.subheader("Ketersediaan kamus KPI by kategori posisi")
+    category_summary = data["category_summary"].copy()
+    structural_row = category_summary[category_summary["category"] == "Struktural"].iloc[0].to_dict()
+    non_structural_row = category_summary[category_summary["category"] == "Non-struktural"].iloc[0].to_dict()
+
+    category_cols = st.columns(6)
+    category_cols[0].metric("Active structural PMIDs", format_int(structural_row.get("active_units")))
+    category_cols[1].metric("Structural complete", format_int(structural_row.get("complete_units")))
+    category_cols[2].metric("Structural not complete", format_int(structural_row.get("not_complete_units")))
+    category_cols[3].metric("Active non-structural PNIDs", format_int(non_structural_row.get("active_units")))
+    category_cols[4].metric("Non-structural complete", format_int(non_structural_row.get("complete_units")))
+    category_cols[5].metric("Non-structural not complete", format_int(non_structural_row.get("not_complete_units")))
+
+    category_plot = category_summary.melt(
+        id_vars=["category", "unit"],
+        value_vars=["complete_units", "partial_units", "missing_units"],
+        var_name="availability_status",
+        value_name="count",
+    )
+    category_plot["availability_status"] = category_plot["availability_status"].map(
+        {
+            "complete_units": "Complete",
+            "partial_units": "Partial",
+            "missing_units": "Missing",
+        }
+    )
+    category_fig = px.bar(
+        category_plot,
+        x="category",
+        y="count",
+        color="availability_status",
+        text="count",
+        labels={"category": "Kategori", "count": "Jumlah", "availability_status": "Status"},
+    )
+    category_fig.update_layout(barmode="stack", height=360)
+    st.plotly_chart(category_fig, width="stretch")
+
+    category_anomalies = data["category_anomalies"].copy()
+    if not category_anomalies.empty:
+        unmapped = int(category_anomalies.iloc[0].get("active_pmids") or 0)
+        if unmapped > 0:
+            st.warning(
+                "Ada active non-structural PMID yang belum punya PNID mapping. "
+                "Baris ini tidak masuk denominator PNID sampai mapping tersedia."
+            )
+            st.dataframe(category_anomalies, width="stretch", hide_index=True)
+
+    structural_tab, non_structural_tab, missing_tab = st.tabs(
+        ["Structural PMIDs", "Non-structural PNIDs", "Belum lengkap"]
+    )
+    with structural_tab:
+        structural_scope = st.selectbox(
+            "KPI status filter",
+            ["All", "With KPI", "Without KPI"],
+            key="structural_kpi_status_filter",
+        )
+        st.dataframe(
+            apply_kpi_scope_filter(data["structural_detail"], structural_scope),
+            width="stretch",
+            hide_index=True,
+            height=420,
+        )
+    with non_structural_tab:
+        non_structural_scope = st.selectbox(
+            "KPI status filter",
+            ["All", "With KPI", "Without KPI"],
+            key="non_structural_kpi_status_filter",
+        )
+        st.dataframe(
+            apply_kpi_scope_filter(data["non_structural_detail"], non_structural_scope),
+            width="stretch",
+            hide_index=True,
+            height=420,
+        )
+    with missing_tab:
+        st.markdown("Structural PMID belum lengkap")
+        st.dataframe(data["structural_not_complete"], width="stretch", hide_index=True, height=320)
+        st.markdown("Non-structural PNID belum lengkap")
+        st.dataframe(data["non_structural_not_complete"], width="stretch", hide_index=True, height=320)
+        st.markdown("Active PNID/PMID/Position Variant tanpa KPI")
+        st.dataframe(data["category_gap_detail"], width="stretch", hide_index=True, height=520)
+
+    st.divider()
+
+    group_df = data["group_coverage"].copy()
+    if group_search:
+        group_df = group_df[
+            group_df["group_name"].str.contains(group_search, case=False, na=False)
+        ]
+    if only_gaps:
+        group_df = group_df[group_df["without_kpi"].astype(float) > 0]
+
+    left, right = st.columns([1.2, 1])
+    with left:
+        st.subheader("Coverage gaps by group")
+        plot_df = group_df.head(30).sort_values("without_kpi", ascending=True)
+        fig = px.bar(
+            plot_df,
+            x="without_kpi",
+            y="group_name",
+            orientation="h",
+            hover_data=["active_variants", "with_kpi", "coverage_pct"],
+            labels={"without_kpi": "Without KPI", "group_name": "Group"},
+        )
+        fig.update_layout(height=max(420, min(900, 28 * len(plot_df) + 120)))
+        st.plotly_chart(fig, width="stretch")
+
+    with right:
+        st.subheader("Planning status by KPI type")
+        status_df = data["status"].copy()
+        fig = px.bar(
+            status_df,
+            x="type",
+            y="ownership_rows",
+            color="weight_approval_status",
+            hover_data=["item_approval_status", "allocation_status", "kpi_ids", "active_variants"],
+            labels={"ownership_rows": "Ownership rows", "type": "KPI type"},
+        )
+        st.plotly_chart(fig, width="stretch")
+        st.dataframe(status_df, width="stretch", hide_index=True)
+
+    st.subheader("Upload audit")
+    import_cols = st.columns([1, 1])
+    with import_cols[0]:
+        agg = data["import_agg"]
+        fig = px.bar(
+            agg,
+            x="status",
+            y="logs",
+            color=agg["dry_run"].map({0: "Actual", 1: "Dry run"}),
+            labels={"color": "Mode", "logs": "Log count"},
+        )
+        st.plotly_chart(fig, width="stretch")
+        st.dataframe(agg, width="stretch", hide_index=True)
+    with import_cols[1]:
+        st.markdown("Latest successful uploads")
+        st.dataframe(
+            data["success_by_file"].head(12),
+            width="stretch",
+            hide_index=True,
+        )
+
+    st.subheader("Anomaly checks")
+    anomaly_df = data["anomalies"].copy()
+    st.dataframe(anomaly_df, width="stretch", hide_index=True)
+    if not data["failed_imports"].empty:
+        st.markdown("Failed or non-success import logs")
+        st.dataframe(data["failed_imports"].head(max_rows), width="stretch", hide_index=True)
+
+    st.subheader("Active position variants without KPI")
+    st.dataframe(data["without_kpi"].head(max_rows), width="stretch", hide_index=True)
+
+    with st.expander("Group coverage detail"):
+        st.dataframe(group_df.head(max_rows), width="stretch", hide_index=True)
+
+    if refresh:
+        st.rerun()
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="KPI planning dashboard")
+    parser.add_argument("--check", action="store_true", help="Run a production read smoke test and print JSON")
+    parser.add_argument("--year", type=int, default=DEFAULT_YEAR)
+    parser.add_argument("--company-id", type=int, default=DEFAULT_COMPANY_ID)
+    args = parser.parse_args()
+    if args.check:
+        run_check(args.year, args.company_id)
+    else:
+        run_app()
+
+
+if __name__ == "__main__":
+    main()
