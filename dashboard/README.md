@@ -1,6 +1,8 @@
 # KPI Planning Dashboard Production
 
-Local Streamlit dashboard for monitoring KPI planning coverage in Portaverse production.
+Local Streamlit dashboard for monitoring KPI planning coverage and worker portfolio progress across Pelindo production companies.
+
+The default scope is **Seluruh Pelindo**. Administrators can drill down to one active Company ID, filter worker readiness/origin, and download the current follow-up list as CSV.
 
 ## Environment Variables
 
@@ -18,7 +20,7 @@ Optional overrides:
 
 ```bash
 export KPI_DASHBOARD_YEAR="2026"
-export KPI_DASHBOARD_COMPANY_ID="1"
+export KPI_DASHBOARD_COMPANY_ID="all" # or one numeric Company ID
 ```
 
 ## Install
@@ -33,6 +35,7 @@ python3 -m pip install -r requirements-dashboard.txt
 
 ```bash
 python3 dashboard/kpi_planning_dashboard.py --check
+python3 dashboard/kpi_planning_dashboard.py --check --company-id 1
 ```
 
 ## Run
@@ -47,4 +50,19 @@ If you want a single click / launch target from the editor, use the `Run analyti
 make run
 ```
 
-If the live production database is temporarily unreachable, the dashboard will fall back to a cached snapshot so the page still opens instead of stopping on a raw MySQL error.
+## Worker Progress Contract
+
+Portfolio origin is derived from the backend write contract:
+
+- `KAMUS_KPI`: the active position has KPI ownership created with `created_by_pov=SYSTEM`.
+- `MANUAL_TANPA_KAMUS`: no system KPI exists for the position and the active worker has KPI ownership created by `WORKER` or `SUPERIOR`.
+- `BELUM_ADA_PORTFOLIO`: neither system nor manual KPI exists.
+- `ORIGIN_TIDAK_DIKENAL`: KPI rows exist with an unsupported or missing origin value.
+
+Readiness uses the same five workflow buckets as My Team Performance: Belum Ada Draft, Draft Perencanaan, Menunggu Review Bawahan, Menunggu Keputusan Anda, and Disetujui. Detail is one row per active worker-position assignment; worker summary uses the least advanced status when a worker has multiple active assignments.
+
+The dashboard includes definitive, Lakhar, and job-sharing assignments. Structural positions use PMID; non-structural positions use PNID mapping for the active company and group.
+
+## Failure Behavior
+
+If the live database is unavailable, the dashboard reports `unavailable` and does not show cached Head Office metrics. Employee data and database credentials are never written to the repository. Upload audit remains global because import logs do not contain a reliable Company ID for filtering.
