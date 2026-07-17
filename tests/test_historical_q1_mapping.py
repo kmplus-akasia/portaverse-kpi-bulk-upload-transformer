@@ -221,6 +221,50 @@ class HistoricalQ1MappingTest(unittest.TestCase):
         self.assertEqual(rows[0]["Candidate PMID"], "")
         self.assertEqual(rows[0]["Candidate PNID"], "")
 
+    def test_two_secondary_identities_for_employee_always_conflict(self):
+        rows = build_mapping_rows(
+            [worksheet("Group Head Keuangan")],
+            historical_reference(
+                historical_row(pmid="501", employee="100", lakhar_id="22"),
+                historical_row(
+                    pmid="502",
+                    employee="100",
+                    job_sharing_id="33",
+                    group="Group Lain",
+                ),
+            ),
+            {},
+            "1",
+        )
+
+        self.assertEqual(rows[0]["Confidence Label"], "mapping_conflict")
+        self.assertEqual(rows[0]["Candidate PMID"], "")
+        self.assertEqual(rows[0]["Candidate PNID"], "")
+
+    def test_two_primary_identities_for_employee_always_conflict(self):
+        rows = build_mapping_rows(
+            [worksheet("Group Head Keuangan")],
+            historical_reference(
+                historical_row(pmid="501", employee="100"),
+                historical_row(pmid="502", employee="100", group="Group Lain"),
+            ),
+            {},
+            "1",
+        )
+
+        self.assertEqual(rows[0]["Confidence Label"], "mapping_conflict")
+        self.assertEqual(rows[0]["Candidate PMID"], "")
+        self.assertEqual(rows[0]["Candidate PNID"], "")
+
+    def test_duplicate_worksheet_key_is_rejected_before_mapping(self):
+        with self.assertRaisesRegex(ValueError, "Duplicate source-workbook/worksheet config key"):
+            build_mapping_rows(
+                [worksheet("Group Head Keuangan"), worksheet("Group Head Keuangan")],
+                historical_reference(historical_row()),
+                {},
+                "1",
+            )
+
     def test_api_rejects_non_head_office_company_id(self):
         with self.assertRaisesRegex(ValueError, "company ID '1'"):
             build_mapping_rows(
@@ -351,6 +395,48 @@ class HistoricalQ1MappingTest(unittest.TestCase):
 
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("company ID '1'", completed.stderr)
+
+    def test_cli_rejects_duplicate_worksheet_key(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            reference_path = temp / "reference.json"
+            config_path = temp / "config.json"
+            existing_path = temp / "existing.json"
+            output_dir = temp / "output"
+            reference_path.write_text(json.dumps(historical_reference(historical_row())), encoding="utf-8")
+            config_path.write_text(
+                json.dumps(
+                    {
+                        "positions": [
+                            worksheet("Group Head Keuangan"),
+                            worksheet("Group Head Keuangan"),
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            existing_path.write_text(json.dumps({"positions": []}), encoding="utf-8")
+
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "scripts" / "build_historical_q1_position_mapping.py"),
+                    "--historical-reference",
+                    str(reference_path),
+                    "--config",
+                    str(config_path),
+                    "--existing-config",
+                    str(existing_path),
+                    "--output-dir",
+                    str(output_dir),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("Duplicate source-workbook/worksheet config key", completed.stderr)
 
 
 if __name__ == "__main__":

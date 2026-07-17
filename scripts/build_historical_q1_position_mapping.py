@@ -8,7 +8,12 @@ import csv
 import json
 from pathlib import Path
 
-from historical_q1_mapping import REPORT_COLUMNS, build_mapping_rows, mapping_summary
+from historical_q1_mapping import (
+    REPORT_COLUMNS,
+    build_mapping_rows,
+    mapping_summary,
+    validate_unique_position_keys,
+)
 
 
 def _load_json(path: Path) -> dict:
@@ -33,10 +38,11 @@ def main() -> int:
     positions = config.get("positions", [])
     if not isinstance(positions, list):
         raise ValueError("Config positions must be a list.")
+    unique_position_keys = validate_unique_position_keys(positions)
 
     rows = build_mapping_rows(positions, historical_reference, existing_config, args.company_id)
-    if len(rows) != len(positions):
-        raise ValueError("Mapping report did not preserve every config position row.")
+    if len(rows) != len(unique_position_keys):
+        raise ValueError("Mapping report did not preserve every unique config worksheet key.")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     json_path = args.output_dir / "mapping_report.json"

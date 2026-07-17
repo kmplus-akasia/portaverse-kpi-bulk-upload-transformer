@@ -298,6 +298,21 @@ def _comparison_index(existing_config: dict[str, Any] | list[dict[str, Any]]) ->
     return index
 
 
+def validate_unique_position_keys(positions: list[dict[str, Any]]) -> set[tuple[str, str]]:
+    """Reject duplicate source-workbook/worksheet inputs before mapping."""
+    seen: set[tuple[str, str]] = set()
+    duplicates: list[tuple[str, str]] = []
+    for position in positions:
+        key = (_text(position.get("source_workbook")), _text(position.get("sheet_name")))
+        if key in seen and key not in duplicates:
+            duplicates.append(key)
+        seen.add(key)
+    if duplicates:
+        rendered = ", ".join(f"{source_workbook!r}/{worksheet!r}" for source_workbook, worksheet in duplicates)
+        raise ValueError(f"Duplicate source-workbook/worksheet config key(s): {rendered}.")
+    return seen
+
+
 def _candidate_value(candidate: dict[str, Any] | None, key: str) -> str:
     if not candidate:
         return ""
@@ -342,6 +357,16 @@ def _has_primary_secondary_identity_conflict(candidates: list[dict[str, Any]]) -
     )
 
 
+def _has_employee_identity_conflict(candidates: list[dict[str, Any]]) -> bool:
+    identities_by_employee: dict[str, set[tuple[str, str]]] = {}
+    for candidate in candidates:
+        for evidence in candidate["evidence"]:
+            employee_number = _text(evidence.get("employee_number"))
+            if employee_number:
+                identities_by_employee.setdefault(employee_number, set()).add(candidate["identity"])
+    return any(len(identities) > 1 for identities in identities_by_employee.values())
+
+
 def _validate_head_office_scope(historical_payload: dict[str, Any], company_id: str) -> None:
     if _text(company_id) != HEAD_OFFICE_COMPANY_ID:
         raise ValueError("Historical Q1 mapping supports only Head Office company ID '1'.")
@@ -372,6 +397,7 @@ def build_mapping_rows(
 ) -> list[dict[str, Any]]:
     """Build one unapproved, evidence-backed report row for every worksheet key."""
     _validate_head_office_scope(historical_payload, str(company_id))
+    validate_unique_position_keys(positions)
     comparison = _comparison_index(existing_config)
     raw_assignments = [
         row
@@ -397,7 +423,8 @@ def build_mapping_rows(
             else []
         )
         primary_secondary_conflict = _has_primary_secondary_identity_conflict(eligible)
-        conflict = len(strong_competitors) > 1 or primary_secondary_conflict
+        employee_identity_conflict = _has_employee_identity_conflict(eligible)
+        conflict = len(strong_competitors) > 1 or employee_identity_conflict
         if not best:
             label = NO_CANDIDATE
             reason = "No historical company-1 candidate matched the worksheet title and group."
