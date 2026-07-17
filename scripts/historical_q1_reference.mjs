@@ -88,7 +88,7 @@ export function buildHistoricalNomenclatureQuery() {
       LEFT JOIN tb_company_in tci
         ON tci.company_in_id = tgm.company_id
      WHERE pnm.position_master_id IS NOT NULL
-       AND (tgm.company_id = ? OR tgm.group_master_id IS NULL)
+       AND pnm.company_id = ?
      ORDER BY pnm.position_master_id ASC, pnm.cluster_id ASC, pnm.group_master_id ASC`;
 }
 
