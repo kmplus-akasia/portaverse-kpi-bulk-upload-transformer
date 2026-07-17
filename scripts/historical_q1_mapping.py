@@ -21,6 +21,7 @@ HIGH_CONFIDENCE = "high_confidence"
 LOW_CONFIDENCE = "low_confidence"
 MAPPING_CONFLICT = "mapping_conflict"
 NO_CANDIDATE = "no_candidate"
+HEAD_OFFICE_COMPANY_ID = "1"
 
 REPORT_COLUMNS = [
     "Source Workbook",
@@ -341,6 +342,15 @@ def _has_primary_secondary_identity_conflict(candidates: list[dict[str, Any]]) -
     )
 
 
+def _validate_head_office_scope(historical_payload: dict[str, Any], company_id: str) -> None:
+    if _text(company_id) != HEAD_OFFICE_COMPANY_ID:
+        raise ValueError("Historical Q1 mapping supports only Head Office company ID '1'.")
+    source = historical_payload.get("source")
+    if isinstance(source, dict) and "company_id" in source:
+        if _text(source.get("company_id")) != HEAD_OFFICE_COMPANY_ID:
+            raise ValueError("Historical payload source company_id must be '1'.")
+
+
 def _fallback_scope(position: dict[str, Any]) -> str:
     configured = _text(position.get("position_scope"))
     if configured in {STRUCTURAL, NON_STRUCTURAL}:
@@ -361,6 +371,7 @@ def build_mapping_rows(
     company_id: str = "1",
 ) -> list[dict[str, Any]]:
     """Build one unapproved, evidence-backed report row for every worksheet key."""
+    _validate_head_office_scope(historical_payload, str(company_id))
     comparison = _comparison_index(existing_config)
     raw_assignments = [
         row
@@ -385,7 +396,8 @@ def build_mapping_rows(
             if best
             else []
         )
-        conflict = len(strong_competitors) > 1
+        primary_secondary_conflict = _has_primary_secondary_identity_conflict(eligible)
+        conflict = len(strong_competitors) > 1 or primary_secondary_conflict
         if not best:
             label = NO_CANDIDATE
             reason = "No historical company-1 candidate matched the worksheet title and group."
@@ -394,7 +406,7 @@ def build_mapping_rows(
         elif conflict:
             label = MAPPING_CONFLICT
             reason = "Multiple equally ranked historical identities require reviewer selection."
-            if _has_primary_secondary_identity_conflict(strong_competitors):
+            if primary_secondary_conflict:
                 reason = (
                     "PRIMARY assignment evidence takes precedence, but conflicting secondary "
                     "identity remains visible for reviewer selection."

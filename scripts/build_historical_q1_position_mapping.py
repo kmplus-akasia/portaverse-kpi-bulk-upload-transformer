@@ -24,6 +24,8 @@ def main() -> int:
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--company-id", default="1")
     args = parser.parse_args()
+    if args.company_id != "1":
+        parser.error("Historical Q1 mapping supports only Head Office company ID '1'.")
 
     historical_reference = _load_json(args.historical_reference)
     config = _load_json(args.config)

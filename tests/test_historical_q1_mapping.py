@@ -201,6 +201,42 @@ class HistoricalQ1MappingTest(unittest.TestCase):
         self.assertEqual(rows[0]["Confidence Label"], "mapping_conflict")
         self.assertIn("PRIMARY assignment evidence takes precedence", rows[0]["Confidence Reason"])
 
+    def test_primary_secondary_identity_conflict_blocks_lower_ranked_secondary_identity(self):
+        rows = build_mapping_rows(
+            [worksheet("Group Head Keuangan")],
+            historical_reference(
+                historical_row(pmid="501", employee="100", group="Group Keuangan"),
+                historical_row(
+                    pmid="502",
+                    employee="100",
+                    lakhar_id="22",
+                    group="Group Lain",
+                ),
+            ),
+            {},
+            "1",
+        )
+
+        self.assertEqual(rows[0]["Confidence Label"], "mapping_conflict")
+        self.assertEqual(rows[0]["Candidate PMID"], "")
+        self.assertEqual(rows[0]["Candidate PNID"], "")
+
+    def test_api_rejects_non_head_office_company_id(self):
+        with self.assertRaisesRegex(ValueError, "company ID '1'"):
+            build_mapping_rows(
+                [worksheet("Group Head Keuangan")],
+                historical_reference(historical_row(company="2")),
+                {},
+                "2",
+            )
+
+    def test_api_rejects_payload_from_non_head_office_company(self):
+        payload = historical_reference(historical_row())
+        payload["source"]["company_id"] = "2"
+
+        with self.assertRaisesRegex(ValueError, "source company_id must be '1'"):
+            build_mapping_rows([worksheet("Group Head Keuangan")], payload, {}, "1")
+
     def test_existing_config_ids_are_comparison_fields_only(self):
         position = worksheet("Group Head Keuangan")
         existing = {
@@ -281,6 +317,40 @@ class HistoricalQ1MappingTest(unittest.TestCase):
         self.assertEqual(len(csv_rows), 1)
         self.assertEqual(summary["mapping_rows"], 1)
         self.assertEqual(summary["reviewer_approved_rows"], 0)
+
+    def test_cli_rejects_non_head_office_company_id(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            reference_path = temp / "reference.json"
+            config_path = temp / "config.json"
+            existing_path = temp / "existing.json"
+            output_dir = temp / "output"
+            reference_path.write_text(json.dumps(historical_reference(historical_row())), encoding="utf-8")
+            config_path.write_text(json.dumps({"positions": [worksheet("Group Head Keuangan")]}), encoding="utf-8")
+            existing_path.write_text(json.dumps({"positions": []}), encoding="utf-8")
+
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "scripts" / "build_historical_q1_position_mapping.py"),
+                    "--historical-reference",
+                    str(reference_path),
+                    "--config",
+                    str(config_path),
+                    "--existing-config",
+                    str(existing_path),
+                    "--output-dir",
+                    str(output_dir),
+                    "--company-id",
+                    "2",
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("company ID '1'", completed.stderr)
 
 
 if __name__ == "__main__":
