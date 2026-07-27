@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dokumentasi Converter KPI Bulk Upload - Progress, Spesifikasi, dan Panduan Penggunaan</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --paper: #ffffff;
+      --ink: #162033;
+      --muted: #5d6878;
+      --line: #d9dee8;
+      --navy: #183a59;
+      --blue: #2563eb;
+      --blue-soft: #eaf1ff;
+      --teal: #0f766e;
+      --teal-soft: #e6f6f3;
+      --green: #16835b;
+      --green-soft: #e8f6ef;
+      --amber: #9a6500;
+      --amber-soft: #fff4d7;
+      --red: #bd382f;
+      --red-soft: #ffe9e7;
+      --slate-soft: #eef2f7;
+      --code: #101828;
+      --shadow: 0 16px 42px rgba(20, 31, 54, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.58;
+    }
+
+    a { color: var(--blue); }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    header {
+      background:
+        linear-gradient(135deg, rgba(24, 58, 89, 0.97), rgba(15, 118, 110, 0.91)),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.28), transparent 52%);
+      color: #fff;
+      padding: 34px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 12px;
+      font-weight: 780;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    header p {
+      margin: 14px 0 0;
+      max-width: 880px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 16px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      margin: 18px 0;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(16, 24, 40, 0.05);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 4px;
+      padding: 10px;
+    }
+
+    nav a {
+      padding: 9px 10px;
+      color: var(--navy);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 720;
+    }
+
+    nav a:hover { background: var(--slate-soft); }
+
+    main {
+      display: grid;
+      gap: 18px;
+    }
+
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 26px;
+      box-shadow: 0 10px 26px rgba(16, 24, 40, 0.035);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 25px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: #263244;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    p { margin: 10px 0; }
+
+    ul, ol {
+      margin: 10px 0 10px 22px;
+      padding: 0;
+    }
+
+    li { margin: 6px 0; }
+
+    code,
+    pre {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+    }
+
+    code {
+      padding: 2px 5px;
+      border-radius: 5px;
+      background: #edf1f7;
+      color: #24324a;
+    }
+
+    pre {
+      margin: 14px 0;
+      padding: 16px;
+      overflow: auto;
+      color: #f5f8ff;
+      background: var(--code);
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      margin: 14px 0;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 10px 11px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f0f3f8;
+      color: #28354a;
+      font-weight: 780;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .metric {
+      min-height: 132px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 780;
+    }
+
+    .metric .value {
+      display: block;
+      margin-top: 6px;
+      font-size: 30px;
+      line-height: 1.05;
+      font-weight: 820;
+      letter-spacing: 0;
+    }
+
+    .metric .sub {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .callout {
+      margin: 14px 0;
+      padding: 14px 16px;
+      border-left: 5px solid var(--blue);
+      border-radius: 8px;
+      background: var(--blue-soft);
+    }
+
+    .callout.good {
+      border-left-color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .callout.warn {
+      border-left-color: var(--amber);
+      background: var(--amber-soft);
+    }
+
+    .callout.danger {
+      border-left-color: var(--red);
+      background: var(--red-soft);
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 780;
+    }
+
+    .status.ready {
+      color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .status.review {
+      color: var(--amber);
+      background: var(--amber-soft);
+    }
+
+    .diagram {
+      margin: 16px 0;
+      padding: 12px;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .diagram svg {
+      display: block;
+      min-width: 760px;
+      width: 100%;
+      height: auto;
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .source-item {
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .check {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .check b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    footer {
+      margin-top: 18px;
+      padding: 18px 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media print {
+      nav { position: static; box-shadow: none; }
+      section, header { box-shadow: none; }
+      body { background: #fff; }
+      .shell { width: 100%; padding: 0; }
+    }
+
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 24px, 1180px); padding-top: 16px; }
+      header, section { padding: 20px; }
+      nav { position: static; }
+      .metric { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <p class="eyebrow">Dokumentasi Operasional Converter KPI</p>
+      <h1>Progress Konversi, Spesifikasi Converter, dan Panduan Penggunaan</h1>
+      <p>
+        Dokumen ini menjelaskan status konversi Group 1, Group 2, dan Group 3,
+        aturan converter terbaru, gating validasi, serta langkah penggunaan
+        untuk menghasilkan workbook upload PMS secara konsisten.
+      </p>
+      <div class="meta" aria-label="Metadata dokumen">
+        <span class="pill">Tanggal dokumen: 25 Juni 2026</span>
+        <span class="pill">Bahasa: Indonesia</span>
+        <span class="pill">Mode: standalone HTML</span>
+      </div>
+    </header>
+
+    <nav aria-label="Daftar isi">
+      <div class="nav-inner">
+        <a href="#ringkasan">Ringkasan</a>
+        <a href="#progress">Progress Group</a>
+        <a href="#source-of-truth">Source of Truth</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#spesifikasi">Spesifikasi</a>
+        <a href="#gating">Gating Validasi</a>
+        <a href="#cara-pakai">Cara Pakai</a>
+        <a href="#checklist">Checklist Upload</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="ringkasan">
+        <h2>1. Ringkasan Eksekutif</h2>
+        <p>
+          KPI Bulk Upload Converter adalah pipeline Python untuk mengubah workbook
+          desain Kamus KPI menjadi workbook resmi yang dapat diunggah ke PMS.
+          Converter membaca workbook sumber atau ZIP batch, menemukan mapping posisi,
+          mengisi template upload 24 kolom, membuat report validasi, lalu menghasilkan
+          manifest untuk menentukan workbook yang siap upload.
+        </p>
+        <div class="grid">
+          <div class="metric">
+            <strong>Total workbook READY</strong>
+            <span class="value">938</span>
+            <span class="sub">Group 1 folder conversion, Group 2, dan Group 3.</span>
+          </div>
+          <div class="metric">
+            <strong>Total rows terkonversi</strong>
+            <span class="value">117.979</span>
+            <span class="sub">Akumulasi Group 1 folder conversion, Group 2, dan Group 3.</span>
+          </div>
+          <div class="metric">
+            <strong>Blank identity</strong>
+            <span class="value">0</span>
+            <span class="sub">Tidak ada row tanpa PMID dan PNID pada batch yang diringkas.</span>
+          </div>
+          <div class="metric">
+            <strong>Double identity</strong>
+            <span class="value">0</span>
+            <span class="sub">Tidak ada row yang mengisi PMID dan PNID sekaligus.</span>
+          </div>
+        </div>
+        <div class="callout good">
+          <strong>Prinsip operasional utama:</strong> upload hanya workbook yang masuk status
+          <code>READY</code> di <code>upload_manifest.csv</code>, atau workbook yang sudah
+          disalin ke folder <code>upload-ready</code>. Jangan upload report, audit, config,
+          atau file CSV pendukung.
+        </div>
+      </section>
+
+      <section id="progress">
+        <h2>2. Progress Konversi Group 1, Group 2, dan Group 3</h2>
+        <p>
+          Ringkasan berikut berasal dari file <code>upload_manifest.csv</code> pada folder
+          output masing-masing batch. Semua batch yang diringkas berada dalam status
+          <code>READY</code> dan tidak memiliki row dengan identitas posisi kosong atau ganda.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Batch</th>
+              <th>Folder manifest</th>
+              <th>Workbook READY</th>
+              <th>Total row KPI</th>
+              <th>Structural rows</th>
+              <th>Non-structural rows</th>
+              <th>Blank / double identity</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Group 1 folder conversion</td>
+              <td><code>output/kpi_conversion_20260623_group1_ho_v2_latest_org_fail_visible</code></td>
+              <td>26</td>
+              <td>4.034</td>
+              <td>2.576</td>
+              <td>1.458</td>
+              <td>0 / 0</td>
+              <td><span class="status ready">READY</span></td>
+            </tr>
+            <tr>
+              <td>Group 1 final safe upload</td>
+              <td><code>output/kpi_upload_final_20260623_pre_restructure_v1_identity_fixed</code></td>
+              <td>26</td>
+              <td>6.118</td>
+              <td>3.976</td>
+              <td>2.142</td>
+              <td>0 / 0</td>
+              <td><span class="status ready">READY</span></td>
+            </tr>
+            <tr>
+              <td>Group 2</td>
+              <td><code>output/kpi_conversion_20260623_group2_latest_org_v2</code></td>
+              <td>900</td>
+              <td>109.160</td>
+              <td>6.564</td>
+              <td>102.596</td>
+              <td>0 / 0</td>
+              <td><span class="status ready">READY</span></td>
+            </tr>
+            <tr>
+              <td>Group 3</td>
+              <td><code>output/kpi_conversion_20260623_group3_latest_org_fail_visible</code></td>
+              <td>12</td>
+              <td>4.785</td>
+              <td>1.362</td>
+              <td>3.423</td>
+              <td>0 / 0</td>
+              <td><span class="status ready">READY</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout warn">
+          <strong>Catatan Group 1:</strong> folder conversion Group 1 menunjukkan jejak run
+          dengan 4.034 rows. Untuk upload final yang aman, gunakan batch
+          <code>kpi_upload_final_20260623_pre_restructure_v1_identity_fixed</code> dengan
+          6.118 rows dan identity audit bersih.
+        </div>
+
+        <h3>Visualisasi Progress</h3>
+        <div class="diagram" role="img" aria-label="Dashboard progress konversi Group 1, Group 2, dan Group 3">
+          <svg viewBox="0 0 1040 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <style>
+                .svg-title { font: 700 22px Inter, Arial, sans-serif; fill: #162033; }
+                .svg-sub { font: 500 13px Inter, Arial, sans-serif; fill: #5d6878; }
+                .svg-label { font: 700 14px Inter, Arial, sans-serif; fill: #263244; }
+                .svg-small { font: 500 12px Inter, Arial, sans-serif; fill: #5d6878; }
+                .svg-value { font: 800 26px Inter, Arial, sans-serif; fill: #183a59; }
+              </style>
+            </defs>
+            <rect x="0" y="0" width="1040" height="500" rx="8" fill="#fbfcff"/>
+            <text x="28" y="42" class="svg-title">Progress Batch Konversi</text>
+            <text x="28" y="66" class="svg-sub">Semua batch pada ringkasan berstatus READY dan memiliki blank/double identity = 0.</text>
+
+            <g transform="translate(28 95)">
+              <rect width="220" height="116" rx="8" fill="#eaf1ff" stroke="#b8c9ff"/>
+              <text x="16" y="28" class="svg-label">Group 1 conversion</text>
+              <text x="16" y="65" class="svg-value">26</text>
+              <text x="70" y="65" class="svg-small">workbook READY</text>
+              <text x="16" y="92" class="svg-small">4.034 rows, identity bersih</text>
+            </g>
+
+            <g transform="translate(268 95)">
+              <rect width="220" height="116" rx="8" fill="#e8f6ef" stroke="#b7dfcc"/>
+              <text x="16" y="28" class="svg-label">Group 1 final</text>
+              <text x="16" y="65" class="svg-value">6.118</text>
+              <text x="100" y="65" class="svg-small">rows</text>
+              <text x="16" y="92" class="svg-small">Batch final aman untuk upload</text>
+            </g>
+
+            <g transform="translate(508 95)">
+              <rect width="220" height="116" rx="8" fill="#e6f6f3" stroke="#addbd4"/>
+              <text x="16" y="28" class="svg-label">Group 2</text>
+              <text x="16" y="65" class="svg-value">900</text>
+              <text x="86" y="65" class="svg-small">workbook READY</text>
+              <text x="16" y="92" class="svg-small">109.160 rows, identity bersih</text>
+            </g>
+
+            <g transform="translate(748 95)">
+              <rect width="220" height="116" rx="8" fill="#fff4d7" stroke="#efd28a"/>
+              <text x="16" y="28" class="svg-label">Group 3</text>
+              <text x="16" y="65" class="svg-value">12</text>
+              <text x="70" y="65" class="svg-small">workbook READY</text>
+              <text x="16" y="92" class="svg-small">4.785 rows, identity bersih</text>
+            </g>
+
+            <g transform="translate(28 260)">
+              <text x="0" y="0" class="svg-label">Perbandingan total rows</text>
+              <text x="0" y="24" class="svg-small">Skala bar mengikuti Group 2 sebagai batch terbesar.</text>
+
+              <text x="0" y="72" class="svg-small">Group 1 conversion</text>
+              <rect x="170" y="56" width="760" height="20" rx="4" fill="#edf1f7"/>
+              <rect x="170" y="56" width="28" height="20" rx="4" fill="#2563eb"/>
+              <text x="948" y="72" class="svg-small">4.034</text>
+
+              <text x="0" y="114" class="svg-small">Group 1 final</text>
+              <rect x="170" y="98" width="760" height="20" rx="4" fill="#edf1f7"/>
+              <rect x="170" y="98" width="43" height="20" rx="4" fill="#16835b"/>
+              <text x="948" y="114" class="svg-small">6.118</text>
+
+              <text x="0" y="156" class="svg-small">Group 2</text>
+              <rect x="170" y="140" width="760" height="20" rx="4" fill="#edf1f7"/>
+              <rect x="170" y="140" width="760" height="20" rx="4" fill="#0f766e"/>
+              <text x="948" y="156" class="svg-small">109.160</text>
+
+              <text x="0" y="198" class="svg-small">Group 3</text>
+              <rect x="170" y="182" width="760" height="20" rx="4" fill="#edf1f7"/>
+              <rect x="170" y="182" width="33" height="20" rx="4" fill="#9a6500"/>
+              <text x="948" y="198" class="svg-small">4.785</text>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section id="source-of-truth">
+        <h2>3. Source of Truth dan Artefak Pendukung</h2>
+        <p>
+          Converter harus dijalankan dengan kontrak template dan reference posisi yang benar.
+          Jangan mengubah asumsi kolom atau identity mapping tanpa mengecek source of truth
+          berikut.
+        </p>
+        <div class="source-list">
+          <div class="source-item">
+            <strong>Template upload resmi</strong>
+            <p class="small">
+              File template di <code>input/KPI Upload Template.xlsx</code> menjadi bentuk akhir
+              workbook upload. Header yang digunakan berjumlah 24 kolom.
+            </p>
+          </div>
+          <div class="source-item">
+            <strong>Production position reference</strong>
+            <p class="small">
+              <code>configs/production_position_reference.json</code> menjadi lookup offline
+              untuk PMID, PNID, company, group, dan tipe posisi.
+            </p>
+          </div>
+          <div class="source-item">
+            <strong>Config posisi</strong>
+            <p class="small">
+              File <code>configs/*.json</code> menentukan sheet, posisi target, scope posisi,
+              PMID atau PNID, dan rule drop khusus.
+            </p>
+          </div>
+          <div class="source-item">
+            <strong>Manifest validasi</strong>
+            <p class="small">
+              <code>upload_manifest.csv</code> adalah bukti operasional workbook siap upload.
+              Status <code>READY</code> wajib dicek sebelum file diunggah.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline">
+        <h2>4. Pipeline Konversi</h2>
+        <p>
+          Pipeline bekerja dari sumber workbook atau ZIP batch, lalu menulis output per workbook.
+          Setiap output selalu dipasangkan dengan report CSV agar issue dapat ditelusuri tanpa
+          membuka file Excel satu per satu.
+        </p>
+
+        <div class="diagram" role="img" aria-label="Diagram pipeline converter KPI">
+          <svg viewBox="0 0 1040 330" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6878"/>
+              </marker>
+              <style>
+                .box-title { font: 800 14px Inter, Arial, sans-serif; fill: #162033; }
+                .box-text { font: 500 12px Inter, Arial, sans-serif; fill: #5d6878; }
+                .flow-title { font: 800 22px Inter, Arial, sans-serif; fill: #162033; }
+              </style>
+            </defs>
+            <rect x="0" y="0" width="1040" height="330" rx="8" fill="#fbfcff"/>
+            <text x="28" y="42" class="flow-title">Alur End-to-End Converter</text>
+
+            <g transform="translate(28 80)">
+              <rect width="130" height="98" rx="8" fill="#eaf1ff" stroke="#b8c9ff"/>
+              <text x="14" y="28" class="box-title">Source</text>
+              <text x="14" y="52" class="box-text">Workbook .xlsx</text>
+              <text x="14" y="72" class="box-text">atau ZIP batch</text>
+            </g>
+
+            <g transform="translate(183 80)">
+              <rect width="130" height="98" rx="8" fill="#f0f3f8" stroke="#cfd6e3"/>
+              <text x="14" y="28" class="box-title">Discovery</text>
+              <text x="14" y="52" class="box-text">Baca sheet</text>
+              <text x="14" y="72" class="box-text">dan config</text>
+            </g>
+
+            <g transform="translate(338 80)">
+              <rect width="150" height="98" rx="8" fill="#e6f6f3" stroke="#addbd4"/>
+              <text x="14" y="28" class="box-title">Reference</text>
+              <text x="14" y="52" class="box-text">PMID, PNID,</text>
+              <text x="14" y="72" class="box-text">company, tipe posisi</text>
+            </g>
+
+            <g transform="translate(513 80)">
+              <rect width="130" height="98" rx="8" fill="#e8f6ef" stroke="#b7dfcc"/>
+              <text x="14" y="28" class="box-title">Transform</text>
+              <text x="14" y="52" class="box-text">Normalisasi</text>
+              <text x="14" y="72" class="box-text">dan mapping</text>
+            </g>
+
+            <g transform="translate(668 80)">
+              <rect width="130" height="98" rx="8" fill="#fff4d7" stroke="#efd28a"/>
+              <text x="14" y="28" class="box-title">Report</text>
+              <text x="14" y="52" class="box-text">.report.csv</text>
+              <text x="14" y="72" class="box-text">issue detail</text>
+            </g>
+
+            <g transform="translate(823 80)">
+              <rect width="160" height="98" rx="8" fill="#f0f3f8" stroke="#cfd6e3"/>
+              <text x="14" y="28" class="box-title">Validation</text>
+              <text x="14" y="52" class="box-text">upload_manifest</text>
+              <text x="14" y="72" class="box-text">READY atau FAIL</text>
+            </g>
+
+            <g stroke="#5d6878" stroke-width="2" fill="none" marker-end="url(#arrow)">
+              <path d="M158 129 L180 129"/>
+              <path d="M313 129 L335 129"/>
+              <path d="M488 129 L510 129"/>
+              <path d="M643 129 L665 129"/>
+              <path d="M798 129 L820 129"/>
+            </g>
+
+            <g transform="translate(190 225)">
+              <rect width="660" height="54" rx="8" fill="#ffffff" stroke="#d9dee8"/>
+              <text x="18" y="23" class="box-title">Output akhir</text>
+              <text x="18" y="42" class="box-text">Workbook upload-ready, report CSV, recap workbook bila dibuat, dan ZIP upload bila diminta.</text>
+            </g>
+            <path d="M903 178 C903 220 820 225 850 252" stroke="#5d6878" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+          </svg>
+        </div>
+      </section>
+
+      <section id="spesifikasi">
+        <h2>5. Spesifikasi Converter Terbaru</h2>
+
+        <h3>5.1 Template dan header upload</h3>
+        <p>
+          Converter menulis ke template upload resmi dengan 24 kolom. Kolom tail yang wajib
+          dipertahankan adalah <code>Ownership Type</code>, <code>Position Nomenklatur ID</code>,
+          dan <code>RKM Code ID</code>. Jangan memakai template lama yang belum memiliki kolom ini.
+        </p>
+
+        <h3>5.2 Rule identity posisi</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Scope posisi</th>
+              <th>Kolom yang diisi</th>
+              <th>Kolom yang dikosongkan</th>
+              <th>Makna operasional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>structural</code></td>
+              <td><code>Position Master ID (Required)</code> / PMID</td>
+              <td><code>Position Nomenklatur ID</code> / PNID</td>
+              <td>Row diarahkan ke posisi struktural spesifik.</td>
+            </tr>
+            <tr>
+              <td><code>non_structural</code></td>
+              <td><code>Position Nomenklatur ID</code> / PNID</td>
+              <td><code>Position Master ID (Required)</code> / PMID</td>
+              <td>Backend importer mengekspansi PNID ke daftar PMID terkait.</td>
+            </tr>
+            <tr>
+              <td><code>neglect</code></td>
+              <td>Tidak dihasilkan sebagai upload row</td>
+              <td>Tidak berlaku</td>
+              <td>Posisi sengaja dikeluarkan dari batch karena belum layak upload.</td>
+            </tr>
+            <tr>
+              <td><code>mapping_conflict</code></td>
+              <td>Tidak boleh memiliki PMID/PNID final</td>
+              <td>Tidak berlaku</td>
+              <td>Butuh review mapping sebelum dapat dikonversi sebagai upload-ready.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>Catatan PNID:</strong> dalam workbook dan converter ini, PNID adalah
+          <code>cluster_id</code> dari position nomenclature mapping, bukan ID baris mentah
+          dari tabel mapping.
+        </div>
+
+        <h3>5.3 Logic parsing dan normalisasi</h3>
+        <ul>
+          <li>Source sheet dibaca sebagai layout blok dan nilai kosong dapat mewarisi konteks dari baris parent.</li>
+          <li>Nilai placeholder seperti <code>(blank)</code> diperlakukan sebagai kosong.</li>
+          <li>Period dinormalisasi ke enum upload, misalnya <code>Triwulan</code> menjadi <code>TRIWULANAN</code>.</li>
+          <li>Polarity dinormalisasi ke <code>POSITIVE</code>, <code>NEGATIVE</code>, atau <code>NEUTRAL</code>.</li>
+          <li>Cascading dinormalisasi ke <code>DIRECT</code>, <code>INDIRECT</code>, atau <code>DUPLICATE</code>.</li>
+          <li>Ownership dinormalisasi ke <code>SPECIFIC</code>, <code>SHARED</code>, atau <code>COMMON</code>.</li>
+          <li>KAI nature diisi sebagai <code>Routine</code> atau <code>Non Routine</code> berdasarkan nilai sumber atau period.</li>
+        </ul>
+
+        <h3>5.4 Rule drop OUTPUT dan KAI</h3>
+        <p>
+          Converter tidak membawa semua baris sumber ke template upload. Baris OUTPUT atau KAI
+          akan dikeluarkan bila salah satu kondisi berikut terjadi:
+        </p>
+        <ul>
+          <li>Kolom comment berisi nilai yang masuk daftar drop, default utamanya <code>Drop</code>.</li>
+          <li>Weight OUTPUT atau KAI kosong.</li>
+          <li>Weight OUTPUT atau KAI bernilai <code>0</code> atau setara nol.</li>
+        </ul>
+
+        <h3>5.5 Scope Group 3 dan affiliate</h3>
+        <p>
+          Untuk Group 3, affiliate, atau workbook non-HO, converter harus memakai all-company
+          reference lookup dengan <code>--target-company-id ""</code>. Tanpa flag ini, lookup
+          dapat terlalu sempit dan menghasilkan mapping yang tidak sesuai konteks perusahaan.
+        </p>
+      </section>
+
+      <section id="gating">
+        <h2>6. Gating Validasi dan Decision Logic</h2>
+        <p>
+          Gating utama converter ada pada identitas posisi dan validasi workbook akhir.
+          Setiap row upload harus lolos rule identitas sebelum dianggap siap upload.
+        </p>
+
+        <div class="diagram" role="img" aria-label="Diagram decision gate PMID dan PNID">
+          <svg viewBox="0 0 1040 430" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="gate-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6878"/>
+              </marker>
+              <style>
+                .gate-title { font: 800 22px Inter, Arial, sans-serif; fill: #162033; }
+                .gate-label { font: 800 14px Inter, Arial, sans-serif; fill: #162033; }
+                .gate-text { font: 500 12px Inter, Arial, sans-serif; fill: #5d6878; }
+                .gate-outcome { font: 800 16px Inter, Arial, sans-serif; fill: #183a59; }
+              </style>
+            </defs>
+            <rect x="0" y="0" width="1040" height="430" rx="8" fill="#fbfcff"/>
+            <text x="28" y="42" class="gate-title">Decision Gate Identity Posisi</text>
+
+            <g transform="translate(420 78)">
+              <polygon points="100,0 200,70 100,140 0,70" fill="#f0f3f8" stroke="#cfd6e3"/>
+              <text x="58" y="63" class="gate-label">position_scope</text>
+              <text x="70" y="84" class="gate-text">dari config/reference</text>
+            </g>
+
+            <g transform="translate(60 250)">
+              <rect width="210" height="95" rx="8" fill="#e8f6ef" stroke="#b7dfcc"/>
+              <text x="16" y="28" class="gate-outcome">structural</text>
+              <text x="16" y="52" class="gate-text">Isi PMID</text>
+              <text x="16" y="72" class="gate-text">Kosongkan PNID</text>
+            </g>
+
+            <g transform="translate(305 250)">
+              <rect width="210" height="95" rx="8" fill="#e6f6f3" stroke="#addbd4"/>
+              <text x="16" y="28" class="gate-outcome">non_structural</text>
+              <text x="16" y="52" class="gate-text">Isi PNID / cluster_id</text>
+              <text x="16" y="72" class="gate-text">Kosongkan PMID</text>
+            </g>
+
+            <g transform="translate(550 250)">
+              <rect width="210" height="95" rx="8" fill="#fff4d7" stroke="#efd28a"/>
+              <text x="16" y="28" class="gate-outcome">neglect</text>
+              <text x="16" y="52" class="gate-text">Jangan upload</text>
+              <text x="16" y="72" class="gate-text">Masuk catatan review</text>
+            </g>
+
+            <g transform="translate(795 250)">
+              <rect width="210" height="95" rx="8" fill="#ffe9e7" stroke="#e6b8b4"/>
+              <text x="16" y="28" class="gate-outcome">mapping_conflict</text>
+              <text x="16" y="52" class="gate-text">Stop untuk posisi ini</text>
+              <text x="16" y="72" class="gate-text">Butuh resolusi mapping</text>
+            </g>
+
+            <g stroke="#5d6878" stroke-width="2" fill="none" marker-end="url(#gate-arrow)">
+              <path d="M492 215 C430 230 255 230 170 248"/>
+              <path d="M500 218 C470 235 430 235 410 248"/>
+              <path d="M545 218 C590 235 635 235 655 248"/>
+              <path d="M570 214 C640 228 870 228 900 248"/>
+            </g>
+
+            <g transform="translate(190 372)">
+              <rect width="660" height="34" rx="8" fill="#ffffff" stroke="#d9dee8"/>
+              <text x="18" y="22" class="gate-text">Validation akhir: setiap row harus punya tepat satu identitas posisi, bukan kosong dan bukan ganda.</text>
+            </g>
+          </svg>
+        </div>
+
+        <h3>Gating yang wajib lolos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Gate</th>
+              <th>Kondisi lolos</th>
+              <th>Jika gagal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Header template</td>
+              <td>Header 24 kolom sesuai template upload.</td>
+              <td>Workbook dianggap tidak sesuai kontrak upload.</td>
+            </tr>
+            <tr>
+              <td>Report CSV</td>
+              <td>Tidak ada row dengan <code>severity=error</code>.</td>
+              <td>Batch tidak boleh diupload sebelum error diperbaiki.</td>
+            </tr>
+            <tr>
+              <td>Identity scope</td>
+              <td>PMID valid untuk structural, PNID valid untuk non-structural.</td>
+              <td>Row ditandai error pada validasi batch.</td>
+            </tr>
+            <tr>
+              <td>Blank/double identity</td>
+              <td><code>blank_identity_rows=0</code> dan <code>double_identity_rows=0</code>.</td>
+              <td>Status workbook menjadi <code>FAIL</code>.</td>
+            </tr>
+            <tr>
+              <td>Expected workbook count</td>
+              <td>Jumlah workbook sesuai parameter <code>--expected-workbooks</code>.</td>
+              <td>Validasi batch memberi error agar folder tidak salah upload.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="cara-pakai">
+        <h2>7. Panduan Penggunaan Converter</h2>
+
+        <h3>7.1 Setup awal</h3>
+        <pre><code>cd /Users/alfredoteja/Documents/portaverse-kpi-bulk-upload-transformer
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt</code></pre>
+
+        <h3>7.2 Run ZIP batch</h3>
+        <p>
+          Gunakan mode ZIP bila sumber berisi banyak workbook. Converter akan membuat folder
+          output per workbook dan report CSV per workbook.
+        </p>
+        <pre><code>python3 scripts/kpi_bulk_transform.py \
+  --source "/absolute/path/to/KAMUS KPI GROUP 2.zip" \
+  --template "input/KPI Upload Template.xlsx" \
+  --mapping "configs/production_position_reference.json" \
+  --output-dir "output/group2_conversion_YYYYMMDD_HHMM"</code></pre>
+
+        <h3>7.3 Run Group 3 atau affiliate</h3>
+        <p>
+          Untuk batch non-HO, kosongkan target company agar lookup membaca seluruh company
+          di reference.
+        </p>
+        <pre><code>python3 scripts/kpi_bulk_transform.py \
+  --source "/absolute/path/to/KAMUS KPI GROUP 3.zip" \
+  --template "input/KPI Upload Template.xlsx" \
+  --mapping "configs/production_position_reference.json" \
+  --target-company-id "" \
+  --output-dir "output/group3_conversion_YYYYMMDD_HHMM"</code></pre>
+
+        <h3>7.4 Run satu workbook</h3>
+        <pre><code>python3 scripts/kpi_bulk_transform.py \
+  --source "/absolute/path/to/source.xlsx" \
+  --template "input/KPI Upload Template.xlsx" \
+  --config "configs/pre_restructure_positions_rw_reviewed_20260609.json" \
+  --mapping "configs/production_position_reference.json" \
+  --output "output/single_conversion.xlsx" \
+  --report "output/single_conversion.report.csv"</code></pre>
+
+        <h3>7.5 Build recap workbook</h3>
+        <pre><code>python3 scripts/build_conversion_recap.py \
+  --output-dir "output/group2_conversion_YYYYMMDD_HHMM" \
+  --config "configs/pre_restructure_positions_rw_reviewed_20260609.json" \
+  --reference "configs/production_position_reference.json" \
+  --output "output/group2_conversion_recap.xlsx" \
+  --report-scope "Group 2"</code></pre>
+
+        <h3>7.6 Validate batch dan siapkan upload-ready</h3>
+        <pre><code>python3 scripts/validate_kpi_upload_batch.py \
+  --output-dir "output/group2_conversion_YYYYMMDD_HHMM" \
+  --config "configs/pre_restructure_positions_rw_reviewed_20260609.json" \
+  --reference "configs/production_position_reference.json" \
+  --expected-workbooks 900 \
+  --upload-ready-dir "output/group2_conversion_YYYYMMDD_HHMM/upload-ready" \
+  --zip-output "output/group2_conversion_YYYYMMDD_HHMM/upload-ready.zip"</code></pre>
+      </section>
+
+      <section id="checklist">
+        <h2>8. Checklist Operasional Sebelum Upload</h2>
+        <div class="checklist">
+          <div class="check">
+            <b>1. Cek manifest</b>
+            Pastikan semua row di <code>upload_manifest.csv</code> berstatus <code>READY</code>.
+          </div>
+          <div class="check">
+            <b>2. Cek identity</b>
+            Pastikan <code>blank_identity_rows</code> dan <code>double_identity_rows</code> bernilai 0.
+          </div>
+          <div class="check">
+            <b>3. Cek report CSV</b>
+            Buka atau grep <code>.report.csv</code> dan pastikan tidak ada <code>severity=error</code>.
+          </div>
+          <div class="check">
+            <b>4. Gunakan folder upload-ready</b>
+            Upload file dari <code>upload-ready</code> bila folder itu dibuat oleh validator.
+          </div>
+          <div class="check">
+            <b>5. Jangan upload artefak pendukung</b>
+            Jangan upload <code>.report.csv</code>, recap, discovered config, audit CSV, atau file markdown.
+          </div>
+          <div class="check">
+            <b>6. Simpan bukti run</b>
+            Simpan path output, manifest, command, dan tanggal run agar batch bisa ditelusuri ulang.
+          </div>
+        </div>
+
+        <div class="callout danger">
+          <strong>Stop condition:</strong> bila ada workbook <code>FAIL</code>, ada error di report,
+          jumlah workbook tidak sesuai ekspektasi, atau ada blank/double identity, jangan upload batch
+          tersebut. Perbaiki config atau mapping dulu, lalu regenerate batch yang terdampak.
+        </div>
+      </section>
+
+      <section id="troubleshooting">
+        <h2>9. Troubleshooting Singkat</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Gejala</th>
+              <th>Kemungkinan penyebab</th>
+              <th>Tindakan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PNID terlihat seperti PMID</td>
+              <td>Config memakai ID yang salah atau bukan <code>cluster_id</code>.</td>
+              <td>Cek ulang terhadap <code>configs/production_position_reference.json</code>.</td>
+            </tr>
+            <tr>
+              <td>Group 3 banyak mapping tidak cocok</td>
+              <td>Lookup masih dibatasi company default.</td>
+              <td>Run ulang dengan <code>--target-company-id ""</code>.</td>
+            </tr>
+            <tr>
+              <td>Report berisi invalid enum</td>
+              <td>Nilai sumber berada di kolom salah atau memakai istilah non-upload.</td>
+              <td>Cek row sumber dan normalisasi field period, polarity, cascading, ownership, atau KAI nature.</td>
+            </tr>
+            <tr>
+              <td>Workbook count tidak sesuai</td>
+              <td>ZIP sumber, filter config, atau expected count tidak sinkron.</td>
+              <td>Bandingkan isi ZIP, discovered config, dan parameter <code>--expected-workbooks</code>.</td>
+            </tr>
+            <tr>
+              <td>Row KPI hilang dari output</td>
+              <td>Row kena rule drop karena comment <code>Drop</code>, weight kosong, atau weight 0.</td>
+              <td>Cek report info dan workbook sumber pada row terkait.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      Dokumen dibuat untuk workspace
+      <code>/Users/alfredoteja/Documents/portaverse-kpi-bulk-upload-transformer</code>.
+      Semua diagram menggunakan SVG inline dan dapat dibuka offline.
+    </footer>
+  </div>
+</body>
+</html>

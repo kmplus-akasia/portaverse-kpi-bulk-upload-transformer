@@ -99,7 +99,7 @@ PNID	9689		Staff Group Perencanaan dan Performa Keuangan	Group Perencanaan dan P
 PNID	9694		Staff Group Strategi SDM	Group Strategi SDM	Missing	not_found_in_generated_upload
 PNID	139		Staff Utama Direktur Pengelola	Direktorat Pengelola	Missing	not_found_in_generated_upload
 PNID	11541		Sustainability Analyst - Unit Pendukung Implementasi Dan Pelaporan	Unit Pendukung Implementasi dan Pelaporan	Missing	not_found_in_generated_upload
-PNID	11435		Data Scientist	Department Monitoring dan Evaluasi Klaster Ekspansi Korporasi	Missing	user_reported_missing_after_snapshot
+PNID	11542		Data Scientist	Department  Monitoring & Evaluasi Klaster Ekspansi Korporasi	Missing	user_reported_missing_after_snapshot
 PMID_VARIANT	348	39813	Officer Pertambahan Nilai	Unit Pendukung Pertambahan Nilai	Partial	not_found_in_generated_upload
 `;
 
@@ -384,13 +384,14 @@ async function build() {
     },
     additionsAfterSnapshot: [
       {
-        source: "User report 2026-06-19; identity cross-checked against staging assignment and production nomenclature reference",
+        source: "User report 2026-06-19; identity cross-checked against staging assignment and current area-scope nomenclature evidence",
         employeeName: "Ficky Alkarim",
         employeeNumber: "90003230",
         positionName: "Data Scientist",
         positionMasterId: 33711,
         stagingPositionMasterVariantId: 35658,
-        productionPositionNomenclatureId: 11435,
+        positionNomenclatureId: 11542,
+        staleProductionSnapshotPositionNomenclatureId: 11435,
         excludedDifferentPositionNomenclatureId: 12256,
       },
     ],

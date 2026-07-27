@@ -42,6 +42,8 @@ EXPECTED_HEADERS = [
     "RKM Code ID",
 ]
 
+TRUST_SOURCE_REVIEWER_MANUAL = "reviewer_manual"
+
 
 def norm(value: object) -> str:
     text = str(value or "").lower()
@@ -49,6 +51,11 @@ def norm(value: object) -> str:
     text = text.replace("&", " dan ")
     text = re.sub(r"[-_/(),.]+", " ", text)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def is_numeric_only_title(value: object) -> bool:
+    text = str(value or "").strip()
+    return bool(text) and re.fullmatch(r"\d+(?:\.0+)?", text) is not None
 
 
 def parse_args() -> argparse.Namespace:
@@ -74,21 +81,23 @@ def load_reference_ids(
 ]:
     with reference_path.open() as handle:
         reference = json.load(handle)
-    master_ids = {str(row["position_master_id"]) for row in reference["position_master_rows"]}
+    structural_rows = reference.get("structural_lookup_rows") or reference.get("position_master_rows", [])
+    non_structural_rows = reference.get("non_structural_lookup_rows") or reference.get("rows", [])
+    master_ids = {str(row["position_master_id"]) for row in structural_rows if row.get("position_master_id")}
     nomenclature_ids = {
-        str(row["cluster_id"])
-        for row in reference["rows"]
-        if row.get("cluster_id") not in (None, "", 0, "0")
+        str(row["cluster_id"] or row.get("position_nomenclature_id"))
+        for row in non_structural_rows
+        if (row.get("cluster_id") or row.get("position_nomenclature_id")) not in (None, "", 0, "0")
     }
     cluster_labels_by_id: dict[str, set[str]] = {}
     master_types_by_id: dict[str, set[str]] = {}
     position_types_by_pnid: dict[str, set[str]] = {}
-    for row in reference["position_master_rows"]:
+    for row in structural_rows:
         master_types_by_id.setdefault(str(row["position_master_id"]), set()).add(
             str(row.get("position_master_type_id") or "")
         )
-    for row in reference["rows"]:
-        cluster_id = row.get("cluster_id")
+    for row in non_structural_rows:
+        cluster_id = row.get("cluster_id") or row.get("position_nomenclature_id")
         if cluster_id in (None, "", 0, "0"):
             continue
         cluster_labels_by_id.setdefault(str(cluster_id), set()).add(norm(row.get("cluster_label")))
@@ -115,20 +124,36 @@ def check_config_scope(
     errors: list[str] = []
     with config_path.open() as handle:
         config = json.load(handle)
+    structural_usage_by_pmid: dict[str, list[str]] = {}
     for pos in config["positions"]:
         scope = (pos.get("position_scope") or "").strip()
         pmid = str(pos.get("position_master_id") or "").strip()
         pnid = str(pos.get("position_nomenclature_id") or "").strip()
+        confidence_label = (pos.get("mapping_confidence_label") or "").strip()
+        review_status = norm(pos.get("mapping_review_status"))
+        override_approved = str(pos.get("mapping_override_approved") or "").lower() in {"1", "true", "yes", "y"}
+        review_approved = override_approved or review_status in {"approved", "review approved", "reviewer approved"}
+        trusted_reviewer = review_approved and pos.get("mapping_override_trust_source") == TRUST_SOURCE_REVIEWER_MANUAL
         label = f"{pos.get('source_workbook')} :: {pos.get('sheet_name')}"
-        if scope not in {"structural", "non_structural", "neglect"}:
+        if review_status == "needs check":
+            continue
+        if confidence_label in {"low_confidence", "scope_uncertain", "no_candidate", "mapping_conflict"} and not review_approved:
+            errors.append(f"unapproved blocked mapping label {confidence_label}: {label}")
+        if scope not in {"structural", "non_structural", "neglect", "mapping_conflict", "scope_uncertain"}:
             errors.append(f"unsupported position scope {scope or '<blank>'}: {label}")
+        if scope in {"mapping_conflict", "scope_uncertain"} and not review_approved:
+            if pmid or pnid:
+                errors.append(f"{scope} config should not have PMID/PNID before approval: {label}")
+            continue
         if scope == "structural":
             if not pmid:
                 errors.append(f"structural config missing PMID: {label}")
             if pnid:
                 errors.append(f"structural config still has PNID: {label} -> {pnid}")
+            if pmid:
+                structural_usage_by_pmid.setdefault(pmid, []).append(label)
             production_types = master_types_by_id.get(pmid, set())
-            if pmid and production_types != {"5"}:
+            if pmid and production_types != {"5"} and not trusted_reviewer:
                 errors.append(
                     f"structural config PMID {pmid} production type "
                     f"{','.join(sorted(production_types)) or 'unknown'} is non-structural: {label}"
@@ -142,12 +167,39 @@ def check_config_scope(
                     f"{label} -> pnid={pnid}"
                 )
             production_types = position_types_by_pnid.get(pnid, set())
-            if pnid and (not production_types or "5" in production_types):
+            if pnid and (not production_types or "5" in production_types) and not trusted_reviewer:
                 errors.append(
                     f"non_structural config PNID {pnid} has invalid production types "
                     f"{sorted(production_types)}: {label}"
                 )
+    for pmid, labels in sorted(structural_usage_by_pmid.items()):
+        unique_labels = sorted(set(labels))
+        if len(unique_labels) > 1:
+            errors.append(
+                f"duplicate structural PMID {pmid} mapped by {len(unique_labels)} worksheets: "
+                + " | ".join(unique_labels)
+            )
     return errors
+
+
+def load_trusted_reviewer_ids(config_path: Path) -> tuple[set[str], set[str]]:
+    with config_path.open() as handle:
+        config = json.load(handle)
+    trusted_pmids: set[str] = set()
+    trusted_pnids: set[str] = set()
+    for pos in config.get("positions", []):
+        review_status = norm(pos.get("mapping_review_status"))
+        override_approved = str(pos.get("mapping_override_approved") or "").lower() in {"1", "true", "yes", "y"}
+        review_approved = override_approved or review_status in {"approved", "review approved", "reviewer approved"}
+        if not review_approved or pos.get("mapping_override_trust_source") != TRUST_SOURCE_REVIEWER_MANUAL:
+            continue
+        pmid = str(pos.get("position_master_id") or "").strip()
+        pnid = str(pos.get("position_nomenclature_id") or "").strip()
+        if pmid and not pnid:
+            trusted_pmids.add(pmid)
+        if pnid and not pmid:
+            trusted_pnids.add(pnid)
+    return trusted_pmids, trusted_pnids
 
 
 def load_fixed_pmids(fixed_audit_path: Path | None) -> set[str]:
@@ -196,9 +248,13 @@ def validate_workbook(
     nomenclature_ids: set[str],
     master_types_by_id: dict[str, set[str]],
     position_types_by_pnid: dict[str, set[str]],
+    trusted_pmid_ids: set[str] | None = None,
+    trusted_pnid_ids: set[str] | None = None,
 ) -> tuple[dict[str, object], list[str], set[str]]:
     errors: list[str] = []
     found_fixed: set[str] = set()
+    trusted_pmid_ids = trusted_pmid_ids or set()
+    trusted_pnid_ids = trusted_pnid_ids or set()
 
     with zipfile.ZipFile(path) as archive:
         bad_file = archive.testzip()
@@ -225,12 +281,15 @@ def validate_workbook(
     non_structural_rows = 0
     blank_identity_rows = 0
     double_identity_rows = 0
+    graph_rows: list[dict[str, object]] = []
 
     for row_idx, row in enumerate(row_iter, 2):
         title = row[10]
         if title in (None, ""):
             continue
         rows += 1
+        if is_numeric_only_title(title):
+            errors.append(f"{path}: row {row_idx} has numeric-only KPI title={title}")
         pmid = str(row[4] or "").strip()
         pnid = str(row[22] or "").strip()
         if pmid and pnid:
@@ -241,10 +300,11 @@ def validate_workbook(
             errors.append(f"{path}: row {row_idx} has neither PMID nor PNID")
         elif pmid:
             structural_rows += 1
-            if pmid not in master_ids:
+            trusted = pmid in trusted_pmid_ids
+            if pmid not in master_ids and not trusted:
                 errors.append(f"{path}: row {row_idx} has invalid PMID={pmid}")
             production_types = master_types_by_id.get(pmid, set())
-            if production_types != {"5"}:
+            if production_types != {"5"} and not trusted:
                 errors.append(
                     f"{path}: row {row_idx} PMID={pmid} has non-structural "
                     f"production types {sorted(production_types)}"
@@ -253,16 +313,85 @@ def validate_workbook(
                 found_fixed.add(pmid)
         else:
             non_structural_rows += 1
-            if pnid not in nomenclature_ids:
+            trusted = pnid in trusted_pnid_ids
+            if pnid not in nomenclature_ids and not trusted:
                 errors.append(f"{path}: row {row_idx} has invalid PNID={pnid}")
             production_types = position_types_by_pnid.get(pnid, set())
-            if not production_types or "5" in production_types:
+            if (not production_types or "5" in production_types) and not trusted:
                 errors.append(
                     f"{path}: row {row_idx} PNID={pnid} has invalid production "
                     f"types {sorted(production_types)}"
                 )
             if pnid in fixed_pmids:
                 errors.append(f"{path}: row {row_idx} fixed structural PMID appears in PNID={pnid}")
+
+        id_kpi_raw = row[0]
+        parent_id_raw = row[8]
+        try:
+            id_kpi = int(id_kpi_raw) if id_kpi_raw not in (None, "") else None
+        except (TypeError, ValueError):
+            id_kpi = None
+        try:
+            parent_id = int(parent_id_raw) if parent_id_raw not in (None, "") else None
+        except (TypeError, ValueError):
+            parent_id = None
+        identity_label = f"PMID={pmid}" if pmid else f"PNID={pnid}"
+        if id_kpi is not None:
+            graph_rows.append(
+                {
+                    "row": row_idx,
+                    "identity": identity_label,
+                    "id_kpi": id_kpi,
+                    "parent_id": parent_id,
+                    "kpi_type": str(row[7] or "").strip().upper(),
+                }
+            )
+
+    global_id_rows: dict[int, dict[str, object]] = {}
+    for graph_row in graph_rows:
+        id_kpi = int(graph_row["id_kpi"])
+        if id_kpi in global_id_rows:
+            errors.append(
+                f"{path}: row {graph_row['row']} duplicate IDKPI={id_kpi} "
+                "dalam satu formulir"
+            )
+        else:
+            global_id_rows[id_kpi] = graph_row
+
+    graph_by_key: dict[tuple[str, int], dict[str, object]] = {}
+    for graph_row in graph_rows:
+        key = (str(graph_row["identity"]), int(graph_row["id_kpi"]))
+        if key in graph_by_key:
+            errors.append(
+                f"{path}: row {graph_row['row']} duplicate IDKPI={graph_row['id_kpi']} "
+                f"pada identity {graph_row['identity']}"
+            )
+        else:
+            graph_by_key[key] = graph_row
+
+    for graph_row in graph_rows:
+        parent_id = graph_row["parent_id"]
+        if parent_id is None:
+            continue
+        parent = graph_by_key.get((str(graph_row["identity"]), int(parent_id)))
+        if parent is None:
+            errors.append(
+                f"{path}: row {graph_row['row']} Parent KPI ID={parent_id} "
+                f"tidak ditemukan pada identity {graph_row['identity']}"
+            )
+            continue
+        child_type = str(graph_row["kpi_type"])
+        parent_type = str(parent["kpi_type"])
+        if child_type == "OUTPUT" and parent_type != "IMPACT":
+            errors.append(
+                f"{path}: row {graph_row['row']} parent OUTPUT harus IMPACT "
+                f"pada identity {graph_row['identity']}"
+            )
+        if child_type == "KAI" and parent_type != "OUTPUT":
+            errors.append(
+                f"{path}: row {graph_row['row']} parent KAI harus OUTPUT "
+                f"pada identity {graph_row['identity']}"
+            )
 
     return (
         {
@@ -345,6 +474,7 @@ def main() -> int:
         position_types_by_pnid,
     ) = load_reference_ids(args.reference)
     fixed_pmids = load_fixed_pmids(args.fixed_audit)
+    trusted_pmid_ids, trusted_pnid_ids = load_trusted_reviewer_ids(args.config)
 
     errors = check_config_scope(
         args.config,
@@ -370,6 +500,8 @@ def main() -> int:
             nomenclature_ids,
             master_types_by_id,
             position_types_by_pnid,
+            trusted_pmid_ids,
+            trusted_pnid_ids,
         )
         records.append(record)
         errors.extend(workbook_errors)

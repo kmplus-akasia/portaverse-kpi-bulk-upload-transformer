@@ -1,0 +1,146 @@
+version: 2
+
+goal:
+  title: "Pengendalian Proyek Group 1 KPI Conversion"
+  slug: "pengendalian-proyek-group-1-conversion"
+  kind: specific
+  tranche: "Convert the provided Pengendalian Proyek Kamus KPI workbook for Group 1 only and produce reviewable PNID/PMID mapping artifacts."
+  status: active
+  oracle:
+    signal: "Group 1-only converted output plus manual-review PNID/PMID mapping artifact generated from refreshed production reference data."
+    cadence: "after each worker step and at final audit"
+    final_proof: "Artifact paths, row counts, production reference timestamp/counts, and Group 2/3 exclusion check are recorded."
+  intake:
+    original_request: "Convert Pengendalian Proyek Kamus KPI Group 1 only, fetch newest prod data, and provide position mapping review."
+    interpreted_outcome: "A verified Group 1 conversion package exists with editable PNID/PMID mapping review data."
+    input_shape: specific
+    audience: product_owner
+    authority: requested
+    proof_type: artifact
+    completion_proof: "Generated conversion and mapping-review artifacts can be opened and checked manually."
+    likely_misfire: "Converting all groups or using stale/offline position reference data."
+    blind_spots_considered:
+      - "Production DB credentials may be unavailable in this environment."
+      - "Source workbook may encode Group 1/2/3 in sheet names or row fields; converter must verify actual structure."
+      - "PNID must use cluster_id, not raw mapping row id."
+    existing_plan_facts:
+      - "Per-workbook output remains the default for this repo."
+      - "Manual review should be a concrete workbook/report, not only a chat summary."
+
+rules:
+  pm_owns_state: true
+  one_active_task: true
+  max_write_workers: 1
+  no_completion_without_judge_or_pm_audit: true
+  goal_pressure_requires_oracle: true
+
+agents:
+  scout: unknown
+  worker: unknown
+  judge: unknown
+
+visual_board:
+  selected: local
+  local:
+    status: starting
+    url: "http://goalbuddy.localhost:41737/pengendalian-proyek-group-1-conversion/"
+    command: "node /Users/alfredoteja/.codex/plugins/cache/goalbuddy/goalbuddy/0.3.9/skills/goalbuddy/surfaces/local-goal-board/scripts/local-goal-board.mjs --goal /Users/alfredoteja/Documents/portaverse-kpi-bulk-upload-transformer/docs/goals/pengendalian-proyek-group-1-conversion"
+
+active_task: T999
+
+tasks:
+  - id: T001
+    type: scout
+    assignee: Scout
+    status: done
+    objective: "Inspect converter commands and workbook structure."
+    inputs:
+      - "/Users/alfredoteja/Downloads/DIREKTORAT TEKNIK - Ibu Ika Oktania - Pengendalian Proyek (Selesai konfirmasi KPI) (1).xlsx"
+      - "README.md"
+      - "scripts"
+      - "configs"
+    constraints:
+      - "Read-only."
+      - "Confirm how Group 1 is identified before conversion."
+    expected_output:
+      - "Exact conversion command or script path."
+      - "Group filtering method."
+      - "Output and mapping-review path plan."
+    verify:
+      - "Source workbook sheets and group markers inspected."
+    receipt:
+      result: done
+      summary: "Source workbook has 134 sheets. Group 1 scope identified as the 9 sheets that declare Posisi = Group Pengendalian Proyek: Group Head, DH Pengendalian Kinerja Proyek, DH Manajemen Kontrak, Officer Pengendalian Kinerja P1/P2, Officer Admin Kontrak, Manager Pengendalian Kinerja P1/P2, and Manajer Admin Kontrak."
+  - id: T002
+    type: worker
+    assignee: Worker
+    status: done
+    objective: "Fetch newest production position reference data."
+    constraints:
+      - "Do not edit secrets or .env files."
+      - "Record if production credentials are unavailable."
+    expected_output:
+      - "Updated production reference artifact or explicit blocked evidence."
+      - "Row counts and timestamp."
+    verify:
+      - "Production reference JSON/export exists and can be parsed."
+    receipt:
+      result: done
+      summary: "Exported newest production reference to output/pengendalian_proyek_group1_prod_reference_20260703.json with 24052 nomenclature rows, 69160 position master/org rows, 1802 active structural lookup rows, and 3198 active non-structural lookup rows."
+  - id: T003
+    type: worker
+    assignee: Worker
+    status: done
+    objective: "Convert only Group 1 rows from the Pengendalian Proyek workbook."
+    constraints:
+      - "Exclude Group 2 and Group 3."
+      - "Keep per-workbook output unless converter contract requires otherwise."
+    expected_output:
+      - "Group 1 conversion output."
+      - "Conversion report."
+    verify:
+      - "Output rows are Group 1 only."
+    receipt:
+      result: done
+      summary: "Ran ZIP-batch conversion with explicit --only-sheet filter for 9 Group 1 sheets. Output workbook/report were written under output/pengendalian_proyek_group1_20260703/conversion. Converter generated 192 rows and reported 1 error for a low-confidence DH Pengendalian Kinerja Proyek mapping that must be manually reviewed."
+  - id: T004
+    type: worker
+    assignee: Worker
+    status: done
+    objective: "Produce manual PNID/PMID mapping review artifact."
+    constraints:
+      - "Include source row context and editable PNID/PMID fields."
+      - "Use PNID cluster_id semantics."
+    expected_output:
+      - "Manual mapping review workbook or CSV."
+    verify:
+      - "Review artifact opens and includes unresolved/ambiguous mappings."
+    receipt:
+      result: done
+      summary: "Generated output/pengendalian_proyek_group1_20260703/Pengendalian_Proyek_Group1_position_mapping_review.xlsx with 9 review rows and 1 blocked row. Workbook includes Reviewer Confirm Mapping, Reviewer Actual PMID, Reviewer Actual PNID, and Reviewer Notes fields."
+  - id: T999
+    type: judge
+    assignee: Judge
+    status: done
+    objective: "Verify final artifacts and summarize handoff."
+    constraints:
+      - "Reject completion if Group 2/3 rows are included."
+      - "Reject completion if latest production data was not fetched or the blocker is not explicit."
+    expected_output:
+      - "Final receipt with paths, counts, checks, and manual follow-ups."
+    verify:
+      - "Artifacts exist."
+      - "Counts and skipped groups are recorded."
+    receipt:
+      result: done
+      summary: "Verified artifacts exist and XLSX integrity passes. Discovered config has exactly the 9 Group 1 sheets and no unexpected Group 2/3 sheets. Upload output has 192 rows across 8 mapped positions; DH Pengendalian Kinerja Proyek remains excluded until manual mapping review confirms PMID 35817 or supplies a corrected PMID/PNID."
+
+checks:
+  dirty_fingerprint: unknown
+  last_verification:
+    result: done
+    task: T999
+    commands:
+      - "unzip -t output/pengendalian_proyek_group1_20260703/Pengendalian_Proyek_Group1_position_mapping_review.xlsx"
+      - "unzip -t output/pengendalian_proyek_group1_20260703/conversion/**/**/*.xlsx"
+      - "python3 verification snippets for config scope, row counts, reference counts, and review workbook headers"

@@ -3,6 +3,7 @@ import sys
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from datetime import datetime
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -14,27 +15,40 @@ from kpi_bulk_transform import (  # noqa: E402
     NormalizationStatus,
     PositionConfig,
     UPLOAD_HEADERS,
+    apply_best_effort_mapping,
+    apply_nomenclature_summary_aliases,
+    apply_nomenclature_summary_upload_rows,
     append_enum_issue,
     build_upload_rows,
     collect_parsed_sheets,
+    conversion_output_name,
     discover_configs_for_workbook,
     is_active_valid_sheet,
     load_config,
+    load_nomenclature_summary_aliases,
+    load_nomenclature_summary_upload_rows,
     load_nomenclature_mapping,
+    merge_mapping_entry,
     parse_block_sheet,
     normalize_cascading,
     normalize_kai_nature,
     normalize_ownership_type,
     normalize_period,
     normalize_polarity,
+    normalize_bsc_perspective,
     refresh_configs_from_mapping,
+    should_skip_source_workbook,
+    source_workbook_context_hints,
     uploader_kai_nature,
     uploader_polarity,
+    unique_output_name,
     validate_output_rows,
     write_output_workbook,
 )
+from position_mapping import build_lookup_indexes  # noqa: E402
 
 from openpyxl import Workbook, load_workbook  # noqa: E402
+from openpyxl.styles import Font  # noqa: E402
 
 
 class KpiBulkTransformTest(unittest.TestCase):
@@ -59,6 +73,122 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual(parsed, [])
         self.assertFalse(any(issue.severity == "error" for issue in issues))
 
+    def test_collect_parsed_sheets_blocks_unapproved_low_confidence_mapping(self):
+        config = PositionConfig(
+            sheet_name="Officer Keu",
+            position_name="Officer Keu",
+            group_name="Group Keuangan",
+            directorate_name="Direktorat Keuangan",
+            position_scope="non_structural",
+            mapping_confidence_label="low_confidence",
+            mapping_confidence_reason="Candidate exists, but title match is weak.",
+        )
+        issues = []
+
+        parsed = collect_parsed_sheets(
+            Path("does-not-exist.xlsx"),
+            None,
+            [config],
+            issues,
+        )
+
+        self.assertEqual(parsed, [])
+        self.assertTrue(any("low_confidence" in issue.message for issue in issues))
+
+    def test_collect_parsed_sheets_holds_needs_check_mapping_without_error(self):
+        config = PositionConfig(
+            sheet_name="Officer Pending",
+            position_name="Officer Pending",
+            group_name="Group Keuangan",
+            directorate_name="Direktorat Keuangan",
+            position_scope="non_structural",
+            position_nomenclature_id="888",
+            mapping_confidence_label="low_confidence",
+            mapping_review_status="needs_check",
+        )
+        issues = []
+
+        parsed = collect_parsed_sheets(
+            Path("does-not-exist.xlsx"),
+            None,
+            [config],
+            issues,
+        )
+
+        self.assertEqual(parsed, [])
+        self.assertFalse(any(issue.severity == "error" for issue in issues))
+        self.assertTrue(any(issue.severity == "warning" and "needs_check" in issue.message for issue in issues))
+
+    def test_approved_scope_uncertain_override_is_validated_against_active_lookup(self):
+        config = PositionConfig(
+            sheet_name="Kamus KPI Bagian",
+            position_name="Kamus KPI Bagian",
+            group_name="Group Keuangan",
+            directorate_name="Direktorat Keuangan",
+            position_scope="non_structural",
+            position_nomenclature_id="76",
+            mapping_confidence_label="scope_uncertain",
+            mapping_override_approved=True,
+            mapping_review_status="approved",
+        )
+        reference = {
+            "structural_lookup_rows": [],
+            "non_structural_lookup_rows": [
+                {
+                    "cluster_id": "76",
+                    "cluster_label": "Officer Keuangan",
+                    "position_master_id": "701",
+                    "position_name": "Officer Keuangan",
+                    "position_master_type_id": "6",
+                    "group_name": "Group Keuangan",
+                    "company_id": "1",
+                    "company_name": "PT Pelabuhan Indonesia (Persero)",
+                    "company_code": "PLD",
+                    "active_variant_count": 1,
+                    "active_employee_count": 1,
+                    "active_employee_names": ["Budi Santoso"],
+                    "active_employee_nipps": ["K001"],
+                }
+            ],
+        }
+        indexes = build_lookup_indexes(reference, target_company_id="1")
+
+        refresh_configs_from_mapping([config], {"Officer Keuangan": {}}, indexes)
+
+        self.assertEqual(config.position_scope, "non_structural")
+        self.assertIsNone(config.position_master_id)
+        self.assertEqual(config.position_nomenclature_id, "76")
+        self.assertEqual(config.active_employee_name, "Budi Santoso")
+
+    def test_trusted_reviewer_manual_override_survives_strict_refresh(self):
+        config = PositionConfig(
+            sheet_name="Officer Manual",
+            position_name="Officer Manual",
+            group_name="Group Keuangan",
+            directorate_name="Direktorat Keuangan",
+            position_scope="non_structural",
+            position_nomenclature_id="888",
+            mapping_confidence_label="low_confidence",
+            mapping_override_approved=True,
+            mapping_review_status="approved",
+            mapping_override_trust_source="reviewer_manual",
+        )
+        indexes = build_lookup_indexes(
+            {
+                "structural_lookup_rows": [],
+                "non_structural_lookup_rows": [],
+            },
+            target_company_id="1",
+        )
+
+        refresh_configs_from_mapping([config], {"Officer Manual": {}}, indexes)
+
+        self.assertEqual(config.position_scope, "non_structural")
+        self.assertIsNone(config.position_master_id)
+        self.assertEqual(config.position_nomenclature_id, "888")
+        self.assertEqual(config.mapping_review_status, "approved")
+        self.assertTrue(config.mapping_override_approved)
+
     def test_latest_upload_headers_include_optional_pnid_columns(self):
         self.assertEqual(len(UPLOAD_HEADERS), 24)
         self.assertEqual(
@@ -67,6 +197,13 @@ class KpiBulkTransformTest(unittest.TestCase):
         )
         self.assertEqual(UPLOAD_HEADERS[18], "Nature Of Work (KAI Only)")
         self.assertEqual(UPLOAD_HEADERS[21], "Ownership Type")
+
+    def test_unique_output_name_adds_stable_suffix_for_duplicate_batch_names(self):
+        seen = {}
+
+        self.assertEqual(unique_output_name("Direktorat - Group", seen), "Direktorat - Group")
+        self.assertEqual(unique_output_name("Direktorat - Group", seen), "Direktorat - Group - 02")
+        self.assertEqual(unique_output_name("Direktorat - Group", seen), "Direktorat - Group - 03")
 
     def test_position_nomenclature_id_overrides_position_master_id_in_output_rows(self):
         config = PositionConfig(
@@ -695,6 +832,14 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual(polarity.status, NormalizationStatus.CROSS_COLUMN)
         self.assertEqual(normalize_polarity("Negatif").value, "NEGATIVE")
 
+        self.assertEqual(normalize_bsc_perspective("Financial").value, "Financial")
+        self.assertEqual(normalize_bsc_perspective("Learning dan Growth").value, "Learning & Growth")
+        self.assertEqual(normalize_bsc_perspective("Learning and Growth").value, "Learning & Growth")
+        self.assertEqual(normalize_bsc_perspective("Internal Process").value, "Internal Business Process")
+        invalid_bsc = normalize_bsc_perspective("Stakeholder")
+        self.assertIsNone(invalid_bsc.value)
+        self.assertEqual(invalid_bsc.status, NormalizationStatus.INVALID)
+
         cascading = normalize_cascading("SPECIFIC")
         self.assertEqual(cascading.value, "INDIRECT")
         self.assertEqual(cascading.status, NormalizationStatus.CROSS_COLUMN)
@@ -806,6 +951,178 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual([row["Title"] for row in row_maps], ["Net Income", "Valid Output", "Valid KAI"])
         self.assertEqual([row["Period"] for row in row_maps], ["TRIWULANAN", "TRIWULANAN", "TRIWULANAN"])
         self.assertEqual([row["Polarity"] for row in row_maps], ["POSITIVE", "POSITIVE", "POSITIVE"])
+
+    def test_alignment_drop_rows_are_excluded_from_output_and_kai(self):
+        config = PositionConfig(
+            sheet_name="Group Head",
+            position_name="Group Head",
+            group_name="Group Raw",
+            directorate_name="Direktorat Raw",
+            position_master_id="58",
+            position_scope="structural",
+        )
+        rows = [
+            [
+                "Jenis Posisi",
+                "BSC Perspective",
+                "KPI Impact",
+                "KPI Impact Unit",
+                "KPI Impact Frequency",
+                "KPI Impact Formula",
+                "%Weight (Impact)",
+                "KPI Impact Polarity",
+                "KPI Output",
+                "%Weight (Output)",
+                "KPI Output Definition",
+                "KPI Output Unit",
+                "KPI Output Frequency",
+                "KPI Output Formula",
+                "KPI Output Polarity",
+                "Coverage KPI Output",
+                "Cascading Tagging (KPI Output)",
+                "Key Activity Indicator (KAI)",
+                "%Weight (Activity)",
+                "Alignment",
+            ],
+            [
+                "Struktural",
+                "Financial",
+                "Net Income",
+                "Rupiah",
+                "Triwulan",
+                "Revenue - Cost",
+                "100",
+                "Positif",
+                "Dropped Output",
+                "100",
+                "Should not be uploaded",
+                "%",
+                "Triwulan",
+                "realisasi/target",
+                "Positif",
+                "SPECIFIC",
+                "DIRECT",
+                "Dropped KAI",
+                "100",
+                "Drop",
+            ],
+            [
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                "Valid Output",
+                "100",
+                "Kept",
+                "%",
+                "Triwulan",
+                "realisasi/target",
+                "Positif",
+                "SPECIFIC",
+                "DIRECT",
+                "Valid KAI",
+                "100",
+                "Diupload",
+            ],
+        ]
+        issues = []
+
+        impacts = parse_block_sheet(rows, config, issues)
+        upload_rows, _ = build_upload_rows(config, "58", impacts, 1)
+        row_maps = [dict(zip(UPLOAD_HEADERS, row)) for row in upload_rows]
+
+        self.assertEqual([row["Title"] for row in row_maps], ["Net Income", "Valid Output", "Valid KAI"])
+        self.assertTrue(any("alignment/status is Drop" in issue.message for issue in issues))
+
+    def test_numeric_output_and_kai_titles_are_excluded_as_summary_rows(self):
+        config = PositionConfig(
+            sheet_name="Group Head",
+            position_name="Group Head",
+            group_name="Group Raw",
+            directorate_name="Direktorat Raw",
+            position_master_id="58",
+            position_scope="structural",
+        )
+        rows = [
+            [
+                "Jenis Posisi",
+                "BSC Perspective",
+                "KPI Impact",
+                "KPI Impact Unit",
+                "KPI Impact Frequency",
+                "KPI Impact Formula",
+                "%Weight (Impact)",
+                "KPI Impact Polarity",
+                "KPI Output",
+                "%Weight (Output)",
+                "KPI Output Definition",
+                "KPI Output Unit",
+                "KPI Output Frequency",
+                "KPI Output Formula",
+                "KPI Output Polarity",
+                "Coverage KPI Output",
+                "Cascading Tagging (KPI Output)",
+                "Key Activity Indicator (KAI)",
+                "%Weight (Activity)",
+            ],
+            [
+                "Struktural",
+                "Learning & Growth",
+                "Manpower productivity",
+                "Rupiah",
+                "Triwulan",
+                "Revenue / Employee",
+                "100",
+                "Positif",
+                "8",
+                "100",
+                "Penyelesaian Temuan Audit",
+                "%",
+                "Triwulan",
+                "realisasi/target",
+                "Positif",
+                "SPECIFIC",
+                "DIRECT",
+                "8",
+                "100",
+            ],
+            [
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                None,
+                "Valid Output 8",
+                "100",
+                "Kept",
+                "%",
+                "Triwulan",
+                "realisasi/target",
+                "Positif",
+                "SPECIFIC",
+                "DIRECT",
+                "Valid KAI 8",
+                "100",
+            ],
+        ]
+        issues = []
+
+        impacts = parse_block_sheet(rows, config, issues)
+        upload_rows, _ = build_upload_rows(config, "58", impacts, 1)
+        row_maps = [dict(zip(UPLOAD_HEADERS, row)) for row in upload_rows]
+
+        self.assertEqual(
+            [row["Title"] for row in row_maps],
+            ["Manpower productivity", "Valid Output 8", "Valid KAI 8"],
+        )
+        self.assertTrue(any("numeric-only title" in issue.message for issue in issues))
 
     def test_kai_nature_normalizes_to_backend_allowed_values(self):
         self.assertEqual(uploader_kai_nature("Routine", "Tahunan"), "Routine")
@@ -982,6 +1299,46 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual(configs[0].sheet_name, "OFFICER")
         self.assertEqual(configs[0].position_master_id, "9001")
 
+    def test_discover_configs_marks_unresolved_position_as_mapping_conflict(self):
+        workbook = Workbook()
+        worksheet = workbook.active
+        worksheet.title = "UNKNOWN ROLE"
+        worksheet.append(["Nama Posisi", "Unknown Role"])
+        worksheet.append(["Posisi", "Group Operasi"])
+        worksheet.append(["BSC Perspective", "KPI Impact", "KPI Output", "Key Activity Indicator (KAI)"])
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "KAMUS KPI TEST.xlsx"
+            workbook.save(path)
+
+            configs = discover_configs_for_workbook("KAMUS KPI TEST.xlsx", path, {})
+
+        self.assertEqual(len(configs), 1)
+        self.assertEqual(configs[0].position_scope, "mapping_conflict")
+        self.assertIsNone(configs[0].position_master_id)
+        self.assertIsNone(configs[0].position_nomenclature_id)
+
+    def test_collect_parsed_sheets_blocks_mapping_conflict_scope(self):
+        config = PositionConfig(
+            sheet_name="Unknown Role",
+            position_name="Unknown Role",
+            group_name="Group Operasi",
+            directorate_name="Direktorat Operasi",
+            position_scope="mapping_conflict",
+        )
+        issues = []
+
+        parsed = collect_parsed_sheets(
+            Path("does-not-exist.xlsx"),
+            None,
+            [config],
+            issues,
+        )
+
+        self.assertEqual(parsed, [])
+        self.assertEqual(issues[0].severity, "error")
+        self.assertIn("mapping_conflict", issues[0].message)
+
     def test_mapping_restricts_lookup_to_target_company_and_uses_cluster_label(self):
         payload = {
             "position_master_rows": [
@@ -1039,6 +1396,215 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual(mapping["officer perencanaan"]["position_scope"], "non_structural")
         self.assertEqual(mapping["manager perencanaan"]["position_master_id"], "222")
         self.assertIsNone(mapping["manager perencanaan"]["position_nomenclature_id"])
+
+    def test_discover_config_uses_workbook_company_hint_for_generic_position(self):
+        workbook = Workbook()
+        worksheet = workbook.active
+        worksheet.title = "SPV"
+        worksheet.append(["Nama Posisi", "SPV"])
+        worksheet.append(["Posisi", ""])
+        worksheet.append(["BSC Perspective", "KPI Impact", "KPI Output", "Key Activity Indicator (KAI)"])
+        mapping = {}
+        merge_mapping_entry(
+            mapping,
+            "Supervisor",
+            {
+                "position_master_id": "100",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "portaverse_position_title": "Supervisor SDM PT TEDS",
+                "portaverse_group_name": "Divisi SDM PT TEDS",
+                "portaverse_company_name": "PT Tanjung Emas Daya Sejahtera",
+                "portaverse_company_code": "TEDS",
+                "cluster_label": None,
+                "position_master_type_id": "5",
+            },
+        )
+        merge_mapping_entry(
+            mapping,
+            "Supervisor",
+            {
+                "position_master_id": "200",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "portaverse_position_title": "Supervisor Sales PT ILCS",
+                "portaverse_group_name": "Unit Sales PT ILCS",
+                "portaverse_company_name": "PT Integrasi Logistik Cipta Solusi",
+                "portaverse_company_code": "ILCS",
+                "cluster_label": None,
+                "position_master_type_id": "5",
+            },
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "KAMUS KPI PT TEDS.xlsx"
+            workbook.save(path)
+
+            configs = discover_configs_for_workbook(
+                "KAMUS KPI PT TEDS/KAMUS KPI PT TEDS.xlsx",
+                path,
+                mapping,
+            )
+
+        self.assertEqual(len(configs), 1)
+        self.assertEqual(configs[0].position_master_id, "100")
+        self.assertEqual(configs[0].position_scope, "structural")
+
+    def test_source_workbook_context_hints_exclude_generic_job_and_org_words(self):
+        hints = source_workbook_context_hints(
+            "KAMUS KPI PELINDO GROUP 2 (REGIONAL, CABANG DAN SUBHOLDING)/"
+            "KAMUS KPI REGIONAL/KAMUS KPI Regional 4/KAMUS KPI Executive Director 4/"
+            "Kamus KPI Executive Director Regional 4 - Mapping dengan Kontrak Manajemen.xlsx"
+        )
+
+        self.assertNotIn("regional", hints)
+        self.assertNotIn("executive director", hints)
+        self.assertIn("regional 4", hints)
+
+    def test_discover_config_keeps_ambiguous_abbreviation_as_mapping_conflict(self):
+        workbook = Workbook()
+        worksheet = workbook.active
+        worksheet.title = "CORSEC"
+        worksheet.append(["Nama Posisi", "CORSEC"])
+        worksheet.append(["Posisi", ""])
+        worksheet.append(["BSC Perspective", "KPI Impact", "KPI Output", "Key Activity Indicator (KAI)"])
+        mapping = {}
+        for position_master_id, company_code in [("100", "PMLI"), ("200", "PDS")]:
+            merge_mapping_entry(
+                mapping,
+                "Corporate Secretary",
+                {
+                    "position_master_id": position_master_id,
+                    "position_nomenclature_id": None,
+                    "position_scope": "structural",
+                    "portaverse_position_title": "Corporate Secretary",
+                    "portaverse_group_name": "Divisi Corporate Secretary",
+                    "portaverse_company_name": f"PT {company_code}",
+                    "portaverse_company_code": company_code,
+                    "cluster_label": None,
+                    "position_master_type_id": "5",
+                },
+            )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "KAMUS KPI UNKNOWN.xlsx"
+            workbook.save(path)
+
+            configs = discover_configs_for_workbook(
+                "KAMUS KPI UNKNOWN/KAMUS KPI UNKNOWN.xlsx",
+                path,
+                mapping,
+            )
+
+        self.assertEqual(len(configs), 1)
+        self.assertEqual(configs[0].position_scope, "mapping_conflict")
+        self.assertIsNone(configs[0].position_master_id)
+
+    def test_discover_config_blocks_unique_abbreviation_with_other_company_hint(self):
+        workbook = Workbook()
+        worksheet = workbook.active
+        worksheet.title = "CORSEC"
+        worksheet.append(["Nama Posisi", "CORSEC"])
+        worksheet.append(["Posisi", ""])
+        worksheet.append(["BSC Perspective", "KPI Impact", "KPI Output", "Key Activity Indicator (KAI)"])
+        mapping = {}
+        merge_mapping_entry(
+            mapping,
+            "Corporate Secretary",
+            {
+                "position_master_id": "100",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "portaverse_position_title": "Corporate Secretary",
+                "portaverse_group_name": "Divisi Corporate Secretary",
+                "portaverse_company_name": "PT Pendidikan Maritim dan Logistik Indonesia",
+                "portaverse_company_code": "PMLI",
+                "cluster_label": None,
+                "position_master_type_id": "5",
+            },
+        )
+        merge_mapping_entry(
+            mapping,
+            "Supervisor PDS",
+            {
+                "position_master_id": "200",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "portaverse_position_title": "Supervisor PDS",
+                "portaverse_group_name": "Divisi Operasi",
+                "portaverse_company_name": "PT Pelindo Daya Sejahtera",
+                "portaverse_company_code": "PDS",
+                "cluster_label": None,
+                "position_master_type_id": "5",
+            },
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "KAMUS KPI PT PDS.xlsx"
+            workbook.save(path)
+
+            configs = discover_configs_for_workbook(
+                "KAMUS KPI AFILIASI NON CLUSTER DAN DAPEN/KAMUS KPI PT PDS/KAMUS KPI PT PDS.xlsx",
+                path,
+                mapping,
+            )
+
+        self.assertEqual(len(configs), 1)
+        self.assertEqual(configs[0].position_scope, "mapping_conflict")
+        self.assertIsNone(configs[0].position_master_id)
+
+    def test_discover_config_does_not_fuzzy_pick_cross_company_candidate(self):
+        workbook = Workbook()
+        worksheet = workbook.active
+        worksheet.title = "REGIONAL MANAGER"
+        worksheet.append(["Nama Posisi", "REGIONAL MANAGER"])
+        worksheet.append(["Posisi", ""])
+        worksheet.append(["BSC Perspective", "KPI Impact", "KPI Output", "Key Activity Indicator (KAI)"])
+        mapping = {}
+        merge_mapping_entry(
+            mapping,
+            "Supervisor SDM PT TEDS",
+            {
+                "position_master_id": "100",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "portaverse_position_title": "Supervisor SDM PT TEDS",
+                "portaverse_group_name": "Divisi SDM PT TEDS",
+                "portaverse_company_name": "PT Tanjung Emas Daya Sejahtera",
+                "portaverse_company_code": "TEDS",
+                "cluster_label": None,
+                "position_master_type_id": "5",
+            },
+        )
+        merge_mapping_entry(
+            mapping,
+            "Regional Manager Jawa PDS",
+            {
+                "position_master_id": "300",
+                "position_nomenclature_id": None,
+                "position_scope": "structural",
+                "portaverse_position_title": "Regional Manager Jawa PDS",
+                "portaverse_group_name": "Regional Jawa PDS",
+                "portaverse_company_name": "PT Pelindo Daya Sejahtera",
+                "portaverse_company_code": "PDS",
+                "cluster_label": None,
+                "position_master_type_id": "5",
+            },
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "KAMUS KPI PT TEDS.xlsx"
+            workbook.save(path)
+
+            configs = discover_configs_for_workbook(
+                "KAMUS KPI PT TEDS/KAMUS KPI PT TEDS.xlsx",
+                path,
+                mapping,
+            )
+
+        self.assertEqual(len(configs), 1)
+        self.assertEqual(configs[0].position_scope, "mapping_conflict")
+        self.assertIsNone(configs[0].position_master_id)
 
     def test_refresh_config_from_mapping_clears_old_other_company_id(self):
         mapping = {
@@ -1280,6 +1846,129 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertIsInstance(weight_cell.value, float)
         self.assertEqual(weight_cell.value, 12.5)
         self.assertEqual(saved["KPI Template"].column_dimensions["P"].width, 72)
+
+    def test_write_output_workbook_forces_black_header_text(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            template = Path(tmp) / "template.xlsx"
+            output = Path(tmp) / "output.xlsx"
+            workbook = Workbook()
+            worksheet = workbook.active
+            worksheet.title = "KPI Template"
+            worksheet.append(UPLOAD_HEADERS)
+            worksheet["A1"].font = Font(bold=True, color="FFFFFF")
+            workbook.save(template)
+
+            write_output_workbook(template, output, [])
+
+            saved = load_workbook(output, data_only=True)
+            header_font = saved["KPI Template"]["A1"].font
+
+        self.assertEqual(header_font.color.type, "rgb")
+        self.assertEqual(header_font.color.rgb, "00000000")
+
+    def test_conversion_output_name_defaults_to_kamus_v2(self):
+        output_name = conversion_output_name(
+            "Direktorat Komersial - Group Pemasaran dan Aliansi Bisnis.xlsx",
+            [],
+            datetime(2026, 7, 2, 11, 43),
+        )
+
+        self.assertTrue(output_name.endswith("(2026 v2)"))
+
+    def test_group_hukum_as_is_source_workbook_is_skipped_for_v2(self):
+        self.assertTrue(
+            should_skip_source_workbook("(As-Is) Direktorat Manajemen Risiko - Group Hukum.xlsx")
+        )
+        self.assertFalse(
+            should_skip_source_workbook("(New) Direktorat Manajemen Risiko - Group Hukum.xlsx")
+        )
+        self.assertFalse(
+            should_skip_source_workbook("(As-Is) Direktorat Manajemen Risiko - Group K3.xlsx")
+        )
+
+    def test_best_effort_mapping_promotes_candidate_and_skips_unmapped(self):
+        low = PositionConfig(
+            sheet_name="Officer A",
+            position_name="Officer A",
+            group_name="Group A",
+            directorate_name="Direktorat A",
+            position_scope="non_structural",
+            mapping_confidence_label="low_confidence",
+            candidate_position_nomenclature_id="82",
+        )
+        missing = PositionConfig(
+            sheet_name="PMO",
+            position_name="PMO",
+            group_name="Group A",
+            directorate_name="Direktorat A",
+            position_scope="scope_uncertain",
+            mapping_confidence_label="scope_uncertain",
+        )
+
+        apply_best_effort_mapping([low, missing])
+
+        self.assertTrue(low.mapping_override_approved)
+        self.assertEqual(low.position_nomenclature_id, "82")
+        self.assertIsNone(low.position_master_id)
+        self.assertEqual(missing.position_scope, "neglect")
+        self.assertEqual(missing.mapping_review_status, "auto_skipped_unmapped_best_effort")
+
+    def test_nomenclature_summary_aliases_extend_lookup_keys(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            summary = Path(tmp) / "summary.xlsx"
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.title = "Database Master"
+            sheet.append([
+                "No.",
+                "Judul Posisi \n(Perubahan STO 1 April 2026)",
+                "Kondisi Existing (Before 1 April)",
+            ])
+            sheet.append([1, "Department Head Pengelolaan Pelanggan", "DH Layanan Pelanggan"])
+            workbook.save(summary)
+
+            aliases = load_nomenclature_summary_aliases(summary)
+            payload = {
+                "structural_lookup_rows": [
+                    {
+                        "position_master_id": "1",
+                        "position_name": "Department Head Pengelolaan Pelanggan",
+                    }
+                ]
+            }
+
+            apply_nomenclature_summary_aliases(payload, aliases)
+
+        self.assertIn("DH Layanan Pelanggan", payload["structural_lookup_rows"][0]["normalized_lookup_keys"])
+
+    def test_nomenclature_summary_upload_ready_overlays_non_structural_lookup(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            summary = Path(tmp) / "summary.xlsx"
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.title = "Upload_Ready"
+            sheet.append(["position_master_id", "position_name", "cluster_id", "cluster_label"])
+            sheet.append(["101", "Administrator Operasi Senior Wilayah II", "9001", "Administrator Operasi Wilayah II"])
+            workbook.save(summary)
+
+            upload_rows = load_nomenclature_summary_upload_rows(summary)
+            payload = {
+                "non_structural_lookup_rows": [
+                    {
+                        "position_master_id": "101",
+                        "position_name": "Administrator Operasi Senior Wilayah II",
+                        "cluster_id": "1",
+                        "cluster_label": "Administrator Operasi",
+                    }
+                ]
+            }
+
+            apply_nomenclature_summary_upload_rows(payload, upload_rows)
+
+        row = payload["non_structural_lookup_rows"][0]
+        self.assertEqual(row["cluster_id"], "9001")
+        self.assertEqual(row["cluster_label"], "Administrator Operasi Wilayah II")
+        self.assertIn("Administrator Operasi Wilayah II", row["normalized_lookup_keys"])
 
     def test_write_output_workbook_preserves_valid_frozen_pane_view(self):
         with tempfile.TemporaryDirectory() as tmp:

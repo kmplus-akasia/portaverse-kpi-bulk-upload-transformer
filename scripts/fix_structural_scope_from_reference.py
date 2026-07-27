@@ -23,9 +23,44 @@ def parse_args() -> argparse.Namespace:
 def norm(value: object) -> str:
     text = str(value or "").lower()
     text = re.sub(r"\bdh\b", "department head", text)
+    text = re.sub(r"\badmin\b", "administrasi", text)
     text = text.replace("&", " dan ")
     text = re.sub(r"[-_/(),.]+", " ", text)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def identity_tokens(value: object) -> set[str]:
+    stopwords = {"dan", "group", "unit", "pendukung", "department", "dept"}
+    return {token for token in norm(value).split() if token and token not in stopwords}
+
+
+def matches_structural_identity(pos: dict[str, object], master: dict[str, object]) -> bool:
+    master_name = master.get("position_name")
+    master_tokens = identity_tokens(master_name)
+    if not master_tokens:
+        return False
+    candidates = [
+        pos.get("position_name"),
+        pos.get("sheet_name"),
+        pos.get("cluster_label"),
+        pos.get("portaverse_position_title"),
+        *(pos.get("position_lookup_names") or []),
+    ]
+    for candidate in candidates:
+        candidate_tokens = identity_tokens(candidate)
+        if not candidate_tokens:
+            continue
+        if candidate_tokens == master_tokens:
+            return True
+        if "head" in candidate_tokens and candidate_tokens.issubset(master_tokens) and len(candidate_tokens) >= 3:
+            return True
+        if candidate_tokens.issubset(master_tokens) and len(candidate_tokens) >= 4:
+            return True
+        if "head" in master_tokens and master_tokens.issubset(candidate_tokens) and len(master_tokens) >= 3:
+            return True
+        if master_tokens.issubset(candidate_tokens) and len(master_tokens) >= 4:
+            return True
+    return False
 
 
 def is_truthy_flag(value: object) -> bool:
@@ -103,10 +138,6 @@ def main() -> int:
             continue
         if scope != "non_structural" or not pnid:
             continue
-        # The field is explicitly PNID. A valid value in the PNID namespace wins
-        # even when the same number also exists as an internal PMID.
-        if pnid in nomenclature_ids:
-            continue
         if pnid not in masters_by_id:
             continue
 
@@ -128,6 +159,14 @@ def main() -> int:
             )
         master_type = next(iter(master_types))
         master = masters[0]
+
+        # The field is explicitly PNID. A valid value in the PNID namespace wins
+        # unless the reviewed position identity matches the same-number
+        # structural PMID in the pre-restructure production reference.
+        if pnid in nomenclature_ids and not (
+            master_type == "5" and any(matches_structural_identity(pos, row) for row in masters)
+        ):
+            continue
 
         if master_type == "5":
             resolved_scope = "structural"

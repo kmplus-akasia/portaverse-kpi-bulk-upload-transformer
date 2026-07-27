@@ -121,6 +121,96 @@ class PositionScopePipelineTest(unittest.TestCase):
         self.assertEqual(position["position_name"], "Officer Transaksi dan Proses")
         self.assertEqual(audit, [])
 
+    def test_same_number_pnid_is_corrected_when_title_matches_structural_pmid(self):
+        reference = self.collision_reference()
+        reference["position_master_rows"].append(
+            {
+                "position_master_id": 515,
+                "position_name": "Manager Rekrutmen dan Karir",
+                "position_master_type_id": 5,
+                "group_name": "Unit Pendukung Rekrutmen dan Karir",
+                "company_name": "PT Pelabuhan Indonesia (Persero)",
+            }
+        )
+        config = self.config()
+        config["positions"][0].update(
+            {
+                "sheet_name": "Manager Rekrutmen-Karir",
+                "position_name": "Manager Rekrutmen-Karir",
+                "position_nomenclature_id": "515",
+                "cluster_label": "Manager Rekrutmen-Karir",
+                "position_lookup_names": ["Manager Rekrutmen-Karir"],
+            }
+        )
+
+        output, audit = self.run_scope_fix(reference, config)
+
+        position = output["positions"][0]
+        self.assertEqual(position["position_scope"], "structural")
+        self.assertEqual(position["position_master_id"], "515")
+        self.assertIsNone(position["position_nomenclature_id"])
+        self.assertEqual(audit[0]["resolved_scope"], "structural")
+
+    def test_dh_abbreviation_matches_structural_pmid_identity(self):
+        reference = self.collision_reference()
+        reference["position_master_rows"].append(
+            {
+                "position_master_id": 571,
+                "position_name": "Department Head Manajemen Kearsipan, HRIS dan Administrasi SDM",
+                "position_master_type_id": 5,
+                "group_name": "Department Manajemen Kearsipan dan HRIS",
+                "company_name": "PT Pelabuhan Indonesia (Persero)",
+            }
+        )
+        config = self.config()
+        config["positions"][0].update(
+            {
+                "sheet_name": "DH Kearsipan, HRIS Admin SDM",
+                "position_name": "DH Kearsipan, HRIS Admin SDM",
+                "position_nomenclature_id": "571",
+                "cluster_label": "DH Kearsipan, HRIS Admin SDM",
+                "position_lookup_names": ["DH Kearsipan, HRIS Admin SDM"],
+            }
+        )
+
+        output, audit = self.run_scope_fix(reference, config)
+
+        position = output["positions"][0]
+        self.assertEqual(position["position_scope"], "structural")
+        self.assertEqual(position["position_master_id"], "571")
+        self.assertIsNone(position["position_nomenclature_id"])
+        self.assertEqual(audit[0]["resolved_scope"], "structural")
+
+    def test_short_dh_identity_subset_matches_structural_pmid(self):
+        reference = self.collision_reference()
+        reference["position_master_rows"].append(
+            {
+                "position_master_id": 458,
+                "position_name": "Department Head Perencanaan SDM dan Kebijakan Remunerasi",
+                "position_master_type_id": 5,
+                "group_name": "Department Perencanaan SDM dan Kebijakan Remunerasi",
+                "company_name": "PT Pelabuhan Indonesia (Persero)",
+            }
+        )
+        config = self.config()
+        config["positions"][0].update(
+            {
+                "sheet_name": "DH Perencanaan-Kebijakan",
+                "position_name": "DH Perencanaan-Kebijakan",
+                "position_nomenclature_id": "458",
+                "cluster_label": "DH Perencanaan-Kebijakan",
+                "position_lookup_names": ["DH Perencanaan-Kebijakan"],
+            }
+        )
+
+        output, audit = self.run_scope_fix(reference, config)
+
+        position = output["positions"][0]
+        self.assertEqual(position["position_scope"], "structural")
+        self.assertEqual(position["position_master_id"], "458")
+        self.assertIsNone(position["position_nomenclature_id"])
+        self.assertEqual(audit[0]["resolved_scope"], "structural")
+
     def test_type_4_position_is_also_non_structural(self):
         output, _ = self.run_scope_fix(self.reference(master_type=4, cluster_ids=(10,)))
 

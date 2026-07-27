@@ -2,5 +2,12 @@
 __pycache__/
 *.pyc
 .DS_Store
+node_modules/
+~$*.xlsx
 output/*.xlsx
 output/*.csv
+tmp/
+*.inspect.ndjson
+configs/archive/
+.codex-work/
+.cursor/plans/

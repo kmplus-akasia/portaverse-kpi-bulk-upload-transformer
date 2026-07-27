@@ -88,15 +88,9 @@ def _scope(row: dict[str, Any]) -> str:
 
 
 def _worksheet_titles(position: dict[str, Any]) -> list[str]:
-    titles: list[str] = []
-    raw_lookup_names = position.get("position_lookup_names")
-    if isinstance(raw_lookup_names, (list, tuple)):
-        titles.extend(_text(value) for value in raw_lookup_names)
-    titles.extend(
-        _text(position.get(key))
-        for key in ("position_name", "portaverse_position_title", "sheet_name")
-    )
-    return _unique(titles)
+    # The in-sheet position title is authoritative. Worksheet names are often
+    # truncated, suffixed for uniqueness, or otherwise operational labels.
+    return _unique([position.get("position_name")])
 
 
 def _worksheet_groups(position: dict[str, Any]) -> list[str]:
@@ -105,6 +99,15 @@ def _worksheet_groups(position: dict[str, Any]) -> list[str]:
 
 def _normalized_values(values: Iterable[str]) -> list[str]:
     return _unique(normalize_position_lookup(value) for value in values)
+
+
+def _normalized_title_values(values: Iterable[str]) -> list[str]:
+    """Normalize title spelling while ignoring low-information connectors."""
+    normalized: list[str] = []
+    for value in values:
+        tokens = normalize_position_lookup(value).split()
+        normalized.append(" ".join(token for token in tokens if token != "dan"))
+    return _unique(normalized)
 
 
 def _context_score(expected_values: list[str], candidate_values: Iterable[Any]) -> tuple[float, bool]:
@@ -132,8 +135,8 @@ def _context_score(expected_values: list[str], candidate_values: Iterable[Any]) 
 
 
 def _title_score(position: dict[str, Any], candidate_titles: Iterable[Any]) -> tuple[float, bool]:
-    titles = _normalized_values(_worksheet_titles(position))
-    candidates = _normalized_values(_text(value) for value in candidate_titles)
+    titles = _normalized_title_values(_worksheet_titles(position))
+    candidates = _normalized_title_values(_text(value) for value in candidate_titles)
     if not titles or not candidates:
         return 0.0, False
     score = 0.0

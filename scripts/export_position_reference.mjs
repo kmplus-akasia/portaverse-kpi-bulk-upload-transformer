@@ -228,24 +228,151 @@ try {
       ORDER BY company_in_id ASC`,
   );
 
+  const [activeAssignmentRows] = await connection.query(
+    `SELECT tpm.position_master_id,
+            tpmos.organization_master_id AS group_master_id,
+            tgm.company_id,
+            COUNT(DISTINCT tpmv.position_master_variant_id) AS active_variant_count,
+            COUNT(DISTINCT tepms.employee_number) AS active_employee_count,
+            COUNT(DISTINCT CASE
+              WHEN tepms.lakhar_id IS NULL AND tepms.job_sharing_id IS NULL THEN tepms.employee_number
+            END) AS definitive_employee_count,
+            COUNT(DISTINCT CASE
+              WHEN tepms.lakhar_id IS NOT NULL OR tepms.job_sharing_id IS NOT NULL THEN tepms.employee_number
+            END) AS secondary_employee_count,
+            GROUP_CONCAT(DISTINCT TRIM(CONCAT_WS(' ', te.firstname, te.middlename, te.lastname))
+              ORDER BY CASE
+                WHEN tepms.lakhar_id IS NULL AND tepms.job_sharing_id IS NULL THEN 0
+                WHEN tepms.lakhar_id IS NOT NULL THEN 1
+                ELSE 2
+              END, te.employee_number SEPARATOR '; ') AS active_employee_names,
+            GROUP_CONCAT(DISTINCT tepms.employee_number
+              ORDER BY CASE
+                WHEN tepms.lakhar_id IS NULL AND tepms.job_sharing_id IS NULL THEN 0
+                WHEN tepms.lakhar_id IS NOT NULL THEN 1
+                ELSE 2
+              END, te.employee_number SEPARATOR '; ') AS active_employee_nipps,
+            GROUP_CONCAT(DISTINCT CASE
+              WHEN tepms.lakhar_id IS NULL AND tepms.job_sharing_id IS NULL
+              THEN TRIM(CONCAT_WS(' ', te.firstname, te.middlename, te.lastname))
+            END ORDER BY te.employee_number SEPARATOR '; ') AS definitive_employee_names,
+            GROUP_CONCAT(DISTINCT CASE
+              WHEN tepms.lakhar_id IS NULL AND tepms.job_sharing_id IS NULL
+              THEN tepms.employee_number
+            END ORDER BY te.employee_number SEPARATOR '; ') AS definitive_employee_nipps,
+            GROUP_CONCAT(DISTINCT CASE
+              WHEN tepms.lakhar_id IS NOT NULL OR tepms.job_sharing_id IS NOT NULL
+              THEN TRIM(CONCAT_WS(' ', te.firstname, te.middlename, te.lastname))
+            END ORDER BY te.employee_number SEPARATOR '; ') AS secondary_employee_names,
+            GROUP_CONCAT(DISTINCT CASE
+              WHEN tepms.lakhar_id IS NOT NULL OR tepms.job_sharing_id IS NOT NULL
+              THEN tepms.employee_number
+            END ORDER BY te.employee_number SEPARATOR '; ') AS secondary_employee_nipps
+       FROM tb_employee_position_master_sync tepms
+       JOIN tb_employee te
+         ON te.employee_number = tepms.employee_number
+        AND te.deletedAt IS NULL
+        AND te.archived_at IS NULL
+       JOIN tb_position_master_variant tpmv
+         ON tpmv.position_master_variant_id = tepms.position_master_variant_id
+        AND tpmv.deletedAt IS NULL
+       JOIN tb_position_master_v2 tpm
+         ON tpm.position_master_id = tpmv.position_master_id
+        AND tpm.deletedAt IS NULL
+        AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tpm.start_date, '1000-01-01') AND COALESCE(tpm.end_date, '9999-12-31')
+       JOIN tb_position_master_organization_sync tpmos
+         ON tpmos.position_master_id = tpm.position_master_id
+        AND tpmos.deletedAt IS NULL
+        AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tpmos.start_date, '1000-01-01') AND COALESCE(tpmos.end_date, '9999-12-31')
+       JOIN tb_group_master tgm
+         ON tgm.group_master_id = tpmos.organization_master_id
+        AND tgm.deletedAt IS NULL
+        AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tgm.start_date, '1000-01-01') AND COALESCE(tgm.end_date, '9999-12-31')
+       JOIN tb_company_in tci
+         ON tci.company_in_id = tgm.company_id
+        AND tci.deletedAt IS NULL
+        AND CURRENT_TIMESTAMP() BETWEEN COALESCE(tci.start_date, '1000-01-01') AND COALESCE(tci.end_date, '9999-12-31')
+      WHERE tepms.deletedAt IS NULL
+        AND CURRENT_TIMESTAMP() BETWEEN tepms.start_date AND COALESCE(tepms.end_date, '9999-12-31')
+        AND tpm.name NOT REGEXP '^(JA_|JS_)'
+      GROUP BY tpm.position_master_id, tpmos.organization_master_id, tgm.company_id`,
+  );
+
+  const activeByPositionOrg = new Map();
+  for (const row of activeAssignmentRows) {
+    activeByPositionOrg.set(
+      `${row.position_master_id}|${row.group_master_id}|${row.company_id}`,
+      row,
+    );
+  }
+  const withActiveAssignment = (row) => {
+    const active = activeByPositionOrg.get(
+      `${row.position_master_id}|${row.group_master_id}|${row.company_id}`,
+    );
+    if (!active) return null;
+    return {
+      ...row,
+      active_variant_count: Number(active.active_variant_count || 0),
+      active_employee_count: Number(active.active_employee_count || 0),
+      definitive_employee_count: Number(active.definitive_employee_count || 0),
+      secondary_employee_count: Number(active.secondary_employee_count || 0),
+      active_employee_names: active.active_employee_names || "",
+      active_employee_nipps: active.active_employee_nipps || "",
+      definitive_employee_names: active.definitive_employee_names || "",
+      definitive_employee_nipps: active.definitive_employee_nipps || "",
+      secondary_employee_names: active.secondary_employee_names || "",
+      secondary_employee_nipps: active.secondary_employee_nipps || "",
+    };
+  };
+  const structuralLookupRows = positionMasterRows
+    .filter(
+      (row) =>
+        String(row.position_master_type_id || "") === "5" &&
+        Number(row.is_position_active || 0) === 1 &&
+        Number(row.is_position_organization_active || 0) === 1 &&
+        Number(row.is_group_active || 0) === 1 &&
+        Number(row.is_company_active || 0) === 1,
+    )
+    .map(withActiveAssignment)
+    .filter(Boolean);
+  const nonStructuralLookupRows = nomenclatureRows
+    .filter(
+      (row) =>
+        String(row.position_master_type_id || "") !== "5" &&
+        row.cluster_id &&
+        Number(row.is_group_active || 0) === 1 &&
+        Number(row.is_company_active || 0) === 1,
+    )
+    .map(withActiveAssignment)
+    .filter(Boolean);
+
   const payload = {
     source: {
       profile,
       database: env.DB_NAME,
       exported_at: new Date().toISOString(),
       read_only: true,
+      review_status: "current_snapshot_unreviewed",
+      review_note:
+        "Current production snapshot is exported for implementation/testing and still requires data-owner review before final business use.",
       tables: [
         "position_nomenclature_mapping",
         "tb_position_master_v2",
         "tb_position_master_organization_sync",
+        "tb_position_master_variant",
+        "tb_employee_position_master_sync",
+        "tb_employee",
         "tb_group_master",
         "tb_company_in",
       ],
       notes:
         "Offline reference dataset for KPI converter. Compatible rows and position_master_rows keys are retained for scripts/kpi_bulk_transform.py.",
     },
+    structural_lookup_rows: structuralLookupRows,
+    non_structural_lookup_rows: nonStructuralLookupRows,
     rows: nomenclatureRows,
     position_master_rows: positionMasterRows,
+    active_assignment_rows: activeAssignmentRows,
     organization_rows: organizationRows,
     company_rows: companyRows,
   };
@@ -253,6 +380,9 @@ try {
   writeFileSync(outputPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
   console.log(`Wrote nomenclature rows: ${nomenclatureRows.length}`);
   console.log(`Wrote position master/org rows: ${positionMasterRows.length}`);
+  console.log(`Wrote active structural lookup rows: ${structuralLookupRows.length}`);
+  console.log(`Wrote active non-structural lookup rows: ${nonStructuralLookupRows.length}`);
+  console.log(`Wrote active assignment rows: ${activeAssignmentRows.length}`);
   console.log(`Wrote organization rows: ${organizationRows.length}`);
   console.log(`Wrote company rows: ${companyRows.length}`);
   console.log(`Output: ${outputPath}`);

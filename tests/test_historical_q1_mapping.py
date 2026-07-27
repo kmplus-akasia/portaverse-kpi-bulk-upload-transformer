@@ -84,6 +84,61 @@ class HistoricalQ1MappingTest(unittest.TestCase):
         self.assertEqual(rows[0]["Confidence Label"], "high_confidence")
         self.assertEqual(rows[0]["Reviewer Confirm Mapping"], "")
 
+    def test_structural_title_ignores_indonesian_connector_for_matching(self):
+        rows = build_mapping_rows(
+            [
+                worksheet(
+                    "Manager Rekrutmen-Karir",
+                    group="Group Pengelolaan SDM",
+                )
+            ],
+            historical_reference(
+                historical_row(
+                    pmid="515",
+                    title="Manager Rekrutmen dan Karir",
+                    group="Unit Pendukung Rekrutmen dan Karir",
+                    employee="107050",
+                    employee_name="Kahfiarsyad Julyan Elevenday",
+                )
+            ),
+            {},
+            "1",
+        )
+
+        self.assertEqual(rows[0]["Candidate PMID"], "515")
+        self.assertEqual(rows[0]["Candidate PNID"], "")
+        self.assertEqual(rows[0]["Confidence Label"], "high_confidence")
+
+    def test_worksheet_name_does_not_override_in_sheet_position_title(self):
+        position = worksheet("Officer Terminal Multipurpose")
+        position["sheet_name"] = "Officer Terminal Petikemas"
+        rows = build_mapping_rows(
+            [position],
+            historical_reference(
+                historical_row(
+                    pmid="701",
+                    title="Officer Terminal Petikemas",
+                    type_id="6",
+                    group="Department Terminal Petikemas",
+                ),
+                nomenclature_rows=[
+                    {
+                        "position_master_id": "701",
+                        "cluster_id": "150",
+                        "cluster_label": "Officer Terminal Petikemas",
+                        "group_name": "Department Terminal Petikemas",
+                        "company_id": "1",
+                    }
+                ],
+            ),
+            {},
+            "1",
+        )
+
+        self.assertEqual(rows[0]["Candidate PMID"], "")
+        self.assertEqual(rows[0]["Candidate PNID"], "")
+        self.assertEqual(rows[0]["Confidence Label"], "no_candidate")
+
     def test_non_structural_unique_cluster_proposes_pnid_only(self):
         rows = build_mapping_rows(
             [worksheet("Officer Keuangan")],

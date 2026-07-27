@@ -9,11 +9,11 @@ The default scope is **Seluruh Pelindo**. Administrators can drill down to one a
 The app reads database credentials only from environment variables. Do not commit credentials.
 
 ```bash
-export DB_HOST="..."
+export DB_HOST="10.95.200.227"
 export DB_PORT="3306"
 export DB_NAME="defaultdb"
-export DB_USER="..."
-export DB_PASSWORD="..."
+export DB_USER="root"
+export DB_PASSWORD="r4sKEi8Slp35"
 ```
 
 Optional overrides:

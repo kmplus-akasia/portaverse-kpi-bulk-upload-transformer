@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KPI Bulk Upload Converter - Deep Dive</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f8fbff;
+      --ink: #12213a;
+      --muted: #5d6b80;
+      --line: #d8e2ef;
+      --blue: #004b93;
+      --blue-deep: #063264;
+      --blue-soft: #e8f1fb;
+      --cyan: #0088c9;
+      --green: #167956;
+      --green-soft: #e8f5ef;
+      --amber: #9a6500;
+      --amber-soft: #fff5dc;
+      --red: #d71920;
+      --red-soft: #fde8ea;
+      --code: #0d1b2f;
+      --shadow: 0 22px 55px rgba(8, 43, 83, 0.12);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", "Aptos", "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(0, 136, 201, 0.12), transparent 28rem),
+        linear-gradient(180deg, #edf4fb 0%, var(--bg) 34rem);
+      color: var(--ink);
+      line-height: 1.62;
+      font-size: 15px;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.26;
+      background-image:
+        linear-gradient(rgba(0, 75, 147, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 75, 147, 0.045) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(to bottom, #000, transparent 42rem);
+    }
+    .shell {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 28px;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px 24px 64px;
+    }
+    header {
+      grid-column: 1 / -1;
+      position: relative;
+      overflow: hidden;
+      min-height: 270px;
+      background:
+        linear-gradient(135deg, rgba(6, 50, 100, 0.96), rgba(0, 75, 147, 0.94)),
+        radial-gradient(circle at 82% 18%, rgba(255,255,255,0.22), transparent 18rem);
+      color: white;
+      padding: 42px 44px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--red), #ffcb05 45%, var(--cyan));
+      z-index: -1;
+    }
+    header h1 {
+      max-width: 760px;
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 0.98;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+    header p {
+      margin: 0;
+      max-width: 760px;
+      color: rgba(255,255,255,0.84);
+      font-size: 16px;
+    }
+    header .small {
+      display: inline-flex;
+      max-width: none;
+      margin-top: 22px !important;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.09);
+      color: rgba(255,255,255,0.78) !important;
+      backdrop-filter: blur(10px);
+    }
+    nav {
+      position: sticky;
+      top: 20px;
+      align-self: start;
+      min-width: 0;
+      margin: 0;
+      padding: 14px;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+      box-shadow: 0 16px 36px rgba(8, 43, 83, 0.08);
+      backdrop-filter: blur(14px);
+    }
+    nav::before {
+      content: "Daftar isi";
+      color: var(--blue-deep);
+      font-size: 12px;
+      font-weight: 800;
+      margin: 2px 8px 8px;
+      text-transform: uppercase;
+    }
+    nav a {
+      color: #26415f;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 9px 10px;
+      border-radius: 8px;
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+    nav a:hover {
+      background: var(--blue-soft);
+      color: var(--blue);
+      transform: translateX(2px);
+    }
+    section {
+      grid-column: 2;
+      min-width: 0;
+      margin-top: 0;
+      margin-bottom: 22px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 12px 32px rgba(8, 43, 83, 0.06);
+    }
+    h2 {
+      margin: 0 0 16px;
+      color: var(--blue-deep);
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 1.1;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 4px;
+      margin-top: 12px;
+      background: linear-gradient(90deg, var(--red), var(--cyan));
+      border-radius: 999px;
+    }
+    h3 {
+      margin: 30px 0 10px;
+      color: #193b64;
+      font-size: 19px;
+      line-height: 1.25;
+    }
+    p {
+      margin: 10px 0;
+      max-width: 78ch;
+    }
+    ul, ol { margin: 10px 0 10px 22px; padding: 0; }
+    li { margin: 6px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .metric {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #dbe8f6;
+      border-radius: 10px;
+      padding: 18px 18px 16px;
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+    }
+    .metric::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--blue);
+    }
+    .metric .value {
+      display: block;
+      color: var(--blue-deep);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0;
+      font-variant-numeric: tabular-nums;
+    }
+    .metric .label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    .callout {
+      border: 1px solid #c9dff4;
+      border-left: 6px solid var(--blue);
+      background: linear-gradient(90deg, var(--blue-soft), #ffffff);
+      padding: 16px 18px;
+      border-radius: 10px;
+      margin: 16px 0;
+    }
+    .callout.good { border-left-color: var(--green); background: var(--green-soft); }
+    .callout.warn { border-left-color: var(--amber); background: var(--amber-soft); }
+    .callout.danger { border-left-color: var(--red); background: var(--red-soft); }
+    code, pre {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+    }
+    code {
+      color: #173a5e;
+      background: #edf4fb;
+      padding: 2px 5px;
+      border-radius: 5px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    pre {
+      background: var(--code);
+      color: #f2f5ff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow: auto;
+      white-space: pre-wrap;
+      max-width: 100%;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    table {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 18px 0;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    th, td {
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 11px 12px;
+      vertical-align: top;
+      text-align: left;
+      overflow-wrap: anywhere;
+    }
+    tr > :last-child { border-right: 0; }
+    tbody tr:last-child td { border-bottom: 0; }
+    th {
+      color: #16345a;
+      background: #edf4fb;
+      font-weight: 800;
+    }
+    tbody tr:nth-child(even) td { background: #fbfdff; }
+    .small { font-size: 13px; color: var(--muted); }
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: #edf4fb;
+      font-size: 12px;
+      font-weight: 800;
+      color: #3d4758;
+    }
+    .tag.green { color: var(--green); background: var(--green-soft); }
+    .tag.amber { color: var(--amber); background: var(--amber-soft); }
+    .tag.red { color: var(--red); background: var(--red-soft); }
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-color: rgba(0, 75, 147, 0.28);
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+    a:hover { color: var(--red); }
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; padding: 18px 14px 48px; }
+      header { padding: 30px 24px; min-height: auto; }
+      nav {
+        position: relative;
+        top: auto;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+      nav::before { grid-column: 1 / -1; }
+      section { grid-column: 1; padding: 22px; }
+    }
+    @media (max-width: 760px) {
+      header h1 { font-size: 34px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>KPI Bulk Upload Converter - Deep Dive</h1>
+      <p>
+        Dokumentasi operasional untuk memahami progress konversi Kamus KPI Group 1 Head Office
+        Versi 2 setelah perubahan STO, Group 2, dan Group 3 ke format upload PMS.
+      </p>
+      <p class="small" style="color: rgba(255,255,255,0.76); margin-top: 14px;">
+        Diperbarui: 25 Juni 2026. Workspace:
+        /Users/alfredoteja/Documents/portaverse-kpi-bulk-upload-transformer
+      </p>
+    </header>
+
+    <nav aria-label="Daftar isi">
+      <a href="#executive-summary">1. Ringkasan</a>
+      <a href="#progress">2. Progress Group 1/2/3</a>
+      <a href="#source-of-truth">3. Source of Truth</a>
+      <a href="#converter-spec">4. Spesifikasi Converter</a>
+      <a href="#gating">5. Gating dan Validasi</a>
+      <a href="#artifacts">6. Artefak Output</a>
+      <a href="#how-to-use">7. Cara Menggunakan</a>
+      <a href="#handoff">8. Handoff Review</a>
+    </nav>
+
+    <section id="executive-summary">
+      <h2>1. Ringkasan</h2>
+      <p>
+        Converter ini adalah pipeline Python untuk mengubah workbook desain Kamus KPI menjadi
+        workbook upload resmi PMS. Scope terbaru sudah mencakup Group 1 Head Office V2,
+        Group 2, dan Group 3 menggunakan data Organisasi terbaru dari OM Production Portaverse.
+      </p>
+      <div class="callout warn">
+        <strong>Status operasional:</strong> converter sudah berhasil generate workbook secara
+        struktural untuk semua posisi yang berhasil dipetakan. Namun batch belum boleh dianggap
+        final upload-ready untuk full group scope karena masih ada <code>mapping_conflict</code>
+        yang harus direview dan disetujui.
+      </div>
+      <div class="grid">
+        <div class="metric"><span class="value">964</span><span class="label">generated workbooks across Group 1, 2, 3</span></div>
+        <div class="metric"><span class="value">119.337</span><span class="label">generated upload rows</span></div>
+        <div class="metric"><span class="value">981</span><span class="label">resolved source sheets</span></div>
+        <div class="metric"><span class="value">2.264</span><span class="label">unresolved mapping conflicts</span></div>
+        <div class="metric"><span class="value">11.140</span><span class="label">structural rows, PMID-only</span></div>
+        <div class="metric"><span class="value">107.999</span><span class="label">non-structural rows, PNID-only</span></div>
+      </div>
+      <p>
+        Istilah <span class="tag green">READY</span> pada validator berarti workbook yang
+        tergenerate sudah lolos struktur workbook untuk posisi yang resolved. Itu bukan berarti
+        seluruh grup siap upload sampai semua conflict direview, override disetujui, config
+        diaplikasikan ulang, dan validator selesai tanpa error.
+      </p>
+    </section>
+
+    <section id="progress">
+      <h2>2. Progress Konversi Group 1, 2, dan 3</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Output terbaru</th>
+            <th>Workbook</th>
+            <th>Rows</th>
+            <th>Resolved sheet</th>
+            <th>Mapping conflict</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Group 1 HO V2</td>
+            <td><code>output/kpi_conversion_20260623_group1_ho_v2_latest_org_v4/</code></td>
+            <td>52</td>
+            <td>5.392</td>
+            <td>217 dari 671</td>
+            <td>454</td>
+            <td><span class="tag amber">Generated, gated by review</span></td>
+          </tr>
+          <tr>
+            <td>Group 2 Regional, Cabang, Subholding</td>
+            <td><code>output/kpi_conversion_20260623_group2_latest_org_v2/</code></td>
+            <td>900</td>
+            <td>109.160</td>
+            <td>742 dari 2.521</td>
+            <td>1.779</td>
+            <td><span class="tag amber">Generated, gated by review</span></td>
+          </tr>
+          <tr>
+            <td>Group 3 Afiliasi, Non Cluster, Dana Pensiun</td>
+            <td><code>output/kpi_conversion_20260623_group3_latest_org_v6/</code></td>
+            <td>12</td>
+            <td>4.785</td>
+            <td>22 dari 53</td>
+            <td>31</td>
+            <td><span class="tag amber">Generated, gated by review</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>2.1 Summary review candidates</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>High confidence</th>
+            <th>Review recommended</th>
+            <th>Ambiguous</th>
+            <th>No candidate</th>
+            <th>Manual review</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Group 1 HO V2</td><td>22</td><td>28</td><td>397</td><td>2</td><td>5</td></tr>
+          <tr><td>Group 2</td><td>20</td><td>31</td><td>1.066</td><td>580</td><td>82</td></tr>
+          <tr><td>Group 3</td><td>0</td><td>0</td><td>29</td><td>1</td><td>1</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>Prioritas berikutnya:</strong> mulai dari tab <code>High Confidence</code> dan
+        <code>All Recommended</code> di workbook override candidates, lalu lanjutkan
+        <code>Manual Review</code>, <code>No Candidate</code>, dan konflik ambiguous.
+      </div>
+    </section>
+
+    <section id="source-of-truth">
+      <h2>3. Source of Truth</h2>
+      <p>
+        Converter tidak boleh menebak dari bentuk workbook saja. Setiap run harus mengikat
+        source workbook, template upload, discovered config, override review, dan snapshot
+        organisasi production yang sama.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>File / Artefak</th>
+            <th>Fungsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Converter utama</td>
+            <td><code>scripts/kpi_bulk_transform.py</code></td>
+            <td>Parse workbook sumber, resolve mapping posisi, bangun row upload, tulis workbook output.</td>
+          </tr>
+          <tr>
+            <td>Template upload</td>
+            <td><code>input/KPI Upload Template.xlsx</code></td>
+            <td>Format workbook upload yang diisi ulang oleh converter.</td>
+          </tr>
+          <tr>
+            <td>Reference organisasi terbaru</td>
+            <td><code>output/production_position_reference_20260623_latest.json</code></td>
+            <td>Snapshot OM Production Portaverse terbaru yang dipakai untuk matching posisi dan company context.</td>
+          </tr>
+          <tr>
+            <td>Discovered config per group</td>
+            <td><code>output/kpi_conversion_20260623_*/*.discovered-config.json</code></td>
+            <td>Mapping hasil discovery yang bisa dire-run setelah override disetujui.</td>
+          </tr>
+          <tr>
+            <td>Mapping conflict review</td>
+            <td><code>output/kpi_conversion_20260623_*_mapping_conflict_review.xlsx</code></td>
+            <td>Evidence semua konflik dan kandidat matching.</td>
+          </tr>
+          <tr>
+            <td>Override candidate workbook</td>
+            <td><code>output/kpi_conversion_20260623_*_override_candidates.xlsx</code></td>
+            <td>Workbook approval satu baris per conflict. Operator mengisi kolom <code>Approved</code>.</td>
+          </tr>
+          <tr>
+            <td>Validator batch</td>
+            <td><code>scripts/validate_kpi_upload_batch.py</code></td>
+            <td>Validasi workbook hasil generate, identity PMID/PNID, header, parent, ZIP, dan status conflict.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>3.1 Snapshot OM Production Portaverse</h3>
+      <div class="grid">
+        <div class="metric"><span class="value">27.271</span><span class="label">nomenclature rows</span></div>
+        <div class="metric"><span class="value">67.668</span><span class="label">position master / org rows</span></div>
+        <div class="metric"><span class="value">4.293</span><span class="label">organizations</span></div>
+        <div class="metric"><span class="value">203</span><span class="label">companies</span></div>
+      </div>
+    </section>
+
+    <section id="converter-spec">
+      <h2>4. Spesifikasi Converter Terbaru</h2>
+      <h3>4.1 Input yang diproses</h3>
+      <p>Converter menerima input berikut untuk setiap group:</p>
+      <ul>
+        <li>Source workbook atau ZIP workbook Kamus KPI Group 1 HO V2, Group 2, atau Group 3.</li>
+        <li>Template upload resmi <code>input/KPI Upload Template.xlsx</code>.</li>
+        <li>Reference organisasi terbaru <code>output/production_position_reference_20260623_latest.json</code>.</li>
+        <li>Config discovered yang dibuat converter, plus override hasil review jika sudah ada.</li>
+      </ul>
+
+      <h3>4.2 Workbook discovery dan sheet selection</h3>
+      <p>
+        Untuk ZIP batch, script mengekstrak semua file <code>.xlsx</code> selain temporary Excel
+        seperti <code>~$...</code>. Jika config tersedia, sheet dipilih berdasarkan
+        <code>source_workbook</code> dan <code>sheet_name</code>. Jika config belum tersedia,
+        converter melakukan discovery dan menulis <code>.discovered-config.json</code>.
+      </p>
+
+      <h3>4.3 Parse layout Kamus KPI</h3>
+      <p>
+        Workbook sumber dibaca sebagai layout block-style. Converter mencari header row,
+        membaca KPI Impact, KPI Output, dan KAI, lalu menerapkan inheritance untuk cell yang
+        terlihat seperti merged cell atau kosong di bawah baris induknya.
+      </p>
+      <p>Aturan parsing penting:</p>
+      <ul>
+        <li>Nilai placeholder seperti <code>(blank)</code> dianggap kosong.</li>
+        <li>Impact adalah parent utama.</li>
+        <li>Output menjadi child dari Impact.</li>
+        <li>KAI menjadi child dari Output.</li>
+        <li>Duplicate Output dengan judul sama digabung, weight dijumlah, dan KAI child direparent ke Output canonical.</li>
+        <li>Shared KPI Impact bisa dibackfill antar sheet berdasarkan judul jika salah satu sheet memiliki field yang valid.</li>
+      </ul>
+
+      <h3>4.4 Matching posisi dan company context</h3>
+      <p>
+        Matching posisi menggunakan normalized title, alias jabatan, company/workbook context,
+        dan reference OM Production. Logic terbaru menjaga candidate list tetap tersedia agar
+        reviewer dapat melihat opsi yang ditolak atau belum cukup yakin.
+      </p>
+      <div class="callout">
+        <strong>Spec update:</strong> strict position mapping berikutnya dipisahkan menjadi
+        lookup structural PMID dan lookup non-structural PNID. Worksheet title harus menentukan
+        scope terlebih dahulu; hanya mapping <code>high_confidence</code> yang boleh auto-map.
+        Detail lengkap ada di
+        <a href="position_mapping_logic_spec.md"><code>docs/converter/position_mapping_logic_spec.md</code></a>.
+      </div>
+      <ul>
+        <li>Alias umum seperti <code>divhead</code>, <code>depthead</code>, <code>spv</code>, <code>corsec</code>, dan variasi typo <code>managr</code> dinormalisasi.</li>
+        <li>Company context dari workbook dipakai untuk mempersempit kandidat, tetapi kata generik seperti <code>regional</code> atau title jabatan tidak boleh otomatis dianggap company.</li>
+        <li>Jika kandidat tidak unik atau confidence tidak cukup, config diberi scope <code>mapping_conflict</code>.</li>
+        <li>Conflict tidak menghasilkan row upload untuk sheet tersebut sampai override disetujui.</li>
+      </ul>
+
+      <h3>4.5 Rule PMID vs PNID</h3>
+      <div class="callout">
+        <strong>Rule utama:</strong> posisi structural wajib mengisi
+        <code>Position Master ID (Required)</code> dan mengosongkan
+        <code>Position Nomenklatur ID</code>. Posisi non-structural wajib mengisi
+        <code>Position Nomenklatur ID</code> dan mengosongkan PMID.
+        Dalam strict mapping spec, keputusan structural/non-structural dilakukan sebelum lookup
+        ID: role seperti <code>Group Head</code>, <code>Department Head</code>, dan
+        <code>Manager</code> masuk lookup structural, sedangkan role seperti
+        <code>Officer</code>, <code>Auditor</code>, <code>Analyst</code>,
+        <code>Specialist</code>, dan <code>Staff</code> masuk lookup non-structural.
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Scope</th>
+            <th>Identity output</th>
+            <th>Catatan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>structural</code></td>
+            <td>PMID only</td>
+            <td>Dipakai untuk jabatan struktural dari position master.</td>
+          </tr>
+          <tr>
+            <td><code>non_structural</code></td>
+            <td>PNID only</td>
+            <td>Dipakai untuk nomenclature/cluster non-struktural. Importer PMS yang expand PNID.</td>
+          </tr>
+          <tr>
+            <td><code>mapping_conflict</code></td>
+            <td>Tidak ditulis ke upload workbook</td>
+            <td>Fail-closed sampai reviewer approve override.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>4.6 Normalisasi enum dan field upload</h3>
+      <p>
+        Field enum dinormalisasi sebelum ditulis ke upload workbook. Tujuannya agar value
+        sesuai kontrak uploader PMS.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Allowed / logic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Polarity</code></td>
+            <td><code>POSITIVE</code>, <code>NEGATIVE</code>, <code>NEUTRAL</code>. Nilai seperti <code>Positif</code> dinormalisasi.</td>
+          </tr>
+          <tr>
+            <td><code>Period</code></td>
+            <td><code>BULANAN</code>, <code>TRIWULANAN</code>, <code>TAHUNAN</code>, <code>SEMESTER</code>, <code>MONTHLY</code>, <code>QUARTERLY</code>, <code>WEEKLY</code>.</td>
+          </tr>
+          <tr>
+            <td><code>Cascading</code></td>
+            <td><code>DIRECT</code>, <code>INDIRECT</code>, <code>DUPLICATE</code>.</td>
+          </tr>
+          <tr>
+            <td><code>Ownership Type</code></td>
+            <td><code>SPECIFIC</code>, <code>SHARED</code>, <code>COMMON</code>.</td>
+          </tr>
+          <tr>
+            <td><code>Weight (%)</code></td>
+            <td>Ditulis sebagai numeric cell, bukan text, supaya Excel dan importer membaca konsisten.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>4.7 Output row generation</h3>
+      <p>
+        Setiap row upload ditulis dalam 24 kolom resmi:
+      </p>
+      <pre>IDKPI, Group, Direktorat, Posisi, Position Master ID (Required),
+Position Master Variant ID (Optional), BSC Perspective, KPI Type,
+Parent KPI ID, Parent KPI Title, Title, Description, Unit, Polarity,
+Period, Formula, Weight (%), Cascading, Nature Of Work (KAI Only),
+External ID (PKPI), System KPI ID, Ownership Type,
+Position Nomenklatur ID, RKM Code ID</pre>
+      <p>
+        ID KPI dibuat per workbook secara incremental. Impact tidak punya parent.
+        Output memakai parent Impact. KAI memakai parent Output.
+      </p>
+    </section>
+
+    <section id="gating">
+      <h2>5. Gating, Validasi, dan Acceptance Criteria</h2>
+      <div class="callout warn">
+        <strong>Gating saat ini:</strong> validator boleh menemukan workbook structurally ready,
+        tetapi run tetap dianggap belum final jika masih ada <code>mapping_conflict</code>.
+        Exit nonzero untuk conflict adalah behavior yang disengaja.
+      </div>
+      <h3>5.1 Gate converter</h3>
+      <ol>
+        <li>Source ZIP harus dapat dibaca dan tidak mengandung workbook temporary Excel.</li>
+        <li>Template upload harus memiliki 24 header resmi.</li>
+        <li>Setiap worksheet harus resolved ke satu scope aman: structural, non_structural, neglect, atau mapping_conflict.</li>
+        <li>Mapping conflict tidak boleh fallback otomatis ke PMID/PNID.</li>
+        <li>Nama output workbook dibuat unik. Jika nama tabrakan, converter menambahkan suffix seperti <code> - 02</code>.</li>
+      </ol>
+      <h3>5.2 Gate validator</h3>
+      <ol>
+        <li>Workbook output harus bisa dibuka tanpa ZIP corruption.</li>
+        <li>Header harus persis sesuai template upload PMS.</li>
+        <li>Setiap row upload harus punya tepat satu identity: PMID atau PNID.</li>
+        <li>Structural row harus PMID-only.</li>
+        <li>Non-structural row harus PNID-only.</li>
+        <li>Parent KPI ID untuk Output dan KAI harus mengarah ke IDKPI yang ada.</li>
+        <li>Batch final harus punya errors 0, termasuk mapping conflict 0.</li>
+      </ol>
+      <h3>5.3 Verification terakhir</h3>
+      <pre>python3 -m unittest \
+  tests.test_apply_mapping_override_candidates \
+  tests.test_mapping_override_candidates \
+  tests.test_kpi_bulk_transform \
+  tests.test_position_scope_pipeline -v
+
+Ran 56 tests - OK</pre>
+      <p>
+        Dry-run apply override untuk Group 1, Group 2, dan Group 3 saat ini menghasilkan
+        <code>approved_rows=0</code> dan <code>applied_rows=0</code>, karena belum ada baris
+        override yang ditandai approved.
+      </p>
+    </section>
+
+    <section id="artifacts">
+      <h2>6. Artefak Output Terbaru</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Artefak</th>
+            <th>Path</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Group 1 HO V2</td>
+            <td>Recap</td>
+            <td><code>output/kpi_conversion_20260623_group1_ho_v2_latest_org_v4_recap.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 1 HO V2</td>
+            <td>Conflict review</td>
+            <td><code>output/kpi_conversion_20260623_group1_ho_v2_latest_org_v4_mapping_conflict_review.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 1 HO V2</td>
+            <td>Override candidates</td>
+            <td><code>output/kpi_conversion_20260623_group1_ho_v2_latest_org_v4_override_candidates.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 2</td>
+            <td>Recap</td>
+            <td><code>output/kpi_conversion_20260623_group2_latest_org_v2_recap.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 2</td>
+            <td>Conflict review</td>
+            <td><code>output/kpi_conversion_20260623_group2_latest_org_v2_mapping_conflict_review.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 2</td>
+            <td>Override candidates</td>
+            <td><code>output/kpi_conversion_20260623_group2_latest_org_v2_override_candidates.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 3</td>
+            <td>Recap</td>
+            <td><code>output/kpi_conversion_20260623_group3_latest_org_v6_recap.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 3</td>
+            <td>Conflict review</td>
+            <td><code>output/kpi_conversion_20260623_group3_latest_org_v6_mapping_conflict_review.xlsx</code></td>
+          </tr>
+          <tr>
+            <td>Group 3</td>
+            <td>Override candidates</td>
+            <td><code>output/kpi_conversion_20260623_group3_latest_org_v6_override_candidates.xlsx</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>6.1 Isi workbook override candidates</h3>
+      <p>
+        Workbook override candidates adalah dokumen utama untuk handoff review. Tab yang tersedia:
+      </p>
+      <ul>
+        <li><code>Summary</code>: jumlah conflict per status.</li>
+        <li><code>High Confidence</code>: kandidat paling aman untuk review awal.</li>
+        <li><code>All Recommended</code>: kandidat recommended selain high confidence.</li>
+        <li><code>Ambiguous</code>: conflict dengan kandidat banyak atau confidence belum cukup.</li>
+        <li><code>No Candidate</code>: belum ada kandidat dari reference.</li>
+        <li><code>Manual Review</code>: perlu keputusan reviewer karena signal belum cukup.</li>
+        <li><code>Override Candidates</code>: tab utama yang dibaca script apply override.</li>
+      </ul>
+    </section>
+
+    <section id="how-to-use">
+      <h2>7. Cara Menggunakan Converter</h2>
+      <h3>7.1 Generate awal dari source ZIP</h3>
+      <p>
+        Jalankan transform dengan source ZIP group, template upload, reference terbaru, dan output
+        folder baru. Contoh pattern:
+      </p>
+      <pre>python3 scripts/kpi_bulk_transform.py \
+  --source "/path/to/KAMUS KPI GROUP.zip" \
+  --template "input/KPI Upload Template.xlsx" \
+  --mapping "output/production_position_reference_20260623_latest.json" \
+  --output-dir "output/kpi_conversion_YYYYMMDD_groupX_latest_org"</pre>
+      <p>
+        Setelah run selesai, simpan <code>.discovered-config.json</code> karena file itu menjadi
+        basis untuk review dan re-run berikutnya.
+      </p>
+
+      <h3>7.2 Buat recap dan review workbook</h3>
+      <pre>python3 scripts/build_conversion_recap.py \
+  --output-dir "output/kpi_conversion_YYYYMMDD_groupX_latest_org" \
+  --config "output/kpi_conversion_YYYYMMDD_groupX_latest_org.discovered-config.json" \
+  --output "output/kpi_conversion_YYYYMMDD_groupX_latest_org_recap.xlsx"
+
+python3 scripts/build_mapping_conflict_review.py \
+  --config "output/kpi_conversion_YYYYMMDD_groupX_latest_org.discovered-config.json" \
+  --reference "output/production_position_reference_20260623_latest.json" \
+  --output "output/kpi_conversion_YYYYMMDD_groupX_latest_org_mapping_conflict_review.xlsx"
+
+python3 scripts/build_mapping_override_candidates.py \
+  --review "output/kpi_conversion_YYYYMMDD_groupX_latest_org_mapping_conflict_review.xlsx" \
+  --output "output/kpi_conversion_YYYYMMDD_groupX_latest_org_override_candidates.xlsx"</pre>
+
+      <h3>7.3 Review dan approve override</h3>
+      <ol>
+        <li>Buka file <code>*_override_candidates.xlsx</code>.</li>
+        <li>Mulai dari tab <code>High Confidence</code> dan <code>All Recommended</code>.</li>
+        <li>Pastikan candidate position, company, scope, PMID/PNID, dan source sheet memang benar.</li>
+        <li>Isi kolom <code>Approved</code> dengan <code>YES</code> hanya untuk baris yang disetujui.</li>
+        <li>Jangan approve baris ambiguous jika reviewer belum yakin.</li>
+      </ol>
+
+      <h3>7.4 Apply override ke config</h3>
+      <pre>python3 scripts/apply_mapping_override_candidates.py \
+  --config "output/kpi_conversion_YYYYMMDD_groupX_latest_org.discovered-config.json" \
+  --overrides "output/kpi_conversion_YYYYMMDD_groupX_latest_org_override_candidates.xlsx" \
+  --output "output/kpi_conversion_YYYYMMDD_groupX_latest_org.reviewed-config.json"</pre>
+      <p>
+        Script hanya menerapkan baris dengan <code>Approved</code> bernilai
+        <code>YES</code>, <code>Y</code>, <code>TRUE</code>, <code>1</code>,
+        <code>APPROVED</code>, <code>APPROVE</code>, atau <code>OK</code>.
+        Structural override menerapkan PMID only. Non-structural override menerapkan PNID only.
+      </p>
+
+      <h3>7.5 Re-run converter dan validasi final</h3>
+      <pre>python3 scripts/kpi_bulk_transform.py \
+  --source "/path/to/KAMUS KPI GROUP.zip" \
+  --template "input/KPI Upload Template.xlsx" \
+  --mapping "output/production_position_reference_20260623_latest.json" \
+  --config "output/kpi_conversion_YYYYMMDD_groupX_latest_org.reviewed-config.json" \
+  --output-dir "output/kpi_conversion_YYYYMMDD_groupX_latest_org_reviewed"
+
+python3 scripts/validate_kpi_upload_batch.py \
+  --output-dir "output/kpi_conversion_YYYYMMDD_groupX_latest_org_reviewed" \
+  --config "output/kpi_conversion_YYYYMMDD_groupX_latest_org.reviewed-config.json" \
+  --reference "output/production_position_reference_20260623_latest.json"</pre>
+      <p>
+        Batch final baru boleh dipakai sebagai kandidat upload jika validator selesai tanpa error
+        dan tidak ada <code>mapping_conflict</code> tersisa untuk scope yang wajib dikonversi.
+      </p>
+    </section>
+
+    <section id="handoff">
+      <h2>8. Handoff Review dan Backlog</h2>
+      <p>
+        Backlog utama bukan lagi struktur converter dasar, tetapi penyelesaian mapping. Urutan
+        kerja yang disarankan:
+      </p>
+      <ol>
+        <li>Review 42 high-confidence candidates lintas Group 1 dan Group 2.</li>
+        <li>Review 59 recommended candidates tambahan.</li>
+        <li>Resolve 88 manual-review/no-candidate blockers yang membutuhkan keputusan eksplisit.</li>
+        <li>Resolve ambiguous conflicts dengan melihat workbook source, company context, dan OM reference.</li>
+        <li>Apply override, re-run converter, lalu re-run validator sampai conflict 0 untuk scope yang wajib upload.</li>
+      </ol>
+      <div class="callout danger">
+        <strong>Jangan upload batch parsial sebagai full conversion.</strong> Output saat ini berguna
+        untuk review dan validasi struktur, tetapi full upload membutuhkan penyelesaian mapping
+        conflicts terlebih dahulu.
+      </div>
+    </section>
+  </div>
+</body>
+</html>

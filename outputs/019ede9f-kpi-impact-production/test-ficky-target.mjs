@@ -9,18 +9,19 @@ const workbook = await SpreadsheetFile.importXlsx(
 const sheet = workbook.worksheets.getItem("KPI Template");
 const used = sheet.getUsedRange(true).values;
 const rows = used.slice(1);
-const fickyRows = rows.filter((row) => Number(row[22]) === 11435);
+const fickyRows = rows.filter((row) => Number(row[22]) === 11542);
+const staleFickyRows = rows.filter((row) => Number(row[22]) === 11435);
 const otherDataScientistRows = rows.filter((row) => Number(row[22]) === 12256);
 
 assert.equal(
   fickyRows.length,
   10,
-  "PNID 11435 for Ficky Alkarim / Data Scientist must have ten KPI IMPACT rows",
+  "PNID 11542 for Ficky Alkarim / Data Scientist must have ten KPI IMPACT rows",
 );
 assert.equal(
   new Set(fickyRows.map((row) => row[10])).size,
   10,
-  "PNID 11435 must contain ten distinct KPI IMPACT titles",
+  "PNID 11542 must contain ten distinct KPI IMPACT titles",
 );
 assert.ok(
   fickyRows.every(
@@ -28,9 +29,14 @@ assert.ok(
       row[7] === "IMPACT" &&
       !row[4] &&
       !row[5] &&
-      Number(row[22]) === 11435,
+      Number(row[22]) === 11542,
   ),
-  "Ficky rows must use PNID 11435 only",
+  "Ficky rows must use PNID 11542 only",
+);
+assert.equal(
+  staleFickyRows.length,
+  0,
+  "PNID 11435 is stale for Ficky and must not be added",
 );
 assert.equal(
   otherDataScientistRows.length,

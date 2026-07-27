@@ -186,7 +186,8 @@ Important fields:
 - Shared KPI Impact fields can be backfilled by title across parsed sheets when one sheet contains placeholders and another contains the valid value.
 - OUTPUT/KAI rows are removed when:
   - their required weight is blank
-  - their comment is in `drop_comment_values`
+  - `Komentar`, `Comment`, `Status`, or `Alignment` is in `drop_comment_values`
+  - their title is numeric-only, which indicates a summary/subtotal row rather than a real KPI title
 
 ## Outputs
 

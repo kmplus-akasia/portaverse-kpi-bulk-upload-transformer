@@ -1,0 +1,223 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+import re
+from collections import Counter, defaultdict
+from pathlib import Path
+from typing import Any
+
+from openpyxl import Workbook, load_workbook
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "output/group1_ho_v2_delta_remediation_20260709"
+BAD_AUDIT = OUT / "audit_delta_remediation_decisions.xlsx"
+SAFE_REPAIR = OUT / "upload_safe_repair_unallocated.xlsx"
+KAMUS_12_DIR = OUT / "bad_12_kamus_converted_no_refresh"
+CANONICAL_IMPACT = ROOT / "output/group1_ho_v2_20260709_latest_prod/missing_ho_impact_only_20260709.xlsx"
+TEMPLATE = ROOT / "input/KPI Upload Template.xlsx"
+OUTPUT = OUT / "upload_all_40_bad_production_positions_kamus_converted_only.xlsx"
+AUDIT_OUTPUT = OUT / "upload_all_40_bad_production_positions_kamus_converted_only_audit.xlsx"
+
+HEADERS = [
+    "IDKPI",
+    "Group",
+    "Direktorat",
+    "Posisi",
+    "Position Master ID (Required)",
+    "Position Master Variant ID (Optional)",
+    "BSC Perspective",
+    "KPI Type",
+    "Parent KPI ID",
+    "Parent KPI Title",
+    "Title",
+    "Description",
+    "Unit",
+    "Polarity",
+    "Period",
+    "Formula",
+    "Weight (%)",
+    "Cascading",
+    "Nature Of Work (KAI Only)",
+    "External ID (PKPI)",
+    "System KPI ID",
+    "Ownership Type",
+    "Position Nomenklatur ID",
+    "RKM Code ID",
+]
+
+
+def text(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return str(value).strip()
+
+
+def is_numeric_title(value: Any) -> bool:
+    return bool(re.fullmatch(r"\d+(?:\.0+)?", text(value)))
+
+
+def row_identity(row: dict[str, Any]) -> tuple[str, str] | None:
+    pmid = text(row.get("Position Master ID (Required)"))
+    pnid = text(row.get("Position Nomenklatur ID"))
+    if pmid and not pnid:
+        return "PMID", pmid
+    if pnid and not pmid:
+        return "PNID", pnid
+    return None
+
+
+def load_template_rows(path: Path) -> list[dict[str, Any]]:
+    wb = load_workbook(path, read_only=True, data_only=True)
+    ws = wb["KPI Template"]
+    rows = ws.iter_rows(values_only=True)
+    headers = [text(v) for v in next(rows)]
+    return [{headers[i]: values[i] if i < len(values) else None for i in range(len(headers))} for values in rows]
+
+
+def load_bad_identities() -> list[dict[str, Any]]:
+    wb = load_workbook(BAD_AUDIT, read_only=True, data_only=True)
+    ws = wb["Bad Production KPI"]
+    rows = ws.iter_rows(values_only=True)
+    headers = [text(v) for v in next(rows)]
+    output = []
+    for values in rows:
+        item = {headers[i]: values[i] if i < len(values) else None for i in range(len(headers))}
+        if text(item.get("Jenis Identity")) and text(item.get("ID Identity")):
+            output.append(item)
+    return output
+
+
+def canonical_impact_rows() -> list[dict[str, Any]]:
+    rows = [r for r in load_template_rows(CANONICAL_IMPACT) if text(r.get("KPI Type")).upper() == "IMPACT"]
+    seen = set()
+    output = []
+    for row in rows:
+        title = text(row.get("Title"))
+        if title in seen:
+            continue
+        seen.add(title)
+        item = {header: row.get(header, "") for header in HEADERS}
+        item["Position Master ID (Required)"] = ""
+        item["Position Nomenklatur ID"] = ""
+        item["Position Master Variant ID (Optional)"] = ""
+        item["System KPI ID"] = ""
+        item["RKM Code ID"] = ""
+        output.append(item)
+        if len(output) == 10:
+            return output
+    raise RuntimeError("Canonical impact source does not contain 10 unique IMPACT rows.")
+
+
+def load_detail_rows(paths: list[Path]) -> dict[tuple[str, str], list[dict[str, Any]]]:
+    by_identity: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+    for path in paths:
+        for row in load_template_rows(path):
+            identity = row_identity(row)
+            if not identity:
+                continue
+            if text(row.get("KPI Type")).upper() == "IMPACT":
+                continue
+            by_identity[identity].append({header: row.get(header, "") for header in HEADERS})
+    return by_identity
+
+
+def clone_impacts(identity: tuple[str, str], impacts: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows = []
+    for index, row in enumerate(impacts, start=1):
+        item = dict(row)
+        item["IDKPI"] = str(index)
+        item["Position Master ID (Required)"] = identity[1] if identity[0] == "PMID" else ""
+        item["Position Nomenklatur ID"] = identity[1] if identity[0] == "PNID" else ""
+        rows.append(item)
+    return rows
+
+
+def write_upload(rows: list[dict[str, Any]]) -> None:
+    wb = load_workbook(TEMPLATE)
+    ws = wb["KPI Template"] if "KPI Template" in wb.sheetnames else wb.active
+    if ws.max_row > 1:
+        ws.delete_rows(2, ws.max_row - 1)
+    for table_name in list(ws.tables.keys()):
+        del ws.tables[table_name]
+    for col, header in enumerate(HEADERS, start=1):
+        ws.cell(1, col, header)
+    for row_idx, row in enumerate(rows, start=2):
+        for col, header in enumerate(HEADERS, start=1):
+            ws.cell(row_idx, col, row.get(header))
+    wb.save(OUTPUT)
+
+
+def main() -> None:
+    bad = load_bad_identities()
+    expected = {(text(row["Jenis Identity"]), text(row["ID Identity"])) for row in bad}
+    detail_by_identity = load_detail_rows([SAFE_REPAIR] + sorted(KAMUS_12_DIR.glob("*/*.xlsx")))
+    impacts = canonical_impact_rows()
+    rows: list[dict[str, Any]] = []
+    audit_rows = []
+    for bad_row in bad:
+        identity = (text(bad_row["Jenis Identity"]), text(bad_row["ID Identity"]))
+        detail_rows = detail_by_identity.get(identity, [])
+        rows.extend(clone_impacts(identity, impacts))
+        rows.extend(detail_rows)
+        audit_rows.append(
+            {
+                "Identity": f"{identity[0]} {identity[1]}",
+                "Impact Rows": 10,
+                "Output/KAI Rows": len(detail_rows),
+                "Detail Source": "kamus_converter",
+                "Issue Reasons": bad_row.get("Issue Reasons"),
+            }
+        )
+    errors = []
+    identities = set()
+    impact_counts = Counter()
+    for idx, row in enumerate(rows, start=2):
+        identity = row_identity(row)
+        if not identity:
+            errors.append(f"row {idx}: blank/double identity")
+            continue
+        identities.add(identity)
+        if text(row.get("KPI Type")).upper() == "IMPACT":
+            impact_counts[identity] += 1
+        if is_numeric_title(row.get("Title")):
+            errors.append(f"row {idx}: numeric title {row.get('Title')}")
+    if expected - identities:
+        errors.append(f"missing identities: {sorted(expected - identities)}")
+    bad_impact = {identity: count for identity, count in impact_counts.items() if count != 10}
+    if bad_impact:
+        errors.append(f"bad impact counts: {bad_impact}")
+    no_detail = [row["Identity"] for row in audit_rows if row["Output/KAI Rows"] == 0]
+    if no_detail:
+        errors.append(f"identities without converted Output/KAI rows: {no_detail}")
+    if errors:
+        raise SystemExit("\n".join(errors))
+    write_upload(rows)
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Summary"
+    type_counts = Counter(text(row.get("KPI Type")).upper() for row in rows)
+    for item in [
+        ("Bad production identities", len(expected)),
+        ("Generated upload rows", len(rows)),
+        ("IMPACT rows", type_counts["IMPACT"]),
+        ("OUTPUT rows", type_counts["OUTPUT"]),
+        ("KAI rows", type_counts["KAI"]),
+        ("Source rule", "All Output/KAI rows come from kamus converter output; production snapshot is not used as row source."),
+    ]:
+        ws.append(item)
+    ws = wb.create_sheet("Identity Sources")
+    headers = ["Identity", "Impact Rows", "Output/KAI Rows", "Detail Source", "Issue Reasons"]
+    ws.append(headers)
+    for row in audit_rows:
+        ws.append([row.get(header, "") for header in headers])
+    wb.save(AUDIT_OUTPUT)
+    print(json.dumps({"output": str(OUTPUT), "audit": str(AUDIT_OUTPUT), "rows": len(rows), "types": dict(type_counts)}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

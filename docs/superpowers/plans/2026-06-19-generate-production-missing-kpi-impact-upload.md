@@ -66,7 +66,7 @@ Validation: workbook opens, rendered content is legible, total rows equal 790, a
 - The backend matches active IMPACT items globally by case-insensitive title when `System KPI ID` is blank, so the ten existing items can be reused without knowing their numeric IDs.
 - The missing PNID 54 detail identifies exact PMID 348 / PMVID 39813, allowing a narrow upload that avoids the two already-covered variants.
 - The validated source workbook contained an unused blank `Sheet1`. The final artifact was rebuilt with one `KPI Template` sheet only.
-- The missing Ficky row was caused by relying on the 2026-06-15 production snapshot. The current user-reported assignment is PMID 33711, while production nomenclature maps that position to PNID 11435.
+- The missing Ficky row was caused by relying on the 2026-06-15 production snapshot. Later user review rejected PNID 11435 as stale; current area-scope evidence points to PNID 11542 for Ficky Alkarim / Data Scientist.
 
 ## Decision Log
 
@@ -82,14 +82,17 @@ Validation: workbook opens, rendered content is legible, total rows equal 790, a
   Rationale: The importer expands PNID to every mapped position, while the audit shows only this variant is missing. Exact targeting avoids changing already-covered variants.
   Date/Author: 2026-06-19 / Codex
 
-- Decision: Add PNID `11435` for Ficky Alkarim and exclude PNID `12256`.
-  Rationale: Staging assignment evidence identifies Ficky as PMID 33711, and the production reference maps that exact position/group to PNID 11435. PNID 12256 belongs to a separate Data Scientist position in Unit Pendukung Kinerja Individu.
-  Date/Author: 2026-06-19 / Codex
+- Decision: Supersede PNID `11435` with PNID `11542` for Ficky Alkarim and exclude PNID `12256`.
+  Rationale: User review rejected PNID 11435. Live staging plus current area-scope artifacts identify Ficky's Data Scientist assignment under PNID 11542; PNID 12256 belongs to a separate Data Scientist position.
+  Date/Author: 2026-06-23 / Codex
 
 ## Outcomes & Retrospective
 
 Generated `outputs/019ede9f-kpi-impact-production/KPI_Upload_Production_HO_Missing_Impact_20260619_SNAPSHOT.xlsx`.
+Generated Ficky-only upload form `outputs/019ede9f-kpi-impact-production/KPI_Upload_Ficky_Alkarim_Impact_20260623.xlsx`.
 
-The workbook contains 800 IMPACT-only rows for 80 target units: the original 79 audited units plus Ficky Alkarim's PNID 11435 correction. Post-export validation confirmed the current 24-column importer headers, ten distinct impact titles and 100% total impact weight per target, 80 unique target identities, exact PMID 348 / PMVID 39813 handling for the partial PNID 54 gap, no PNID 54 expansion, ten PNID 11435 rows, zero PNID 12256 rows, no formula errors, one worksheet only, valid ZIP members, and readable first/last rendered ranges.
+The combined workbook contains 800 IMPACT-only rows for 80 target units: the original 79 audited units plus Ficky Alkarim's PNID 11542 correction. Post-export validation confirmed the current 24-column importer headers, ten distinct impact titles and 100% total impact weight per target, 80 unique target identities, exact PMID 348 / PMVID 39813 handling for the partial PNID 54 gap, no PNID 54 expansion, ten PNID 11542 rows, zero PNID 11435 rows, zero PNID 12256 rows, no formula errors, one worksheet only, valid ZIP members, and readable first/last rendered ranges.
+
+The Ficky-only workbook contains 10 IMPACT-only rows for PNID 11542, one worksheet only, zero stale PNID 11435 rows, zero PNID 12256 rows, no formula errors, valid ZIP members, and a readable rendered preview.
 
 Remaining limitation: the target list is the latest recoverable production audit from 2026-06-15. A current production dry-run is still required before confirmed upload because live read-only production access was unavailable on 2026-06-19.
