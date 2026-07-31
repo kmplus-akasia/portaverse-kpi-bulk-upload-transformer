@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { createRequire } from "node:module";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { requireFromPmsService, userHomeDir } from "./pms_service_require.mjs";
 
 const args = process.argv.slice(2);
 const outputIndex = args.indexOf("--output");
@@ -14,7 +14,7 @@ const outputPath =
 const profile =
   profileIndex >= 0 && args[profileIndex + 1] ? args[profileIndex + 1] : "production";
 
-const envPath = path.join(process.env.HOME, ".codex/pms-connections", `${profile}.env`);
+const envPath = path.join(userHomeDir(), ".codex/pms-connections", `${profile}.env`);
 const env = {};
 if (existsSync(envPath)) {
   for (const line of readFileSync(envPath, "utf8").split(/\r?\n/)) {
@@ -36,6 +36,7 @@ for (const key of [
   "DB_USER",
   "DB_PASSWORD",
   "DB_SSL",
+  "DB_READ_WRITE",
 ]) {
   if (process.env[key]) env[key] = process.env[key];
 }
@@ -50,10 +51,12 @@ if (!["mysql", "mariadb"].includes(String(env.DB_ENGINE).toLowerCase())) {
   console.error(`Unsupported DB_ENGINE: ${env.DB_ENGINE}`);
   process.exit(1);
 }
+if (profile === "production" && String(env.DB_READ_WRITE ?? "0") !== "0") {
+  console.error("Refusing production export unless DB_READ_WRITE=0.");
+  process.exit(1);
+}
 
-const servicePackage = "/Users/alfredoteja/Documents/pms-codebase/pms-service/package.json";
-const serviceRequire = createRequire(servicePackage);
-const mysql = serviceRequire("mysql2/promise");
+const mysql = requireFromPmsService("mysql2/promise");
 
 const connection = await mysql.createConnection({
   host: env.DB_HOST,

@@ -19,7 +19,7 @@ Run all five. One failure keeps the package a draft.
 1. `scripts/validate_kpi_upload_batch.py` returns zero errors: headers match the template's 24 columns, every row carries exactly one identity, and each PMID or PNID exists in the reference.
 2. `unzip -t` passes on every delivered `.xlsx`.
 3. `IDKPI` is unique and sequential within each file, every OUTPUT resolves to an IMPACT parent, and every KAI resolves to an OUTPUT parent.
-4. No cell holds a formula error, and each sheet opens on the template's frozen panes.
+4. No cell holds a formula error, each sheet opens on the template's frozen panes, and the KPI-row conditional-formatting and dropdown-validation ranges reach the final populated KPI row.
 5. The manifest lists every delivered workbook and nothing besides workbooks.
 
 ## Steps
@@ -28,9 +28,9 @@ Run all five. One failure keeps the package a draft.
 
    Done when: all five checks have a recorded pass or fail together with the counts that produced it.
 
-2. **Write `VALIDATION_RECEIPT.md`** beside the package: generation date, workbook count, KPI row count, the PMID versus PNID split, error count, checks run, checks skipped, and positions deliberately left out.
+2. **Write `VALIDATION_RECEIPT.md`** beside the package: generation date, workbook count, KPI row count, the PMID versus PNID split, error count, checks run, checks skipped, positions deliberately left out, and the resolved Kamus source root from `README_SOURCE.md` when the package came from a Kamus conversion.
 
-   Done when: the receipt exists and every figure in it came from check output rather than from expectation.
+   Done when: the receipt exists, every figure in it came from check output rather than from expectation, and `README_SOURCE.md` is present for Kamus-derived packages.
 
 ## Scope of the claim
 

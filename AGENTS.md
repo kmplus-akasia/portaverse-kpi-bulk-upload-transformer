@@ -46,9 +46,12 @@ Do not treat the full `unittest discover` suite as the default verification path
 ## Repo map
 
 - `scripts/kpi_bulk_transform.py` — main workbook-to-upload-template converter.
+- `scripts/kamus_source.py` — resolve canonical Kamus KPI HO source roots and workbook paths from inventory config.
+- `scripts/normalize_position_config_sources.py` — align position config `source_workbook` paths with the inventory.
 - `scripts/position_mapping.py` — strict position resolver and lookup indexes.
 - `scripts/validate_kpi_upload_batch.py` — batch-level fail-closed validation.
 - `scripts/export_position_reference.mjs` — read-only production-reference export.
+- `scripts/refresh_canonical_production_reference.sh` — refresh the single canonical snapshot at `configs/production_position_reference.json`.
 - `scripts/historical_q1_mapping.py` and `scripts/export_historical_q1_position_reference.mjs` — historical Q1 mapping workflow.
 - `tests/` — regression tests; add focused coverage with behavioral changes.
 - `configs/` — mapping/config snapshots. Treat production-reference files as sensitive.
@@ -58,7 +61,9 @@ Do not treat the full `unittest discover` suite as the default verification path
 ## Source of truth and identity rules
 
 - Start every conversion by identifying the raw workbook, exact worksheet scope, template version, config, and production-reference snapshot.
-- Treat `configs/production_position_reference.json` as an offline snapshot, not timeless truth. Its `current_snapshot_unreviewed` status requires review before identity decisions.
+- **Canonical Head Office Kamus KPI raw root:** `outputs/kamus-ho-config-20260729/source/KAMUS KPI PELINDO GROUP 1 (HO) 5`. Resolve it through `scripts/kamus_source.py` and the inventory at `configs/kamus_kpi_ho_visible_20260729.json`. Do not convert from `~/Downloads/KAMUS KPI PELINDO GROUP 1 (HO) *` unless the user explicitly authorizes an external override.
+- Every conversion run must write `README_SOURCE.md` beside its outputs and record the resolved source root in `generation_summary.json` or the validation receipt.
+- Treat `configs/production_position_reference.json` as the **single canonical** offline snapshot, not timeless truth. Refresh with `scripts/refresh_canonical_production_reference.sh` when production org data may have drifted. Its `current_snapshot_unreviewed` status requires review before identity decisions.
 - Use the strict resolver through `build_lookup_indexes(...)`; do not reintroduce obsolete lookup paths.
 - Determine worksheet scope before lookup:
   - structural position -> `Position Master ID` / PMID only;

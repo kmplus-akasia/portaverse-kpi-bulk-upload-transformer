@@ -46,7 +46,8 @@ Active entry points, grouped by the workflow stage they serve. `.cursor/skills/`
 
 | Script | Role |
 | --- | --- |
-| `export_position_reference.mjs` | read-only production position reference snapshot |
+| `export_position_reference.mjs` | low-level exporter; prefer `refresh_canonical_production_reference.sh` for the single canonical snapshot |
+| `refresh_canonical_production_reference.sh` | refresh `configs/production_position_reference.json` + metadata + receipt |
 | `export_group1_ho_v2_kpi_production_snapshot.mjs` | read-only production KPI snapshot; `--output`, `--profile`, `--year`, honours `DB_READ_WRITE` |
 
 ## Amendment

@@ -25,7 +25,7 @@ Column meanings live in the mapping skill's `references/review-artifact-schema.m
 
    Done when: no position in the output config holds a PMID and a PNID together, and every held position carries a status naming why it is held.
 
-3. **Write to a new path.** The input config stays as it was, and the output is named for the run.
+3. **Write to a new path.** The input config stays as it was, and the output is named for the run. Include a top-level `metadata.source_root` and `metadata.inventory_config` copied from `scripts/kamus_source.py` when the config will feed a Kamus conversion.
 
    Done when: the output config exists at a new path and the input file is byte-identical to before the run.
 

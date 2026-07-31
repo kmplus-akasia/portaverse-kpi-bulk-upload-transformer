@@ -1,0 +1,19 @@
+{
+  "canonical_path": "configs/production_position_reference.json",
+  "exported_at": "2026-07-30T07:46:28.247Z",
+  "profile": "production",
+  "database": "defaultdb",
+  "review_status": "current_snapshot_unreviewed",
+  "read_only": true,
+  "row_counts": {
+    "rows": 24064,
+    "position_master_rows": 70660,
+    "structural_lookup_rows": 1727,
+    "non_structural_lookup_rows": 2991,
+    "active_assignment_rows": 5603,
+    "organization_rows": 6280,
+    "company_rows": 251
+  },
+  "refreshed_by": "scripts/refresh_canonical_production_reference.sh",
+  "notes": "Single canonical production snapshot for mapping and conversion. Refresh before identity decisions when production org data may have drifted."
+}

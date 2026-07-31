@@ -48,7 +48,9 @@ from kpi_bulk_transform import (  # noqa: E402
 from position_mapping import build_lookup_indexes  # noqa: E402
 
 from openpyxl import Workbook, load_workbook  # noqa: E402
+from openpyxl.formatting.rule import FormulaRule  # noqa: E402
 from openpyxl.styles import Font  # noqa: E402
+from openpyxl.worksheet.datavalidation import DataValidation  # noqa: E402
 
 
 class KpiBulkTransformTest(unittest.TestCase):
@@ -262,6 +264,58 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertEqual(row_map["Position Master ID (Required)"], "509")
         self.assertIsNone(row_map["Position Nomenklatur ID"])
 
+    def test_assistant_scope_writes_pmvid_to_impact_output_and_kai(self):
+        config = PositionConfig(
+            sheet_name="Personal Assistant Direksi SDM ",
+            position_name="Personal Assistant Direksi",
+            group_name="KAMUS KPI PERSONAL ASSISTANT DIREKSI",
+            directorate_name="Direktorat SDM dan Umum",
+            position_master_id="77",
+            position_master_variant_id="655",
+            position_scope="assistant",
+        )
+        impact = ImpactRecord(
+            bsc="Financial",
+            title="Net Income",
+            unit="Rupiah",
+            period="Triwulan",
+            formula="Revenue - Cost",
+            polarity="Positif",
+            weight="100",
+            outputs=[
+                {
+                    "title": "Valid Output",
+                    "description": "Output definition",
+                    "unit": "%",
+                    "period": "Triwulan",
+                    "formula": "realisasi/target",
+                    "polarity": "Positif",
+                    "weight": "100",
+                    "cascading": "DIRECT",
+                    "ownership_type": "SPECIFIC",
+                    "kai": {
+                        "title": "Valid KAI",
+                        "description": "KAI definition",
+                        "period": "Triwulan",
+                        "formula": "realisasi/target",
+                        "polarity": "Positif",
+                        "weight": "100",
+                        "cascading": "INDIRECT",
+                        "ownership_type": "SPECIFIC",
+                        "nature_of_work": "Routine",
+                    },
+                }
+            ],
+        )
+
+        rows, _ = build_upload_rows(config, "77", [impact], 1)
+        row_maps = [dict(zip(UPLOAD_HEADERS, row)) for row in rows]
+
+        self.assertEqual([row["KPI Type"] for row in row_maps], ["IMPACT", "OUTPUT", "KAI"])
+        self.assertTrue(all(row["Position Master ID (Required)"] == "77" for row in row_maps))
+        self.assertTrue(all(row["Position Master Variant ID (Optional)"] == "655" for row in row_maps))
+        self.assertTrue(all(row["Position Nomenklatur ID"] is None for row in row_maps))
+
     def test_validate_output_rows_rejects_invalid_upload_enums_and_dual_position_ids(self):
         config = PositionConfig(
             sheet_name="Manager Rekrutmen-Karir",
@@ -339,6 +393,31 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertIsNone(configs[0].position_master_id)
         self.assertEqual(configs[0].position_nomenclature_id, "76")
         self.assertEqual(configs[0].position_scope, "non_structural")
+
+    def test_load_config_preserves_assistant_pmvid(self):
+        payload = {
+            "positions": [
+                {
+                    "sheet_name": "Personal Assistant Direksi SDM ",
+                    "position_name": "Personal Assistant Direksi",
+                    "group_name": "KAMUS KPI PERSONAL ASSISTANT DIREKSI",
+                    "directorate_name": "Direktorat SDM dan Umum",
+                    "position_master_id": 77,
+                    "position_master_variant_id": 655,
+                    "position_nomenclature_id": None,
+                    "position_scope": "assistant",
+                }
+            ]
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "config.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            configs = load_config(path)
+
+        self.assertEqual(configs[0].position_master_id, "77")
+        self.assertEqual(configs[0].position_master_variant_id, "655")
+        self.assertIsNone(configs[0].position_nomenclature_id)
+        self.assertEqual(configs[0].position_scope, "assistant")
 
     def test_load_config_structural_scope_drops_pnid_and_non_structural_scope_drops_pmid(self):
         payload = {
@@ -1846,6 +1925,46 @@ class KpiBulkTransformTest(unittest.TestCase):
         self.assertIsInstance(weight_cell.value, float)
         self.assertEqual(weight_cell.value, 12.5)
         self.assertEqual(saved["KPI Template"].column_dimensions["P"].width, 72)
+
+    def test_write_output_workbook_extends_template_rules_to_last_generated_row(self):
+        for row_count in (28, 30, 1001):
+            with self.subTest(row_count=row_count), tempfile.TemporaryDirectory() as tmp:
+                template = Path(tmp) / "template.xlsx"
+                output = Path(tmp) / "output.xlsx"
+                workbook = Workbook()
+                worksheet = workbook.active
+                worksheet.title = "KPI Template"
+                worksheet.append(UPLOAD_HEADERS)
+                worksheet["A25"] = "template rule boundary"
+                worksheet.conditional_formatting.add(
+                    "A2:F25",
+                    FormulaRule(formula=["TRUE"]),
+                )
+                validation = DataValidation(type="list", formula1='"A,B"', allow_blank=True)
+                validation.add("G2:G25")
+                worksheet.add_data_validation(validation)
+                workbook.save(template)
+
+                rows = [
+                    [str(index)] + [None] * (len(UPLOAD_HEADERS) - 1)
+                    for index in range(1, row_count + 1)
+                ]
+                write_output_workbook(template, output, rows)
+
+                saved = load_workbook(output)
+                saved_sheet = saved["KPI Template"]
+                conditional_ranges = {
+                    str(conditional_format.sqref)
+                    for conditional_format in saved_sheet.conditional_formatting
+                }
+                validation_ranges = {
+                    str(item.sqref)
+                    for item in saved_sheet.data_validations.dataValidation
+                }
+                expected_last_row = row_count + 1
+
+                self.assertIn(f"A2:F{expected_last_row}", conditional_ranges)
+                self.assertIn(f"G2:G{expected_last_row}", validation_ranges)
 
     def test_write_output_workbook_forces_black_header_text(self):
         with tempfile.TemporaryDirectory() as tmp:

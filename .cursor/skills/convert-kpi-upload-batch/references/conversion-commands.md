@@ -28,6 +28,29 @@ python3 scripts/kpi_bulk_transform.py \
 
 ## Single workbook
 
+Resolve Head Office Kamus KPI paths through `scripts/kamus_source.py` before calling the converter.
+
+```bash
+python3 scripts/kpi_bulk_transform.py \
+  --source "$(python3 - <<'PY'
+from pathlib import Path
+import sys
+sys.path.insert(0, "scripts")
+from kamus_source import resolve_kamus_source_root, resolve_source_workbook, load_inventory_config
+ctx = resolve_kamus_source_root()
+inv = load_inventory_config(ctx.inventory_config)
+print(resolve_source_workbook(ctx.source_root, "Group Pengelolaan SDM/DIREKTORAT SDM & UMUM - Group Pengelolaan SDM.xlsx", inv))
+PY
+)" \
+  --template "input/KPI Upload Template.xlsx" \
+  --config "configs/<approved>.json" \
+  --mapping "configs/production_position_reference.json" \
+  --output "output/<run>/single_conversion.xlsx" \
+  --report "output/<run>/single_conversion.report.csv"
+```
+
+For a whole approved batch against the canonical HO root, prefer resolving each config row with `resolve_source_workbook(...)` rather than hardcoding `SOURCE_ROOT` in a run script.
+
 ```bash
 python3 scripts/kpi_bulk_transform.py \
   --source "/absolute/path/to/source.xlsx" \

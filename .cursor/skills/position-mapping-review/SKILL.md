@@ -9,7 +9,7 @@ Produce an editable review artifact and stop there. Conversion resumes only afte
 
 ## Steps
 
-1. **Name the reference snapshot.** Record its path, its export timestamp, and whether it is an *active* production export or a *historical* export taken at a cutoff. An active export describes today's organisation, so a request about a past period needs the historical branch.
+1. **Name the reference snapshot.** Record its path, its export timestamp, and whether it is an *active* production export or a *historical* export taken at a cutoff. An active export describes today's organisation, so a request about a past period needs the historical branch. For Head Office worksheet keys, keep `source_workbook + sheet_name` aligned with `configs/kamus_kpi_ho_visible_20260729.json` and the repo Kamus root under `outputs/kamus-ho-config-20260729/source/`.
 
    Done when: snapshot kind, path, and export timestamp sit in the artifact metadata, and the kind matches the period the request is about.
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { createRequire } from "node:module";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -8,6 +7,7 @@ import {
   buildHistoricalNomenclatureQuery,
   shapeHistoricalPayload,
 } from "./historical_q1_reference.mjs";
+import { requireFromPmsService, userHomeDir } from "./pms_service_require.mjs";
 
 const Q1_CUTOFF_DATE = "2026-03-31";
 const HEAD_OFFICE_COMPANY_ID = "1";
@@ -19,7 +19,7 @@ function optionValue(args, name, fallback) {
 }
 
 function loadProfile(profile) {
-  const envPath = path.join(process.env.HOME || "", ".codex/pms-connections", `${profile}.env`);
+  const envPath = path.join(userHomeDir(), ".codex/pms-connections", `${profile}.env`);
   const env = {};
 
   if (existsSync(envPath)) {
@@ -106,9 +106,7 @@ export async function main(args = process.argv.slice(2)) {
     throw new Error(`Unsupported DB_ENGINE: ${env.DB_ENGINE}`);
   }
 
-  const servicePackage = "/Users/alfredoteja/Documents/pms-codebase/pms-service/package.json";
-  const serviceRequire = createRequire(servicePackage);
-  const mysql = serviceRequire("mysql2/promise");
+  const mysql = requireFromPmsService("mysql2/promise");
   const payload = await runHistoricalReferenceExport({
     createConnection: mysql.createConnection.bind(mysql),
     connectionOptions: {

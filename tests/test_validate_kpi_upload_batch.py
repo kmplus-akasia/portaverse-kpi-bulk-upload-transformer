@@ -3,6 +3,8 @@ import unittest
 from pathlib import Path
 
 from openpyxl import Workbook
+from openpyxl.formatting.rule import FormulaRule
+from openpyxl.worksheet.datavalidation import DataValidation
 
 from scripts import validate_kpi_upload_batch as validator
 
@@ -174,6 +176,51 @@ class ValidateKpiUploadBatchTest(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(record["status"], "READY")
 
+    def test_workbook_validation_allows_approved_assistant_identity(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            workbook_path = Path(temp_dir) / "upload.xlsx"
+            self._write_upload_workbook(workbook_path, pnid="")
+            workbook = validator.openpyxl.load_workbook(workbook_path)
+            sheet = workbook["KPI Template"]
+            sheet.cell(2, 5).value = "77"
+            sheet.cell(2, 6).value = "655"
+            workbook.save(workbook_path)
+
+            record, errors, _ = validator.validate_workbook(
+                workbook_path,
+                fixed_pmids=set(),
+                master_ids=set(),
+                nomenclature_ids=set(),
+                master_types_by_id={},
+                position_types_by_pnid={},
+                approved_assistant_identities={("77", "655")},
+            )
+
+        self.assertEqual(errors, [])
+        self.assertEqual(record["status"], "READY")
+
+    def test_workbook_validation_rejects_unapproved_assistant_pmvid(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            workbook_path = Path(temp_dir) / "upload.xlsx"
+            self._write_upload_workbook(workbook_path, pnid="")
+            workbook = validator.openpyxl.load_workbook(workbook_path)
+            sheet = workbook["KPI Template"]
+            sheet.cell(2, 5).value = "77"
+            sheet.cell(2, 6).value = "999"
+            workbook.save(workbook_path)
+
+            _, errors, _ = validator.validate_workbook(
+                workbook_path,
+                fixed_pmids=set(),
+                master_ids=set(),
+                nomenclature_ids=set(),
+                master_types_by_id={},
+                position_types_by_pnid={},
+                approved_assistant_identities={("77", "655")},
+            )
+
+        self.assertTrue(any("unapproved or missing PMVID=999" in error for error in errors))
+
     def test_workbook_validation_rejects_untrusted_invalid_ids(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             workbook_path = Path(temp_dir) / "upload.xlsx"
@@ -209,6 +256,39 @@ class ValidateKpiUploadBatchTest(unittest.TestCase):
             )
 
         self.assertTrue(any("numeric-only KPI title" in error for error in errors))
+
+    def test_workbook_validation_rejects_rules_ending_before_last_kpi_row(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            workbook_path = Path(temp_dir) / "upload.xlsx"
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.title = "KPI Template"
+            sheet.append(validator.EXPECTED_HEADERS)
+            for row_number in range(1, 31):
+                row = [""] * len(validator.EXPECTED_HEADERS)
+                row[0] = row_number
+                row[3] = "Officer"
+                row[7] = "IMPACT"
+                row[10] = f"KPI {row_number}"
+                row[22] = "888"
+                sheet.append(row)
+            sheet.conditional_formatting.add("A2:F25", FormulaRule(formula=["TRUE"]))
+            validation = DataValidation(type="list", formula1='"A,B"', allow_blank=True)
+            validation.add("G2:G25")
+            sheet.add_data_validation(validation)
+            workbook.save(workbook_path)
+
+            _, errors, _ = validator.validate_workbook(
+                workbook_path,
+                fixed_pmids=set(),
+                master_ids=set(),
+                nomenclature_ids={"888"},
+                master_types_by_id={},
+                position_types_by_pnid={"888": {"6"}},
+            )
+
+        self.assertTrue(any("conditional formatting ends before final KPI row 31" in error for error in errors))
+        self.assertTrue(any("data validation ends before final KPI row 31" in error for error in errors))
 
     def test_workbook_validation_rejects_parent_id_missing_in_same_pnid(self):
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -293,6 +373,10 @@ class ValidateKpiUploadBatchTest(unittest.TestCase):
         row[10] = title
         row[22] = pnid
         sheet.append(row)
+        sheet.conditional_formatting.add("A2:F2", FormulaRule(formula=["TRUE"]))
+        validation = DataValidation(type="list", formula1='"A,B"', allow_blank=True)
+        validation.add("G2:G2")
+        sheet.add_data_validation(validation)
         workbook.save(path)
 
 

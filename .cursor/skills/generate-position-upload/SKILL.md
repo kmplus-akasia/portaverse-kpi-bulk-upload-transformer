@@ -13,17 +13,17 @@ One formulir, built from the official template, carrying only identities that ar
 
    Done when: each requested position holds exactly one identity shape, and any position without one is on the blocker list before a single KPI row is read.
 
-2. **Locate the source worksheet** for each identity, recording workbook, sheet, and how that pair was established.
+2. **Locate the source worksheet** for each identity, recording workbook, sheet, and how that pair was established. Resolve Head Office Kamus KPI workbooks through `scripts/kamus_source.py` and `configs/kamus_kpi_ho_visible_20260729.json`; write `README_SOURCE.md` beside the run.
 
-   Done when: every convertible identity names its source worksheet, and identities whose worksheet is missing join the blocker list.
+   Done when: every convertible identity names its source worksheet from the repository Kamus root, and identities whose worksheet is missing join the blocker list.
 
 3. **Parse and transform** through the repo's rules in `scripts/kpi_bulk_transform.py`, so enum normalisation, drop rules, and shared-impact backfill match what batch conversion produces.
 
    Done when: parsed rows preserve the IMPACT to OUTPUT to KAI hierarchy within each identity, and weight totals per level are known.
 
-4. **Assemble against the official template.** For a consolidated formulir covering several identities, renumber `IDKPI` as one global `1..N` sequence and regenerate every `Parent KPI ID` after the merge, since per-identity numbering collides once merged.
+4. **Assemble against the official template.** For a consolidated formulir covering several identities, renumber `IDKPI` as one global `1..N` sequence and regenerate every `Parent KPI ID` after the merge, since per-identity numbering collides once merged. Preserve the template's conditional formatting and dropdown validation, extending both through the final populated KPI row regardless of whether the formulir has tens or thousands of rows.
 
-   Done when: `IDKPI` is unique and sequential across the whole `KPI Template` sheet, and every OUTPUT and KAI resolves to a parent inside the same file.
+   Done when: `IDKPI` is unique and sequential across the whole `KPI Template` sheet, every OUTPUT and KAI resolves to a parent inside the same file, and all KPI rows remain inside the active formatting and validation ranges.
 
 5. **Verify** through `validate-upload-package`.
 

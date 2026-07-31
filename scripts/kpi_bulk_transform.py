@@ -12,7 +12,7 @@ import tempfile
 import zipfile
 import xml.etree.ElementTree as ET
 from copy import copy
-from collections import Counter
+from collections import Counter, OrderedDict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from enum import Enum
@@ -25,6 +25,7 @@ try:
     from openpyxl import load_workbook
     from openpyxl.styles import Alignment, Font
     from openpyxl.utils import get_column_letter
+    from openpyxl.worksheet.cell_range import CellRange
 except ImportError as exc:  # pragma: no cover - runtime guidance
     raise SystemExit(
         "Missing dependency: openpyxl. Install it with `python3 -m pip install openpyxl`."
@@ -572,6 +573,7 @@ class PositionConfig:
     directorate_name: str
     source_workbook: str | None = None
     position_master_id: str | None = None
+    position_master_variant_id: str | None = None
     position_nomenclature_id: str | None = None
     position_scope: str | None = None
     portaverse_position_title: str | None = None
@@ -1113,6 +1115,7 @@ def build_upload_rows(
 ) -> tuple[list[list[Any]], int]:
     position_name = config.position_name
     output_position_master_id, output_position_nomenclature_id = resolve_upload_scope(config, position_master_id)
+    output_position_master_variant_id = config.position_master_variant_id
 
     rows: list[list[Any]] = []
     next_id = start_id
@@ -1133,7 +1136,7 @@ def build_upload_rows(
                 config.directorate_name,
                 position_name,
                 output_position_master_id,
-                None,
+                output_position_master_variant_id,
                 impact.bsc,
                 "IMPACT",
                 None,
@@ -1213,7 +1216,7 @@ def build_upload_rows(
                     config.directorate_name,
                     position_name,
                     output_position_master_id,
-                    None,
+                    output_position_master_variant_id,
                     impact.bsc,
                     "OUTPUT",
                     impact_ids[impact.title],
@@ -1314,7 +1317,7 @@ def build_upload_rows(
                         config.directorate_name,
                         position_name,
                         output_position_master_id,
-                        None,
+                        output_position_master_variant_id,
                         impact.bsc,
                         "KAI",
                         output["_generated_id"],
@@ -1724,9 +1727,35 @@ def excel_cell_value(header: str, value: Any) -> Any:
     return value
 
 
+def extend_worksheet_rules_to_row(worksheet: Any, source_last_row: int, target_last_row: int) -> None:
+    """Extend template conditional formatting and validation through generated rows."""
+    if target_last_row <= source_last_row:
+        return
+
+    def extended_sqref(sqref: Any) -> str:
+        updated_ranges: list[str] = []
+        for range_ref in str(sqref).split():
+            cell_range = CellRange(range_ref)
+            if cell_range.max_row == source_last_row:
+                cell_range.max_row = target_last_row
+            updated_ranges.append(str(cell_range))
+        return " ".join(updated_ranges)
+
+    conditional_rules = OrderedDict()
+    for conditional_format, rules in worksheet.conditional_formatting._cf_rules.items():
+        updated_format = copy(conditional_format)
+        updated_format.sqref = extended_sqref(conditional_format.sqref)
+        conditional_rules[updated_format] = rules
+    worksheet.conditional_formatting._cf_rules = conditional_rules
+
+    for validation in worksheet.data_validations.dataValidation:
+        validation.sqref = extended_sqref(validation.sqref)
+
+
 def write_output_workbook(template_path: Path, output_path: Path, rows: list[list[Any]]) -> None:
     workbook = load_workbook(template_path)
     worksheet = workbook["KPI Template"] if "KPI Template" in workbook.sheetnames else workbook.active
+    template_last_row = worksheet.max_row
     if worksheet.max_column > len(UPLOAD_HEADERS):
         worksheet.delete_cols(len(UPLOAD_HEADERS) + 1, worksheet.max_column - len(UPLOAD_HEADERS))
     for table_name in list(worksheet.tables.keys()):
@@ -1768,6 +1797,7 @@ def write_output_workbook(template_path: Path, output_path: Path, rows: list[lis
         worksheet.column_dimensions[get_column_letter(col_index)].width = COLUMN_WIDTHS.get(header, 18)
     worksheet.row_dimensions[1].height = 36
     worksheet.auto_filter.ref = None
+    extend_worksheet_rules_to_row(worksheet, template_last_row, len(rows) + 1)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     workbook.save(output_path)
 
@@ -1800,6 +1830,12 @@ def load_config(config_path: Path) -> list[PositionConfig]:
             normalized_position_master_id = None
         else:
             normalized_position_master_id = str(raw_position_master_id)
+        raw_position_master_variant_id = item.get("position_master_variant_id")
+        normalized_position_master_variant_id = (
+            None
+            if raw_position_master_variant_id in (None, "", 0, "0")
+            else str(raw_position_master_variant_id)
+        )
         raw_position_nomenclature_id = item.get("position_nomenclature_id")
         normalized_position_nomenclature_id: str | None
         if raw_position_nomenclature_id in (None, "", 0, "0"):
@@ -1815,6 +1851,7 @@ def load_config(config_path: Path) -> list[PositionConfig]:
             directorate_name=item["directorate_name"],
             source_workbook=item.get("source_workbook"),
             position_master_id=normalized_position_master_id,
+            position_master_variant_id=normalized_position_master_variant_id,
             position_nomenclature_id=normalized_position_nomenclature_id,
             position_scope=position_scope,
             portaverse_position_title=item.get("portaverse_position_title"),
@@ -1971,6 +2008,7 @@ def config_to_dict(config: PositionConfig) -> dict[str, Any]:
         "sheet_name": config.sheet_name,
         "position_name": config.position_name,
         "position_master_id": position_master_id,
+        "position_master_variant_id": config.position_master_variant_id,
         "position_nomenclature_id": position_nomenclature_id,
         "position_scope": config.position_scope,
         "portaverse_position_title": config.portaverse_position_title,

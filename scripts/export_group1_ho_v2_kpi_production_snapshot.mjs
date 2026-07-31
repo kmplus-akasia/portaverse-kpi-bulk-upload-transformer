@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { createRequire } from "node:module";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { requireFromPmsService, userHomeDir } from "./pms_service_require.mjs";
 
 const args = process.argv.slice(2);
 const outputIndex = args.indexOf("--output");
@@ -16,7 +16,7 @@ const profile =
   profileIndex >= 0 && args[profileIndex + 1] ? args[profileIndex + 1] : "production";
 const year = yearIndex >= 0 && args[yearIndex + 1] ? Number(args[yearIndex + 1]) : 2026;
 
-const envPath = path.join(process.env.HOME, ".codex/pms-connections", `${profile}.env`);
+const envPath = path.join(userHomeDir(), ".codex/pms-connections", `${profile}.env`);
 const env = {};
 if (existsSync(envPath)) {
   for (const line of readFileSync(envPath, "utf8").split(/\r?\n/)) {
@@ -58,9 +58,7 @@ if (!["mysql", "mariadb"].includes(String(env.DB_ENGINE).toLowerCase())) {
   process.exit(1);
 }
 
-const servicePackage = "/Users/alfredoteja/Documents/pms-codebase/pms-service/package.json";
-const serviceRequire = createRequire(servicePackage);
-const mysql = serviceRequire("mysql2/promise");
+const mysql = requireFromPmsService("mysql2/promise");
 
 const connection = await mysql.createConnection({
   host: env.DB_HOST,

@@ -139,7 +139,14 @@ def check_config_scope(
             continue
         if confidence_label in {"low_confidence", "scope_uncertain", "no_candidate", "mapping_conflict"} and not review_approved:
             errors.append(f"unapproved blocked mapping label {confidence_label}: {label}")
-        if scope not in {"structural", "non_structural", "neglect", "mapping_conflict", "scope_uncertain"}:
+        if scope not in {
+            "structural",
+            "non_structural",
+            "assistant",
+            "neglect",
+            "mapping_conflict",
+            "scope_uncertain",
+        }:
             errors.append(f"unsupported position scope {scope or '<blank>'}: {label}")
         if scope in {"mapping_conflict", "scope_uncertain"} and not review_approved:
             if pmid or pnid:
@@ -158,6 +165,14 @@ def check_config_scope(
                     f"structural config PMID {pmid} production type "
                     f"{','.join(sorted(production_types)) or 'unknown'} is non-structural: {label}"
                 )
+        if scope == "assistant":
+            pmvid = str(pos.get("position_master_variant_id") or "").strip()
+            if pmid != "77":
+                errors.append(f"assistant config must use PMID 77: {label} -> {pmid or '<blank>'}")
+            if not pmvid:
+                errors.append(f"assistant config missing PMVID: {label}")
+            if pnid:
+                errors.append(f"assistant config still has PNID: {label} -> {pnid}")
         if scope == "non_structural":
             if pmid:
                 errors.append(f"non_structural config has PMID populated: {label} -> {pmid}")
@@ -215,6 +230,22 @@ def load_fixed_pmids(fixed_audit_path: Path | None) -> set[str]:
     }
 
 
+def load_approved_assistant_identities(config_path: Path) -> set[tuple[str, str]]:
+    with config_path.open() as handle:
+        config = json.load(handle)
+    return {
+        (
+            str(pos.get("position_master_id") or "").strip(),
+            str(pos.get("position_master_variant_id") or "").strip(),
+        )
+        for pos in config["positions"]
+        if (pos.get("position_scope") or "").strip() == "assistant"
+        and str(pos.get("mapping_review_status") or "").strip().lower() == "approved"
+        and str(pos.get("position_master_id") or "").strip()
+        and str(pos.get("position_master_variant_id") or "").strip()
+    }
+
+
 def iter_upload_workbooks(output_dir: Path) -> list[Path]:
     paths = []
     for path in output_dir.rglob("*.xlsx"):
@@ -241,6 +272,40 @@ def check_report_csvs(output_dir: Path) -> list[str]:
     return errors
 
 
+def check_worksheet_rule_coverage(
+    path: Path,
+    sheet: object,
+    last_kpi_row: int,
+) -> list[str]:
+    errors: list[str] = []
+    if last_kpi_row <= 1:
+        return errors
+
+    conditional_last_rows = [
+        max(cell_range.max_row for cell_range in conditional_format.sqref.ranges)
+        for conditional_format in sheet.conditional_formatting
+        if any(cell_range.max_row > 1 for cell_range in conditional_format.sqref.ranges)
+    ]
+    if not conditional_last_rows:
+        errors.append(f"{path}: missing KPI-row conditional formatting")
+    elif max(conditional_last_rows) < last_kpi_row:
+        errors.append(
+            f"{path}: conditional formatting ends before final KPI row {last_kpi_row}"
+        )
+
+    validation_last_rows = [
+        max(cell_range.max_row for cell_range in validation.sqref.ranges)
+        for validation in sheet.data_validations.dataValidation
+        if any(cell_range.max_row > 1 for cell_range in validation.sqref.ranges)
+    ]
+    if not validation_last_rows:
+        errors.append(f"{path}: missing KPI-row data validation")
+    elif min(validation_last_rows) < last_kpi_row:
+        errors.append(f"{path}: data validation ends before final KPI row {last_kpi_row}")
+
+    return errors
+
+
 def validate_workbook(
     path: Path,
     fixed_pmids: set[str],
@@ -250,18 +315,20 @@ def validate_workbook(
     position_types_by_pnid: dict[str, set[str]],
     trusted_pmid_ids: set[str] | None = None,
     trusted_pnid_ids: set[str] | None = None,
+    approved_assistant_identities: set[tuple[str, str]] | None = None,
 ) -> tuple[dict[str, object], list[str], set[str]]:
     errors: list[str] = []
     found_fixed: set[str] = set()
     trusted_pmid_ids = trusted_pmid_ids or set()
     trusted_pnid_ids = trusted_pnid_ids or set()
+    approved_assistant_identities = approved_assistant_identities or set()
 
     with zipfile.ZipFile(path) as archive:
         bad_file = archive.testzip()
         if bad_file:
             errors.append(f"{path}: bad xlsx zip member {bad_file}")
 
-    workbook = openpyxl.load_workbook(path, read_only=True, data_only=False)
+    workbook = openpyxl.load_workbook(path, read_only=False, data_only=False)
     if "KPI Template" not in workbook.sheetnames:
         errors.append(f"{path}: missing KPI Template sheet")
         return {"path": str(path), "rows": 0, "status": "FAIL"}, errors, found_fixed
@@ -282,15 +349,18 @@ def validate_workbook(
     blank_identity_rows = 0
     double_identity_rows = 0
     graph_rows: list[dict[str, object]] = []
+    last_kpi_row = 1
 
     for row_idx, row in enumerate(row_iter, 2):
         title = row[10]
         if title in (None, ""):
             continue
         rows += 1
+        last_kpi_row = row_idx
         if is_numeric_only_title(title):
             errors.append(f"{path}: row {row_idx} has numeric-only KPI title={title}")
         pmid = str(row[4] or "").strip()
+        pmvid = str(row[5] or "").strip()
         pnid = str(row[22] or "").strip()
         if pmid and pnid:
             double_identity_rows += 1
@@ -300,7 +370,12 @@ def validate_workbook(
             errors.append(f"{path}: row {row_idx} has neither PMID nor PNID")
         elif pmid:
             structural_rows += 1
-            trusted = pmid in trusted_pmid_ids
+            trusted_assistant = (pmid, pmvid) in approved_assistant_identities
+            trusted = pmid in trusted_pmid_ids or trusted_assistant
+            if pmid == "77" and not trusted_assistant:
+                errors.append(
+                    f"{path}: row {row_idx} assistant PMID=77 has unapproved or missing PMVID={pmvid or '<blank>'}"
+                )
             if pmid not in master_ids and not trusted:
                 errors.append(f"{path}: row {row_idx} has invalid PMID={pmid}")
             production_types = master_types_by_id.get(pmid, set())
@@ -346,6 +421,8 @@ def validate_workbook(
                     "kpi_type": str(row[7] or "").strip().upper(),
                 }
             )
+
+    errors.extend(check_worksheet_rule_coverage(path, sheet, last_kpi_row))
 
     global_id_rows: dict[int, dict[str, object]] = {}
     for graph_row in graph_rows:
@@ -475,6 +552,7 @@ def main() -> int:
     ) = load_reference_ids(args.reference)
     fixed_pmids = load_fixed_pmids(args.fixed_audit)
     trusted_pmid_ids, trusted_pnid_ids = load_trusted_reviewer_ids(args.config)
+    approved_assistant_identities = load_approved_assistant_identities(args.config)
 
     errors = check_config_scope(
         args.config,
@@ -502,6 +580,7 @@ def main() -> int:
             position_types_by_pnid,
             trusted_pmid_ids,
             trusted_pnid_ids,
+            approved_assistant_identities,
         )
         records.append(record)
         errors.extend(workbook_errors)

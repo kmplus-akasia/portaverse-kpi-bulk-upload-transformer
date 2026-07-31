@@ -23,7 +23,7 @@ This skill records what each workbook says about itself. Resolving a worksheet t
 
    Done when: every visible worksheet holds either a title backed by a cell reference, or a `review_status` naming why the title stayed unproven.
 
-4. **Emit the inventory** as JSON under `configs/` plus an editable review workbook under a run-scoped folder in `outputs/`. Use `scripts/extract_visible_kamus_config.py --root <source> --output <json>`. Keep the two generations in separate lists.
+4. **Emit the inventory** as JSON under `configs/` plus an editable review workbook under a run-scoped folder in `outputs/`. Use `scripts/extract_visible_kamus_config.py --root <source> --output <json>`. Keep the two generations in separate lists. When the raw folder has been moved into the repository, record the repo-relative moved source root in `metadata.source_root`; later conversion skills must read from that moved root, not from `~/Downloads`.
 
    Done when: `source_workbook + sheet_name` is unique within each generation list, and `include_in_position_config` is `true` only for rows whose title came from sheet content.
 
