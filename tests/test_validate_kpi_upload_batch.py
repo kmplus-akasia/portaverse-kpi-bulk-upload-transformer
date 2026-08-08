@@ -45,6 +45,41 @@ class ValidateKpiUploadBatchTest(unittest.TestCase):
 
         self.assertEqual(errors, [])
 
+    def test_config_scope_allows_trusted_pnid_that_collides_with_pmid_number(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            config_path = Path(temp_dir) / "config.json"
+            config_path.write_text(
+                """
+{
+  "positions": [
+    {
+      "source_workbook": "book.xlsx",
+      "sheet_name": "Officer Investasi",
+      "position_scope": "non_structural",
+      "position_master_id": null,
+      "position_nomenclature_id": "12554",
+      "mapping_confidence_label": "low_confidence",
+      "mapping_review_status": "approved",
+      "mapping_override_approved": true,
+      "mapping_override_trust_source": "reviewer_manual"
+    }
+  ]
+}
+""".strip(),
+                encoding="utf-8",
+            )
+
+            errors = validator.check_config_scope(
+                config_path,
+                master_ids={"12554"},
+                nomenclature_ids=set(),
+                cluster_labels_by_id={},
+                master_types_by_id={"12554": {"6"}},
+                position_types_by_pnid={},
+            )
+
+        self.assertEqual(errors, [])
+
     def test_config_scope_allows_needs_check_rows_to_remain_held(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             config_path = Path(temp_dir) / "config.json"

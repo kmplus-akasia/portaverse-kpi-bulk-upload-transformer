@@ -160,6 +160,32 @@ class PositionMappingTest(unittest.TestCase):
             normalize_position_lookup("Manager Talenta dan Rekrutmen"),
         )
 
+    def test_normalizes_agreed_title_abbreviations(self):
+        self.assertEqual(
+            normalize_position_lookup("Asst Mgr Ops"),
+            normalize_position_lookup("Assistant Manager Operasi"),
+        )
+        self.assertEqual(
+            normalize_position_lookup("Supt Operasi"),
+            normalize_position_lookup("Superintendent Operasi"),
+        )
+        self.assertNotEqual(
+            normalize_position_lookup("Supt Operasi"),
+            normalize_position_lookup("Supervisor Operasi"),
+        )
+        self.assertEqual(
+            normalize_position_lookup("Manajer Oficer"),
+            normalize_position_lookup("Manager Officer"),
+        )
+        self.assertEqual(
+            normalize_position_lookup("Corsec"),
+            normalize_position_lookup("Corporate Secretary"),
+        )
+        self.assertEqual(
+            normalize_position_lookup("Manrisk Monev Faspel"),
+            normalize_position_lookup("Manajemen Risiko Monitoring Evaluasi Fasilitas Pelabuhan"),
+        )
+
     def test_normalizer_preserves_area_wilayah_and_project_numbers(self):
         self.assertNotEqual(
             normalize_position_lookup("Administrator Operasi Wilayah I Group B Tanjung Priok"),

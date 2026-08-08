@@ -476,7 +476,10 @@ def read_xlsx_sheet(path: Path, sheet_name: str) -> list[list[Any]]:
                 rel_target = relmap[
                     sheet.attrib["{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"]
                 ]
-                target = f"xl/{rel_target}" if not rel_target.startswith("xl/") else rel_target
+                # Office relationship Targets may be package-absolute ("/xl/worksheets/...")
+                # or relative to xl/ ("worksheets/..."). Normalize before joining.
+                rel_target = rel_target.lstrip("/")
+                target = rel_target if rel_target.startswith("xl/") else f"xl/{rel_target}"
                 break
         if not target:
             raise KeyError(f"Sheet '{sheet_name}' not found in {path}")
@@ -1983,9 +1986,77 @@ def conversion_output_name(
     year: int = 2026,
     version: int = 2,
 ) -> str:
-    directorate, group = extract_output_title_parts(source_workbook, configs)
-    timestamp = generated_at.strftime("%m-%d-%Y at %H.%M")
-    return f"{directorate} - {group} {timestamp} ({year} v{version})"
+    """Name upload formulir from raw kamus stem + timestamp + pekerja/identity counts.
+
+    Example:
+      Kamus KPI SPTP - Mapping dengan Kontrak Manajemen - 20260807_1430 (42 pekerja, 35 identity)
+    """
+    del year, version  # retained in signature for callers; counts replace version tag
+    raw_stem = Path(source_workbook).stem.strip() or "Kamus KPI"
+    # Strip trailing " - Mapping dengan Kontrak Manajemen" noise? Keep full raw stem so HO
+    # SPTP/SPJM/SPSL/SPMT stay searchable from the original kamus filename.
+    timestamp = generated_at.strftime("%Y%m%d_%H%M")
+    identity_count = len(configs)
+    pekerja_count = 0
+    for config in configs:
+        try:
+            pekerja_count += int(config.active_employee_count or 0)
+        except (TypeError, ValueError):
+            continue
+    if pekerja_count > 0:
+        return f"{raw_stem} - {timestamp} ({pekerja_count} pekerja, {identity_count} identity)"
+    return f"{raw_stem} - {timestamp} ({identity_count} identity)"
+
+
+def enforce_default_impact_set(
+    impacts: list[ImpactRecord],
+    expected_count: int,
+    *,
+    sheet_name: str,
+    position_name: str,
+    issues: list[ValidationIssue],
+) -> list[ImpactRecord]:
+    """Keep one Impact per title (first wins), then cap at expected_count (default 10).
+
+    Duplicate Impact blocks in kamus (same title, multiple rows) are dropped with their
+    OUTPUT/KAI children so upload formulir carries the shared Pelindo set only.
+    """
+    if expected_count <= 0:
+        return impacts
+    deduped: list[ImpactRecord] = []
+    seen_titles: set[str] = set()
+    duplicate_count = 0
+    for impact in impacts:
+        key = normalize_title(impact.title)
+        if not key:
+            continue
+        if key in seen_titles:
+            duplicate_count += 1
+            continue
+        seen_titles.add(key)
+        deduped.append(impact)
+
+    truncated = 0
+    if len(deduped) > expected_count:
+        truncated = len(deduped) - expected_count
+        deduped = deduped[:expected_count]
+
+    if duplicate_count or truncated or len(impacts) != len(deduped):
+        issues.append(
+            ValidationIssue(
+                severity="info",
+                sheet_name=sheet_name,
+                source_row=None,
+                record_type="sheet",
+                title=position_name,
+                message=(
+                    f"Enforced default {expected_count} KPI Impact items "
+                    f"(parsed={len(impacts)}, unique_kept={len(deduped)}, "
+                    f"duplicates_dropped={duplicate_count}, truncated={truncated})."
+                ),
+            )
+        )
+    return deduped
 
 
 def unique_output_name(output_name: str, seen_names: dict[str, int]) -> str:
@@ -2410,40 +2481,21 @@ def apply_best_effort_mapping(configs: list[PositionConfig]) -> None:
 
 
 def normalize_position_lookup(value: str | None) -> str:
-    text = normalize_title(value)
-    text = re.sub(r"\b([a-z]+)([0-9]+)\b", r"\1 \2", text)
-    text = re.sub(r"\bp\s+([0-9]+)\b", r"proyek \1", text)
-    text = re.sub(r"\bdivhead\b", "division head", text)
-    text = re.sub(r"\bdepthead\b", "department head", text)
-    text = re.sub(r"\bspv\b", "supervisor", text)
-    text = re.sub(r"\bcorsec\b", "corporate secretary", text)
-    text = re.sub(r"\bprinciple\b", "principal", text)
-    text = re.sub(r"\bpimpro\b", "pimpinan proyek", text)
-    text = re.sub(r"\bmanagr\b", "manager", text)
-    text = re.sub(r"\bmanajer\b", "manager", text)
-    text = re.sub(r"\bmgr\b", "manager", text)
-    text = re.sub(r"\boficer\b", "officer", text)
-    text = re.sub(r"\boffice\b", "officer", text)
-    text = re.sub(r"\bcorpo\b", "corporate", text)
-    text = re.sub(r"\bdept\b", "department", text)
-    text = re.sub(r"\bdh\b", "department head", text)
-    text = re.sub(r"\btl\b", "team lead", text)
-    text = re.sub(r"\bmanrisk\b", "manajemen risiko", text)
-    text = re.sub(r"\bmonev\b", "monitoring evaluasi", text)
-    text = re.sub(r"\bcorcomm\b", "corporate communication", text)
-    text = re.sub(r"\banper\b", "anak perusahaan", text)
-    text = re.sub(
-        r"\b(group head|department head|manager|senior officer|officer)\s+(i|ii|iii|iv|v)\b",
-        r"\1",
-        text,
-    )
-    text = re.sub(r"\badmin\b", "administrasi", text)
-    text = re.sub(r"\bperenca\b", "perencanaan", text)
-    text = re.sub(r"\bpengemb\b", "pengembangan", text)
-    text = re.sub(r"\bkepatuha\b", "kepatuhan", text)
-    text = re.sub(r"\bfaspel\b", "fasilitas pelabuhan", text)
-    text = re.sub(r"\bmeko\b", "monitoring evaluasi korporasi", text)
-    text = re.sub(r"\bmeka\b", "monitoring evaluasi anak perusahaan", text)
+    """Shared core normalizer plus transform-only expansions used by converter configs."""
+    text = strict_position_mapping.normalize_position_lookup(value)
+    extras = [
+        (r"\bcorpo\b", "corporate"),
+        (r"\bcorcomm\b", "corporate communication"),
+        (r"\banper\b", "anak perusahaan"),
+        (r"\badmin\b", "administrasi"),
+        (r"\bperenca\b", "perencanaan"),
+        (r"\bpengemb\b", "pengembangan"),
+        (r"\bkepatuha\b", "kepatuhan"),
+        (r"\bmeko\b", "monitoring evaluasi korporasi"),
+        (r"\bmeka\b", "monitoring evaluasi anak perusahaan"),
+    ]
+    for pattern, replacement in extras:
+        text = re.sub(pattern, replacement, text)
     text = re.sub(r"\bcompany\s+\d+\b", "", text)
     return re.sub(r"\s+", " ", text).strip()
 
@@ -3101,7 +3153,15 @@ def collect_parsed_sheets(
             )
             continue
         impacts = parse_block_sheet(sheet_rows, config, issues)
-        if len(impacts) != config.expected_impact_count:
+        raw_impact_count = len(impacts)
+        impacts = enforce_default_impact_set(
+            impacts,
+            config.expected_impact_count,
+            sheet_name=config.sheet_name,
+            position_name=config.position_name,
+            issues=issues,
+        )
+        if raw_impact_count != config.expected_impact_count:
             issues.append(
                 ValidationIssue(
                     severity="warning",
@@ -3110,8 +3170,8 @@ def collect_parsed_sheets(
                     record_type="sheet",
                     title=config.position_name,
                     message=(
-                        f"Parsed {len(impacts)} KPI Impact rows; expected "
-                        f"{config.expected_impact_count} shared Pelindo impacts."
+                        f"Parsed {raw_impact_count} KPI Impact rows; enforced "
+                        f"{len(impacts)}/{config.expected_impact_count} shared Pelindo impacts."
                     ),
                 )
             )
@@ -3191,14 +3251,16 @@ def extract_zip_workbooks(source_zip: Path, destination: Path) -> dict[str, Path
     workbooks: dict[str, Path] = {}
     with zipfile.ZipFile(source_zip) as archive:
         for name in archive.namelist():
-            if not name.lower().endswith(".xlsx"):
+            lower = name.lower()
+            if not (lower.endswith(".xlsx") or lower.endswith(".xlsm")):
                 continue
             if Path(name).name.startswith("~$"):
                 continue
             if should_skip_source_workbook(name):
                 continue
             target = destination / safe_path_stem(name)
-            target = target.with_suffix(".xlsx")
+            # Keep original suffix so OOXML readers still open .xlsm payloads.
+            target = target.with_suffix(Path(name).suffix.lower())
             target.write_bytes(archive.read(name))
             workbooks[name] = target
     return workbooks

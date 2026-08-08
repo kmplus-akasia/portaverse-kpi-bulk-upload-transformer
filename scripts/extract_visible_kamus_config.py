@@ -41,6 +41,25 @@ GENERIC_TOP_LEFT = {
     "nama jabatan",
     "jabatan",
     "bsc perspective",
+    "jenis posisi",
+    "kpi impact",
+    "kpi output",
+    "financial",
+    "customer",
+    "internal process",
+    "learning & growth",
+    "learning and growth",
+}
+GENERIC_KAMUS_TAB_TITLES = {
+    "kamus kpi bagian",
+    "kamus kpi officer",
+    "kamus kpi staff",
+    "kamus kpi sub bagian",
+    "kamus kpi kawasan",
+    "kamus kpi kelompok kerja",
+    "kamus kpi unit",
+    "kamus kpi pelabuhan kawasan",
+    "kamus kpi sub regional head",
 }
 
 
@@ -146,6 +165,16 @@ def extract_labeled_value(
     return "", first_label_ref, ""
 
 
+def is_generic_top_left(value: str) -> bool:
+    normalized = normalize_label(value)
+    return (
+        not normalized
+        or normalized in GENERIC_TOP_LEFT
+        or normalized in POSITION_LABELS | GROUP_LABELS
+        or normalized in GENERIC_KAMUS_TAB_TITLES
+    )
+
+
 def extract_position(
     cells: dict[tuple[int, int], tuple[str, str]], sheet_name: str
 ) -> tuple[str, str, str, str]:
@@ -156,16 +185,28 @@ def extract_position(
         return position, label_ref, value_ref, "labeled_value"
     if label_ref:
         return "", label_ref, "", "labeled_value_missing"
-    top_left = cells.get((1, 1))
-    if top_left:
+    for row in (1, 2):
+        top_left = cells.get((row, 1))
+        if not top_left:
+            continue
         ref, value = top_left
-        normalized = normalize_label(value)
-        if (
-            not SUPPORT_SHEET_RE.match(sheet_name.strip())
-            and normalized not in GENERIC_TOP_LEFT
-            and normalized not in POSITION_LABELS | GROUP_LABELS
-        ):
-            return value, "", ref, "top_left_title"
+        if is_generic_top_left(value):
+            continue
+        return value, "", ref, "top_left_title"
+    # Group 2 Subholding/Cabang templates often start the KPI grid at A1
+    # (BSC Perspective / Jenis Posisi) and keep the position title only on the tab.
+    a1 = cells.get((1, 1), ("", ""))[1]
+    a2 = cells.get((2, 1), ("", ""))[1]
+    tab = sheet_name.strip()
+    if (
+        tab
+        and not SUPPORT_SHEET_RE.match(tab)
+        and normalize_label(tab) not in GENERIC_KAMUS_TAB_TITLES
+        and not is_generic_top_left(tab)
+        and (not a1 or is_generic_top_left(a1))
+        and (not a2 or is_generic_top_left(a2))
+    ):
+        return tab, "", "", "sheet_tab_title"
     return "", "", "", "not_found"
 
 
@@ -207,7 +248,13 @@ def extract(root: Path) -> dict:
         "kamus_kpi_v1_pre_restructure": [],
     }
     workbooks = sorted(
-        (path for path in root.rglob("*.xlsx") if is_source_workbook(path, root)),
+        (
+            path
+            for path in root.rglob("*")
+            if path.is_file()
+            and path.suffix.casefold() in {".xlsx", ".xlsm"}
+            and is_source_workbook(path, root)
+        ),
         key=lambda path: str(path.relative_to(root)).casefold(),
     )
     workbook_counts = {"v2": 0, "v1_pre_restructure": 0}

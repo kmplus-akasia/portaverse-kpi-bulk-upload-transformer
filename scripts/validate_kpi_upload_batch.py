@@ -176,7 +176,12 @@ def check_config_scope(
         if scope == "non_structural":
             if pmid:
                 errors.append(f"non_structural config has PMID populated: {label} -> {pmid}")
-            if pnid and pnid not in nomenclature_ids and pnid in master_ids:
+            if (
+                pnid
+                and pnid not in nomenclature_ids
+                and pnid in master_ids
+                and not trusted_reviewer
+            ):
                 errors.append(
                     f"non_structural config points to structural PMID instead of valid PNID: "
                     f"{label} -> pnid={pnid}"

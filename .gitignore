@@ -4,10 +4,16 @@ __pycache__/
 .DS_Store
 node_modules/
 ~$*.xlsx
-output/*.xlsx
-output/*.csv
+
+# Generated run artifacts (never commit)
+# output/  = converter CLI default (--output / --output-dir)
+# outputs/ = workflow evidence, mapping reviews, upload-ready batches, kamus sources
+output/
+outputs/
 tmp/
 *.inspect.ndjson
+
 configs/archive/
 .codex-work/
 .cursor/plans/
+.cursor/settings.json

@@ -107,8 +107,8 @@ def resolution_from_config(row: dict[str, Any]) -> position_mapping.MappingResol
         else position_mapping.MAPPING_CONFLICT
     )
     scope = transform.normalize_position_scope(row.get("position_scope")) or position_mapping.SCOPE_UNCERTAIN
-    candidate_pmid = norm(row.get("candidate_position_master_id")) or norm(row.get("position_master_id")) or None
-    candidate_pnid = norm(row.get("candidate_position_nomenclature_id")) or norm(row.get("position_nomenclature_id")) or None
+    candidate_pmid = norm(row.get("position_master_id")) or norm(row.get("candidate_position_master_id")) or None
+    candidate_pnid = norm(row.get("position_nomenclature_id")) or norm(row.get("candidate_position_nomenclature_id")) or None
     return position_mapping.MappingResolution(
         source_workbook=norm(row.get("source_workbook")) or None,
         worksheet=norm(row.get("sheet_name")),

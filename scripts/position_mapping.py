@@ -156,9 +156,17 @@ def normalize_position_lookup(value: Any) -> str:
         (r"\bdepthead\b", "department head"),
         (r"\bspv\b", "supervisor"),
         (r"\btl\b", "team lead"),
+        (r"\bcorsec\b", "corporate secretary"),
+        (r"\bmanrisk\b", "manajemen risiko"),
+        (r"\bmonev\b", "monitoring evaluasi"),
+        (r"\bfaspel\b", "fasilitas pelabuhan"),
         (r"\bmanagr\b", "manager"),
         (r"\bmanajer\b", "manager"),
         (r"\bmgr\b", "manager"),
+        (r"\basst\b", "assistant"),
+        (r"\basisten\b", "assistant"),
+        (r"\bops\b", "operasi"),
+        (r"\bsupt\b", "superintendent"),
         (r"\boficer\b", "officer"),
         (r"\boffice\b", "officer"),
         (r"\bprinciple\b", "principal"),
@@ -171,7 +179,7 @@ def normalize_position_lookup(value: Any) -> str:
     for pattern, replacement in replacements:
         text = re.sub(pattern, replacement, text)
     text = re.sub(
-        r"\b(group head|department head|division head|regional manager|manager|senior officer|officer)\s+(i|ii|iii|iv|v)\b",
+        r"\b(group head|department head|division head|regional manager|manager|senior officer|officer|superintendent|assistant)\s+(i|ii|iii|iv|v)\b",
         r"\1",
         text,
     )
